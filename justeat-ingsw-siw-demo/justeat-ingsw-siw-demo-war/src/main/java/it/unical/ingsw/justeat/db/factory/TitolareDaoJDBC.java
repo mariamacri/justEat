@@ -106,7 +106,7 @@ public class TitolareDaoJDBC implements TitolareDao {
 			}
 			// relazione 1 a n si fa così
 
-			String update = "update titolare SET numero_carta= ? WHERE cf_titolare= ?";
+			String update = "update titolare SET carta_credito_intestata= ? WHERE cf_titolare= ?";
 			PreparedStatement statement = connection.prepareStatement(update);
 			statement.setString(1, titolare.getCf_Titolare());
 			statement.setString(2, carta.getNumero_Carta());

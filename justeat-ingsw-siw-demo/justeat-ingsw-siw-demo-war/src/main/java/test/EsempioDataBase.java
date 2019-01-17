@@ -1,9 +1,22 @@
 package test;
 
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.TimeZone;
+
+import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
+import it.unical.ingsw.justeat.db.dao.CategoriaDao;
+import it.unical.ingsw.justeat.db.dao.PietanzaDao;
+import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.dao.TitolareDao;
 import it.unical.ingsw.justeat.db.factory.DAOFactory;
 import it.unical.ingsw.justeat.db.factory.DataSource;
 import it.unical.ingsw.justeat.db.factory.UtilDao;
+import it.unical.ingsw.justeat.db.model.CartaDiCredito;
+import it.unical.ingsw.justeat.db.model.Categoria;
+import it.unical.ingsw.justeat.db.model.Pietanza;
+import it.unical.ingsw.justeat.db.model.Ristorante;
+import it.unical.ingsw.justeat.db.model.Titolare;
 
 public class EsempioDataBase {
 
@@ -60,29 +73,26 @@ public class EsempioDataBase {
 
 		// ***************************************************************************************************+
 		// test ristorante
-		// RistoranteDao ristoranteDao = factory.getRistoranteDAO();
-
+//		 RistoranteDao ristoranteDao = factory.getRistoranteDAO();
+//
 //		Ristorante ristorante = new Ristorante();
 //		ristorante.setNome("pomodoro_rosso");
 //		ristorante.setIndirizzo("via G. Cesare");
-
 //		Ristorante ristorante1 = new Ristorante();
 //		ristorante1.setNome("pomodoro_rosso2");
 //		ristorante1.setIndirizzo("via G. Cesare");
-
-		// ristoranteDao.save(ristorante);
-		// System.out.println(ristoranteDao.findByPrimaryKey("pomodoro_rosso").toString());
-
-		// System.out.println("ALL DONE");
+//		 ristoranteDao.save(ristorante);
+//		 System.out.println(ristoranteDao.findByPrimaryKey("pomodoro_rosso").toString());
+//		 System.out.println("ALL DONE");
 //*********************************************************************************************
 //test di pietanza 
 //		Pietanza pietanza = new Pietanza();
-//		pietanza.setNome("");
+//		pietanza.setNome("margherita");
 //		pietanza.setPrezzo(12.00);
 //		pietanza.setDescrizione("ciao");
-		// PietanzaDao pietanzaDao = factory.getPietanzaDAO();
-		// pietanzaDao.save(pietanza);
-		// System.out.println(pietanzaDao.findByPrimaryKey("margherita").toString());
+//		 PietanzaDao pietanzaDao = factory.getPietanzaDAO();
+//		 pietanzaDao.save(pietanza);
+//		 System.out.println(pietanzaDao.findByPrimaryKey("margherita").toString());
 //********************************************************************************************
 		// test di carta di credito ok
 //		CartaDiCredito c = new CartaDiCredito();
@@ -90,13 +100,11 @@ public class EsempioDataBase {
 //		c.setSaldo_Disponibile(00.00);
 //		Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
 //		java.util.Date today = calendar.getTime();
-//
 //		c.setScadenza(today);
-//
 //		c.setTipo_Circuito_Carta("paypal");
 //		CartaDiCreditoDao cartaDao = factory.getCartaDiCreditoDAO();
-		// cartaDao.save(c);
-		// System.out.println(cartaDao.findByPrimaryKey("1234").toString());
+//		 cartaDao.save(c);
+//		 System.out.println(cartaDao.findByPrimaryKey("1234").toString());
 //******************************************************************************************************
 
 		// test di categoria ok
@@ -106,10 +114,10 @@ public class EsempioDataBase {
 //		CategoriaDao categoriaDao = factory.getCategoriaDAO();
 //		categoriaDao.save(c1);
 //		System.out.println(categoriaDao.findByPrimaryKey(1).toString());
-		// fine test
+//		// fine test
 // ******************************************************************************************************
 //test titolare ok 
-		// Titolare t = new Titolare();
+//		Titolare t = new Titolare();
 //		t.setCf_Titolare("mcrmri96b69f112j");
 //		t.setNome_Titolare("Maria");
 //		t.setCognome_Titolare("Macri");
@@ -123,17 +131,13 @@ public class EsempioDataBase {
 //		c.setSaldo_Disponibile(00.00);
 //		Calendar calendar1 = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
 //		java.util.Date today1 = calendar1.getTime();
-//
 //		c.setScadenza(today1);
-//
 //		c.setTipo_Circuito_Carta("paypal");
 //		t.addCarta(c);
-//
 //		t.setCarteDiCredito(t.getCarteDiCredito());
-
 		TitolareDao titolareDao = factory.getTitolareDAO();
-//		titolareDao.save(t);
-		System.out.println(titolareDao.findByPrimaryKey("mcrmra96b69f112j").toString());
+	//	titolareDao.save(t);
+		System.out.println(titolareDao.findByPrimaryKey("mcrmri96b69f112j").toString());
 		// fine test
 	}
 

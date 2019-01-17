@@ -6,7 +6,7 @@ public interface RistoranteDao {
 	// CRUD=create, read, update e delete
 	public void save(Ristorante ristorante); // Create
 
-	public Ristorante findByPrimaryKey(String nome); // Retrieve
+	public Ristorante findByPrimaryKey(String partita_iva); // Retrieve
 
 	// public List<Ristorante> findAll();
 

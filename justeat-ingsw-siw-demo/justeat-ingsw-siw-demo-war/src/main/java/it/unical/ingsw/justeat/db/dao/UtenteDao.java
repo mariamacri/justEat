@@ -6,9 +6,9 @@ import it.unical.ingsw.justeat.db.model.Utente;
 
 public interface UtenteDao {
 
-	public void save(); // Create
+	public void save(Utente utente); // Create
 
-	public Utente findByPrimaryKey(String email, String password); // Retrieve
+	public Utente findByPrimaryKey(String email); // Retrieve
 
 	public List<Utente> findAll();
 
