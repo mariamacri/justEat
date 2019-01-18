@@ -2,9 +2,12 @@ package it.unical.ingsw.justeat.db.factory;
 
 import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.CategoriaDao;
+import it.unical.ingsw.justeat.db.dao.MenuDao;
+import it.unical.ingsw.justeat.db.dao.PagamentoDao;
 import it.unical.ingsw.justeat.db.dao.PietanzaDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.dao.TitolareDao;
+import it.unical.ingsw.justeat.db.dao.UtenteDao;
 
 public class PostgresDAOFactory extends DAOFactory {
 
@@ -54,11 +57,21 @@ public class PostgresDAOFactory extends DAOFactory {
 		return new TitolareDaoJDBC(dataSource);
 	}
 
-//	@Override
-//	public DipartimentoDao getDipartimentoDAO() {
-//		return new DipartimentoDaoJDBC(dataSource);
-//	}
-//	
+	@Override
+	public UtenteDao getUtenteDAO() {
+		return new UtenteDaoJDBC(dataSource);
+	}
+	
+	@Override
+	public MenuDao getMenuDAO() {
+		return new MenuDaoJDBC(dataSource);
+	}
+	
+	@Override
+	public PagamentoDao getPagamentoDAO() {
+		return new PagamentoDaoJDBC(dataSource);
+	}
+	
 	@Override
 	public UtilDao getUtilDAO() {
 		return new UtilDao(dataSource);

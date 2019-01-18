@@ -84,14 +84,45 @@ public class CartaDiCreditoDaoJDBC implements CartaDiCreditoDao {
 
 	@Override
 	public void update(CartaDiCredito cartaDiCredito) {
-		// TODO Auto-generated method stub
-
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String update = "update  carta_di_credito SET  tipo_circuito_carta=?, saldo_disponibile=?,scadenza=? WHERE numero_carta=?";
+			PreparedStatement statement = connection.prepareStatement(update);
+			statement.setString(1, cartaDiCredito.getNumero_Carta());
+			statement.setString(2, cartaDiCredito.getTipo_Circuito_Carta());
+			statement.setDouble(3, cartaDiCredito.getSaldo_Disponibile());
+			long secs = cartaDiCredito.getScadenza().getTime();
+			statement.setDate(4, new java.sql.Date(secs));
+			
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
 	}
 
 	@Override
 	public void delete(CartaDiCredito cartaDiCredito) {
-		// TODO Auto-generated method stub
-
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String delete = "delete FROM carta_di_credito WHERE numero_carta = ? ";
+			PreparedStatement statement = connection.prepareStatement(delete);
+			statement.setString(1, cartaDiCredito.getNumero_Carta());
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
 	}
 
 }

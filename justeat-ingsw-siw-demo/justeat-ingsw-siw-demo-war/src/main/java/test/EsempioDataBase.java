@@ -6,17 +6,21 @@ import java.util.TimeZone;
 
 import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.CategoriaDao;
+import it.unical.ingsw.justeat.db.dao.MenuDao;
 import it.unical.ingsw.justeat.db.dao.PietanzaDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.dao.TitolareDao;
+import it.unical.ingsw.justeat.db.dao.UtenteDao;
 import it.unical.ingsw.justeat.db.factory.DAOFactory;
 import it.unical.ingsw.justeat.db.factory.DataSource;
 import it.unical.ingsw.justeat.db.factory.UtilDao;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
+import it.unical.ingsw.justeat.db.model.Menu;
 import it.unical.ingsw.justeat.db.model.Pietanza;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 import it.unical.ingsw.justeat.db.model.Titolare;
+import it.unical.ingsw.justeat.db.model.Utente;
 
 public class EsempioDataBase {
 
@@ -65,7 +69,7 @@ public class EsempioDataBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		DataSource dataSource = new DataSource("jdbc:postgresql://localhost:5432/justEat", "mary", "postgres");
+		DataSource dataSource = new DataSource("jdbc:postgresql://localhost:5432/justeat", "postgres", "sette77");
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
 //		util.dropDatabase();
@@ -135,10 +139,61 @@ public class EsempioDataBase {
 //		c.setTipo_Circuito_Carta("paypal");
 //		t.addCarta(c);
 //		t.setCarteDiCredito(t.getCarteDiCredito());
-		TitolareDao titolareDao = factory.getTitolareDAO();
+//		TitolareDao titolareDao = factory.getTitolareDAO();
 	//	titolareDao.save(t);
-		System.out.println(titolareDao.findByPrimaryKey("mcrmri96b69f112j").toString());
+//	System.out.println(titolareDao.findByPrimaryKey("mcrmri96b69f112j").toString());
 		// fine test
+		// ******************************************************************************************************	
+		//test utente 
+//		Utente utente = new Utente();
+//		utente.setNome_Utente("maria");
+//		utente.setCognome_Utente("macrì");
+//		utente.setIndirizzo_Utente("via g.cesare");
+//		utente.setPassword("aSz1*x35x");
+//		CartaDiCreditoDao c=factory.getCartaDiCreditoDAO();
+//		CartaDiCredito c1=c.findByPrimaryKey("1234");
+//		 utente.setCarta_Credito_Usata(c1);
+//		 utente.setNumero_telefono_utente(345);
+//		 utente.setEmail_Utente("mariamacri@gmail.com");
+		 //UtenteDao utenteDao=factory.getUtenteDAO();
+		// utenteDao.save(utente);
+		 //System.out.println(utenteDao.findByPrimaryKey("mariamacri@gmail.com"));
+		 
+		// ******************************************************************************************************	
+//test ristorante 
+//		Ristorante ristorante = new Ristorante();
+//		ristorante.setNome_Ristorante("L'oasi del Gabbiano");
+//		ristorante.setIndirizzo_Ristorante("via degli uccelli n.100");
+//		ristorante.setIndirizzo_Legale("via C.Colombo, Rende");
+//		ristorante.setCoordinate_Bancarie_Ristorante("0123");
+//		ristorante.setPartita_Iva("0123456789");
+//		TitolareDao titolareDao=factory.getTitolareDAO();
+//		Titolare titolare=titolareDao.findByPrimaryKey("mcrmri96b69f112j");
+//		ristorante.setTitolare(titolare);
+//		UtenteDao utenteDao=factory.getUtenteDAO();
+//		Utente utente=utenteDao.findByPrimaryKey("mariamacri@gmail.com");
+//		ristorante.setUtente_Proprietario(utente);
+//		ristorante.setDescrizione_Ristorante("si mangia benissimo sia il pesce che la carne");
+		
+//		RistoranteDao ristoranteDao= factory.getRistoranteDAO();
+	//	ristoranteDao.save(ristorante);
+	//	 System.out.println(ristoranteDao.findByPrimaryKey("0123456789"));	
+	//********************************************************************************************	
+		//test menu ok
+//		MenuDao menuDao =factory.getMenuDAO();
+//		Menu menu = new Menu();
+//		menu.setDescrizionemenu("menu di pizze");
+//		menu.setIdmenu(1);
+//		menuDao.save(menu);
+//		System.out.println(menuDao.findByPrimaryKey(1).toString());
+		
+//		pietanza.setNome("margherita");
+//		pietanza.setPrezzo(12.00);
+	//fine test	
+		
+		//***************************************************************************
+		
+		
 	}
 
 }

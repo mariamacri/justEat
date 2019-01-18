@@ -139,12 +139,54 @@ public class TitolareDaoJDBC implements TitolareDao {
 
 	@Override
 	public void update(Titolare titolare) {
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String update = "update  titolare SET nome_titolare=?, cognome_titolare=?, indirizzo_titolare=?, carta_di_credito_intestata=?, numero_telefono_titolare=?, data_nascita_titolare=?  WHERE cf_titolare=?";
+			PreparedStatement statement = connection.prepareStatement(update);
+			statement.setString(1, titolare.getCf_Titolare());
+			statement.setString(2, titolare.getNome_Titolare());
+			statement.setString(3, titolare.getCognome_Titolare());
+			statement.setString(4, titolare.getIndirizzo_Titolare());
+			for (CartaDiCredito c : titolare.getCarteDiCredito()) {
 
+				statement.setString(5, c.getNumero_Carta());
+			}
+			statement.setInt(6, titolare.getNumero_Telefono_Titolare());
+			long secs = titolare.getData_Nascita_Titolare().getTime();
+			statement.setDate(7, new java.sql.Date(secs));
+
+			statement.executeUpdate();
+			this.updateCarte(titolare, connection);
+			
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
 	}
 
 	@Override
 	public void delete(Titolare titolare) {
-
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String delete = "delete FROM titolare WHERE cf_titolare = ? ";
+			PreparedStatement statement = connection.prepareStatement(delete);
+			statement.setString(1, titolare.getCf_Titolare());
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
 	}
 
 }

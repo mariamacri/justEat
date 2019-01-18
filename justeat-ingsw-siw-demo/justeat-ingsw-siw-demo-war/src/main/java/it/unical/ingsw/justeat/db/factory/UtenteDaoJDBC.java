@@ -67,7 +67,7 @@ public class UtenteDaoJDBC implements UtenteDao {
 				utente.setIndirizzo_Utente(result.getString("indirizzo_utente"));
 				utente.setPassword(result.getString("password"));
 				CartaDiCredito c = new CartaDiCredito();
-				c.setNumero_Carta(result.getString("carta_credito_usata"));
+				c.setNumero_Carta(result.getString("carta_di_credito_usata"));
 				utente.setCarta_Credito_Usata(c);
 				utente.setNumero_telefono_utente(result.getInt("numero_telefono_utente"));
 //				
@@ -102,7 +102,7 @@ public class UtenteDaoJDBC implements UtenteDao {
 				utente.setIndirizzo_Utente(result.getString("indirizzo_utente"));
 				utente.setPassword(result.getString("password"));
 				CartaDiCredito c = new CartaDiCredito();
-				c.setNumero_Carta(result.getString("carta_credito_usata"));
+				c.setNumero_Carta(result.getString("carta_di_credito_usata"));
 				utente.setCarta_Credito_Usata(c);
 				utente.setNumero_telefono_utente(result.getInt("numero_telefono_utente"));
 

@@ -70,12 +70,44 @@ public class CategoriaDaoJDBC implements CategoriaDao {
 
 	@Override
 	public void update(Categoria categoria) {
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String update = "update  categoria SET  nome_categoria=? WHERE id_categoria=?";
+			PreparedStatement statement = connection.prepareStatement(update);
+		
+			statement.setString(1, categoria.getNome_Categoria());
+			statement.setInt(2, categoria.getId_Categoria());
+
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
 
 	}
 
 	@Override
 	public void delete(Categoria categoria) {
-
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String delete = "delete FROM categoria WHERE id_categoria = ? ";
+			PreparedStatement statement = connection.prepareStatement(delete);
+			statement.setInt(2, categoria.getId_Categoria());
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
 	}
 
 }

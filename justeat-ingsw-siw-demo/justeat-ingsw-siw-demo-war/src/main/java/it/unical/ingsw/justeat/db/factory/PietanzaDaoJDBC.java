@@ -86,12 +86,44 @@ public class PietanzaDaoJDBC implements PietanzaDao {
 
 	@Override
 	public void update(Pietanza pietanza) {
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String update = "update  pietanza SET  descrizione_pietanza= ?, prezzo_pietanza=? WHERE nome_pietanza=?";
+			PreparedStatement statement = connection.prepareStatement(update);
+			statement.setString(1, pietanza.getNome());
+			statement.setString(2, pietanza.getDescrizione());
+			statement.setDouble(3, pietanza.getPrezzo());
+			
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
 
 	}
 
 	@Override
 	public void delete(Pietanza pietanza) {
-
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String delete = "delete FROM pietanza WHERE nome_pietanza = ? ";
+			PreparedStatement statement = connection.prepareStatement(delete);
+			statement.setString(1, pietanza.getNome());
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
 	}
 
 }
