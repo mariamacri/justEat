@@ -6,7 +6,7 @@
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list> --> 
   
-  <servlet>
+   <servlet>
   	<servlet-name>DammiRistoranti</servlet-name>
   	<!--nome del pacchetto che contiene la servlet-->
   	<servlet-class>it.unical.ingsw.justeat.db.servlet.CercaRistorante</servlet-class>
