@@ -1,5 +1,7 @@
 package it.unical.ingsw.justeat.db.dao;
 
+import java.util.List;
+
 import it.unical.ingsw.justeat.db.model.Ristorante;
 
 public interface RistoranteDao {
@@ -8,7 +10,9 @@ public interface RistoranteDao {
 
 	public Ristorante findByPrimaryKey(String partita_iva); // Retrieve
 
-	// public List<Ristorante> findAll();
+	public List<Ristorante> findAll();
+	
+	public List<Ristorante> findByIndirizzo(String indirizzo);
 
 	public void update(Ristorante ristorante); // Update
 

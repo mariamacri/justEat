@@ -99,6 +99,34 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 		
 	}
 	
+	//query che trova TUTTI i ristoranti
+	public List<Ristorante> findAll(){
+		Connection connection = this.dataSource.getConnection();
+		List<Ristorante> ristoranti  = new LinkedList<>();
+		try {
+			Ristorante ristorante;
+			PreparedStatement statement;
+			String query = "Select * from ristorante";
+			statement = connection.prepareStatement(query);
+			ResultSet result = statement.executeQuery();
+			while (result.next()) {
+				ristorante = new Ristorante();
+				ristorante.setCoordinate_Bancarie_Ristorante(coordinate_Bancarie_Ristorante);
+				ristorante.setDescrizione_Ristorante(descrizione_Ristorante);
+				ristorante.setIndirizzo_Legale(indirizzo_Legale);
+				ristorante.setIndirizzo_Ristorante(indirizzo_Ristorante);
+				ristorante.setNome_Ristorante(nome_Ristorante);
+				ristorante.setPartita_Iva(partita_Iva);
+				
+				
+			}
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
 	
 	@Override
 	public Ristorante findByPrimaryKey(String partita_iva) {
