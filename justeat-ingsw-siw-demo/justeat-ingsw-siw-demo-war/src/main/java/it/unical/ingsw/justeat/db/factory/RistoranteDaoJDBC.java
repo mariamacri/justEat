@@ -106,25 +106,37 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 		try {
 			Ristorante ristorante;
 			PreparedStatement statement;
-			String query = "Select * from ristorante";
+			String query = "select * from ristorante";
 			statement = connection.prepareStatement(query);
 			ResultSet result = statement.executeQuery();
 			while (result.next()) {
 				ristorante = new Ristorante();
-				ristorante.setCoordinate_Bancarie_Ristorante(coordinate_Bancarie_Ristorante);
-				ristorante.setDescrizione_Ristorante(descrizione_Ristorante);
-				ristorante.setIndirizzo_Legale(indirizzo_Legale);
-				ristorante.setIndirizzo_Ristorante(indirizzo_Ristorante);
-				ristorante.setNome_Ristorante(nome_Ristorante);
-				ristorante.setPartita_Iva(partita_Iva);
-				
+				ristorante.setNome_Ristorante(result.getString("nome_ristorante"));
+				ristorante.setIndirizzo_Ristorante(result.getString("indirizzo_ristorante"));
+				ristorante.setIndirizzo_Legale(result.getString("indirizzo_legale"));
+				ristorante.setCoordinate_Bancarie_Ristorante(result.getString("coordinate_bancarie_ristorante"));				
+				Titolare titolare=new Titolare();
+				titolare.setCf_Titolare(result.getString("codice_fiscale_titolare"));
+				ristorante.setTitolare(titolare);	
+				Utente utente=new Utente();
+				utente.setEmail_Utente(result.getString("email_utenteregistrato"));
+				ristorante.setUtente_Proprietario(utente);
+				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
+				ristoranti.add(ristorante);
 				
 			}
 			
 			
-		} catch (Exception e) {
-			// TODO: handle exception
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
 		}
+		return ristoranti;
 	}
 	
 	

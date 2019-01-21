@@ -25,9 +25,13 @@ public class CercaRistorante extends HttpServlet{
 		List<Ristorante> ristor = risDao.findByIndirizzo(indirizzoCercato);
 
 		req.setAttribute("ristoranti", ristor);
+		//nelle parentesi si deve mettere il nome della js invocata per esempio 
+//		RequestDispatcher rd = req.getRequestDispatcher
+//				("gestioneStudenti/studenti.jsp");
 		
-		RequestDispatcher rd = req.getRequestDispatcher();
-		rd.forward(req, resp);
+		//ciao ricky
+//		RequestDispatcher rd = req.getRequestDispatcher();
+//		rd.forward(req, resp);
 
 
 	}
