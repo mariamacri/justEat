@@ -1,79 +1,36 @@
 package it.unical.ingsw.justeat.db.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 
 public class Ristorante {
-	
+
 	private String nome_Ristorante;
 	private String indirizzo_Ristorante;
 	private String indirizzo_Legale;
 	private String partita_Iva;
 	private String coordinate_Bancarie_Ristorante;
-	private Titolare titolare; 
+	private Titolare titolare;
 	private String descrizione_Ristorante;
 	// utente che crea il ristorante
 	private Utente utente_Proprietario;
-	
-	
-	public String getNome_Ristorante() {
-		return nome_Ristorante;
-	}
-	public void setNome_Ristorante(String nome_Ristorante) {
-		this.nome_Ristorante = nome_Ristorante;
-	}
-	public String getIndirizzo_Ristorante() {
-		return indirizzo_Ristorante;
-	}
-	public void setIndirizzo_Ristorante(String indirizzo_Ristorante) {
-		this.indirizzo_Ristorante = indirizzo_Ristorante;
-	}
-	public String getIndirizzo_Legale() {
-		return indirizzo_Legale;
-	}
-	public void setIndirizzo_Legale(String indirizzo_Legale) {
-		this.indirizzo_Legale = indirizzo_Legale;
-	}
-	public String getPartita_Iva() {
-		return partita_Iva;
-	}
-	public void setPartita_Iva(String partita_Iva) {
-		this.partita_Iva = partita_Iva;
-	}
-	public String getCoordinate_Bancarie_Ristorante() {
-		return coordinate_Bancarie_Ristorante;
-	}
-	public void setCoordinate_Bancarie_Ristorante(String coordinate_Bancarie_Ristorante) {
-		this.coordinate_Bancarie_Ristorante = coordinate_Bancarie_Ristorante;
-	}
-	public Titolare getTitolare() {
-		return titolare;
-	}
-	public void setTitolare(Titolare titolare) {
-		this.titolare = titolare;
-	}
-	public String getDescrizione_Ristorante() {
-		return descrizione_Ristorante;
-	}
-	public void setDescrizione_Ristorante(String descrizione_Ristorante) {
-		this.descrizione_Ristorante = descrizione_Ristorante;
-	}
-	public Utente getUtente_Proprietario() {
-		return utente_Proprietario;
-	}
-	public void setUtente_Proprietario(Utente utente_Proprietario) {
-		this.utente_Proprietario = utente_Proprietario;
-	}
+	private Set<Categoria> categorie;
+
 	@Override
 	public String toString() {
 		return "Ristorante [nome_Ristorante=" + nome_Ristorante + ", indirizzo_Ristorante=" + indirizzo_Ristorante
 				+ ", indirizzo_Legale=" + indirizzo_Legale + ", partita_Iva=" + partita_Iva
-				+ ", coordinate_Bancarie_Ristorante=" + coordinate_Bancarie_Ristorante + ", titolare=" + titolare.getCf_Titolare()
-				+ ", descrizione_Ristorante=" + descrizione_Ristorante + ", utente_Proprietario=" + utente_Proprietario.getEmail_Utente()
-				+ "]";
+				+ ", coordinate_Bancarie_Ristorante=" + coordinate_Bancarie_Ristorante + ", titolare=" + titolare
+				+ ", descrizione_Ristorante=" + descrizione_Ristorante + ", utente_Proprietario=" + utente_Proprietario
+				+ ", categoria=" + categorie.toString() + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((categorie == null) ? 0 : categorie.hashCode());
 		result = prime * result
 				+ ((coordinate_Bancarie_Ristorante == null) ? 0 : coordinate_Bancarie_Ristorante.hashCode());
 		result = prime * result + ((descrizione_Ristorante == null) ? 0 : descrizione_Ristorante.hashCode());
@@ -85,6 +42,7 @@ public class Ristorante {
 		result = prime * result + ((utente_Proprietario == null) ? 0 : utente_Proprietario.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -94,6 +52,11 @@ public class Ristorante {
 		if (getClass() != obj.getClass())
 			return false;
 		Ristorante other = (Ristorante) obj;
+		if (categorie == null) {
+			if (other.categorie != null)
+				return false;
+		} else if (!categorie.equals(other.categorie))
+			return false;
 		if (coordinate_Bancarie_Ristorante == null) {
 			if (other.coordinate_Bancarie_Ristorante != null)
 				return false;
@@ -136,7 +99,84 @@ public class Ristorante {
 			return false;
 		return true;
 	}
-	
-	
-	
+
+	public void addCategoria(Categoria categoria) {
+		if (categorie == null) {
+			categorie = new HashSet<Categoria>();
+		}
+		categorie.add(categoria);
+	}
+
+	public Set<Categoria> getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(Set<Categoria> categoria) {
+		this.categorie = categoria;
+	}
+
+	public String getNome_Ristorante() {
+		return nome_Ristorante;
+	}
+
+	public void setNome_Ristorante(String nome_Ristorante) {
+		this.nome_Ristorante = nome_Ristorante;
+	}
+
+	public String getIndirizzo_Ristorante() {
+		return indirizzo_Ristorante;
+	}
+
+	public void setIndirizzo_Ristorante(String indirizzo_Ristorante) {
+		this.indirizzo_Ristorante = indirizzo_Ristorante;
+	}
+
+	public String getIndirizzo_Legale() {
+		return indirizzo_Legale;
+	}
+
+	public void setIndirizzo_Legale(String indirizzo_Legale) {
+		this.indirizzo_Legale = indirizzo_Legale;
+	}
+
+	public String getPartita_Iva() {
+		return partita_Iva;
+	}
+
+	public void setPartita_Iva(String partita_Iva) {
+		this.partita_Iva = partita_Iva;
+	}
+
+	public String getCoordinate_Bancarie_Ristorante() {
+		return coordinate_Bancarie_Ristorante;
+	}
+
+	public void setCoordinate_Bancarie_Ristorante(String coordinate_Bancarie_Ristorante) {
+		this.coordinate_Bancarie_Ristorante = coordinate_Bancarie_Ristorante;
+	}
+
+	public Titolare getTitolare() {
+		return titolare;
+	}
+
+	public void setTitolare(Titolare titolare) {
+		this.titolare = titolare;
+	}
+
+	public String getDescrizione_Ristorante() {
+		return descrizione_Ristorante;
+	}
+
+	public void setDescrizione_Ristorante(String descrizione_Ristorante) {
+		this.descrizione_Ristorante = descrizione_Ristorante;
+	}
+
+	public Utente getUtente_Proprietario() {
+		return utente_Proprietario;
+	}
+
+	public void setUtente_Proprietario(Utente utente_Proprietario) {
+		this.utente_Proprietario = utente_Proprietario;
+	}
+
 }

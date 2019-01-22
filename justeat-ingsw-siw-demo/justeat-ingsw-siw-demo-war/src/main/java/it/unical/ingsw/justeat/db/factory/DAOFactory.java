@@ -3,6 +3,7 @@ package it.unical.ingsw.justeat.db.factory;
 import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.CategoriaDao;
 import it.unical.ingsw.justeat.db.dao.MenuDao;
+import it.unical.ingsw.justeat.db.dao.OrdineDao;
 import it.unical.ingsw.justeat.db.dao.PagamentoDao;
 import it.unical.ingsw.justeat.db.dao.PietanzaDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
@@ -61,6 +62,7 @@ public abstract class DAOFactory {
 	public abstract CartaDiCreditoDao getCartaDiCreditoDAO();
 
 	public abstract CategoriaDao getCategoriaDAO();
+	public abstract OrdineDao getOrdineDAO();
 
 	public abstract TitolareDao getTitolareDAO();
 	public abstract UtenteDao getUtenteDAO();

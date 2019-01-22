@@ -7,6 +7,7 @@ import java.util.TimeZone;
 import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.CategoriaDao;
 import it.unical.ingsw.justeat.db.dao.MenuDao;
+import it.unical.ingsw.justeat.db.dao.OrdineDao;
 import it.unical.ingsw.justeat.db.dao.PietanzaDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.dao.TitolareDao;
@@ -17,6 +18,7 @@ import it.unical.ingsw.justeat.db.factory.UtilDao;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
 import it.unical.ingsw.justeat.db.model.Menu;
+import it.unical.ingsw.justeat.db.model.Ordine;
 import it.unical.ingsw.justeat.db.model.Pietanza;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 import it.unical.ingsw.justeat.db.model.Titolare;
@@ -72,6 +74,13 @@ public class EsempioDataBase {
 		DataSource dataSource = new DataSource("jdbc:postgresql://localhost:5432/justeat", "postgres", "sette77");
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
+		//test ordine
+		OrdineDao ordineDao= factory.getOrdineDAO();
+		Ordine ordine=new Ordine();
+		ordine.setId_ordine(1);
+		System.out.println(ordineDao.totale_ordine(ordine));
+		
+		
 //		util.dropDatabase();
 //		util.createDatabase();
 

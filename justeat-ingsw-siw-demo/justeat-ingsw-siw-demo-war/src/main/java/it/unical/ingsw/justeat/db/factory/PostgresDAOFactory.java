@@ -3,6 +3,7 @@ package it.unical.ingsw.justeat.db.factory;
 import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.CategoriaDao;
 import it.unical.ingsw.justeat.db.dao.MenuDao;
+import it.unical.ingsw.justeat.db.dao.OrdineDao;
 import it.unical.ingsw.justeat.db.dao.PagamentoDao;
 import it.unical.ingsw.justeat.db.dao.PietanzaDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
@@ -80,6 +81,12 @@ public class PostgresDAOFactory extends DAOFactory {
 	// ONLY FOR TEST
 	public DataSource getDataSource() {
 		return dataSource;
+	}
+
+	@Override
+	public OrdineDao getOrdineDAO() {
+		
+		return new OrdineDaoJDBC(dataSource);
 	}
 
 }
