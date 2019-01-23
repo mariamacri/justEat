@@ -1,5 +1,5 @@
 package it.unical.ingsw.justeat.db.model;
-
+//modificato
 public class Pagamento {
 	
 	private double sconto; 
@@ -32,7 +32,7 @@ public class Pagamento {
 	}
 	@Override
 	public String toString() {
-		return "Pagamento [sconto=" + sconto + ", utente=" + utente.getCarta_Credito_Usata().getNumero_Carta() + ", id_pagamento=" + id_pagamento
+		return "Pagamento [sconto=" + sconto + ", utente=" + utente.toString() + ", id_pagamento=" + id_pagamento
 				+ ", importo_totale_pagamento=" + importo_totale_pagamento + "]";
 	}
 	@Override

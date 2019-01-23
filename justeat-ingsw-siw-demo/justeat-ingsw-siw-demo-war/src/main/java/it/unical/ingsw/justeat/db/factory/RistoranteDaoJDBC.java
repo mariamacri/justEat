@@ -16,7 +16,7 @@ import it.unical.ingsw.justeat.db.model.Titolare;
 import it.unical.ingsw.justeat.db.model.Utente;
 
 import it.unical.ingsw.justeat.db.model.Ristorante;
-
+//modificato
 public class RistoranteDaoJDBC implements RistoranteDao {
 
 	private DataSource dataSource;

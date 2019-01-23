@@ -11,7 +11,7 @@ import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
 import it.unical.ingsw.justeat.db.model.Pagamento;
 import it.unical.ingsw.justeat.db.model.Utente;
-
+//modificato
 public class PagamentoDaoJDBC implements PagamentoDao{
 	private DataSource dataSource; 
 	
@@ -50,17 +50,22 @@ public class PagamentoDaoJDBC implements PagamentoDao{
 			PreparedStatement statement;
 			String query = "select * from pagamento where id_pagamento= ?";
 			statement = connection.prepareStatement(query);
-			statement.setInt(3, id_pagamento);
+			statement.setInt(1, id_pagamento);
 			ResultSet result = statement.executeQuery();
 			if (result.next()) {
 
 				pagamento = new Pagamento();
+				pagamento.setId_pagamento(result.getInt("id_pagamento"));
 				pagamento.setImporto_totale_pagamento(result.getDouble("importo_totale_pagamento"));
 				pagamento.setSconto(result.getDouble("sconto"));
-				CartaDiCredito carta =new CartaDiCredito();
-				carta.setNumero_Carta(result.getString("numero_cartadicredito_utente"));
-				Utente utente =new Utente(); 
-				utente.setCarta_Credito_Usata(carta);
+				CartaDiCreditoDaoJDBC cartadao =new CartaDiCreditoDaoJDBC(dataSource);
+				CartaDiCredito carta=new CartaDiCredito();
+				carta =cartadao.findByPrimaryKey(result.getString("numero_cartadicredito_utente"));
+						//setNumero_Carta();
+				
+				UtenteDaoJDBC utenteDao=new UtenteDaoJDBC(dataSource);
+				Utente utente=new Utente();
+				utente=utenteDao.findByCartaDiCredito(carta.getNumero_Carta());
 				pagamento.setUtente(utente);
 
 			}

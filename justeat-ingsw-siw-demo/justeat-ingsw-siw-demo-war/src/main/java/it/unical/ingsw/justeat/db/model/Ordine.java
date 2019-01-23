@@ -2,11 +2,11 @@ package it.unical.ingsw.justeat.db.model;
 
 public class Ordine {
 	
-	int id_ordine;
-	Pagamento pagamento;
-	double prezzo_totale_ordine;
-	double commissioni_ordine;
-	double spesa_minima;
+	private int id_ordine;
+	private Pagamento pagamento;
+	private double prezzo_totale_ordine;
+	private double commissioni_ordine;
+	private double spesa_minima;
 	public int getId_ordine() {
 		return id_ordine;
 	}

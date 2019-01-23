@@ -27,10 +27,10 @@ public class OrdineDaoJDBC implements OrdineDao{
 	@Override
 	public void save(Ordine ordine) {
 		Connection connection = this.dataSource.getConnection();
-		
+	//modificato	
 		try {
 
-			String insert = "insert into ristorante(id_ordine, id_pagamento_ordine, prezzo_totale_ordine, commissioni_ordine, spesa_minima) values (?,?,?,?,?)";
+			String insert = "insert into ordine(id_ordine, id_pagamento_ordine, prezzo_totale_ordine, commissioni_ordine, spesa_minima) values (?,?,?,?,?)";
 			PreparedStatement statement = connection.prepareStatement(insert);
 			
 			statement.setInt(1, ordine.getId_ordine());
@@ -66,8 +66,6 @@ public class OrdineDaoJDBC implements OrdineDao{
 
 			if (result.next()) {
 				ordine=new Ordine();
-
-				ordine.setId_ordine(result.getInt("id_ordine"));
 				Pagamento pagamento=new Pagamento();
 				pagamento.setId_pagamento(result.getInt("id_pagamento_ordine"));
 				ordine.setPagamento(pagamento);
@@ -84,7 +82,6 @@ public class OrdineDaoJDBC implements OrdineDao{
 				throw new PersistenceException(e.getMessage());
 			}
 		}
-		// restituiamo il ristorante che abbiamo creato con il risultato della query
 
 		return ordine;
 	}
@@ -96,7 +93,7 @@ public class OrdineDaoJDBC implements OrdineDao{
 	public void update(Ordine ordine) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			String update = "update ristorante SET  id_ordine= ?, id_pagamento_ordine = ?,  prezzo_totale_ordine=?, commissioni_ordine=? , spesa_minima =? ";
+			String update = "update ordine SET  id_pagamento_ordine = ?,  prezzo_totale_ordine=?, commissioni_ordine=? , spesa_minima =? where id_ordine=?";
 			PreparedStatement statement = connection.prepareStatement(update);
 			statement.setInt(1, ordine.getId_ordine());
 			statement.setInt(2, ordine.getPagamento().getId_pagamento());
