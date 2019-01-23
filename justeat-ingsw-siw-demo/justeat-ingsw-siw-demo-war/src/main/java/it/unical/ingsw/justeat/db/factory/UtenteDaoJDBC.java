@@ -70,7 +70,7 @@ public class UtenteDaoJDBC implements UtenteDao {
 				c.setNumero_Carta(result.getString("carta_di_credito_usata"));
 				utente.setCarta_Credito_Usata(c);
 				utente.setNumero_telefono_utente(result.getInt("numero_telefono_utente"));
-//				
+			
 			}
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -83,7 +83,8 @@ public class UtenteDaoJDBC implements UtenteDao {
 		}
 		return utente;
 	}
-
+	
+	
 	@Override
 	public List<Utente> findAll() {
 		Connection connection = this.dataSource.getConnection();
@@ -189,6 +190,41 @@ public class UtenteDaoJDBC implements UtenteDao {
 		}
 	}
 
-	
+
+	public Utente findByCartaDiCredito(String numero_carta) {
+		Connection connection = this.dataSource.getConnection();
+		Utente utente = null;
+		try {
+			PreparedStatement statement;
+			String query = "select * from utente where carta_di_credito_usata=? ";
+			statement = connection.prepareStatement(query);
+			statement.setString(1, numero_carta);
+
+			ResultSet result = statement.executeQuery();
+			if (result.next()) {
+				utente = new Utente();
+				utente.setEmail_Utente(result.getString("email_utente"));
+				utente.setNome_Utente(result.getString("nome_utente"));
+				utente.setCognome_Utente(result.getString("cognome_utente"));
+
+				utente.setIndirizzo_Utente(result.getString("indirizzo_utente"));
+				utente.setPassword(result.getString("password"));
+				CartaDiCredito c = new CartaDiCredito();
+				c.setNumero_Carta(result.getString("carta_di_credito_usata"));
+				utente.setCarta_Credito_Usata(c);
+				utente.setNumero_telefono_utente(result.getInt("numero_telefono_utente"));
+//				
+			}
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		return utente;
+	}
 
 }

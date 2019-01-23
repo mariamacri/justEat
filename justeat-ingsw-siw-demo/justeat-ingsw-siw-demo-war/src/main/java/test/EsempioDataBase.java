@@ -8,6 +8,7 @@ import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.CategoriaDao;
 import it.unical.ingsw.justeat.db.dao.MenuDao;
 import it.unical.ingsw.justeat.db.dao.OrdineDao;
+import it.unical.ingsw.justeat.db.dao.PagamentoDao;
 import it.unical.ingsw.justeat.db.dao.PietanzaDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.dao.TitolareDao;
@@ -19,6 +20,7 @@ import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
 import it.unical.ingsw.justeat.db.model.Menu;
 import it.unical.ingsw.justeat.db.model.Ordine;
+import it.unical.ingsw.justeat.db.model.Pagamento;
 import it.unical.ingsw.justeat.db.model.Pietanza;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 import it.unical.ingsw.justeat.db.model.Titolare;
@@ -71,14 +73,34 @@ public class EsempioDataBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		DataSource dataSource = new DataSource("jdbc:postgresql://localhost:5432/justeat", "postgres", "sette77");
+//		DataSource dataSource = new DataSource("jdbc:postgresql://localhost:5432/justeat", "postgres", "sette77");
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
+		//test pagamento ok
+		PagamentoDao p=factory.getPagamentoDAO();
+//		Pagamento pagamento=new Pagamento();
+//		pagamento.setId_pagamento(9);
+//		pagamento.setSconto(0.75);
+//		UtenteDao utente =factory.getUtenteDAO();
+//		
+//		pagamento.setUtente(utente.findByPrimaryKey("mariamacri@gmail.com"));
+//		pagamento.setImporto_totale_pagamento(10.00);
+//		p.save(pagamento);
+		System.out.println(p.findByPrimaryKey(9));
+		
+//************************************************
+		//fine test pagamento
+		
 		//test ordine
 		OrdineDao ordineDao= factory.getOrdineDAO();
-		Ordine ordine=new Ordine();
-		ordine.setId_ordine(1);
-		System.out.println(ordineDao.totale_ordine(ordine));
+//		Ordine ordine=new Ordine();
+//		ordine.setId_ordine(1);
+//		ordine.setPagamento(p.findByPrimaryKey(9));
+//		ordine.setPrezzo_totale_ordine(20.00);
+//		ordine.setCommissioni_ordine(3.00);
+//		ordine.setSpesa_minima(5.00);
+//		ordineDao.save(ordine);
+		System.out.println(ordineDao.findByPrimaryKey(1));
 		
 		
 //		util.dropDatabase();
