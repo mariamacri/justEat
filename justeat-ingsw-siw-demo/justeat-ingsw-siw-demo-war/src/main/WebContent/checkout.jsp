@@ -22,22 +22,22 @@
         <!--header starts-->
         <header id="header" class="header-scroll top-header headrom">
             <!-- .navbar -->
-            <nav class="navbar navbar-dark">
+          <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
+                    <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="img/food-picky-logo.png" alt=""> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item"> <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Food</a>
-                                <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.html">Food results</a> <a class="dropdown-item" href="map_results.html">Map results</a></div>
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cibo</a>
+                                <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.html">Risultati Cibo</a> <a class="dropdown-item" href="map_results.html">Risultati Mappa</a></div>
                             </li>
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Restaurants</a>
-                                <div class="dropdown-menu"> <a class="dropdown-item" href="restaurants.html">Search results</a> <a class="dropdown-item" href="profile.html">Profile page</a></div>
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ristoranti</a>
+                                <div class="dropdown-menu"> <a class="dropdown-item" href="restaurants.html">Search results</a> <a class="dropdown-item" href="restaurantProfile.html">Profilo Ristoranti</a></div>
                             </li>
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                <div class="dropdown-menu"> <a class="dropdown-item" href="pricing.html">Pricing</a> <a class="dropdown-item" href="contact.html">Contact</a> <a class="dropdown-item" href="submition.html">Submit restaurant</a> <a class="dropdown-item" href="registration.html">Registration</a>
-                                    <div class="dropdown-divider"></div> <a class="dropdown-item" href="checkout.html">Checkout</a> </div>
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pagine</a>
+                                <div class="dropdown-menu"> <a class="dropdown-item" href="pricing.html">Pricing</a> <a class="dropdown-item" href="contact.html">Contact</a> <a class="dropdown-item" href="restaurantRegistration.html">Inserisci Nuovo Ristorante</a> <a class="dropdown-item" href="registration.html">Registrazione</a>
+                              <div class="dropdown-divider"></div> <a class="dropdown-item" href="checkout.html">Checkout</a> </div>
                             </li>
                         </ul>
                     </div>
@@ -49,10 +49,10 @@
             <div class="top-links">
                 <div class="container">
                     <ul class="row links">
-                        <li class="col-xs-12 col-sm-3 link-item active"><span>1</span><a href="index.html">Choose Your Location</a></li>
-                        <li class="col-xs-12 col-sm-3 link-item active"><span>2</span><a href="restaurants.html">Choose Restaurant</a></li>
-                        <li class="col-xs-12 col-sm-3 link-item active"><span>3</span><a href="profile.html">Pick Your favorite food</a></li>
-                        <li class="col-xs-12 col-sm-3 link-item"><span>4</span><a href="checkout.html">Order and Pay online</a></li>
+                        <li class="col-xs-12 col-sm-3 link-item active"><span>1</span><a href="index.html">Inserisci il tuo Indirizzo</a></li>
+                        <li class="col-xs-12 col-sm-3 link-item active"><span>2</span><a href="restaurants.html">Scegli il Ristorante</a></li>
+                        <li class="col-xs-12 col-sm-3 link-item active"><span>3</span><a href="profile.html">Scegli il tuo cibo preferito</a></li>
+                        <li class="col-xs-12 col-sm-3 link-item"><span>4</span><a href="checkout.html">Ordina e paga Online</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                     <!-- /widget heading -->
                     <div class="widget-heading">
                         <h3 class="widget-title text-dark">
-                                        Cart summary
+                                      Riassunto del carrello
                                     </h3>
                         <div class="clearfix"></div>
                     </div>
@@ -72,73 +72,73 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>First Name*</label>
+                                                <label>Nome*</label>
                                                 <input type="text" class="form-control" placeholder="John"> </div>
                                             <!--/form-group-->
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Last Name*</label>
-                                                <input type="text" class="form-control" placeholder="Doe"> </div>
+                                                <label>Cognome*</label>
+                                                <input type="text" class="form-control" placeholder="Rossi"> </div>
                                             <!--/form-group-->
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Country*</label>
+                                                <label>Paese*</label>
                                                 <select class="form-control">
-                                                    <option>India</option>
-                                                    <option>USA</option>
-                                                    <option>UK</option>
-                                                    <option>Australia</option>
-                                                    <option>Japan</option>
-                                                    <option>Columbia</option>
-                                                    <option>Poland</option>
+                                                    <option>Italia</option>
+                                                    <option>Francia</option>
+                                                    <option>Spagna</option>
+                                                    <option>Germania</option>
+                                                    <option>Uk</option>
+                                                    <option>Olanda</option>
+                                                    <option>Grecia</option>
                                                 </select>
                                             </div>
                                             <!--/form-group-->
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Company Name</label>
-                                                <input type="text" class="form-control" placeholder="Lorem ipsum"> </div>
+                                                <label>Nome Attività</label>
+                                                <input type="text" class="form-control" placeholder="Dolci freschi"> </div>
                                             <!--/form-group-->
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label>Full Address*</label>
-                                                <input type="text" class="form-control" placeholder="124, Lorem Street.."> </div>
+                                                <label>Indirizzo Completo*</label>
+                                                <input type="text" class="form-control" placeholder="Via dei Mandarini"> </div>
                                             <!--/form-group-->
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>City / State*</label>
-                                                <input type="text" class="form-control" placeholder="Jaipur"> </div>
+                                                <label>Città*</label>
+                                                <input type="text" class="form-control" placeholder="Milano"> </div>
                                             <!--/form-group-->
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Zip/ Postal Code*</label>
-                                                <input type="text" class="form-control" placeholder="302012"> </div>
+                                                <label>Codice Postale*</label>
+                                                <input type="text" class="form-control" placeholder="87000"> </div>
                                             <!--/form-group-->
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Email Address*</label>
-                                                <input type="text" class="form-control" placeholder="john@doe.com"> </div>
+                                                <label>Indirizzo Email*</label>
+                                                <input type="text" class="form-control" placeholder="rossi@gmail.com"> </div>
                                             <!--/form-group-->
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>phone*</label>
-                                                <input type="text" class="form-control" placeholder="123-345-3322"> </div>
+                                                <label>Telefono*</label>
+                                                <input type="text" class="form-control" placeholder="3411112221"> </div>
                                             <!--/form-group-->
                                         </div>
                                     </div>
@@ -146,21 +146,22 @@
                                 <div class="col-sm-6">
                                     <div class="cart-totals margin-b-20">
                                         <div class="cart-totals-title">
-                                            <h4>Cart Summary</h4> </div>
+                                          <h4>Sommario Carrello</h4>
+                                        </div>
                                         <div class="cart-totals-fields">
                                             <table class="table">
                                                 <tbody>
                                                     <tr>
-                                                        <td>Cart Subtotal</td>
-                                                        <td>$29.00</td>
+                                                        <td>Subtotale</td>
+                                                        <td>€29.00</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Shipping &amp; Handling</td>
-                                                        <td>$2.00</td>
+                                                        <td>Costi di consegna</td>
+                                                        <td>€2.00</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-color"><strong>Total</strong></td>
-                                                        <td class="text-color"><strong>$31.00</strong></td>
+                                                        <td class="text-color"><strong>Totale</strong></td>
+                                                        <td class="text-color"><strong>€31.00</strong></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -171,15 +172,15 @@
                                         <ul class=" list-unstyled">
                                             <li>
                                                 <label class="custom-control custom-radio  m-b-20">
-                                                    <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Payment on delivery</span>
-                                                    <br> <span>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span> </label>
+                                                    <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Pagamento alla consegna</span>
+                                                   <!-- <br> <span>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span> </label>-->
                                             </li>
                                             <li>
                                                 <label class="custom-control custom-radio  m-b-10">
-                                                    <input name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paypal <img src="images/paypal.jpg" alt="" width="90"></span> </label>
+                                                    <input name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paypal <img src="img/paypal.jpg" alt="" width="90"></span> </label>
                                             </li>
                                         </ul>
-                                        <p class="text-xs-center"> <a href="#" class="btn btn-outline-success btn-block">Pay now</a> </p>
+                                        <p class="text-xs-center"> <a href="#" class="btn btn-outline-success btn-block">Paga Ora</a> </p>
                                     </div>
                                 </div>
                             </div>
@@ -187,82 +188,54 @@
                     </div>
                 </div>
             </div>
-            <section class="app-section">
-                <div class="app-wrap">
-                    <div class="container">
-                        <div class="row text-img-block text-xs-left">
-                            <div class="container">
-                                <div class="col-xs-12 col-sm-6  right-image text-center">
-                                    <figure> <img src="images/app.png" alt="Right Image"> </figure>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 left-text">
-                                    <h3>The Best Food Delivery App</h3>
-                                    <p>Now you can make food happen pretty much wherever you are thanks to the free easy-to-use Food Delivery &amp; Takeout App.</p>
-                                    <div class="social-btns">
-                                        <a href="#" class="app-btn apple-button clearfix">
-                                            <div class="pull-left"><i class="fa fa-apple"></i> </div>
-                                            <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">App Store</span> </div>
-                                        </a>
-                                        <a href="#" class="app-btn android-button clearfix">
-                                            <div class="pull-left"><i class="fa fa-android"></i> </div>
-                                            <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">Play store</span> </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <section class="app-section"> </section>
             <!-- start: FOOTER -->
             <footer class="footer">
                 <div class="container">
                     <!-- top footer statrs -->
                     <div class="row top-footer">
                         <div class="col-xs-12 col-sm-3 footer-logo-block color-gray">
-                            <a href="#"> <img src="images/food-picky-logo.png" alt="Footer logo"> </a> <span>Order Delivery &amp; Take-Out </span> </div>
+                            <a href="#"> <img src="img/food-picky-logo.png" alt="Footer logo"> </a> <span>Consegna dell'ordine &amp; Ritira </span> </div>
                         <div class="col-xs-12 col-sm-2 about color-gray">
-                            <h5>About Us</h5>
+                            <h5>Informazioni</h5>
                             <ul>
-                                <li><a href="#">About us</a> </li>
-                                <li><a href="#">History</a> </li>
-                                <li><a href="#">Our Team</a> </li>
-                                <li><a href="#">We are hiring</a> </li>
+                                <li><a href="#">Su di noi</a> </li>
+                                <li><a href="#">Storia</a> </li>
+                                <li><a href="#">Il nostro Team</a> </li>         
                             </ul>
                         </div>
                         <div class="col-xs-12 col-sm-2 how-it-works-links color-gray">
-                            <h5>How it Works</h5>
+                            <h5>Come Funziona</h5>
                             <ul>
-                                <li><a href="#">Enter your location</a> </li>
-                                <li><a href="#">Choose restaurant</a> </li>
-                                <li><a href="#">Choose meal</a> </li>
-                                <li><a href="#">Pay via credit card</a> </li>
-                                <li><a href="#">Wait for delivery</a> </li>
+                                <li><a href="#">Inserisci la tua posizione</a> </li>
+                                <li><a href="#">Scegli il Ristorante</a> </li>
+                                <li><a href="#">Scegli il cibo</a> </li>
+                                <li><a href="#">Paga con carta di credito</a> </li>
+                                <li><a href="#">Aspetta la consegna</a> </li>
                             </ul>
                         </div>
                         <div class="col-xs-12 col-sm-2 pages color-gray">
-                            <h5>Pages</h5>
-                            <ul>
-                                <li><a href="#">Search results page</a> </li>
-                                <li><a href="#">User Sing Up Page</a> </li>
-                                <li><a href="#">Pricing page</a> </li>
-                                <li><a href="#">Make order</a> </li>
-                                <li><a href="#">Add to cart</a> </li>
+                          <h5>Pagine</h5>
+                          <ul>
+                            <li><a href="#">Pagina dei risultarti</a> </li>
+                                <li><a href="#">Pagina di accesso utente</a> </li>
+                                <li><a href="#">Fai un ordine</a> </li>
+                                <li><a href="#">Aggiungi al carrello</a> </li>
                             </ul>
                         </div>
                         <div class="col-xs-12 col-sm-3 popular-locations color-gray">
                             <h5>Popular locations</h5>
                             <ul>
-                                <li><a href="#">Sarajevo</a> </li>
-                                <li><a href="#">Split</a> </li>
-                                <li><a href="#">Tuzla</a> </li>
-                                <li><a href="#">Sibenik</a> </li>
-                                <li><a href="#">Zagreb</a> </li>
-                                <li><a href="#">Brcko</a> </li>
-                                <li><a href="#">Beograd</a> </li>
-                                <li><a href="#">New York</a> </li>
-                                <li><a href="#">Gradacac</a> </li>
-                                <li><a href="#">Los Angeles</a> </li>
+                                <li><a href="#">Roma</a> </li>
+                                <li><a href="#">Milano</a> </li>
+                                <li><a href="#">Reggio Calabria</a> </li>
+                                <li><a href="#">Cosenza</a> </li>
+                                <li><a href="#">Torino</a> </li>
+                                <li><a href="#">Palermo</a> </li>
+                                <li><a href="#">Messina</a> </li>
+                                <li><a href="#">Napoli</a> </li>
+                                <li><a href="#">Bari</a> </li>
+                                <li><a href="#">Firenze</a> </li>
                             </ul>
                         </div>
                     </div>
@@ -272,32 +245,32 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-3 payment-options color-gray">
-                                    <h5>Payment Options</h5>
+                                    <h5>Opzioni di pagamento</h5>
                                     <ul>
                                         <li>
-                                            <a href="#"> <img src="images/paypal.png" alt="Paypal"> </a>
+                                            <a href="#"> <img src="img/paypal.png" alt="Paypal"> </a>
                                         </li>
                                         <li>
-                                            <a href="#"> <img src="images/mastercard.png" alt="Mastercard"> </a>
+                                            <a href="#"> <img src="img/mastercard.png" alt="Mastercard"> </a>
                                         </li>
                                         <li>
-                                            <a href="#"> <img src="images/maestro.png" alt="Maestro"> </a>
+                                            <a href="#"> <img src="img/maestro.png" alt="Maestro"> </a>
                                         </li>
                                         <li>
-                                            <a href="#"> <img src="images/stripe.png" alt="Stripe"> </a>
+                                            <a href="#"> <img src="img/stripe.png" alt="Stripe"> </a>
                                         </li>
                                         <li>
-                                            <a href="#"> <img src="images/bitcoin.png" alt="Bitcoin"> </a>
+                                            <a href="#"> <img src="img/bitcoin.png" alt="Bitcoin"> </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col-xs-12 col-sm-4 address color-gray">
-                                    <h5>Address</h5>
-                                    <p>Concept design of oline food order and deliveye,planned as restaurant directory</p>
-                                    <h5>Phone: <a href="tel:+080000012222">080 000012 222</a></h5> </div>
+                                    <h5>Indirizzo</h5>
+                                    <p>Via ponte Pietro Bucci Rende, CS</p>
+                                    <h5>Phone: <a href="tel:+080000012222">0984000000</a></h5> </div>
                                 <div class="col-xs-12 col-sm-5 additional-info color-gray">
-                                    <h5>Addition informations</h5>
-                                    <p>Join the thousands of other restaurants who benefit from having their menus on TakeOff</p>
+                                    <h5>Informazioni aggiuntive</h5>
+                                    <p>Unisciti alle migliaia di altri ristoranti che traggono vantaggio dall'avere i loro menu su TakeOff</p>
                                 </div>
                             </div>
                         </div>

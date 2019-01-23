@@ -24,22 +24,22 @@
         <!--header starts-->
         <header class="top-header navbar-fixed-top">
             <!-- .navbar -->
-            <nav class="navbar navbar-dark">
+          <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
                     <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="img/food-picky-logo.png" alt=""> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item"> <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Food</a>
-                                <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.html">Food results</a> <a class="dropdown-item" href="map_results.html">Map results</a></div>
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cibo</a>
+                                <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.html">Risultati Cibo</a> <a class="dropdown-item" href="map_results.html">Risultati Mappa</a></div>
                             </li>
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Restaurants</a>
-                                <div class="dropdown-menu"> <a class="dropdown-item" href="restaurants.html">Search results</a> <a class="dropdown-item" href="profile.html">Profile page</a></div>
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ristoranti</a>
+                                <div class="dropdown-menu"> <a class="dropdown-item" href="restaurants.html">Search results</a> <a class="dropdown-item" href="restaurantProfile.html">Profilo Ristoranti</a></div>
                             </li>
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                <div class="dropdown-menu"> <a class="dropdown-item" href="pricing.html">Pricing</a> <a class="dropdown-item" href="contact.html">Contact</a> <a class="dropdown-item" href="submition.html">Submit restaurant</a> <a class="dropdown-item" href="registration.html">Registration</a>
-                                    <div class="dropdown-divider"></div> <a class="dropdown-item" href="checkout.html">Checkout</a> </div>
+                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pagine</a>
+                                <div class="dropdown-menu"> <a class="dropdown-item" href="pricing.html">Pricing</a> <a class="dropdown-item" href="contact.html">Contact</a> <a class="dropdown-item" href="restaurantRegistration.html">Inserisci Nuovo Ristorante</a> <a class="dropdown-item" href="registration.html">Registrazione</a>
+                              <div class="dropdown-divider"></div> <a class="dropdown-item" href="checkout.html">Checkout</a> </div>
                             </li>
                         </ul>
                     </div>
@@ -62,7 +62,7 @@
                             <!-- /widget heading -->
                             <div class="widget-heading">
                                 <h3 class="widget-title text-dark">
-                                        Search filter
+                                        Filtro Ricerca
                                     </h3>
                                 <div class="clearfix"></div>
                             </div>
@@ -74,20 +74,20 @@
                                     </div>
                                     <div class="col-xs-12 col-md-6 col-lg-3">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="exampleInputText2" placeholder="Enter Location"> </div>
+                                            <input type="text" class="form-control" id="exampleInputText2" placeholder="Località"> </div>
                                     </div>
                                     <div class="col-xs-12 col-md-6 col-lg-3">
                                         <div class="form-group">
                                             <select class="form-control" id="exampleSelect1">
-                                                <option>Category</option>
+                                                <option>Categoria</option>
                                                 <option>Fast food</option>
                                                 <option>Pizza</option>
                                                 <option>Pasta</option>
-                                                <option>Fish meal</option>
+                                                <option>Pesce</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-xs-12 col-md-6 col-lg-3"> <a href="food_results.html" class="btn theme-btn  btn-block">Submit</a> </div>
+                                    <div class="col-xs-12 col-md-6 col-lg-3"> <a href="food_results.html" class="btn theme-btn  btn-block">Invia</a> </div>
                                 </form>
                             </div>
                         </div>
@@ -95,15 +95,12 @@
                         <div class="widget clearfix">
                             <!-- /widget heading -->
                             <div class="widget-heading">
-                                <h3 class="widget-title text-dark">
-                                        Price range
-                                    </h3>
-                                <div class="clearfix"></div>
+                              <h3 class="widget-title text-dark"> Range prezzo</h3>
+                              <div class="clearfix"></div>
                             </div>
                             <div class="widget-body">
-                                <div class="range-slider m-b-10"> <span id="ex2CurrentSliderValLabel"> Filter by price:<span id="ex2SliderVal"><strong>35</strong></span>€</span>
-                                    <br>
-                                    <input id="ex2" type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="35" /> </div>
+                                <div class="range-slider m-b-10"> Filtra per prezzo massimo:48€ <br>
+                              <input id="ex2" type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="35" /> </div>
                             </div>
                         </div>
                         <!-- end:Pricing widget -->

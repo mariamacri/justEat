@@ -1,6 +1,7 @@
 package test;
 
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
@@ -78,7 +79,12 @@ public class EsempioDataBase {
 		OrdineDao ordineDao= factory.getOrdineDAO();
 		Ordine ordine=new Ordine();
 		ordine.setId_ordine(1);
-		System.out.println(ordineDao.totale_ordine(ordine));
+		List<Pietanza> l=ordineDao.comprende(ordine);
+		for(Pietanza p: l)
+		{
+			System.out.println(p.getNome());
+		}
+		
 		
 		
 //		util.dropDatabase();
