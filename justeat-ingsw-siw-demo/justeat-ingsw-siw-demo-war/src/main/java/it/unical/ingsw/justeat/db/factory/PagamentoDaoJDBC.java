@@ -11,7 +11,7 @@ import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
 import it.unical.ingsw.justeat.db.model.Pagamento;
 import it.unical.ingsw.justeat.db.model.Utente;
-
+//modificato
 public class PagamentoDaoJDBC implements PagamentoDao{
 	private DataSource dataSource; 
 	

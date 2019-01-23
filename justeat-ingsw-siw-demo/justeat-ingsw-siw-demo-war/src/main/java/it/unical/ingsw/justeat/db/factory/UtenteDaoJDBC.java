@@ -12,7 +12,7 @@ import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Titolare;
 import it.unical.ingsw.justeat.db.model.Utente;
-
+//modificato
 public class UtenteDaoJDBC implements UtenteDao {
 
 	private DataSource dataSource;

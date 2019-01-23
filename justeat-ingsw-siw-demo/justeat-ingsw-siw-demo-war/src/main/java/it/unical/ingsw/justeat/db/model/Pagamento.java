@@ -1,5 +1,5 @@
 package it.unical.ingsw.justeat.db.model;
-
+//modificato
 public class Pagamento {
 	
 	private double sconto; 

@@ -1,5 +1,5 @@
 package it.unical.ingsw.justeat.db.model;
-
+//modificato
 import java.util.HashSet;
 import java.util.Set;
 

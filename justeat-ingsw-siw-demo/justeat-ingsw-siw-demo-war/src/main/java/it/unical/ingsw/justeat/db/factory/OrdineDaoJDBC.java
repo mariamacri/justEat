@@ -27,7 +27,7 @@ public class OrdineDaoJDBC implements OrdineDao{
 	@Override
 	public void save(Ordine ordine) {
 		Connection connection = this.dataSource.getConnection();
-		
+	//modificato	
 		try {
 
 			String insert = "insert into ordine(id_ordine, id_pagamento_ordine, prezzo_totale_ordine, commissioni_ordine, spesa_minima) values (?,?,?,?,?)";
