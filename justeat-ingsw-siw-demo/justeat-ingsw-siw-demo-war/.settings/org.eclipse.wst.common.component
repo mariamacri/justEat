@@ -5,6 +5,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp/WEB-INF"/>
         <property name="context-root" value="justeat-ingsw-siw-demo-war"/>
         <property name="java-output-path" value="/justeat-ingsw-siw-demo-war/target/classes"/>
     </wb-module>

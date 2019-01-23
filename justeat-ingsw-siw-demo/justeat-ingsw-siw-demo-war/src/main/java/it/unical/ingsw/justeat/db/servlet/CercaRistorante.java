@@ -16,9 +16,9 @@ import it.unical.ingsw.justeat.db.model.Ristorante;
 
 public class CercaRistorante extends HttpServlet{
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		String indirizzoCercato = req.getParameter("indirizzoCercato");
+		/*String indirizzoCercato = req.getParameter("indirizzoCercato");
 
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		RistoranteDao risDao = DatabaseManager.getInstance().getDaoFactory().getRistoranteDAO();
@@ -27,8 +27,10 @@ public class CercaRistorante extends HttpServlet{
 		req.setAttribute("ristoranti", ristor);
 		RequestDispatcher rd = req.getRequestDispatcher
 				("WebContent/restaurant.jsp");
-		rd.forward(req, resp);
+		rd.forward(req, resp);*/
 
+		RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+		rd.forward(req, resp);
 
 	}
 
