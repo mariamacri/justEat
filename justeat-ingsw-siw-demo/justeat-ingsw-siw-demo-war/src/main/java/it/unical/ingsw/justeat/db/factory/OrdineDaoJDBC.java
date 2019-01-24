@@ -27,7 +27,6 @@ public class OrdineDaoJDBC implements OrdineDao{
 	@Override
 	public void save(Ordine ordine) {
 		Connection connection = this.dataSource.getConnection();
-		ordine.setPrezzo_totale_ordine(totale_ordine(ordine));
 		try {
 
 			String insert = "insert into ordine(id_ordine, id_pagamento_ordine, prezzo_totale_ordine, commissioni_ordine, spesa_minima) values (?,?,?,?,?)";
@@ -57,8 +56,11 @@ public class OrdineDaoJDBC implements OrdineDao{
 		}
 		save_pietanze_comprese(ordine);
 		
-		for(Pietanza i: comprende(ordine))
-		System.out.println(i.getNome());
+		ordine.setPrezzo_totale_ordine(totale_ordine(ordine));
+		System.out.println(ordine.getPrezzo_totale_ordine());
+		
+		update(ordine);
+		
 	}
 	
 	
@@ -104,13 +106,14 @@ public class OrdineDaoJDBC implements OrdineDao{
 	public void update(Ordine ordine) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			String update = "update ordine SET  id_pagamento_ordine = ?,  prezzo_totale_ordine=?, commissioni_ordine=? , spesa_minima =? where id_ordine=?";
+			String update = "update ordine SET  id_pagamento_ordine = ?,  prezzo_totale_ordine=?, commissioni_ordine=? , spesa_minima =? WHERE id_ordine=?";
 			PreparedStatement statement = connection.prepareStatement(update);
-			statement.setInt(1, ordine.getId_ordine());
-			statement.setInt(2, ordine.getPagamento().getId_pagamento());
-			statement.setDouble(3, ordine.getPrezzo_totale_ordine());
-			statement.setDouble(4, ordine.getCommissioni_ordine());
-			statement.setDouble(5, ordine.getSpesa_minima());
+			
+			statement.setInt(1, ordine.getPagamento().getId_pagamento());
+			statement.setDouble(2, ordine.getPrezzo_totale_ordine());
+			statement.setDouble(3, ordine.getCommissioni_ordine());
+			statement.setDouble(4, ordine.getSpesa_minima());
+			statement.setInt(5, ordine.getId_ordine());
 			statement.executeUpdate();
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -157,7 +160,7 @@ public List<Pietanza> comprende(Ordine ordine) {
 		try {
 			Pietanza pietanza=null;
 			PreparedStatement statement;
-			String query = "select nome_pietanza, prezzo_pietanza, descrizione_pietanza from comprende, ordine, pietanza where id_ordine_compreso=? and nome_pietanza=nome_pietanza_compresa";
+			String query = "select nome_pietanza, prezzo_pietanza, descrizione_pietanza from pietanza where nome_pietanza in (select nome_pietanza_compresa from comprende, ordine where id_ordine_compreso=? )";
 			statement = connection.prepareStatement(query);
 			statement.setInt(1, ordine.getId_ordine());
 			
@@ -192,7 +195,7 @@ public List<Pietanza> comprende(Ordine ordine) {
 		try {
 			
 			PreparedStatement statement;
-			String query = "select prezzo_pietanza from comprende, ordine, pietanza where id_ordine_compreso=? and nome_pietanza=nome_pietanza_compresa";
+			String query = "select prezzo_pietanza from pietanza where nome_pietanza in (select nome_pietanza_compresa from ordine, comprende where id_ordine_compreso=?)";
 			statement = connection.prepareStatement(query);
 			statement.setInt(1, ordine.getId_ordine());
 			

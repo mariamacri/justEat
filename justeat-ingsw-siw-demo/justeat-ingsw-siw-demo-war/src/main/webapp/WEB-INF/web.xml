@@ -8,13 +8,16 @@
   </welcome-file-list>  
   -->
   
+  
+
+  
   <servlet>
   	<servlet-name>CercaRistoranti</servlet-name>
-  	<servlet-class></servlet-class>
+  	<servlet-class>/justeat-ingsw-siw-demo-war/src/main/java/it/unical/ingsw/justeat/db/servlet/CercaRistorante</servlet-class>
   </servlet>
    <servlet-mapping>
     <servlet-name>CercaRistoranti</servlet-name>
-    <url-pattern></url-pattern>
+    <url-pattern>/ottieniStudenti</url-pattern>
   </servlet-mapping> 
   
  
