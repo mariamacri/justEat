@@ -1,5 +1,8 @@
 package it.unical.ingsw.justeat.db.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Ordine {
 	
 	private int id_ordine;
@@ -7,6 +10,7 @@ public class Ordine {
 	private double prezzo_totale_ordine;
 	private double commissioni_ordine;
 	private double spesa_minima;
+	private List<Pietanza> pietanze=null;
 	public int getId_ordine() {
 		return id_ordine;
 	}
@@ -37,6 +41,17 @@ public class Ordine {
 	public void setSpesa_minima(double spesa_minima) {
 		this.spesa_minima = spesa_minima;
 	}
+	public List<Pietanza> getPietanze() {
+		return pietanze;
+	}
+	public void setPietanze(List<Pietanza> pietanze) {
+		this.pietanze = pietanze;
+	}
+	public void add(Pietanza p) {
+		if(pietanze==null)
+			pietanze=new ArrayList<Pietanza>();
+		this.pietanze.add(p);
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -46,12 +61,15 @@ public class Ordine {
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + id_ordine;
 		result = prime * result + ((pagamento == null) ? 0 : pagamento.hashCode());
+		result = prime * result + ((pietanze == null) ? 0 : pietanze.hashCode());
 		temp = Double.doubleToLongBits(prezzo_totale_ordine);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		temp = Double.doubleToLongBits(spesa_minima);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
+	
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -70,6 +88,11 @@ public class Ordine {
 				return false;
 		} else if (!pagamento.equals(other.pagamento))
 			return false;
+		if (pietanze == null) {
+			if (other.pietanze != null)
+				return false;
+		} else if (!pietanze.equals(other.pietanze))
+			return false;
 		if (Double.doubleToLongBits(prezzo_totale_ordine) != Double.doubleToLongBits(other.prezzo_totale_ordine))
 			return false;
 		if (Double.doubleToLongBits(spesa_minima) != Double.doubleToLongBits(other.spesa_minima))
@@ -80,8 +103,9 @@ public class Ordine {
 	public String toString() {
 		return "Ordine [id_ordine=" + id_ordine + ", pagamento=" + pagamento + ", prezzo_totale_ordine="
 				+ prezzo_totale_ordine + ", commissioni_ordine=" + commissioni_ordine + ", spesa_minima=" + spesa_minima
-				+ "]";
+				+ ", pietanze=" + pietanze + "]";
 	}
+	
 	
 	
 	

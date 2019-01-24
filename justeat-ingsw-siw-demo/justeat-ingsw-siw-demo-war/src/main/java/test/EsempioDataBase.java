@@ -1,5 +1,6 @@
 package test;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
@@ -74,11 +75,46 @@ public class EsempioDataBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		DataSource dataSource = new DataSource("jdbc:postgresql://localhost:5432/justeat", "postgres", "sette77");
+		DataSource dataSource = new DataSource("jdbc:postgresql://localhost:5432/justeat", "postgres", "sette77");
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
+		
+		OrdineDao o=factory.getOrdineDAO();
+		Ordine ordine=new Ordine();
+		ordine.setCommissioni_ordine(0.0);
+		ordine.setId_ordine(14);
+		ordine.setPagamento(new Pagamento());
+		ordine.getPagamento().setId_pagamento(2);
+		ordine.setPrezzo_totale_ordine(0.0);
+		ordine.setSpesa_minima(0.0);
+		//o.save(ordine);
+		Pietanza p=new Pietanza();
+		p.setNome("pizza");
+		Pietanza w=new Pietanza();
+		w.setNome("pasta");
+		Pietanza e=new Pietanza();
+		e.setNome("margherita");
+		
+		ordine.add(p);
+		ordine.add(w);
+		ordine.add(e);
+		
+		o.save(ordine);
+		
+		o.delete(ordine);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		//test pagamento ok
-		PagamentoDao p=factory.getPagamentoDAO();
+		//PagamentoDao p=factory.getPagamentoDAO();
 //		Pagamento pagamento=new Pagamento();
 //		pagamento.setId_pagamento(9);
 //		pagamento.setSconto(0.75);
@@ -87,13 +123,13 @@ public class EsempioDataBase {
 //		pagamento.setUtente(utente.findByPrimaryKey("mariamacri@gmail.com"));
 //		pagamento.setImporto_totale_pagamento(10.00);
 //		p.save(pagamento);
-		System.out.println(p.findByPrimaryKey(9));
+		//System.out.println(p.findByPrimaryKey(9));
 		
 //************************************************
 		//fine test pagamento
 		
 		//test ordine
-		OrdineDao ordineDao= factory.getOrdineDAO();
+		//OrdineDao ordineDao= factory.getOrdineDAO();
 		
 //		util.dropDatabase();
 //		util.createDatabase();
