@@ -49,6 +49,7 @@ public class UtenteDaoJDBC implements UtenteDao {
 
 	@Override
 	public Utente findByPrimaryKey(String email) {
+		
 		Connection connection = this.dataSource.getConnection();
 		Utente utente = null;
 		try {
@@ -58,19 +59,21 @@ public class UtenteDaoJDBC implements UtenteDao {
 			statement.setString(1, email);
 
 			ResultSet result = statement.executeQuery();
+			
 			if (result.next()) {
+				
 				utente = new Utente();
 				utente.setEmail_Utente(result.getString("email_utente"));
 				utente.setNome_Utente(result.getString("nome_utente"));
 				utente.setCognome_Utente(result.getString("cognome_utente"));
-
+				
 				utente.setIndirizzo_Utente(result.getString("indirizzo_utente"));
 				utente.setPassword(result.getString("password"));
 				CartaDiCredito c = new CartaDiCredito();
 				c.setNumero_Carta(result.getString("carta_di_credito_usata"));
 				utente.setCarta_Credito_Usata(c);
 				utente.setNumero_telefono_utente(result.getInt("numero_telefono_utente"));
-			
+				
 			}
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -81,9 +84,27 @@ public class UtenteDaoJDBC implements UtenteDao {
 				throw new PersistenceException(e.getMessage());
 			}
 		}
+		
 		return utente;
 	}
 	
+	@Override
+	public UtenteCredenziali findByPrimaryKeyCredential(String email) {
+		Utente utent = findByPrimaryKey(email);
+		UtenteCredenziali utentCred = null;
+		if (utent != null){
+			utentCred = new UtenteCredenziali(dataSource);
+			utentCred.setEmail_Utente(utent.getEmail_Utente());
+			utentCred.setCarta_Credito_Usata(utent.getCarta_Credito_Usata());
+			utentCred.setCognome_Utente(utent.getCognome_Utente());
+			utentCred.setIndirizzo_Utente(utent.getIndirizzo_Utente());
+			utentCred.setNome_Utente(utent.getNome_Utente());
+			utentCred.setNumero_telefono_utente(utent.getNumero_telefono_utente());
+			utentCred.setPassword(utent.getPassword());
+		}
+		
+		return utentCred;
+	}
 	
 	@Override
 	public List<Utente> findAll() {

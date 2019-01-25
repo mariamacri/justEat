@@ -9,16 +9,30 @@
   -->
   
   
-
-  
   <servlet>
-  	<servlet-name>CercaRistoranti</servlet-name>
-  	<servlet-class>/justeat-ingsw-siw-demo-war/src/main/java/it/unical/ingsw/justeat/db/servlet/CercaRistorante</servlet-class>
+  	<servlet-name>Credenziali</servlet-name>
+  	<servlet-class>it.unical.ingsw.justeat.db.servlet.CredenzialiLogin</servlet-class>
   </servlet>
-   <servlet-mapping>
-    <servlet-name>CercaRistoranti</servlet-name>
-    <url-pattern>/ottieniStudenti</url-pattern>
-  </servlet-mapping> 
+  <servlet-mapping>
+  	<servlet-name>Credenziali</servlet-name>
+  	<url-pattern>/inviaCredenziali</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>FaiLogin</servlet-name>
+  	<servlet-class>it.unical.ingsw.justeat.db.servlet.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>FaiLogin</servlet-name>
+  	<url-pattern>/doLogin</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>it.unical.ingsw.justeat.db.servlet.Home</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern></url-pattern>
+  </servlet-mapping>
   
  
   
