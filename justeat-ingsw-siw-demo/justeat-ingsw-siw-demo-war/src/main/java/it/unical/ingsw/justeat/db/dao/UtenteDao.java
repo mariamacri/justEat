@@ -2,6 +2,7 @@ package it.unical.ingsw.justeat.db.dao;
 
 import java.util.List;
 
+import it.unical.ingsw.justeat.db.factory.UtenteCredenziali;
 import it.unical.ingsw.justeat.db.model.Utente;
 
 public interface UtenteDao {
@@ -18,7 +19,7 @@ public interface UtenteDao {
 
 	public void setPassword(Utente utente, String password);
 
-	// public UtenteCredenziali findByPrimaryKeyCredential(String matricola); //
+    public UtenteCredenziali findByPrimaryKeyCredential(String email);
 	// Retrieve
 
 }

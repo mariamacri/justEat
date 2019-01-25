@@ -379,36 +379,6 @@
                                 <!--end:row -->
                             </div>
                             <!-- end:Restaurant entry -->
-                            <div class="bg-gray restaurant-entry">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
-                                        <div class="entry-logo">
-                                            <a class="img-fluid" href="#"><img src="img/logo7.png" alt="Food logo"></a>
-                                        </div>
-                                        <!-- end:Logo -->
-                                        <div class="entry-dscr">
-                                            <h5><a href="#">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ,urgers, American, Sandwiches <a href="#">...</a></span>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 10,00</li>
-                                                <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
-                                            </ul>
-                                        </div>
-                                        <!-- end:Entry description -->
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
-                                        <div class="right-content bg-white">
-                                            <div class="right-review">
-                                                <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                                <p> 245 Reviews</p> <a href="profile.html" class="btn theme-btn-dash">View Menu</a> </div>
-                                        </div>
-                                        <!-- end:right info -->
-                                    </div>
-                                </div>
-                                <!--end:row -->
-                            </div>
-                            <!-- end:Restaurant entry -->
-                        </div>
-                    </div>
                 </div>
             </section>
             <section class="app-section"> </section>

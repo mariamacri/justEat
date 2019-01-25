@@ -1,9 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" 
-prefix="c" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="utf-8">
@@ -27,28 +23,82 @@ prefix="c" %>
         <!--header starts-->
         <header id="header" class="header-scroll top-header headrom">
             <!-- .navbar -->
-           <nav class="navbar navbar-dark">
-                <div class="container">
-                    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="img/food-picky-logo.png" alt=""> </a>
-                    <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
-                        <ul class="nav navbar-nav">
-                            <li class="nav-item"> <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cibo</a>
-                                <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.html">Risultati Cibo</a> <a class="dropdown-item" href="map_results.html">Risultati Mappa</a></div>
-                            </li>
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ristoranti</a>
-                                <div class="dropdown-menu"> <a class="dropdown-item" href="restaurants.html">Search results</a> <a class="dropdown-item" href="restaurantProfile.html">Profilo Ristoranti</a></div>
-                            </li>
-                            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pagine</a>
-                                <div class="dropdown-menu"> <a class="dropdown-item" href="pricing.html">Pricing</a> <a class="dropdown-item" href="contact.html">Contact</a> <a class="dropdown-item" href="restaurantRegistration.html">Inserisci Nuovo Ristorante</a> <a class="dropdown-item" href="registration.html">Registrazione</a>
-                              <div class="dropdown-divider"></div> <a class="dropdown-item" href="checkout.html">Checkout</a> </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- /.navbar -->
+<nav class="navbar navbar-dark">
+  <div class="container">
+    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
+    <a class="navbar-brand" href="index.html"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="70"> </a>
+    <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"> <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cibo</a>
+          <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.jsp">Risultati Cibo</a> <a class="dropdown-item" href="map_results.jsp">Risultati Mappa</a></div>
+        </li>
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ristoranti</a>
+          <div class="dropdown-menu"> <a class="dropdown-item" href="restaurantInfo.html">Search results</a> <a class="dropdown-item" href="restaurantProfile.jsp">Profilo Ristoranti</a></div>
+        </li>
+        <!-- Inizio Lista utente -->
+
+        
+        <li class="nav-item dropdown"> 
+		
+				
+			<c:if test="${username != null}">
+			   
+			   
+			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="doLogin?logout=true" role="button" aria-haspopup="true" aria-expanded="false">Ciao, ${email_utente}
+			<svg width="20" height="22" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg" class="icon-profile">
+            <path d="M2.67 11.33V9a.33.33 0 0 1 .66 0v2.67c0 .18-.15.33-.33.33H1.67a1 1 0 0 1-1-1V9.67c0-2.6 1.8-4.34 5.33-4.34 3.53 0 5.33 1.74 5.33 4.34V11a1 1 0 0 1-1 1H9a.33.33 0 0 1-.33-.33V9a.33.33 0 1 1 .66 0v2.33h1c.19 0 .34-.15.34-.33V9.67C10.67 7.44 9.17 6 6 6S1.33 7.44 1.33 9.67V110 .18.15.33.34.33h1zm3.33-6c1.09 0 2-1.02 2-2.33C8 1.7 7.09.67 6 .67 4.91.67 4 1.69 4 3c0 1.3.91 2.33 2 2.33zM6 6C4.53 6 3.33 4.66 3.33 3S4.53 0 6 0s2.67 1.34 2.67 3S7.47 6 6 6zm2.67 3.67a.33.33 0 1 1 .66 0v2c0 .09-.03.17-.1.23-.12.12-.37.28-.8.42-.65.22-1.56.35-2.76.35-.92 0-1.65-.14-2.21-.36-.36-.14-.58-.3-.7-.4a.33.33 0 0 1-.1-.24v-2a.33.33 0 1 1 .67 0v1.84a5.33 5.33 0 0 0 2.33.5c1.14-.01 1.98-.13 2.57-.33.2-.07.35-.13.44-.18V9.67z" fill="#266ABD"></path>
+          </svg>
+				
+				
+			    <div class="dropdown-menu"> 
+			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link">Area Utente</a>
+			  <a class="dropdown-item" data-test-id="orders" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userOrders.html" id="orders-nav-link">Ordini</a>
+			  <a class="dropdown-item" data-test-id="addressBook" href="/account/addressbook/" id="address-nav-link">Indirizzi di consegna</a>
+			  <a class="dropdown-item" href="restaurantRegistration.html">Inserisci Nuovo Ristorante</a>
+            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" href="/account/logout/?returnurl=%2Faccount%2Finfo%2F">Esci</a>
+			</div>
+        </li>
+				
+				
+          </a>
+			<a href="doLogin?logout=true">Logout</a>
+				</c:if>	
+		
+			<c:if test="${email == null}">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="doLogin" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
+				
+				
+				    <div class="dropdown-menu"> 
+						<a class="dropdown-item" href="login.html">Login</a>
+			    <a class="dropdown-item" href="registration.html">Registrazione</a>
+
+			  <a class="dropdown-item" href="restaurantRegistration.html">Inserisci Nuovo Ristorante</a>
+            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			</div>
+        </li>
+			
+				</c:if>	
+			
+          <div class="dropdown-menu"> 
+			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link">Area Utente</a> <a class="dropdown-item" href="login.html">Login</a>
+			    <a class="dropdown-item" href="registration.html">Registrazione</a>
+			  <a class="dropdown-item" data-test-id="orders" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userOrders.html" id="orders-nav-link">Ordini</a>
+			  <a class="dropdown-item" data-test-id="addressBook" href="/account/addressbook/" id="address-nav-link">Indirizzi di consegna</a>
+			  <a class="dropdown-item" href="restaurantRegistration.html">Inserisci Nuovo Ristorante</a>
+            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" href="/account/logout/?returnurl=%2Faccount%2Finfo%2F">Esci</a>
+			</div>
+        </li>
+        
+        <!-- Fine lista Utente -->
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- /.navbar -->
         </header>
         <!-- banner part starts -->
         <section class="hero bg-image" data-image-src="img/cibo.jpg">
@@ -185,7 +235,6 @@ prefix="c" %>
             </div>
         </section>
         <!-- Popular block ends -->
-        <li><a class="dropdown-item" href=ottieniStudenti>Elenco Studenti</a></li>
         <!-- How it works block starts -->
         <section class="how-it-works">
             <div class="container">
