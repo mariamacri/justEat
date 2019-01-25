@@ -185,6 +185,7 @@ prefix="c" %>
             </div>
         </section>
         <!-- Popular block ends -->
+        <li><a class="dropdown-item" href=ottieniStudenti>Elenco Studenti</a></li>
         <!-- How it works block starts -->
         <section class="how-it-works">
             <div class="container">

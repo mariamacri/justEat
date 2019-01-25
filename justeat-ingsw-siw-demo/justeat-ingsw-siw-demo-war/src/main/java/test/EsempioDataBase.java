@@ -99,8 +99,8 @@ public class EsempioDataBase {
 		ordine.add(w);
 		ordine.add(e);
 		
-		o.save(ordine);
-		
+		//o.save(ordine);
+		//System.out.println(o.totale_ordine(ordine));
 		o.delete(ordine);
 		
 		
