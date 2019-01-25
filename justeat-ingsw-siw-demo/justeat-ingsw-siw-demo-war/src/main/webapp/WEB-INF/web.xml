@@ -8,6 +8,14 @@
   </welcome-file-list>  
   -->
   
+    <servlet>
+  	<servlet-name>InserisciPietanza</servlet-name>
+  	<servlet-class>it.unical.ingsw.justeat.db.servlet.MettiPietanza</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>InserisciPietanza</servlet-name>
+  	<url-pattern>/aggiungiPietanza</url-pattern>
+  </servlet-mapping>
   
   <servlet>
   	<servlet-name>Credenziali</servlet-name>
