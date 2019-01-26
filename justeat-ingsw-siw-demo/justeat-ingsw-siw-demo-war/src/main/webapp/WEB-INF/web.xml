@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<<<<<<< HEAD
+
+  <servlet>
+=======
 
  <!--   <display-name>justeat-ingsw-siw-demo-war</display-name>
   <welcome-file-list>
@@ -18,13 +22,17 @@
   </servlet-mapping>
   
   <servlet>
+>>>>>>> branch 'master' of https://github.com/mariamacri/justEat.git
   	<servlet-name>Credenziali</servlet-name>
   	<servlet-class>it.unical.ingsw.justeat.db.servlet.CredenzialiLogin</servlet-class>
+
   </servlet>
+ 
   <servlet-mapping>
   	<servlet-name>Credenziali</servlet-name>
   	<url-pattern>/inviaCredenziali</url-pattern>
   </servlet-mapping>
+
   <servlet>
   	<servlet-name>FaiLogin</servlet-name>
   	<servlet-class>it.unical.ingsw.justeat.db.servlet.Login</servlet-class>
@@ -42,7 +50,20 @@
     <url-pattern></url-pattern>
   </servlet-mapping>
   
+
  
-  
-  
-</web-app> 
+ 
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+
+
+
+
+
+
+
+
+
+</web-app>
