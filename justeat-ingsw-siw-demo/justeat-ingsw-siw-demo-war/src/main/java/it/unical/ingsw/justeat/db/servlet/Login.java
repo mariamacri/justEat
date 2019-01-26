@@ -24,7 +24,10 @@ public class Login extends HttpServlet{
 			}
 		}else {
 			if (logout.equals("true")) {
-				req.getSession().setAttribute("email", null);
+				
+				req.getSession().setAttribute("utente", null);
+
+				
 			}
 			RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
 			rd.forward(req, resp);
