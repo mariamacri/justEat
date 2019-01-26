@@ -19,7 +19,21 @@
     <link href="css/style.css" rel="stylesheet"> <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C33BB16D-A6ED-BE42-AEC0-323877E5D848/main.js" charset="UTF-8"></script></head>
 
 <body class="home">
-    <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
+
+					<%if(session.getAttribute("email_utente")==null)
+						{
+							response.sendRedirect("Login.jsp");
+						}%>
+						
+						Wellcome ${email_utente}
+
+
+
+
+
+
+
+     <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
         <!--header starts-->
         <header id="header" class="header-scroll top-header headrom">
             <!-- .navbar -->
@@ -608,7 +622,7 @@
     <script src="js/bootstrap-slider.min.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/headroom.js"></script>
-    <script src="js/foodpicky.min.js"></script>
+    <script src="js/foodpicky.min.js"></script>  
 </body>
 
 </html>
