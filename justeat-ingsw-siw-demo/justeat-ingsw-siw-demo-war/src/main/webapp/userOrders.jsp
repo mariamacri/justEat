@@ -2,8 +2,10 @@
     pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
+	
 <!DOCTYPE html>
-<html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
+
+<html lang="it">
 <head>
 <title>Informazioni Account | JUST EAT</title>
 <meta charset="utf-8">
@@ -42,8 +44,8 @@ prefix="c" %>
 
 <div class="skipTo"> <a class="is-visuallyHidden focusable u-text-marker" href="#skipToMain">Vai al contenuto principale</a> </div>
 <header class="header"> </header>
-<!-- .navbar -->
-		  
+		
+            <!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
@@ -121,8 +123,8 @@ prefix="c" %>
     </div>
   </div>
 </nav>
-			 
 <!-- /.navbar -->
+	
 	
 <div class="u-divider u-horizontalRule">
   <div class="l-container l-vPad--small">

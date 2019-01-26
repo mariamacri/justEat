@@ -3,9 +3,9 @@
     pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
+	
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,21 +24,7 @@ prefix="c" %>
     <link href="css/style.css" rel="stylesheet"> <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C33BB16D-A6ED-BE42-AEC0-323877E5D848/main.js" charset="UTF-8"></script></head>
 
 <body class="home">
-
-					<%if(session.getAttribute("email_utente")==null)
-						{
-							response.sendRedirect("Login.jsp");
-						}%>
-						
-						Wellcome ${email_utente}
-
-
-
-
-
-
-
-     <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
+    <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
         <!--header starts-->
         <header id="header" class="header-scroll top-header headrom">
 			
@@ -75,11 +61,12 @@ prefix="c" %>
 				
 				
 			    <div class="dropdown-menu"> 
-			  <a class="dropdown-item" data-test-id="accountInfo" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userPanel.jsp" id="account-nav-link">Area Utente</a>
+			  <a class="dropdown-item" data-test-id="accountInfo" href="/justeat-ingsw-siw-demo-war/userPanel.jsp" id="account-nav-link">Area Utente</a>
 					
 					
-			  <a class="dropdown-item" data-test-id="orders" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userOrders.jsp" id="orders-nav-link">Ordini</a>
-            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			  <a class="dropdown-item" data-test-id="orders" href="/justeat-ingsw-siw-demo-war/userOrders.jsp">Ordini</a>
+					<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
+            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" name="logout" href="doLogin?logout=true">Esci</a>
 			</div>
 				
@@ -93,23 +80,22 @@ prefix="c" %>
 				
 				
 				    <div class="dropdown-menu"> 
-						<a class="dropdown-item" href="login.html">Login</a>
-			    <a class="dropdown-item" href="registration.html">Registrazione</a>
+						<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.html">Login</a>
+			    <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/registration.html">Registrazione</a>
 
-			  <a class="dropdown-item" href="restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
-            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
+            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			</div>
         </li>
 			
 				</c:if>	
 			
           <div class="dropdown-menu"> 
-			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link">Area Utente</a> <a class="dropdown-item" href="login.html">Login</a>
+			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link">Area Utente</a> <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.html">Login</a>
 			    <a class="dropdown-item" href="registration.html">Registrazione</a>
-			  <a class="dropdown-item" data-test-id="orders" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userOrders.html" id="orders-nav-link">Ordini</a>
-			  <a class="dropdown-item" data-test-id="addressBook" href="/account/addressbook/" id="address-nav-link">Indirizzi di consegna</a>
-			  <a class="dropdown-item" href="restaurantRegistration.jsp">Inserisci Nuovo Ristorante</a>
-            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			  <a class="dropdown-item" data-test-id="orders" href="/justeat-ingsw-siw-demo-war/userOrders.html" id="orders-nav-link">Ordini</a>
+			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Inserisci Nuovo Ristorante</a>
+            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" href="/account/logout/?returnurl=%2Faccount%2Finfo%2F">Esci</a>
 			</div>
         </li>
@@ -632,7 +618,7 @@ prefix="c" %>
     <script src="js/bootstrap-slider.min.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/headroom.js"></script>
-    <script src="js/foodpicky.min.js"></script>  
+    <script src="js/foodpicky.min.js"></script>
 </body>
 
 </html>
