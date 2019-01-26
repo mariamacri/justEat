@@ -12,15 +12,25 @@ import com.sun.glass.ui.Menu;
 
 import it.unical.ingsw.justeat.db.dao.MenuDao;
 import it.unical.ingsw.justeat.db.dao.PietanzaDao;
+import it.unical.ingsw.justeat.db.dao.RistoranteDao;
+import it.unical.ingsw.justeat.db.dao.UtenteDao;
 import it.unical.ingsw.justeat.db.factory.DAOFactory;
 import it.unical.ingsw.justeat.db.model.Pietanza;
+import it.unical.ingsw.justeat.db.model.Ristorante;
+import it.unical.ingsw.justeat.db.model.Utente;
 
 public class MettiPietanza extends HttpServlet{
 	
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	
+		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+		Utente u=(Utente) req.getSession().getAttribute("utente");
+		
+		RistoranteDao rd=factory.getRistoranteDAO();
+		
+		Ristorante r=rd.findByEmail(u.getEmail_Utente());
+		
 		String nomePietanza= req.getParameter("Pietanza");
 		String prezzoPietanza= req.getParameter("PietanzaPrice");
 		String descrizionePietanza= req.getParameter("FoodDescr");
@@ -30,12 +40,14 @@ public class MettiPietanza extends HttpServlet{
 		p.setNome(nomePietanza);
 		p.setPrezzo(prezzo);
 		
-		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+		
 		PietanzaDao pd=factory.getPietanzaDAO();
 		pd.save(p);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("menuForm.html");
-		rd.forward(req, resp);
+		pd.pietanza_contenuta_in(p, r);
+		
+		RequestDispatcher rde = req.getRequestDispatcher("menuForm.html");
+		rde.forward(req, resp);
 		
 		
 	}

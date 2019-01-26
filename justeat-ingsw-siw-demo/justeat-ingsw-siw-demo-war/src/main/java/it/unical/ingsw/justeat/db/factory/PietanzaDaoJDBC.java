@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import it.unical.ingsw.justeat.db.dao.PietanzaDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.Pietanza;
+import it.unical.ingsw.justeat.db.model.Ristorante;
 
 public class PietanzaDaoJDBC implements PietanzaDao {
 	private DataSource dataSource;
@@ -124,6 +125,27 @@ public class PietanzaDaoJDBC implements PietanzaDao {
 				throw new PersistenceException(e.getMessage());
 			}
 		}
+	}
+	
+	@Override
+	public void pietanza_contenuta_in(Pietanza pietanza, Ristorante ristorante) {
+		Connection connection= this.dataSource.getConnection();
+		try {
+			String save = "insert into contiene(nome_pietanza_contenuta, partita_iva_ristorante_contenente) values (?,?) ";
+			PreparedStatement statement = connection.prepareStatement(save);
+			statement.setString(1, pietanza.getNome());
+			statement.setString(2, ristorante.getPartita_Iva());
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		
 	}
 
 }

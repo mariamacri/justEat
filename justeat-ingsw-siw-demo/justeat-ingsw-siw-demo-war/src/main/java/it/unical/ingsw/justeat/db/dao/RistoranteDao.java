@@ -2,6 +2,7 @@ package it.unical.ingsw.justeat.db.dao;
 
 import java.util.List;
 
+import it.unical.ingsw.justeat.db.model.Pietanza;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 
 public interface RistoranteDao {
@@ -19,4 +20,7 @@ public interface RistoranteDao {
 	public void delete(Ristorante ristorante); // Delete
 
 	// public void setPassword(Ristorante ristorante, String password);
+	public Ristorante findByEmail(String Email);
+	
+	public void delete_pietanza_contenuta(Pietanza pietanza, Ristorante ristorante);
 }

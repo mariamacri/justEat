@@ -79,29 +79,16 @@ public class EsempioDataBase {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
 		
-		OrdineDao o=factory.getOrdineDAO();
-		Ordine ordine=new Ordine();
-		ordine.setCommissioni_ordine(0.0);
-		ordine.setId_ordine(14);
-		ordine.setPagamento(new Pagamento());
-		ordine.getPagamento().setId_pagamento(2);
-		ordine.setPrezzo_totale_ordine(0.0);
-		ordine.setSpesa_minima(0.0);
-		//o.save(ordine);
+		PietanzaDao pd=factory.getPietanzaDAO();
+		
 		Pietanza p=new Pietanza();
-		p.setNome("pizza");
-		Pietanza w=new Pietanza();
-		w.setNome("pasta");
-		Pietanza e=new Pietanza();
-		e.setNome("margherita");
+		p.setNome("margherita");
 		
-		ordine.add(p);
-		ordine.add(w);
-		ordine.add(e);
+		Ristorante r=new Ristorante();
 		
-		//o.save(ordine);
-		//System.out.println(o.totale_ordine(ordine));
-		o.delete(ordine);
+		r.setPartita_Iva("123");
+		
+		pd.pietanza_contenuta_in(p, r);
 		
 		
 		

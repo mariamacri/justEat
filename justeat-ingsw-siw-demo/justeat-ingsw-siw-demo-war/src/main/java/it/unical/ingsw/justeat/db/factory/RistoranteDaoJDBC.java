@@ -11,6 +11,7 @@ import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
+import it.unical.ingsw.justeat.db.model.Pietanza;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 import it.unical.ingsw.justeat.db.model.Titolare;
 import it.unical.ingsw.justeat.db.model.Utente;
@@ -379,6 +380,66 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				throw new PersistenceException(e.getMessage());
 			}
 		}
+	}
+	
+	
+	@Override
+	public Ristorante findByEmail(String Email) {
+		Ristorante ristorante=null;
+		Connection connection = this.dataSource.getConnection();
+		try {
+			
+			PreparedStatement statement;
+			String query = "select * from ristorante where email_utenteregistrato=?";
+			statement = connection.prepareStatement(query);
+			statement.setString(1, Email);
+			
+			ResultSet result = statement.executeQuery();
+			while (result.next()) {
+				ristorante = new Ristorante();
+				ristorante.setNome_Ristorante(result.getString("nome_ristorante"));
+				ristorante.setIndirizzo_Legale(result.getString("indirizzo_legale"));
+				ristorante.setCoordinate_Bancarie_Ristorante(result.getString("coordinate_bancarie_ristorante"));				
+				Titolare titolare=new Titolare();
+				titolare.setCf_Titolare(result.getString("codice_fiscale_titolare"));
+				ristorante.setTitolare(titolare);
+				Utente utente=new Utente();
+				utente.setEmail_Utente(result.getString("email_utenteregistrato"));
+				ristorante.setUtente_Proprietario(utente);
+				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
+			}
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		return ristorante;
+	}
+	
+	@Override
+	public void delete_pietanza_contenuta(Pietanza pietanza, Ristorante ristorante) {
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String delete = "delete FROM contiene WHERE nome_pietanza_contenuta=? and partita_iva_ristorante_contenente=? ";
+			PreparedStatement statement = connection.prepareStatement(delete);
+			statement.setString(1, pietanza.getNome());
+			statement.setString(2, ristorante.getPartita_Iva());
+			
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		
 	}
 
 }
