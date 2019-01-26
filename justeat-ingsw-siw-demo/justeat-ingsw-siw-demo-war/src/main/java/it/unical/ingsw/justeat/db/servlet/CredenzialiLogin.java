@@ -33,11 +33,10 @@ public class CredenzialiLogin extends HttpServlet{
 			String p= s.getPassword().replace(" ", "");
 			if (p.equals(password)) {
 			
-				req.getSession().setAttribute("email_utente", email);
+			//	req.getSession().setAttribute("email_utente", email);
 				
-				req.setAttribute("utente", s);
-				
-				RequestDispatcher rd = req.getRequestDispatcher("index.html");
+				req.getSession().setAttribute("utente", s);
+				RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
 				rd.forward(req, resp);
 			}else {
 				RequestDispatcher rd = req.getRequestDispatcher("loginFailed.html");

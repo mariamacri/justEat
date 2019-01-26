@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" 
+prefix="c" %>
+<!DOCTYPE html>
 <html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
 <head>
 <title>Informazioni Account | JUST EAT</title>
@@ -37,34 +42,73 @@
 
 <div class="skipTo"> <a class="is-visuallyHidden focusable u-text-marker" href="#skipToMain">Vai al contenuto principale</a> </div>
 <header class="header"> </header>
-<!-- .navbar -->
+   <!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
     <a class="navbar-brand" href="index.html"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="70"> </a>
     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
       <ul class="nav navbar-nav">
-        <li class="nav-item"> <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a> </li>
+		     <!-- LISTA Home -->
+        <li class="nav-item"> <a class="nav-link active" href="index.jsp">Home <span class="sr-only">(current)</span></a> </li>
+		     <!-- LISTA Cibo -->
         <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cibo</a>
           <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.jsp">Risultati Cibo</a> <a class="dropdown-item" href="map_results.jsp">Risultati Mappa</a></div>
         </li>
+		  
+		     <!-- Lista Ristoranti -->
         <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ristoranti</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="restaurantInfo.html">Search results</a> <a class="dropdown-item" href="restaurantProfile.jsp">Profilo Ristoranti</a></div>
+          <div class="dropdown-menu"> <a class="dropdown-item" href="restaurantInfo.jsp">Search results</a> <a class="dropdown-item" href="restaurantProfile.jsp">Profilo Ristoranti</a></div>
         </li>
         <!-- Inizio Lista utente -->
-        
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ciao, Rickym
+		<!--  <h1>${utente.getEmail_Utente() }</h1>-->
+		  
+				 <!-- LISTA DA LOGGATO -->
+			<c:if test="${utente.getEmail_Utente() != null}">  
+			           
+        <li class="nav-item dropdown"> 
+				
+			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="doLogin?logout=true" role="button" aria-haspopup="true" aria-expanded="false">Ciao, ${utente.getNome_Utente()}
 			<svg width="20" height="22" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg" class="icon-profile">
-            <path d="M2.67 11.33V9a.33.33 0 0 1 .66 0v2.67c0 .18-.15.33-.33.33H1.67a1 1 0 0 1-1-1V9.67c0-2.6 1.8-4.34 5.33-4.34 3.53 0 5.33 1.74 5.33 4.34V11a1 1 0 0 1-1 1H9a.33.33 0 0 1-.33-.33V9a.33.33 0 1 1 .66 0v2.33h1c.19 0 .34-.15.34-.33V9.67C10.67 7.44 9.17 6 6 6S1.33 7.44 1.33 9.67V11c0 .18.15.33.34.33h1zm3.33-6c1.09 0 2-1.02 2-2.33C8 1.7 7.09.67 6 .67 4.91.67 4 1.69 4 3c0 1.3.91 2.33 2 2.33zM6 6C4.53 6 3.33 4.66 3.33 3S4.53 0 6 0s2.67 1.34 2.67 3S7.47 6 6 6zm2.67 3.67a.33.33 0 1 1 .66 0v2c0 .09-.03.17-.1.23-.12.12-.37.28-.8.42-.65.22-1.56.35-2.76.35-.92 0-1.65-.14-2.21-.36-.36-.14-.58-.3-.7-.4a.33.33 0 0 1-.1-.24v-2a.33.33 0 1 1 .67 0v1.84a5.33 5.33 0 0 0 2.33.5c1.14-.01 1.98-.13 2.57-.33.2-.07.35-.13.44-.18V9.67z" fill="#266ABD"></path>
+            <path d="M2.67 11.33V9a.33.33 0 0 1 .66 0v2.67c0 .18-.15.33-.33.33H1.67a1 1 0 0 1-1-1V9.67c0-2.6 1.8-4.34 5.33-4.34 3.53 0 5.33 1.74 5.33 4.34V11a1 1 0 0 1-1 1H9a.33.33 0 0 1-.33-.33V9a.33.33 0 1 1 .66 0v2.33h1c.19 0 .34-.15.34-.33V9.67C10.67 7.44 9.17 6 6 6S1.33 7.44 1.33 9.67V110 .18.15.33.34.33h1zm3.33-6c1.09 0 2-1.02 2-2.33C8 1.7 7.09.67 6 .67 4.91.67 4 1.69 4 3c0 1.3.91 2.33 2 2.33zM6 6C4.53 6 3.33 4.66 3.33 3S4.53 0 6 0s2.67 1.34 2.67 3S7.47 6 6 6zm2.67 3.67a.33.33 0 1 1 .66 0v2c0 .09-.03.17-.1.23-.12.12-.37.28-.8.42-.65.22-1.56.35-2.76.35-.92 0-1.65-.14-2.21-.36-.36-.14-.58-.3-.7-.4a.33.33 0 0 1-.1-.24v-2a.33.33 0 1 1 .67 0v1.84a5.33 5.33 0 0 0 2.33.5c1.14-.01 1.98-.13 2.57-.33.2-.07.35-.13.44-.18V9.67z" fill="#266ABD"></path>  </a>
           </svg>
+				
+				
+			    <div class="dropdown-menu"> 
+			  <a class="dropdown-item" data-test-id="accountInfo" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userPanel.jsp" id="account-nav-link">Area Utente</a>
+					
+					
+			  <a class="dropdown-item" data-test-id="orders" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userOrders.jsp" id="orders-nav-link">Ordini</a>
+            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" name="logout" href="doLogin?logout=true">Esci</a>
+			</div>
+				
+        </li>
+				</c:if>	
+		
+		<!-- LISTA DA NON LOGGATO-->
+		<c:if test="${utente.getEmail_Utente() == null}">
+		 <li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="doLogin" role="button" aria-haspopup="true" aria-expanded="false">Login</a>
+				
+				
+				    <div class="dropdown-menu"> 
+						<a class="dropdown-item" href="login.html">Login</a>
+			    <a class="dropdown-item" href="registration.html">Registrazione</a>
+
+			  <a class="dropdown-item" href="restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
+            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			</div>
+        </li>
 			
-          </a>>
+				</c:if>	
+			
           <div class="dropdown-menu"> 
 			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link">Area Utente</a> <a class="dropdown-item" href="login.html">Login</a>
 			    <a class="dropdown-item" href="registration.html">Registrazione</a>
-			  <a class="dropdown-item" data-test-id="orders" href="userOrders.html" id="orders-nav-link">Ordini</a>
+			  <a class="dropdown-item" data-test-id="orders" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userOrders.html" id="orders-nav-link">Ordini</a>
 			  <a class="dropdown-item" data-test-id="addressBook" href="/account/addressbook/" id="address-nav-link">Indirizzi di consegna</a>
-			  <a class="dropdown-item" href="restaurantRegistration.html">Inserisci Nuovo Ristorante</a>
+			  <a class="dropdown-item" href="restaurantRegistration.jsp">Inserisci Nuovo Ristorante</a>
             <a class="dropdown-item" href="checkout.jsp">Checkout</a>
 			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" href="/account/logout/?returnurl=%2Faccount%2Finfo%2F">Esci</a>
 			</div>
@@ -76,6 +120,7 @@
     </div>
   </div>
 </nav>
+			
 <!-- /.navbar -->
 
 <div data-cookiebanner="" class="infoBar infoBar--dark infoBar--hideByDefault">
@@ -88,7 +133,7 @@
 <div class="u-divider u-horizontalRule">
   <div class="l-container l-vPad--small">
     <ul class="breadcrumb unstyled">
-      <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="index.html" itemprop="url" title="Vai alla pagina iniziale di JUST EAT"> <span itemprop="title">Pagina iniziale</span> </a> </li>
+      <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/index.html" itemprop="url" title="Vai alla pagina iniziale di JUST EAT"> <span itemprop="title">Pagina iniziale</span> </a> </li>
       <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Account"> <span itemprop="title">Account</span> </li>
     </ul>
   </div>
@@ -98,17 +143,17 @@
     <aside class="sidebar g-col g-span3--mid u-showAboveMid">
       <nav>
         <ul class="controlList unstyled">
-            <li class="controlList-item is-active"> <a href="userPanel.html" id="account-nav-link">Account</a> </li>
-          <li class="controlList-item "> <a href="userOrders.html" id="orders-nav-link">Ordini</a> </li>
-          <li class="controlList-item"> <a href="restaurantInfo.html" id="credit-nav-link">Il mio Ristorante</a> </li>
+            <li class="controlList-item is-active"> <a href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userPanel.html" id="account-nav-link">Account</a> </li>
+          <li class="controlList-item "> <a href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userOrders.html" id="orders-nav-link">Ordini</a> </li>
+          <li class="controlList-item"> <a href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/restaurantInfo.html" id="credit-nav-link">Il mio Ristorante</a> </li>
         <li class="controlList-item "> <a id="payment-nav-link" href="/member/savedcards">Inserisci Menù Ristorante</a> </li></li>
         </ul>
       </nav>
     </aside>
     <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
-      <form action="aggiungiPietanza" class="form" id="menuform" method="post">
+      <form action="/account/info/" class="form" data-track-validation="{&quot;event&quot;:&quot;trackEvent&quot;,&quot;eventCategory&quot;:&quot;engagement&quot;,&quot;eventAction&quot;:&quot;form_account_info_update&quot;}" id="account-info-form" method="post" novalidate="novalidate">
         <fieldset class="form-fieldset">
-          <h1 class="form-title beta title--alternate">Il tuo menù</h1>
+          <h1 class="form-title beta title--alternate">Il mio Account</h1>
           <input name="__RequestVerificationToken" type="hidden" value="jmR4IvWw3cRE18u_Hl7HZH7-VvP8Vyj6vPKgEo_Eay9fvStNU7bnkDKsdYWK9uDjToHD0aYXuEB4WBH8KJsF4sYqLxOEbOGN6auvtwTA8SofSJgOw7C_u61fnQWetmh75xKINQ2">
           <div role="alert" aria-atomic="true" class="validation-summary-valid alert alert--danger" data-valmsg-summary="true" data-test-id="validationErrorSummary">
             <ul>
@@ -116,23 +161,45 @@
           </div>
           <input data-unsaved-changes-flag="true" data-unsaved-changes-message="I cambiamenti che hai fatto verranno persi abbandonando questa pagina." id="UnsavedChangesFlag" name="UnsavedChangesFlag" type="hidden" value="0">
           <div class="form-controlGroup">
-            <label class="form-label" for="Name">Nome Pietanza</label>
+            <label class="form-label" for="Name">Nome</label>
             <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" name="Pietanza" type="text">
+              <input class="form-input form-input--icon" data-test-id="name" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" data-val-regex="Il tuo nome non dovrebbe contenere numeri" data-val-regex-pattern="^[\.\(\),!\/&amp;:\u0022\u2019\u00b4\u0060\u00C0-\u00F6\u00F8-\u017Fa-zA-Z-'' ]*$" data-val-required="Inserisci Nome e Cognome" id="account-name" name="Name" type="text" value="rickym">
               <span class="field-validation-valid has-error" data-valmsg-for="Name" data-valmsg-replace="true"></span> </div>
           </div>
-			  <div class="form-controlGroup">
-            <label class="form-label" for="IndirizzoOrdini">Prezzo</label>
+          <div class="form-controlGroup">
+            <label class="form-label" for="Email">Email</label>
             <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" id="price" name="PietanzaPrice" type="number">
+              <input class="form-input form-input--icon" data-test-id="email" data-val="true" data-val-email="Inserisci il tuo indirizzo email valido" data-val-length="Inserisci il tuo indirizzo email valido" data-val-length-max="50" data-val-required="Inserisci il tuo indirizzo email" id="account-email" name="Email" type="email" value="prova@gmail.com">
+              <span class="field-validation-valid has-error" data-valmsg-for="Email" data-valmsg-replace="true"></span> </div>
+          </div>
+          <div class="form-controlGroup">
+            <label class="form-label" for="Phone">Cellulare</label>
+            <div class="form-controlGroup-inputWrapper">
+              <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
+              <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
+          </div>
+			  <div class="form-controlGroup">
+            <label class="form-label" for="IndirizzoOrdini">Indirizzo</label>
+            <div class="form-controlGroup-inputWrapper">
+              <input class="form-input form-input--icon" data-test-id="IndirizzoOrdini" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" id="account-street" name="Indirizzo" type="text">
             </div>
           </div>
-			  <div class="form-group">
-        <label for="exampleTextarea">Descrizione</label>
-        <textarea class="form-control" id="exampleTextarea" name="FoodDescr" rows="3"></textarea>
-      </div>
-          <button type="submit" class="btn btn--primary btn--block" id="addfood"><span class="is-loading-hidden">Aggiungi</span></button>
+			  <div class="form-controlGroup">
+            <label class="form-label" for="NumeroCarta">Numero Carta</label>
+            <div class="form-controlGroup-inputWrapper">
+              <input class="form-input form-input--icon" data-test-id="NumeroCarta" data-val="true" data-val-length="Lunghezza massima 16 caratteri" data-val-length-max="16" data-val-regex="Il tuo nome non dovrebbe contenere caratteri"id="cardnumber" name="Name" type="text"></div>
+          </div>
+          <div class="form-controlGroup">
+            <label class="form-label" for="Password">Password</label>
+            <div class="form-editableText"> <a class="form-editableText-link" data-test-id="changePassword" href="/account/change-password/" id="change-password">Modifica Password</a>
+              <p class="form-editableText-text text-masked">●●●●●●●●●●</p>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block" id="save-changes-button" data-test-id="saveButton"><span class="is-loading-hidden">Salva modifiche</span></button>
         </fieldset>
+        <div class="form-subSection u-separated--top">
+          <p class="u-text-soften">Desideri eliminare il tuo account Just Eat?</p>
+          <a href="/account/deactivate/" id="deactivate-account">Elimina il mio account</a> </div>
       </form>
     </main>
   </div>
