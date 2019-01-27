@@ -33,16 +33,23 @@
   	<servlet-name>FaiLogin</servlet-name>
   	<url-pattern>/doLogin</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>HomeServlet</servlet-name>
     <servlet-class>it.unical.ingsw.justeat.db.servlet.Home</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HomeServlet</servlet-name>
-    <url-pattern></url-pattern>
+    <url-pattern>/ciao</url-pattern>
+  </servlet-mapping>
+  <servlet>
+ <servlet-name>ioSono</servlet-name>
+    <servlet-class>it.unical.ingsw.justeat.db.servlet.cosaSono</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ioSono</servlet-name>
+    <url-pattern>/what</url-pattern>
   </servlet-mapping>
   
- 
   
   
 </web-app> 

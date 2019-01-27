@@ -23,7 +23,6 @@ public class CredenzialiLogin extends HttpServlet{
 		//UtenteCredenziali s =uDao.findByPrimaryKeyCredential(email);
 		Utente s=uDao.findByPrimaryKey(email);
 		
-		
 		if (s == null) {
 			
 			RequestDispatcher rd = req.getRequestDispatcher("loginFailed.html");

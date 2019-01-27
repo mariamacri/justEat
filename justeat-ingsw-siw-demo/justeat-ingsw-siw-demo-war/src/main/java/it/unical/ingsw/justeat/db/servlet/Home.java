@@ -15,7 +15,7 @@ import it.unical.ingsw.justeat.db.model.Utente;
 public class Home extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String email = (String) req.getSession().getAttribute("email");
+	/*	String email = (String) req.getSession().getAttribute("email");
 		
 		if (email != null) {
 			UtenteDao utenteD = DatabaseManager.getInstance().getDaoFactory().getUtenteDAO();
@@ -26,6 +26,10 @@ public class Home extends HttpServlet{
 		}
 		
 		RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
-		rd.forward(req, resp);
+		rd.forward(req, resp);*/
+		String email=req.getParameter("email");
+		System.out.println(email);
+	
 	}
+		
 }
