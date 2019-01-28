@@ -16,14 +16,16 @@ public class Ristorante {
 	// utente che crea il ristorante
 	private Utente utente_Proprietario;
 	private Set<Categoria> categorie;
+	private String citta;
 
+	
 	@Override
 	public String toString() {
 		return "Ristorante [nome_Ristorante=" + nome_Ristorante + ", indirizzo_Ristorante=" + indirizzo_Ristorante
 				+ ", indirizzo_Legale=" + indirizzo_Legale + ", partita_Iva=" + partita_Iva
 				+ ", coordinate_Bancarie_Ristorante=" + coordinate_Bancarie_Ristorante + ", titolare=" + titolare
 				+ ", descrizione_Ristorante=" + descrizione_Ristorante + ", utente_Proprietario=" + utente_Proprietario
-				+ ", categoria=" + categorie.toString() + "]";
+				+ ", categoria=" + categorie.toString() + "citta"+citta +"]";
 	}
 
 	@Override
@@ -31,6 +33,7 @@ public class Ristorante {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((categorie == null) ? 0 : categorie.hashCode());
+		result = prime * result + ((citta == null) ? 0 : citta.hashCode());
 		result = prime * result
 				+ ((coordinate_Bancarie_Ristorante == null) ? 0 : coordinate_Bancarie_Ristorante.hashCode());
 		result = prime * result + ((descrizione_Ristorante == null) ? 0 : descrizione_Ristorante.hashCode());
@@ -43,6 +46,7 @@ public class Ristorante {
 		return result;
 	}
 
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -56,6 +60,11 @@ public class Ristorante {
 			if (other.categorie != null)
 				return false;
 		} else if (!categorie.equals(other.categorie))
+			return false;
+		if (citta == null) {
+			if (other.citta != null)
+				return false;
+		} else if (!citta.equals(other.citta))
 			return false;
 		if (coordinate_Bancarie_Ristorante == null) {
 			if (other.coordinate_Bancarie_Ristorante != null)
@@ -98,6 +107,14 @@ public class Ristorante {
 		} else if (!utente_Proprietario.equals(other.utente_Proprietario))
 			return false;
 		return true;
+	}
+
+	public String getCitta() {
+		return citta;
+	}
+
+	public void setCitta(String citta) {
+		this.citta = citta;
 	}
 
 	public void addCategoria(Categoria categoria) {

@@ -200,7 +200,7 @@ prefix="c" %>
               <p class="form-editableText-text text-masked">*********</p>
             </div>
           </div>
-          <button type="submit" class="btn btn--primary btn--block" id="save-changes-button" data-test-id="saveButton"><span class="is-loading-hidden">Salva modifiche</span></button>
+          <button type="submit"  class="btn btn--primary btn--block" id="save-changes-button" data-test-id="saveButton"><span class="is-loading-hidden">Salva modifiche</span></button>
         </fieldset>
         <div class="form-subSection u-separated--top">
           <p class="u-text-soften">Desideri eliminare il tuo account Just Eat?</p>

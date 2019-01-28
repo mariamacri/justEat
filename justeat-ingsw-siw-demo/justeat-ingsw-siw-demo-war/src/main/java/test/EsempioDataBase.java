@@ -79,20 +79,20 @@ public class EsempioDataBase {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
 		
-		PietanzaDao pd=factory.getPietanzaDAO();
-		
-		Pietanza p=new Pietanza();
-		p.setNome("margherita");
-		
-		Ristorante r=new Ristorante();
-		
-		r.setPartita_Iva("123");
-		
-		pd.pietanza_contenuta_in(p, r);
-		
-		
-		
-		
+//		PietanzaDao pd=factory.getPietanzaDAO();
+//		
+//		Pietanza p=new Pietanza();
+//		p.setNome("margherita");
+//		
+//		Ristorante r=new Ristorante();
+//		
+//		r.setPartita_Iva("123");
+//		
+//		pd.pietanza_contenuta_in(p, r);
+//		Dao pd=factory.getPietanzaDAO();
+//		
+//		
+//		
 		
 		
 		

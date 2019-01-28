@@ -388,7 +388,7 @@ prefix="c" %>
     <script src="js/headroom.js"></script>
     <script src="js/foodpicky.js"></script>
     <script src="js/markerclusterer.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLqPULHQ1p9KU-10gdMR3Hd-Y9kmaVxTM&callback=initMap"></script>
     <script src="js/jquery.googlemap.js"></script>
     <script src="js/data.json"></script>
     

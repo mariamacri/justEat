@@ -157,6 +157,32 @@ prefix="c" %>
       <h1 class="beta title--alternate">Ordini</h1>
       <p class="u-text-knockedBack u-text-soften">Qui trovi lo storico dei tuoi ordini.</p>
       <ol id="orderList" class="listing unstyled u-divider--top">
+		  
+		  <!-- Template lista ordini da generare con un for -->
+		  
+		  <li class="listing-item" itemscope="" itemtype="http://schema.org/Restaurant" data-test="orderHistoryItem" data-test-order-listing-id="29385942">
+        <a href="/account/order/29385942/" class="mediaElement" data-test="orderSummaryLink" data-gtm="engagement|previous_order|click_details">
+            <div class="listing-item-img mediaElement-img mediaElement-img--outlined mediaElement-img--small">
+                <img src="//d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/207929.gif" alt="The Burger Station" itemprop="image">
+
+                <noscript>
+                    <img src="//d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/207929.gif" alt="The Burger Station" itemprop="image" />
+                </noscript>
+            </div>
+            <div class="listing-item-info mediaElement-content">
+                <h3 class="listing-item-title" data-order-id="29385942" data-test-restaurant-name="" itemprop="name">The Burger Station</h3>
+
+                <p class="infoText">€ 16,80</p>
+                <p class="infoText" data-order-id="29385942" data-test-order-details="">27/01/2019 · Consegna</p>
+
+
+            </div>
+
+            <button class="btn btn--primary btn--cta" data-restaurant-id="item.OrderContainer.RestaurantInfo.Id">Dettagli dell'ordine</button>
+        </a>
+    </li>
+		  <!-- Fine template -->
+		  
       </ol>
     </main>
   </div>

@@ -26,6 +26,7 @@ prefix="c" %>
      <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
          <!--header starts-->
          <header id="header" class="header-scroll top-header headrom">
+			 
                        <!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
@@ -105,6 +106,7 @@ prefix="c" %>
   </div>
 </nav>
 <!-- /.navbar -->
+		 
          </header>
          <div class="page-wrapper">
             <!-- top Links -->
