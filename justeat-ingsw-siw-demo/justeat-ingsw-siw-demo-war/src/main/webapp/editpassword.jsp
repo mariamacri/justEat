@@ -170,7 +170,7 @@ prefix="c" %>
 		  
 		  <!-- Template lista ordini da generare con un for -->
 		  <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
-<form action="/account/change-password/" class="form" data-track-validation="{&quot;event&quot;:&quot;trackEvent&quot;,&quot;eventCategory&quot;:&quot;engagement&quot;,&quot;eventAction&quot;:&quot;form_account_change_password&quot;}" id="change-password-form" method="post" novalidate="novalidate">                    <fieldset class="form-fieldset">
+<form action="modificapassword" class="form" data-track-validation="{&quot;event&quot;:&quot;trackEvent&quot;,&quot;eventCategory&quot;:&quot;engagement&quot;,&quot;eventAction&quot;:&quot;form_account_change_password&quot;}" id="change-password-form" method="post" novalidate="novalidate">                    <fieldset class="form-fieldset">
                         <h1 class="form-title beta title--alternate">Cambia password</h1>
 
                         <input name="__RequestVerificationToken" type="hidden" value="bIbz1CsvOE0LiuK4dgu_IlkcGHYe-R8eqzGhcSHmuIC96nz-x3i8G1jkr44-f6FXQyIqpL5y9MnBMph9d7KqCLyYgP4LRNGN8xANmaukEqTIOgbIIeXR7zqdb23Q5WADyfKVQA2">
@@ -210,7 +210,7 @@ prefix="c" %>
                                 <span class="field-validation-valid has-error" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn--primary btn--block" id="save-changes-button" data-test-id="savePassword"><span class="is-loading-hidden">Salva</span></button>
+                        <button type="submit" value="${utente.getEmail_Utente()}" name="email" class="btn btn--primary btn--block" id="save-changes-button" data-test-id="savePassword"><span class="is-loading-hidden">Salva</span></button>
                     </fieldset>
 </form>        </main>
 		  

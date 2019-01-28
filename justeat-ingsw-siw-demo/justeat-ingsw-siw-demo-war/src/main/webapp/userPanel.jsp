@@ -196,7 +196,7 @@ prefix="c" %>
           </div>
           <div class="form-controlGroup">
             <label class="form-label" for="Password">Password</label>
-            <div class="form-editableText"> <a class="form-editableText-link" data-test-id="changePassword" href="/account/change-password/" id="change-password">Modifica Password</a>
+            <div class="form-editableText"> <a class="form-editableText-link" data-test-id="changePassword" href="editpassword.jsp" id="change-password">Modifica Password</a>
               <p class="form-editableText-text text-masked">*********</p>
             </div>
           </div>

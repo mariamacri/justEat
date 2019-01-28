@@ -59,4 +59,14 @@
     <url-pattern>/modificadati</url-pattern>
   </servlet-mapping>
   
+  
+    <servlet>
+  <servlet-name>ModificaPassword</servlet-name>
+    <servlet-class>it.unical.ingsw.justeat.db.servlet.modificaPassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModificaPassword</servlet-name>
+    <url-pattern>/modificapassword</url-pattern>
+  </servlet-mapping>
+  
 </web-app> 
