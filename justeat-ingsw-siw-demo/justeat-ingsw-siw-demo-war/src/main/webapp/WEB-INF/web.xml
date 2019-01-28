@@ -50,6 +50,13 @@
     <url-pattern>/what</url-pattern>
   </servlet-mapping>
   
-  
+  <servlet>
+  <servlet-name>ModificaDati</servlet-name>
+    <servlet-class>it.unical.ingsw.justeat.db.servlet.modificaDati</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModificaDati</servlet-name>
+    <url-pattern>/modificadati</url-pattern>
+  </servlet-mapping>
   
 </web-app> 

@@ -21,5 +21,7 @@ public interface UtenteDao {
 
     public UtenteCredenziali findByPrimaryKeyCredential(String email);
 	// Retrieve
+    
+    public void setCartaDiCredito(Utente utente, String numero_carta);
 
 }

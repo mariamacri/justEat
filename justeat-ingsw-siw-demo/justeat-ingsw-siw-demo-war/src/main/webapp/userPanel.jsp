@@ -156,7 +156,7 @@ prefix="c" %>
 	
 	
     <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
-      <form class="form" action="" id="account-info-form" method="post" novalidate="novalidate">
+      <form class="form" action="modificadati" id="account-info-form" method="post" novalidate="novalidate">
         <fieldset class="form-fieldset">
           <h1 class="form-title beta title--alternate">Il mio Account</h1>
           <input name="__RequestVerificationToken" type="hidden" value="jmR4IvWw3cRE18u_Hl7HZH7-VvP8Vyj6vPKgEo_Eay9fvStNU7bnkDKsdYWK9uDjToHD0aYXuEB4WBH8KJsF4sYqLxOEbOGN6auvtwTA8SofSJgOw7C_u61fnQWetmh75xKINQ2">
@@ -192,7 +192,7 @@ prefix="c" %>
 			  <div class="form-controlGroup">
             <label class="form-label" for="NumeroCarta">Numero Carta</label>
             <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="NumeroCarta" data-val="true" data-val-length="Lunghezza massima 16 caratteri" data-val-length-max="16" data-val-regex="Il tuo nome non dovrebbe contenere caratteri"id="cardnumber" name="Name" type="text" value="${utente.getCarta_Credito_Usata().getNumero_Carta()}"></div>
+              <input class="form-input form-input--icon" data-test-id="NumeroCarta" data-val="true" data-val-length="Lunghezza massima 16 caratteri" data-val-length-max="16" data-val-regex="Il tuo nome non dovrebbe contenere caratteri"id="cardnumber" name="numero_carta" type="text" value="${utente.getCarta_Credito_Usata().getNumero_Carta()}"></div>
           </div>
           <div class="form-controlGroup">
             <label class="form-label" for="Password">Password</label>
@@ -200,7 +200,7 @@ prefix="c" %>
               <p class="form-editableText-text text-masked">*********</p>
             </div>
           </div>
-          <button type="submit"  class="btn btn--primary btn--block" id="save-changes-button" data-test-id="saveButton"><span class="is-loading-hidden">Salva modifiche</span></button>
+          <button type="submit" value="${utente.getEmail_Utente()}" name="email" class="btn btn--primary btn--block" id="save-changes-button" data-test-id="saveButton"><span class="is-loading-hidden">Salva modifiche</span></button>
         </fieldset>
         <div class="form-subSection u-separated--top">
           <p class="u-text-soften">Desideri eliminare il tuo account Just Eat?</p>
