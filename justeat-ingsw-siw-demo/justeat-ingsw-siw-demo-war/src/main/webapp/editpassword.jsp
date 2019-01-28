@@ -1,11 +1,11 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
+	
 <!DOCTYPE html>
 
-<html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
+<html lang="it">
 <head>
 <title>Informazioni Account | JUST EAT</title>
 <meta charset="utf-8">
@@ -44,7 +44,8 @@ prefix="c" %>
 
 <div class="skipTo"> <a class="is-visuallyHidden focusable u-text-marker" href="#skipToMain">Vai al contenuto principale</a> </div>
 <header class="header"> </header>
-
+		
+        
             <!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
@@ -121,7 +122,27 @@ prefix="c" %>
   </div>
 </nav>
 <!-- /.navbar -->
+	
+<div class="u-divider u-horizontalRule">
+    <div class="l-container l-vPad--small">
+        <ul class="breadcrumb unstyled">
+    <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="/" itemprop="url" title="Vai alla pagina iniziale di JUST EAT">
+            <span itemprop="title">Pagina iniziale</span>
+        </a>
+    </li>
+        <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Account">
+                <a href="/account/info/" itemprop="url" title="Account">
+                    <span itemprop="title">Account</span>
+                </a>
+        </li>
+        <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Modifica Password">
+                <span itemprop="title">Modifica Password</span>
+        </li>
+</ul>
 
+    </div>
+</div>
 <div data-cookiebanner="" class="infoBar infoBar--dark infoBar--hideByDefault">
   <div class="l-container infoBar-row"> <a class="btn infoBar-btn" data-cookiebanner-btn="" data-test="cookieBannerBtn">Chiudi</a>
     <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicità online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti all’uso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
@@ -129,17 +150,8 @@ prefix="c" %>
     <p class="u-showBelowMid">Qui puoi trovare i dettagli della nostra <a href="/cookies-policy">cookie policy</a></p>
   </div>
 </div>
-<div class="u-divider u-horizontalRule">
-  <div class="l-container l-vPad--small">
-    <ul class="breadcrumb unstyled">
-      <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="index.jsp" itemprop="url" title="Vai alla pagina iniziale di JUST EAT"> <span itemprop="title">Pagina iniziale</span> </a> </li>
-      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Account"> <span itemprop="title">Account</span> </li>
-    </ul>
-  </div>
-</div>
 <div class="l-container l-pageContent">
   <div class="g g--gutter g--stack">
-	  
 	   <!-- Pannello Account Laterale -->
     <aside class="sidebar g-col g-span3--mid u-showAboveMid">
       <nav>
@@ -153,59 +165,58 @@ prefix="c" %>
 		  </ul>
       </nav>
     </aside>
-	
-	
-    <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
-      <form class="form" action="" id="account-info-form" method="post" novalidate="novalidate">
-        <fieldset class="form-fieldset">
-          <h1 class="form-title beta title--alternate">Il mio Account</h1>
-          <input name="__RequestVerificationToken" type="hidden" value="jmR4IvWw3cRE18u_Hl7HZH7-VvP8Vyj6vPKgEo_Eay9fvStNU7bnkDKsdYWK9uDjToHD0aYXuEB4WBH8KJsF4sYqLxOEbOGN6auvtwTA8SofSJgOw7C_u61fnQWetmh75xKINQ2">
-          <div role="alert" aria-atomic="true" class="validation-summary-valid alert alert--danger" data-valmsg-summary="true" data-test-id="validationErrorSummary">
-            <ul>
-            </ul>
-          </div>
-          <input data-unsaved-changes-flag="true" data-unsaved-changes-message="I cambiamenti che hai fatto verranno persi abbandonando questa pagina." id="UnsavedChangesFlag" name="UnsavedChangesFlag" type="hidden" value="0">
-          <div class="form-controlGroup">
-            <label class="form-label" for="Name">Nome</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="name" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" data-val-regex="Il tuo nome non dovrebbe contenere numeri" data-val-required="Inserisci Nome e Cognome" id="account-name" name="nome" type="text" value="${utente.getNome_Utente()}">
-              <span class="field-validation-valid has-error" data-valmsg-for="Name" data-valmsg-replace="true"></span> </div>
-          </div>
-          <div class="form-controlGroup">
-            <label class="form-label" for="Email">Cognome</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="cognome" data-val="true" data-val-email="Inserisci il tuo indirizzo email valido" data-val-length="Inserisci il tuo indirizzo email valido" data-val-length-max="50" data-val-required="Inserisci il tuo indirizzo email" name="cognome" type="text" value="${utente.getCognome_Utente()}">
-              <span class="field-validation-valid has-error" data-valmsg-for="Email" data-valmsg-replace="true"></span> </div>
-          </div>
-          <div class="form-controlGroup">
-            <label class="form-label" for="Phone">Cellulare</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="numero_telefono_utente" type="tel" value="${utente.getNumero_telefono_utente()}">
-              <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
-          </div>
-			  <div class="form-controlGroup">
-            <label class="form-label" for="IndirizzoOrdini">Indirizzo</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="IndirizzoOrdini" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" id="account-street" name="indirizzo" type="text" value="${utente.getIndirizzo_Utente()}">
-            </div>
-          </div>
-			  <div class="form-controlGroup">
-            <label class="form-label" for="NumeroCarta">Numero Carta</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="NumeroCarta" data-val="true" data-val-length="Lunghezza massima 16 caratteri" data-val-length-max="16" data-val-regex="Il tuo nome non dovrebbe contenere caratteri"id="cardnumber" name="numero_carta" type="text" value="${utente.getCarta_Credito_Usata().getNumero_Carta()}"></div>
-          </div>
-          <div class="form-controlGroup">
-            <label class="form-label" for="Password">Password</label>
-            <div class="form-editableText"> <a class="form-editableText-link" data-test-id="changePassword" href="/account/change-password/" id="change-password">Modifica Password</a>
-              <p class="form-editableText-text text-masked">*********</p>
-            </div>
-          </div>
-          <button type="submit"  class="btn btn--primary btn--block" id="save-changes-button" data-test-id="saveButton"><span class="is-loading-hidden">Salva modifiche</span></button>
-        </fieldset>
-        <div class="form-subSection u-separated--top">
-          <p class="u-text-soften">Desideri eliminare il tuo account Just Eat?</p>
-          <a href="/account/deactivate/" id="deactivate-account">Elimina il mio account</a> </div>
-      </form>
+    <main class="g-col g-span9--mid g-span7--wide">
+      <ol id="orderList" class="listing unstyled u-divider--top">
+		  
+		  <!-- Template lista ordini da generare con un for -->
+		  <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
+<form action="/account/change-password/" class="form" data-track-validation="{&quot;event&quot;:&quot;trackEvent&quot;,&quot;eventCategory&quot;:&quot;engagement&quot;,&quot;eventAction&quot;:&quot;form_account_change_password&quot;}" id="change-password-form" method="post" novalidate="novalidate">                    <fieldset class="form-fieldset">
+                        <h1 class="form-title beta title--alternate">Cambia password</h1>
+
+                        <input name="__RequestVerificationToken" type="hidden" value="bIbz1CsvOE0LiuK4dgu_IlkcGHYe-R8eqzGhcSHmuIC96nz-x3i8G1jkr44-f6FXQyIqpL5y9MnBMph9d7KqCLyYgP4LRNGN8xANmaukEqTIOgbIIeXR7zqdb23Q5WADyfKVQA2">
+                        
+<div role="alert" aria-atomic="true" class="validation-summary-valid alert alert--danger" data-valmsg-summary="true" data-test-id="validationErrorSummary">
+    <ul>
+    </ul>
+</div>
+
+
+
+
+
+
+
+                        <div class="form-controlGroup">
+                            <label class="form-label" for="OldPassword">Vecchia password</label>
+                            <div class="form-controlGroup-inputWrapper">
+                                <input class="form-input" data-test-id="passwordOld" data-val="true" data-val-required="Inserisci una password" id="account-password-old" name="OldPassword" type="password">
+                                <span class="field-validation-valid has-error" data-valmsg-for="OldPassword" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <p class="form-subtext">
+                            <a href="/account/reset-password/">Hai dimenticato la password?</a>
+                        </p>
+                        <div class="form-controlGroup">
+                            <label class="form-label" for="NewPassword">Nuova password</label>
+                            <div class="form-controlGroup-inputWrapper">
+                                <input class="form-input" data-test-id="passwordNew" data-val="true" data-val-length="Inserisci una password valida. Deve essere composta da almeno 4 caratteri" data-val-length-max="100" data-val-length-min="4" data-val-required="Inserisci una password" id="account-password-new" name="NewPassword" type="password" aria-autocomplete="list">
+                                <span class="field-validation-valid has-error" data-valmsg-for="NewPassword" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <div class="form-controlGroup">
+                            <label class="form-label" for="ConfirmPassword">Ripeti la nuova password</label>
+                            <div class="form-controlGroup-inputWrapper">
+                                <input class="form-input" data-test-id="passwordNewRepeat" data-val="true" data-val-equalto="Le nuove password devono essere uguali: controlla di aver digitato correttamente!" data-val-equalto-other="*.NewPassword" id="account-password-newrepeat" name="ConfirmPassword" type="password">
+                                <span class="field-validation-valid has-error" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--block" id="save-changes-button" data-test-id="savePassword"><span class="is-loading-hidden">Salva</span></button>
+                    </fieldset>
+</form>        </main>
+		  
+		  <!-- Fine template -->
+		  
+      </ol>
     </main>
   </div>
 </div>
