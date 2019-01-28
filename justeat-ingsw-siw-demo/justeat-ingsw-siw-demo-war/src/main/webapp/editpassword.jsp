@@ -189,7 +189,7 @@ prefix="c" %>
                         <div class="form-controlGroup">
                             <label class="form-label" for="OldPassword">Vecchia password</label>
                             <div class="form-controlGroup-inputWrapper">
-                                <input class="form-input" data-test-id="passwordOld" data-val="true" data-val-required="Inserisci una password" id="account-password-old" name="OldPassword" type="password">
+                                <input class="form-input" data-test-id="passwordOld" data-val="true" data-val-required="Inserisci una password" id="account-password-old" value="${utente.getPassword()}" name="OldPassword" type="text">
                                 <span class="field-validation-valid has-error" data-valmsg-for="OldPassword" data-valmsg-replace="true"></span>
                             </div>
                         </div>
