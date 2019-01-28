@@ -193,6 +193,7 @@ prefix="c" %>
             <label class="form-label" for="NumeroCarta">Numero Carta</label>
             <div class="form-controlGroup-inputWrapper">
               <input class="form-input form-input--icon" data-test-id="NumeroCarta" data-val="true" data-val-length="Lunghezza massima 16 caratteri" data-val-length-max="16" data-val-regex="Il tuo nome non dovrebbe contenere caratteri"id="cardnumber" name="numero_carta" type="text" value="${utente.getCarta_Credito_Usata().getNumero_Carta()}"></div>
+				  <a class="form-editableText-link" data-test-id="changePassword" href="editcreditcard.jsp" id="change-password">Modifica NumeroCarta</a>
           </div>
           <div class="form-controlGroup">
             <label class="form-label" for="Password">Password</label>
