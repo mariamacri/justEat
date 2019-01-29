@@ -1,9 +1,9 @@
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
+
 <!DOCTYPE html>
+
 <html lang="it">
 
 <head>
@@ -661,7 +661,7 @@ prefix="c" %>
                            </div>
                            <!-- end:Logo -->
                            <div class="rest-descr">
-                              <h6><a href="#">Sandwich de Alegranza Grande Menü (28 - 30 cm.)</a></h6>
+                              <h6><a href="#">Sandwich de Alegranza Grande MenÃ¼ (28 - 30 cm.)</a></h6>
                            </div>
                            <!-- end:Description -->
                         </div>
@@ -693,7 +693,7 @@ prefix="c" %>
                            </div>
                            <!-- end:Logo -->
                            <div class="rest-descr">
-                              <h6><a href="#">Sandwich de Alegranza Grande Menü (28 - 30 cm.)</a></h6>
+                              <h6><a href="#">Sandwich de Alegranza Grande MenÃ¼ (28 - 30 cm.)</a></h6>
                            </div>
                            <!-- end:Description -->
                         </div>
@@ -725,7 +725,7 @@ prefix="c" %>
                            </div>
                            <!-- end:Logo -->
                            <div class="rest-descr">
-                              <h6><a href="#">Sandwich de Alegranza Grande Menü (28 - 30 cm.)</a></h6>
+                              <h6><a href="#">Sandwich de Alegranza Grande MenÃ¼ (28 - 30 cm.)</a></h6>
                            </div>
                            <!-- end:Description -->
                         </div>
@@ -757,7 +757,7 @@ prefix="c" %>
                            </div>
                            <!-- end:Logo -->
                            <div class="rest-descr">
-                              <h6><a href="#">Sandwich de Alegranza Grande Menü (28 - 30 cm.)</a></h6>
+                              <h6><a href="#">Sandwich de Alegranza Grande MenÃ¼ (28 - 30 cm.)</a></h6>
                            </div>
                            <!-- end:Description -->
                         </div>

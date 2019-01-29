@@ -1,8 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
-	
+
 <!DOCTYPE html>
 
 <html lang="it">
@@ -133,14 +132,14 @@ prefix="c" %>
 </div>
 <div data-cookiebanner="" class="infoBar infoBar--dark infoBar--hideByDefault">
   <div class="l-container infoBar-row"> <a class="btn infoBar-btn" data-cookiebanner-btn="" data-test="cookieBannerBtn">Chiudi</a>
-    <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicità online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti all’uso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
+    <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicitÃ  online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti allâuso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
     <p class="u-showBelowMid u-hideTextOverflow--narrow">JUST EAT utilizza diversi cookie: accedendo al sito, ne acconsenti l'uso.</p>
     <p class="u-showBelowMid">Qui puoi trovare i dettagli della nostra <a href="/cookies-policy">cookie policy</a></p>
   </div>
 </div>
 <div class="l-container l-pageContent">
   <div class="g g--gutter g--stack">
-	   <!-- Pannello Account Laterale -->
+	 <!-- Pannello Account Laterale -->
     <aside class="sidebar g-col g-span3--mid u-showAboveMid">
       <nav>
         <ul class="controlList unstyled">
@@ -148,7 +147,7 @@ prefix="c" %>
           <li class="controlList-item is-active "> <a href="userOrders.jsp" id="orders-nav-link">Ordini</a> </li>
 			<c:if test="${ristorante==true}">
           <li class="controlList-item"> <a href="restaurantInfo.jsp" id="credit-nav-link">Il mio Ristorante</a> </li>
-        <li class="controlList-item "> <a id="payment-nav-link" href="menuForm.jsp">Inserisci Menù Ristorante</a> </li></li>
+        <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
         </c:if>
 		  </ul>
       </nav>
@@ -172,8 +171,8 @@ prefix="c" %>
             <div class="listing-item-info mediaElement-content">
                 <h3 class="listing-item-title" data-order-id="29385942" data-test-restaurant-name="" itemprop="name">The Burger Station</h3>
 
-                <p class="infoText">€ 16,80</p>
-                <p class="infoText" data-order-id="29385942" data-test-order-details="">27/01/2019 · Consegna</p>
+                <p class="infoText">â¬ 16,80</p>
+                <p class="infoText" data-order-id="29385942" data-test-order-details="">27/01/2019 Â· Consegna</p>
 
 
             </div>

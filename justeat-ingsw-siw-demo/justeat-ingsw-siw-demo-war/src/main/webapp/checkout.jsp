@@ -1,9 +1,9 @@
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
+
 <!DOCTYPE html>
+
 <html lang="it">
 
 <head>
@@ -162,7 +162,7 @@ prefix="c" %>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Nome Attività</label>
+                                                <label>Nome AttivitÃ </label>
                                                 <input type="text" class="form-control" placeholder="Dolci freschi"> </div>
                                             <!--/form-group-->
                                         </div>
@@ -178,7 +178,7 @@ prefix="c" %>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Città*</label>
+                                                <label>CittÃ *</label>
                                                 <input type="text" class="form-control" placeholder="Milano"> </div>
                                             <!--/form-group-->
                                         </div>
@@ -214,15 +214,15 @@ prefix="c" %>
                                                 <tbody>
                                                     <tr>
                                                         <td>Subtotale</td>
-                                                        <td>€29.00</td>
+                                                        <td>â¬29.00</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Costi di consegna</td>
-                                                        <td>€2.00</td>
+                                                        <td>â¬2.00</td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-color"><strong>Totale</strong></td>
-                                                        <td class="text-color"><strong>€31.00</strong></td>
+                                                        <td class="text-color"><strong>â¬31.00</strong></td>
                                                     </tr>
                                                 </tbody>
                                             </table>

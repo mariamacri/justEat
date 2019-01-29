@@ -1,9 +1,9 @@
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
+
 <!DOCTYPE html>
+
 <html lang="it">
 
 <head>
@@ -133,7 +133,7 @@ prefix="c" %>
                                     </div>
                                     <div class="col-xs-12 col-md-6 col-lg-3">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="exampleInputText2" placeholder="Località"> </div>
+                                            <input type="text" class="form-control" id="exampleInputText2" placeholder="LocalitÃ "> </div>
                                     </div>
                                     <div class="col-xs-12 col-md-6 col-lg-3">
                                         <div class="form-group">
@@ -158,7 +158,7 @@ prefix="c" %>
                               <div class="clearfix"></div>
                             </div>
                             <div class="widget-body">
-                                <div class="range-slider m-b-10"> Filtra per prezzo massimo:48€ <br>
+                                <div class="range-slider m-b-10"> Filtra per prezzo massimo:48â¬ <br>
                               <input id="ex2" type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="35" /> </div>
                             </div>
                         </div>

@@ -1,8 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
-	
+
 <!DOCTYPE html>
 
 <html lang="it">
@@ -136,7 +135,7 @@ prefix="c" %>
     <div data-cookiebanner="" class="infoBar infoBar--dark infoBar--hideByDefault infoBar--fixed">
         <div class="l-container infoBar-row">
             <a class="btn infoBar-btn" data-cookiebanner-btn="" data-test="cookieBannerBtn">Chiudi</a>
-            <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicità online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti all’uso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
+            <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicitÃ  online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti allâuso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
             <p class="u-showBelowMid u-hideTextOverflow--narrow">JUST EAT utilizza diversi cookie: accedendo al sito, ne acconsenti l'uso.</p>
             <p class="u-showBelowMid">Qui puoi trovare i dettagli della nostra <a href="/cookies-policy">cookie policy</a></p>
         </div>
@@ -220,8 +219,8 @@ prefix="c" %>
 
                 <ul class="infoList unstyled">
                             <li class="infoList-item icon icon--delivery">
-                                <div id="formattedMinDeliveryCharge" data-test-id="deliveryFee">Costo di consegna: € 2</div>
-                                <div id="formattedMinBasketPrice">Minimo € 5 per la consegna</div>
+                                <div id="formattedMinDeliveryCharge" data-test-id="deliveryFee">Costo di consegna: â¬ 2</div>
+                                <div id="formattedMinBasketPrice">Minimo â¬ 5 per la consegna</div>
                             </li>
 
                     <li class="infoList-item icon icon--location">
@@ -314,7 +313,7 @@ prefix="c" %>
 <div id="menu-container--card" class="menuCard" data-test-id="menuCardContainer">
     <div class="u-showAboveMid">
     <div class="input--searchbar searchbar" style="width: 654px;">
-        <input data-menusearch-entry="" placeholder="Cerca nel menù" class="searchbar-entry" type="text">
+        <input data-menusearch-entry="" placeholder="Cerca nel menÃ¹" class="searchbar-entry" type="text">
         <button data-menusearch-btn="" class="searchbar-btn icon-search" disabled=""><span class="is-visuallyHidden">Clear Search Text</span></button>
     </div>
 </div>
@@ -334,7 +333,7 @@ prefix="c" %>
         </div>
         <div class="offerContainer">
                 <p class="offer" data-test="discount-offer">
-        20% di sconto per ordini superiori a € 20
+        20% di sconto per ordini superiori a â¬ 20
     </p>
 
 <script>
@@ -383,7 +382,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                      Normale
                 </div>
-                <div class="product-price u-noWrap">€ 3,00</div>
+                <div class="product-price u-noWrap">â¬ 3,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486952" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Marinara -  Normale to Basket</span>
@@ -393,7 +392,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                      Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486953" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Marinara -  Maxi to Basket</span>
@@ -415,7 +414,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 4,00</div>
+                <div class="product-price u-noWrap">â¬ 4,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486958" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Margherita - Normale to Basket</span>
@@ -425,7 +424,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 8,00</div>
+                <div class="product-price u-noWrap">â¬ 8,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486959" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Margherita - Maxi to Basket</span>
@@ -447,7 +446,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,00</div>
+                <div class="product-price u-noWrap">â¬ 5,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486962" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Salame - Normale to Basket</span>
@@ -457,7 +456,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 10,00</div>
+                <div class="product-price u-noWrap">â¬ 10,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486963" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Salame - Maxi to Basket</span>
@@ -479,7 +478,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 4,50</div>
+                <div class="product-price u-noWrap">â¬ 4,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486966" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Cardinale - Normale to Basket</span>
@@ -489,7 +488,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 9,00</div>
+                <div class="product-price u-noWrap">â¬ 9,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486967" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Cardinale - Maxi to Basket</span>
@@ -511,7 +510,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,00</div>
+                <div class="product-price u-noWrap">â¬ 5,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486971" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Completa - Normale to Basket</span>
@@ -521,7 +520,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 10,00</div>
+                <div class="product-price u-noWrap">â¬ 10,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486972" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Completa - Maxi to Basket</span>
@@ -543,7 +542,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486975" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Cosentina - Normale to Basket</span>
@@ -554,7 +553,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486976" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Cosentina - Maxi to Basket</span>
@@ -576,7 +575,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486978" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Capricciosa - Normale to Basket</span>
@@ -586,7 +585,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486979" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Capricciosa - Maxi to Basket</span>
@@ -608,7 +607,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486983" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add 4 Stagioni - Normale to Basket</span>
@@ -618,7 +617,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486984" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add 4 Stagioni - Maxi to Basket</span>
@@ -641,7 +640,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487035" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add 4 Formaggi - Normale to Basket</span>
@@ -651,7 +650,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 13,00</div>
+                <div class="product-price u-noWrap">â¬ 13,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487036" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add 4 Formaggi - Maxi to Basket</span>
@@ -673,7 +672,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,50</div>
+                <div class="product-price u-noWrap">â¬ 6,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487044" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Primavera - Normale to Basket</span>
@@ -683,7 +682,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 13,00</div>
+                <div class="product-price u-noWrap">â¬ 13,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487045" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Primavera - Maxi to Basket</span>
@@ -705,7 +704,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 4,50</div>
+                <div class="product-price u-noWrap">â¬ 4,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487050" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Funghi - Normale to Basket</span>
@@ -715,7 +714,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 9,00</div>
+                <div class="product-price u-noWrap">â¬ 9,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487051" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Funghi - Maxi to Basket</span>
@@ -737,7 +736,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 4,50</div>
+                <div class="product-price u-noWrap">â¬ 4,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487054" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Peperoni - Normale to Basket</span>
@@ -747,7 +746,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 9,00</div>
+                <div class="product-price u-noWrap">â¬ 9,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487055" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Peperoni - Maxi to Basket</span>
@@ -769,7 +768,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 4,50</div>
+                <div class="product-price u-noWrap">â¬ 4,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487061" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Patate - Normale to Basket</span>
@@ -779,7 +778,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 9,00</div>
+                <div class="product-price u-noWrap">â¬ 9,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487062" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Patate - Maxi to Basket</span>
@@ -801,7 +800,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487068" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Sfiziosa - Normale to Basket</span>
@@ -811,7 +810,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487069" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Sfiziosa - Maxi to Basket</span>
@@ -833,7 +832,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 4,50</div>
+                <div class="product-price u-noWrap">â¬ 4,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487074" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Reginella - Normale to Basket</span>
@@ -843,7 +842,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 9,00</div>
+                <div class="product-price u-noWrap">â¬ 9,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487075" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Reginella - Maxi to Basket</span>
@@ -865,7 +864,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487083" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Reginella con Bufala - Normale to Basket</span>
@@ -875,7 +874,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487084" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Reginella con Bufala - Maxi to Basket</span>
@@ -897,7 +896,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 4,50</div>
+                <div class="product-price u-noWrap">â¬ 4,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487085" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Wurstel - Normale to Basket</span>
@@ -907,7 +906,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 9,00</div>
+                <div class="product-price u-noWrap">â¬ 9,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487086" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Wurstel - Maxi to Basket</span>
@@ -929,7 +928,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487092" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Saporita - Normale to Basket</span>
@@ -939,7 +938,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487093" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Saporita - Maxi to Basket</span>
@@ -961,7 +960,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487101" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Canadese - Normale to Basket</span>
@@ -971,7 +970,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487102" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Canadese - Maxi to Basket</span>
@@ -993,7 +992,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487107" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Campagnola - Normale to Basket</span>
@@ -1003,7 +1002,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487108" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Campagnola - Maxi to Basket</span>
@@ -1026,7 +1025,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487115" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Vegetariana - Normale to Basket</span>
@@ -1036,7 +1035,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487116" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Vegetariana - Maxi to Basket</span>
@@ -1058,7 +1057,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487119" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add 'Nduja - Normale to Basket</span>
@@ -1068,7 +1067,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487120" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add 'Nduja - Maxi to Basket</span>
@@ -1090,7 +1089,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 7,00</div>
+                <div class="product-price u-noWrap">â¬ 7,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487132" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Silana - Normale to Basket</span>
@@ -1100,7 +1099,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 14,00</div>
+                <div class="product-price u-noWrap">â¬ 14,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487133" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Silana - Maxi to Basket</span>
@@ -1122,7 +1121,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 4,50</div>
+                <div class="product-price u-noWrap">â¬ 4,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487137" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Zucchine - Normale to Basket</span>
@@ -1132,7 +1131,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 9,00</div>
+                <div class="product-price u-noWrap">â¬ 9,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487139" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Zucchine - Maxi to Basket</span>
@@ -1154,7 +1153,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487145" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Contadina - Normale to Basket</span>
@@ -1164,7 +1163,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487146" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Contadina - Maxi to Basket</span>
@@ -1186,7 +1185,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487158" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Ortolana - Normale to Basket</span>
@@ -1196,7 +1195,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487159" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Ortolana - Maxi to Basket</span>
@@ -1218,7 +1217,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487169" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Porcini - Normale to Basket</span>
@@ -1228,7 +1227,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487170" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Porcini - Maxi to Basket</span>
@@ -1250,7 +1249,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487182" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Special - Normale to Basket</span>
@@ -1260,7 +1259,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487183" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Special - Maxi to Basket</span>
@@ -1282,7 +1281,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,50</div>
+                <div class="product-price u-noWrap">â¬ 6,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487191" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Sprint - Normale to Basket</span>
@@ -1292,7 +1291,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 13,00</div>
+                <div class="product-price u-noWrap">â¬ 13,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487192" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Sprint - Maxi to Basket</span>
@@ -1314,7 +1313,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 7,50</div>
+                <div class="product-price u-noWrap">â¬ 7,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487203" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Calabrisella - Normale to Basket</span>
@@ -1324,7 +1323,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 15,00</div>
+                <div class="product-price u-noWrap">â¬ 15,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487204" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Calabrisella - Maxi to Basket</span>
@@ -1346,7 +1345,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487210" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Messicana - Normale to Basket</span>
@@ -1356,7 +1355,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487211" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Messicana - Maxi to Basket</span>
@@ -1378,7 +1377,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,50</div>
+                <div class="product-price u-noWrap">â¬ 6,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487229" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Curiosa - Normale to Basket</span>
@@ -1388,7 +1387,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 13,00</div>
+                <div class="product-price u-noWrap">â¬ 13,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487230" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Curiosa - Maxi to Basket</span>
@@ -1410,7 +1409,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,50</div>
+                <div class="product-price u-noWrap">â¬ 6,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487237" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Raffinata - Normale to Basket</span>
@@ -1420,7 +1419,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 13,00</div>
+                <div class="product-price u-noWrap">â¬ 13,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487238" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Raffinata - Maxi to Basket</span>
@@ -1442,7 +1441,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,50</div>
+                <div class="product-price u-noWrap">â¬ 6,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487240" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Marco - Normale to Basket</span>
@@ -1452,7 +1451,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 13,00</div>
+                <div class="product-price u-noWrap">â¬ 13,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487241" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Marco - Maxi to Basket</span>
@@ -1474,7 +1473,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 8,00</div>
+                <div class="product-price u-noWrap">â¬ 8,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487242" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Luigi - Normale to Basket</span>
@@ -1484,7 +1483,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 16,00</div>
+                <div class="product-price u-noWrap">â¬ 16,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487243" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Luigi - Maxi to Basket</span>
@@ -1506,7 +1505,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487248" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Diavola - Normale to Basket</span>
@@ -1516,7 +1515,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487249" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Diavola - Maxi to Basket</span>
@@ -1538,7 +1537,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487253" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bomba - Normale to Basket</span>
@@ -1548,7 +1547,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487254" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bomba - Maxi to Basket</span>
@@ -1570,7 +1569,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487261" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Tonno e Cipolla - Normale to Basket</span>
@@ -1580,7 +1579,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487262" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Tonno e Cipolla - Maxi to Basket</span>
@@ -1602,7 +1601,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487266" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Mediterranea - Normale to Basket</span>
@@ -1612,7 +1611,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487267" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Mediterranea - Maxi to Basket</span>
@@ -1634,7 +1633,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487268" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Boscaiola - Normale to Basket</span>
@@ -1644,7 +1643,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487269" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Boscaiola - Maxi to Basket</span>
@@ -1666,7 +1665,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487271" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Fantasia - Normale to Basket</span>
@@ -1676,7 +1675,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487272" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Fantasia - Maxi to Basket</span>
@@ -1698,7 +1697,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487276" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Zuccosa - Normale to Basket</span>
@@ -1708,7 +1707,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487277" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Zuccosa - Maxi to Basket</span>
@@ -1730,7 +1729,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487282" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Halloween - Normale to Basket</span>
@@ -1740,7 +1739,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487283" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Halloween - Maxi to Basket</span>
@@ -1762,7 +1761,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 6,00</div>
+                <div class="product-price u-noWrap">â¬ 6,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487287" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Casareccia - Normale to Basket</span>
@@ -1772,7 +1771,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 12,00</div>
+                <div class="product-price u-noWrap">â¬ 12,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487288" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Casareccia - Maxi to Basket</span>
@@ -1810,7 +1809,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486946" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Focaccia - Normale to Basket</span>
@@ -1820,7 +1819,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 5,00</div>
+                <div class="product-price u-noWrap">â¬ 5,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3486947" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Focaccia - Maxi to Basket</span>
@@ -1854,7 +1853,7 @@ prefix="c" %>
             <div class="product-description">mozzarella fiordilatte, patate 'mbacchiuse, cipolla, salame, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 4,00</div>
+        <div class="product-price u-noWrap">â¬ 4,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3486865" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Panino Silano to Basket</span>
@@ -1871,7 +1870,7 @@ prefix="c" %>
             <div class="product-description">mozzarella fiordilatte, patate 'mbacchiuse, cipolla, peperoni, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 4,00</div>
+        <div class="product-price u-noWrap">â¬ 4,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3486870" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Panino Unico to Basket</span>
@@ -1888,7 +1887,7 @@ prefix="c" %>
             <div class="product-description">mozzarella fiordilatte, pomodoro Pachino, pancetta, patate 'mbacchiuse, pepe, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 4,50</div>
+        <div class="product-price u-noWrap">â¬ 4,50</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3486883" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Panino Casereccio to Basket</span>
@@ -1905,7 +1904,7 @@ prefix="c" %>
             <div class="product-description">mozzarella fiordilatte, tonno, cipolla, patate 'mbacchiuse, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 4,00</div>
+        <div class="product-price u-noWrap">â¬ 4,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3486897" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Panino Mitico to Basket</span>
@@ -1922,7 +1921,7 @@ prefix="c" %>
             <div class="product-description">mozzarella fiordilatte, patate 'mbacchiuse, pancetta, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 4,00</div>
+        <div class="product-price u-noWrap">â¬ 4,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3486919" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Panino Calabrese to Basket</span>
@@ -1939,7 +1938,7 @@ prefix="c" %>
             <div class="product-description">mozzarella fiordilatte, prosciutto crudo, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 4,00</div>
+        <div class="product-price u-noWrap">â¬ 4,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3486921" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Panino Delizioso to Basket</span>
@@ -1956,7 +1955,7 @@ prefix="c" %>
             <div class="product-description">mozzarella fiordilatte, patate 'mbacchiuse, wurstel, ketchup, maionese e olio</div>
 
 
-        <div class="product-price u-noWrap">€ 4,00</div>
+        <div class="product-price u-noWrap">â¬ 4,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3486929" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Panino Messicano to Basket</span>
@@ -1973,7 +1972,7 @@ prefix="c" %>
             <div class="product-description">mozzarella fiordilatte, pomodoro Pachino, salame, scamorza, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 4,50</div>
+        <div class="product-price u-noWrap">â¬ 4,50</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3486934" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Panino Saporito to Basket</span>
@@ -1990,7 +1989,7 @@ prefix="c" %>
             <div class="product-description">mozzarella fiordilatte, pancetta, tonno, cipolla, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 4,00</div>
+        <div class="product-price u-noWrap">â¬ 4,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3486936" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Panino Boscaiolo to Basket</span>
@@ -2007,7 +2006,7 @@ prefix="c" %>
             <div class="product-description">pomodoro Pachino,&nbsp;mozzarella fiordilatte, prosciutto cotto, tonno e maionese</div>
 
 
-        <div class="product-price u-noWrap">€ 4,50</div>
+        <div class="product-price u-noWrap">â¬ 4,50</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3486939" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Panino Sprint Freddo to Basket</span>
@@ -2040,7 +2039,7 @@ prefix="c" %>
             <div class="product-description">acciughe, olio, origano e aceto</div>
 
 
-        <div class="product-price u-noWrap">€ 3,00</div>
+        <div class="product-price u-noWrap">â¬ 3,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3487556" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Fresina alle Acciughe to Basket</span>
@@ -2057,7 +2056,7 @@ prefix="c" %>
             <div class="product-description">pomodoro, mozzarella fiordilatte, salame, sottolii, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 3,50</div>
+        <div class="product-price u-noWrap">â¬ 3,50</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3487559" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Fresina al Forno to Basket</span>
@@ -2074,7 +2073,7 @@ prefix="c" %>
             <div class="product-description">pomodoro, mozzarella fiordilatte, salame, 'nduja, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 3,50</div>
+        <div class="product-price u-noWrap">â¬ 3,50</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3487560" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Fresina alla 'Nduja to Basket</span>
@@ -2091,7 +2090,7 @@ prefix="c" %>
             <div class="product-description">pomodoro, mozzarella fiordilatte, salame, olio e origano</div>
 
 
-        <div class="product-price u-noWrap">€ 3,00</div>
+        <div class="product-price u-noWrap">â¬ 3,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3487563" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Fresina al Salame to Basket</span>
@@ -2108,7 +2107,7 @@ prefix="c" %>
             <div class="product-description">pomodoro, mozzarella fiordilatte, rucola, scaglie di Parmigiano Reggiano e prosciutto crudo di Parma</div>
 
 
-        <div class="product-price u-noWrap">€ 4,00</div>
+        <div class="product-price u-noWrap">â¬ 4,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3487566" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Fresina Special to Basket</span>
@@ -2140,7 +2139,7 @@ prefix="c" %>
 
 
 
-        <div class="product-price u-noWrap">€ 2,50</div>
+        <div class="product-price u-noWrap">â¬ 2,50</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3532482" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Patatine Fritte to Basket</span>
@@ -2156,7 +2155,7 @@ prefix="c" %>
 
 
 
-        <div class="product-price u-noWrap">€ 3,00</div>
+        <div class="product-price u-noWrap">â¬ 3,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3532484" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Patatine Rotonde to Basket</span>
@@ -2172,7 +2171,7 @@ prefix="c" %>
 
 
 
-        <div class="product-price u-noWrap">€ 3,50</div>
+        <div class="product-price u-noWrap">â¬ 3,50</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3532485" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Patatine Dippers to Basket</span>
@@ -2188,7 +2187,7 @@ prefix="c" %>
 
 
 
-        <div class="product-price u-noWrap">€ 4,00</div>
+        <div class="product-price u-noWrap">â¬ 4,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3532488" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Patatine Rotonde al Cacio e Pepe to Basket</span>
@@ -2205,7 +2204,7 @@ prefix="c" %>
             <div class="product-description">5 pezzi</div>
 
 
-        <div class="product-price u-noWrap">€ 3,00</div>
+        <div class="product-price u-noWrap">â¬ 3,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3532490" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Nuggets to Basket</span>
@@ -2215,17 +2214,17 @@ prefix="c" %>
 <div class="menu-product product u-separated--dash" title="" data-product-id="3532491">
 
     <h4 class="product-title">
-        Crocchè di Patate
+        CrocchÃ¨ di Patate
         
     </h4>
 
             <div class="product-description">5 pezzi</div>
 
 
-        <div class="product-price u-noWrap">€ 3,00</div>
+        <div class="product-price u-noWrap">â¬ 3,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3532491" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
-            <span class="is-visuallyHidden">Add Crocchè di Patate to Basket</span>
+            <span class="is-visuallyHidden">Add CrocchÃ¨ di Patate to Basket</span>
         </button>
 
     </div>
@@ -2239,7 +2238,7 @@ prefix="c" %>
             <div class="product-description">5 pezzi</div>
 
 
-        <div class="product-price u-noWrap">€ 3,00</div>
+        <div class="product-price u-noWrap">â¬ 3,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3532494" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Mozzarelle Stick to Basket</span>
@@ -2276,7 +2275,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,00</div>
+                <div class="product-price u-noWrap">â¬ 5,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487292" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Pizza con Nutella - Normale to Basket</span>
@@ -2286,7 +2285,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 10,00</div>
+                <div class="product-price u-noWrap">â¬ 10,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487293" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Pizza con Nutella - Maxi to Basket</span>
@@ -2308,7 +2307,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Normale
                 </div>
-                <div class="product-price u-noWrap">€ 5,50</div>
+                <div class="product-price u-noWrap">â¬ 5,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487300" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bounty - Normale to Basket</span>
@@ -2318,7 +2317,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Maxi
                 </div>
-                <div class="product-price u-noWrap">€ 11,00</div>
+                <div class="product-price u-noWrap">â¬ 11,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487301" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bounty - Maxi to Basket</span>
@@ -2355,7 +2354,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     50cl
                 </div>
-                <div class="product-price u-noWrap">€ 1,00</div>
+                <div class="product-price u-noWrap">â¬ 1,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487320" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Acqua Naturale - 50cl to Basket</span>
@@ -2365,7 +2364,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     1L
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487321" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Acqua Naturale - 1L to Basket</span>
@@ -2386,7 +2385,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     50cl
                 </div>
-                <div class="product-price u-noWrap">€ 1,00</div>
+                <div class="product-price u-noWrap">â¬ 1,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487327" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Acqua Ferrarelle - 50cl to Basket</span>
@@ -2396,7 +2395,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     1L
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487328" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Acqua Ferrarelle - 1L to Basket</span>
@@ -2414,7 +2413,7 @@ prefix="c" %>
             <div class="product-description">50cl</div>
 
 
-        <div class="product-price u-noWrap">€ 1,00</div>
+        <div class="product-price u-noWrap">â¬ 1,00</div>
         <button class="btn btn--primary btn--roundedIcon btn-addproduct" data-gtm="menu|click - add to cart|3487331" data-test-istempoffline="False">
             <div class="icon--plus--white"></div>
             <span class="is-visuallyHidden">Add Acqua Frizzante to Basket</span>
@@ -2434,7 +2433,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Coca Cola
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487356" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita in Lattina 33cl - Coca Cola to Basket</span>
@@ -2444,7 +2443,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Coca Cola Zero
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487357" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita in Lattina 33cl - Coca Cola Zero to Basket</span>
@@ -2454,7 +2453,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Fanta
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487358" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita in Lattina 33cl - Fanta to Basket</span>
@@ -2464,7 +2463,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Sprite
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487359" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita in Lattina 33cl - Sprite to Basket</span>
@@ -2485,7 +2484,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Coca Cola
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487364" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita in Vetro 33cl - Coca Cola to Basket</span>
@@ -2495,7 +2494,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Coca Cola Zero
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487365" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita in Vetro 33cl - Coca Cola Zero to Basket</span>
@@ -2505,7 +2504,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Fanta
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487366" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita in Vetro 33cl - Fanta to Basket</span>
@@ -2526,7 +2525,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Coca Cola
                 </div>
-                <div class="product-price u-noWrap">€ 4,00</div>
+                <div class="product-price u-noWrap">â¬ 4,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487404" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita in Bottiglia 1,5L - Coca Cola to Basket</span>
@@ -2536,7 +2535,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Coca Cola Zero
                 </div>
-                <div class="product-price u-noWrap">€ 4,00</div>
+                <div class="product-price u-noWrap">â¬ 4,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487405" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita in Bottiglia 1,5L - Coca Cola Zero to Basket</span>
@@ -2546,7 +2545,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Fanta
                 </div>
-                <div class="product-price u-noWrap">€ 4,00</div>
+                <div class="product-price u-noWrap">â¬ 4,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487406" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita in Bottiglia 1,5L - Fanta to Basket</span>
@@ -2565,29 +2564,29 @@ prefix="c" %>
 
             <div class="product-synonym" title="" data-product-id="3487418" data-product-type="Simple">
                 <div class="product-synonym-name">
-                    Estathè alla Pesca
+                    EstathÃ¨ alla Pesca
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487418" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
-                    <span class="is-visuallyHidden">Add Bibita - Estathè alla Pesca to Basket</span>
+                    <span class="is-visuallyHidden">Add Bibita - EstathÃ¨ alla Pesca to Basket</span>
                 </button>
             </div>
             <div class="product-synonym" title="" data-product-id="3487419" data-product-type="Simple">
                 <div class="product-synonym-name">
-                    Estathè al Limone
+                    EstathÃ¨ al Limone
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487419" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
-                    <span class="is-visuallyHidden">Add Bibita - Estathè al Limone to Basket</span>
+                    <span class="is-visuallyHidden">Add Bibita - EstathÃ¨ al Limone to Basket</span>
                 </button>
             </div>
             <div class="product-synonym" title="" data-product-id="3532447" data-product-type="Simple">
                 <div class="product-synonym-name">
                     Moka Drink
                 </div>
-                <div class="product-price u-noWrap">€ 1,50</div>
+                <div class="product-price u-noWrap">â¬ 1,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3532447" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Bibita - Moka Drink to Basket</span>
@@ -2624,7 +2623,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Nastro Azzurro
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487440" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 33cl - Nastro Azzurro to Basket</span>
@@ -2634,7 +2633,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Heineken
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487441" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 33cl - Heineken to Basket</span>
@@ -2644,7 +2643,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Beck's
                 </div>
-                <div class="product-price u-noWrap">€ 2,00</div>
+                <div class="product-price u-noWrap">â¬ 2,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487442" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 33cl - Beck's to Basket</span>
@@ -2654,7 +2653,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Dreher Lemon
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3532452" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 33cl - Dreher Lemon to Basket</span>
@@ -2664,7 +2663,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Tourtel Analcolica
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3532453" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 33cl - Tourtel Analcolica to Basket</span>
@@ -2674,7 +2673,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Poretti 3 Luppoli
                 </div>
-                <div class="product-price u-noWrap">€ 1,50</div>
+                <div class="product-price u-noWrap">â¬ 1,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3532454" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 33cl - Poretti 3 Luppoli to Basket</span>
@@ -2695,7 +2694,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Peroni Gran Riserva Rossa
                 </div>
-                <div class="product-price u-noWrap">€ 5,00</div>
+                <div class="product-price u-noWrap">â¬ 5,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487539" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 50cl - Peroni Gran Riserva Rossa to Basket</span>
@@ -2705,7 +2704,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Peroni Gran Riserva Doppio Malto
                 </div>
-                <div class="product-price u-noWrap">€ 5,00</div>
+                <div class="product-price u-noWrap">â¬ 5,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487540" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 50cl - Peroni Gran Riserva Doppio Malto to Basket</span>
@@ -2715,7 +2714,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Peroni Gran Riserva Puro Malto
                 </div>
-                <div class="product-price u-noWrap">€ 5,00</div>
+                <div class="product-price u-noWrap">â¬ 5,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487541" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 50cl - Peroni Gran Riserva Puro Malto to Basket</span>
@@ -2725,7 +2724,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Peroni Gran Riserva Bianca Weiss
                 </div>
-                <div class="product-price u-noWrap">€ 5,00</div>
+                <div class="product-price u-noWrap">â¬ 5,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487542" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 50cl - Peroni Gran Riserva Bianca Weiss to Basket</span>
@@ -2746,7 +2745,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Nastro Azzurro
                 </div>
-                <div class="product-price u-noWrap">€ 4,00</div>
+                <div class="product-price u-noWrap">â¬ 4,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487446" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 66cl - Nastro Azzurro to Basket</span>
@@ -2756,7 +2755,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Heineken
                 </div>
-                <div class="product-price u-noWrap">€ 4,00</div>
+                <div class="product-price u-noWrap">â¬ 4,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487447" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 66cl - Heineken to Basket</span>
@@ -2766,7 +2765,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Poretti 3 Luppoli
                 </div>
-                <div class="product-price u-noWrap">€ 3,00</div>
+                <div class="product-price u-noWrap">â¬ 3,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3532471" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 66cl - Poretti 3 Luppoli to Basket</span>
@@ -2776,7 +2775,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Baffo d'Oro
                 </div>
-                <div class="product-price u-noWrap">€ 3,50</div>
+                <div class="product-price u-noWrap">â¬ 3,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3532472" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 66cl - Baffo d'Oro to Basket</span>
@@ -2786,7 +2785,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Tuborg
                 </div>
-                <div class="product-price u-noWrap">€ 3,50</div>
+                <div class="product-price u-noWrap">â¬ 3,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3532473" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 66cl - Tuborg to Basket</span>
@@ -2796,7 +2795,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Moretti
                 </div>
-                <div class="product-price u-noWrap">€ 3,00</div>
+                <div class="product-price u-noWrap">â¬ 3,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3532474" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra 66cl - Moretti to Basket</span>
@@ -2817,7 +2816,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Bud
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487485" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Bud to Basket</span>
@@ -2827,7 +2826,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Carlsberg
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487486" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Carlsberg to Basket</span>
@@ -2837,7 +2836,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Peroni Cruda
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487487" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Peroni Cruda to Basket</span>
@@ -2847,7 +2846,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Nastro Azzurro Premium
                 </div>
-                <div class="product-price u-noWrap">€ 3,00</div>
+                <div class="product-price u-noWrap">â¬ 3,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487488" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Nastro Azzurro Premium to Basket</span>
@@ -2857,7 +2856,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Bjorne Beer
                 </div>
-                <div class="product-price u-noWrap">€ 3,00</div>
+                <div class="product-price u-noWrap">â¬ 3,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487489" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Bjorne Beer to Basket</span>
@@ -2867,7 +2866,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Tennent's
                 </div>
-                <div class="product-price u-noWrap">€ 3,50</div>
+                <div class="product-price u-noWrap">â¬ 3,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487490" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Tennent's to Basket</span>
@@ -2877,7 +2876,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Ceres
                 </div>
-                <div class="product-price u-noWrap">€ 3,50</div>
+                <div class="product-price u-noWrap">â¬ 3,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487491" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Ceres to Basket</span>
@@ -2887,7 +2886,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Ichnusa Non Filtrata
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487492" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Ichnusa Non Filtrata to Basket</span>
@@ -2897,7 +2896,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Ichnusa
                 </div>
-                <div class="product-price u-noWrap">€ 2,50</div>
+                <div class="product-price u-noWrap">â¬ 2,50</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487493" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Ichnusa to Basket</span>
@@ -2907,7 +2906,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Franziskaner
                 </div>
-                <div class="product-price u-noWrap">€ 4,00</div>
+                <div class="product-price u-noWrap">â¬ 4,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487494" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Franziskaner to Basket</span>
@@ -2917,7 +2916,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Paulaner Blonde
                 </div>
-                <div class="product-price u-noWrap">€ 3,00</div>
+                <div class="product-price u-noWrap">â¬ 3,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487495" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Paulaner Blonde to Basket</span>
@@ -2927,7 +2926,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Paulaner Weiss
                 </div>
-                <div class="product-price u-noWrap">€ 4,00</div>
+                <div class="product-price u-noWrap">â¬ 4,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3487519" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Paulaner Weiss to Basket</span>
@@ -2937,7 +2936,7 @@ prefix="c" %>
                 <div class="product-synonym-name">
                     Corona
                 </div>
-                <div class="product-price u-noWrap">€ 4,00</div>
+                <div class="product-price u-noWrap">â¬ 4,00</div>
                 <button class="btn btn--primary btn--roundedIcon btn-addproduct " data-gtm="menu|click - add to cart|3532477" data-test-istempoffline="False">
                     <div class="icon--plus--white"></div>
                     <span class="is-visuallyHidden">Add Birra - Corona to Basket</span>
@@ -2966,11 +2965,11 @@ prefix="c" %>
 <article data-basket="" class="infoBox infoBox--noSpacing u--noOutline l-pageContent" data-basket-servicetype="delivery" data-basket-menutype="evening" data-megamodal-dynamic-attacher="">
     <header class="infoBox-header infoBox-header--medium infoBox-icon infoBox-icon--basket">
         <h3 class="infoBox-title title--alternate">Totale ordine</h3>
-        <h3 data-baskettotal="" class="infoBox-header-info">€ 0,00</h3>
+        <h3 data-baskettotal="" class="infoBox-header-info">â¬ 0,00</h3>
     </header>
     <div class="card card--rounded card--medium card--tab">
 <form action="/restaurants/menu/75046/checkout/?isCollection=False" id="basket-checkout" method="post" novalidate="novalidate">            <input type="hidden" name="noteToRestaurant" id="basket-notetorestarant">
-<div data-basket-checkoutmessage="" class="u-separatedSpace u-separatedSpace--small u-textCenter" data-test-id="basket-message"><strong>€ 5,00</strong> per raggiungere il minimo d'ordine</div>
+<div data-basket-checkoutmessage="" class="u-separatedSpace u-separatedSpace--small u-textCenter" data-test-id="basket-message"><strong>â¬ 5,00</strong> per raggiungere il minimo d'ordine</div>
 <div data-basket-checkout-infobox="" data-gtm="menu|click - go to checkout|disabled" class="infoBox-content infoBox-content--small">
     <a data-basket-checkoutbtn="" data-basket-checkoutprogressbtn="" class="btn btn--block btn--disabled btn--progress" data-el="progressbtn" data-value="0" data-max="1.7976931348623157e+308" data-completionstate="btn--primary" data-test="basket-checkout-button-main" disabled="disabled">
         Ordina adesso
@@ -2978,8 +2977,8 @@ prefix="c" %>
     </a>
 </div>
 </form>        <div class="u-textLeft u-separatedSpace--top u-separatedSpace--small infoBox-icon infoBox-icon--alert" data-test="allergy-dietary-wrapper">
-            <button data-megamodal-dynamic="" data-megamodal-modaltype="narrow" data-megamodal-title="Informazioni su allergie e intolleranze alimentari" data-megamodal-content=".modal-c1844edf-1ddc-4f60-aacf-ed31f4b86213" class="btnLink u-textCenter">Hai un’allergia o un’intolleranza alimentare?</button>
-<div class="modal-c1844edf-1ddc-4f60-aacf-ed31f4b86213 is-hidden"><p>Se hai allergie o intolleranze alimentari che possono compromettere la tua salute, per favore contatta direttamente il ristorante <strong>prima di inserire l'ordine</strong> (puoi chiedere il nostro aiuto tramite <a href="/help/article/115001318051/cosa-faccio-se-sono-allergico-a-qualcosa" target="_blank">chat</a> oppure inviandoci un’email a <a href="mailto:info@justeat.it" target="_blank">info@justeat.it</a>).</p><p>Ti consigliamo inoltre di contattare il ristorante <strong>anche dopo l’ordine</strong> per confermare le tue richieste</p><p>Alla pagina delle <a href="/help" target="_blank">Domande frequenti (FAQ)</a> sono disponibili ulteriori informazioni sulla politica di Just Eat riguardo le allergie e le intolleranze alimentari.</p></div>
+            <button data-megamodal-dynamic="" data-megamodal-modaltype="narrow" data-megamodal-title="Informazioni su allergie e intolleranze alimentari" data-megamodal-content=".modal-c1844edf-1ddc-4f60-aacf-ed31f4b86213" class="btnLink u-textCenter">Hai unâallergia o unâintolleranza alimentare?</button>
+<div class="modal-c1844edf-1ddc-4f60-aacf-ed31f4b86213 is-hidden"><p>Se hai allergie o intolleranze alimentari che possono compromettere la tua salute, per favore contatta direttamente il ristorante <strong>prima di inserire l'ordine</strong> (puoi chiedere il nostro aiuto tramite <a href="/help/article/115001318051/cosa-faccio-se-sono-allergico-a-qualcosa" target="_blank">chat</a> oppure inviandoci unâemail a <a href="mailto:info@justeat.it" target="_blank">info@justeat.it</a>).</p><p>Ti consigliamo inoltre di contattare il ristorante <strong>anche dopo lâordine</strong> per confermare le tue richieste</p><p>Alla pagina delle <a href="/help" target="_blank">Domande frequenti (FAQ)</a> sono disponibili ulteriori informazioni sulla politica di Just Eat riguardo le allergie e le intolleranze alimentari.</p></div>
 
         </div>
 
@@ -2993,7 +2992,7 @@ prefix="c" %>
                         <input data-menuswitcher="" type="radio" name="ms-servicetype" value="delivery" class="btnToggle-input" id="ms-delivery-Basket" checked="" data-gtm="menu|click - menu switch|delivery" data-test-id="delivery-Basket">
                         <label for="ms-delivery-Basket" id="RadioDelivery" class="btnToggle-label" data-test-id="delivery-label-Basket">
                             <span class="btnToggle-label-text">
-                                Consegna a domicilio<span data-servicefee="">&nbsp;€ 2</span>
+                                Consegna a domicilio<span data-servicefee="">&nbsp;â¬ 2</span>
                             </span>
                         </label>
                     </div>
@@ -3011,7 +3010,7 @@ prefix="c" %>
 
         
 
-<div data-basketreceipt="" data-basketreceipt-id="" data-basketreceipt-removedingredientsenabled="False" data-basketreceipt-consumerspend="0.00" data-basketreceipt-remainingspend="5.00" data-basketreceipt-minimumspendrequired="5.00" data-basketreceipt-totalspent="0.00" data-basketreceipt-totalspentformatted="€ 0,00" data-basketreceipt-deliveryfeeformatted="€&nbsp;0" data-basketreceipt-itemquantity="0" data-basketreceipt-basketorderable="False" data-basketreceipt-checkoutmessage="<strong>€ 5,00</strong> per raggiungere il minimo d'ordine" class="infoBox-content infoBox-content--small">
+<div data-basketreceipt="" data-basketreceipt-id="" data-basketreceipt-removedingredientsenabled="False" data-basketreceipt-consumerspend="0.00" data-basketreceipt-remainingspend="5.00" data-basketreceipt-minimumspendrequired="5.00" data-basketreceipt-totalspent="0.00" data-basketreceipt-totalspentformatted="â¬ 0,00" data-basketreceipt-deliveryfeeformatted="â¬&nbsp;0" data-basketreceipt-itemquantity="0" data-basketreceipt-basketorderable="False" data-basketreceipt-checkoutmessage="<strong>â¬ 5,00</strong> per raggiungere il minimo d'ordine" class="infoBox-content infoBox-content--small">
 
         <div class="u-separated--top">
             <div data-basketfeedback="" class="userFeedback is-hidden u-separatedSpace">
@@ -3061,7 +3060,7 @@ prefix="c" %>
             <div class="tab-pointer is-selected categories-pointer"></div>
         </div>
         <div class="searchbar searchbar--narrow g-col g-span2 icon-search">
-            <input data-menusearch-entry="" placeholder="Cerca nel menù" class="searchbar-entry searchbar-entry--narrow is-visuallyHidden" type="text">
+            <input data-menusearch-entry="" placeholder="Cerca nel menÃ¹" class="searchbar-entry searchbar-entry--narrow is-visuallyHidden" type="text">
         </div>
         <button class="searchbar-exit g-col g-span2 is-visuallyHidden"><i class="icon icon--close"></i></button>
     </div>
@@ -3091,7 +3090,7 @@ prefix="c" %>
 
 <div data-nocurrentgeolocation="" class="is-hidden">
     <h3>Inserisci l'indirizzo di consegna</h3>
-    <p class="u-separatedSpace">Dobbiamo verificare se questo ristorante può consegnare dove desideri</p>
+    <p class="u-separatedSpace">Dobbiamo verificare se questo ristorante puÃ² consegnare dove desideri</p>
 
     <div class="form addressLookup addressLookup--modal u-separatedSpace" data-address-lookup-template="" data-address-lookup="{
          &quot;componentRestrictions&quot;:
@@ -3105,7 +3104,7 @@ prefix="c" %>
                 <ul data-address-lookup-suggestions="" class="addressLookup-suggestions" data-test-id="addressLookupSuggestions"></ul>
             </div>
             <div class="form-controlGroup-inputWrapper addressLookup-streetNumber">
-                <input autocomplete="off" data-address-lookup-street-number="" class="form-input form-input--transparent addressLookup-streetNumber-input" id="nocurrentgeolocation-streetNumber" placeholder="N°" type="text" data-test-id="RequestStreetNumberPopup">
+                <input autocomplete="off" data-address-lookup-street-number="" class="form-input form-input--transparent addressLookup-streetNumber-input" id="nocurrentgeolocation-streetNumber" placeholder="NÂ°" type="text" data-test-id="RequestStreetNumberPopup">
             </div>
             <button data-address-lookup-search-button="" data-test="confirmButton" class="btn btn--primary addressLookup-actionBtn form-submit" data-gtm="overlay|location prompt|click - check location">
                 <span>Controlla</span>
@@ -3115,7 +3114,7 @@ prefix="c" %>
         <ul class="addressLookup-prompt">
             <li data-test-id="NoSuggestionsWarning" class="addressLookup-prompt-item addressLookup-prompt-item--noSuggestions"><label for="nocurrentgeolocation-fullAddress">Ci spiace, non siamo riusciti a trovare il tuo indirizzo</label></li>
             <li data-test-id="FullAddressMissingWarning" class="addressLookup-prompt-item addressLookup-prompt-item--fullAddressMissing"><label for="nocurrentgeolocation-fullAddress">Compila correttamente l'indirizzo di ricerca</label></li>
-            <li data-test-id="StreetNumberMissingWarning" class="addressLookup-prompt-item addressLookup-prompt-item--streetNumberMissing"><label for="nocurrentgeolocation-streetNumber">Per favore indica anche il tuo numero civico, così da trovare tutti i ristoranti che consegnano al tuo indirizzo</label></li>
+            <li data-test-id="StreetNumberMissingWarning" class="addressLookup-prompt-item addressLookup-prompt-item--streetNumberMissing"><label for="nocurrentgeolocation-streetNumber">Per favore indica anche il tuo numero civico, cosÃ¬ da trovare tutti i ristoranti che consegnano al tuo indirizzo</label></li>
             <li data-test-id="BeMoreSpecificWarning" class="addressLookup-prompt-item addressLookup-prompt-item--beMoreSpecific"><label for="nocurrentgeolocation-fullAddress">Per favore inserisci il tuo indirizzo di consegna</label></li>
             <li data-test-id="UnableToFindLocation" class="addressLookup-prompt-item addressLookup-prompt-item--unableToFindLocation"><label for="homepage-search-fullAddress">Impossibile trovare la posizione</label></li>
             <li data-test-id="PostcodeSearchWarning" class="addressLookup-prompt-item addressLookup-prompt-item--postcodeSearchWarning"><label for="homepage-search-fullAddress">%%userprompt_location_error_postcodesearchwarning%%</label></li>
@@ -3197,7 +3196,7 @@ prefix="c" %>
                 <ul data-address-lookup-suggestions="" class="addressLookup-suggestions" data-test-id="addressLookupSuggestions"></ul>
             </div>
             <div class="form-controlGroup-inputWrapper addressLookup-streetNumber">
-                <input autocomplete="off" data-address-lookup-street-number="" class="form-input form-input--transparent addressLookup-streetNumber-input" id="nocurrentgeolocation-streetNumber" placeholder="N°" type="text">
+                <input autocomplete="off" data-address-lookup-street-number="" class="form-input form-input--transparent addressLookup-streetNumber-input" id="nocurrentgeolocation-streetNumber" placeholder="NÂ°" type="text">
             </div>
             <button data-address-lookup-search-button="" class="btn btn--primary addressLookup-actionBtn form-submit" data-gtm="overlay|location prompt|click - check location">
                 <span>%%userprompt-location-googleplaces-submitbuttontext%%</span>
@@ -3207,7 +3206,7 @@ prefix="c" %>
         <ul class="addressLookup-prompt">
             <li class="addressLookup-prompt-item addressLookup-prompt-item--noSuggestions"><label for="nocurrentgeolocation-fullAddress">Ci spiace, non siamo riusciti a trovare il tuo indirizzo</label></li>
             <li class="addressLookup-prompt-item addressLookup-prompt-item--fullAddressMissing"><label for="nocurrentgeolocation-fullAddress">Compila correttamente l'indirizzo di ricerca</label></li>
-            <li class="addressLookup-prompt-item addressLookup-prompt-item--streetNumberMissing"><label for="nocurrentgeolocation-streetNumber">Per favore indica anche il tuo numero civico, così da trovare tutti i ristoranti che consegnano al tuo indirizzo</label></li>
+            <li class="addressLookup-prompt-item addressLookup-prompt-item--streetNumberMissing"><label for="nocurrentgeolocation-streetNumber">Per favore indica anche il tuo numero civico, cosÃ¬ da trovare tutti i ristoranti che consegnano al tuo indirizzo</label></li>
             <li class="addressLookup-prompt-item addressLookup-prompt-item--beMoreSpecific"><label for="nocurrentgeolocation-fullAddress">Per favore inserisci il tuo indirizzo di consegna</label></li>
         </ul>
     </div>
@@ -3231,9 +3230,9 @@ prefix="c" %>
                 </ul>
             </div>
             <div class="c-footer-panel collapsible is-hiding l-col">
-                <h2>Città</h2>
+                <h2>CittÃ </h2>
                 <ul>
-                    <li><a href="/domicilio/palermo/">Palermo</a></li><li><a href="/domicilio/roma/">Roma</a></li><li><a href="/domicilio/milano/">Milano</a></li><li><a href="/domicilio/napoli/">Napoli</a></li><li><a href="/domicilio/Torino/">Torino</a></li><li><a href="/domicilio/bologna/">Bologna</a></li><li><a href="/domicilio/ferrara/">Ferrara</a></li><li><a href="/domicilio/genova/">Genova</a></li><li><a href="/domicilio/padova/">Padova</a></li><li><a href="/domicilio/parma/">Parma</a></li><li><a href="/domicilio/citta/">Tutte le città</a></li><li><a href="/domicilio/citta-offerte/">Offerte e Sconti</a></li>
+                    <li><a href="/domicilio/palermo/">Palermo</a></li><li><a href="/domicilio/roma/">Roma</a></li><li><a href="/domicilio/milano/">Milano</a></li><li><a href="/domicilio/napoli/">Napoli</a></li><li><a href="/domicilio/Torino/">Torino</a></li><li><a href="/domicilio/bologna/">Bologna</a></li><li><a href="/domicilio/ferrara/">Ferrara</a></li><li><a href="/domicilio/genova/">Genova</a></li><li><a href="/domicilio/padova/">Padova</a></li><li><a href="/domicilio/parma/">Parma</a></li><li><a href="/domicilio/citta/">Tutte le cittÃ </a></li><li><a href="/domicilio/citta-offerte/">Offerte e Sconti</a></li>
                 </ul>
             </div>
             <div class="c-footer-panel collapsible is-hiding l-col">
@@ -3261,9 +3260,9 @@ prefix="c" %>
 
         <div class="c-footer-row c-footer-support-text">
 <h2>Hai un ristorante e vorresti entrare a far parte di Just Eat?</h2>
-<a class="btn btn--outline btn--small" href="http://ristoranti.justeat.it/" target="_blank">Sì, desidero ricevere più informazioni</a>
+<a class="btn btn--outline btn--small" href="http://ristoranti.justeat.it/" target="_blank">SÃ¬, desidero ricevere piÃ¹ informazioni</a>
 <p>
-    Lavori già con noi? <br class="u-showBelowNarrow"><a href="https://partner.justeat.it/" target="_blank">Gestisci il tuo ristorante</a>
+    Lavori giÃ  con noi? <br class="u-showBelowNarrow"><a href="https://partner.justeat.it/" target="_blank">Gestisci il tuo ristorante</a>
 </p>
         </div>
 
@@ -3382,7 +3381,7 @@ prefix="c" %>
     <script>
         var JustEat = JustEat || {};
         JustEat.LocalCurrencySettings = {
-            currencySymbol: "€",
+            currencySymbol: "â¬",
             decimalSeparater: ",",
             thousandSeparater: ".",
             currencyPattern: 2

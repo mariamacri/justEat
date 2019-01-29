@@ -1,9 +1,9 @@
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
+
 <!DOCTYPE html>
+
 <html lang="it">
 
 
@@ -204,7 +204,7 @@ prefix="c" %>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="widget-body">
-                                    <div class="range-slider m-b-10"> <span id="ex2CurrentSliderValLabel"> Filter by price:<span id="ex2SliderVal"><strong>35</strong></span>€</span>
+                                    <div class="range-slider m-b-10"> <span id="ex2CurrentSliderValLabel"> Filter by price:<span id="ex2SliderVal"><strong>35</strong></span>â¬</span>
                                         <br>
                                         <input id="ex2" type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="35" /> </div>
                                 </div>
@@ -378,7 +378,7 @@ prefix="c" %>
                                     <nav aria-label="...">
                                         <ul class="pagination">
                                             <li class="page-item disabled">
-                                                <a class="page-link" href="#" tabindex="-1" aria-label="Previous"> <span aria-hidden="true">«</span> <span class="sr-only">Previous</span> </a>
+                                                <a class="page-link" href="#" tabindex="-1" aria-label="Previous"> <span aria-hidden="true">Â«</span> <span class="sr-only">Previous</span> </a>
                                             </li>
                                             <li class="page-item active"> <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a> </li>
                                             <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -386,7 +386,7 @@ prefix="c" %>
                                             <li class="page-item"><a class="page-link" href="#">4</a></li>
                                             <li class="page-item"><a class="page-link" href="#">5</a></li>
                                             <li class="page-item">
-                                                <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">»</span> <span class="sr-only">Next</span> </a>
+                                                <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">Â»</span> <span class="sr-only">Next</span> </a>
                                             </li>
                                         </ul>
                                     </nav>

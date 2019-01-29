@@ -1,8 +1,9 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
+
 <!DOCTYPE html>
+
 
 <html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
 <head>
@@ -138,14 +139,17 @@ prefix="c" %>
 </div>
 <div class="l-container l-pageContent">
   <div class="g g--gutter g--stack">
+    <!-- Pannello Account Laterale -->
     <aside class="sidebar g-col g-span3--mid u-showAboveMid">
       <nav>
         <ul class="controlList unstyled">
-            <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
+         <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
           <li class="controlList-item "> <a href="userOrders.jsp" id="orders-nav-link">Ordini</a> </li>
+			<c:if test="${ristorante==true}">
           <li class="controlList-item"> <a href="restaurantInfo.jsp" id="credit-nav-link">Il mio Ristorante</a> </li>
-        <li class="controlList-item is-active"> <a id="payment-nav-link" href="menuForm.jsp">Menù Ristorante</a> </li></li>
-        </ul>
+        <li class="controlList-item is-active"> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
+        </c:if>
+		  </ul>
       </nav>
     </aside>
     <main class="g-col g-span8--mid g-span7--midWide g-offset1--midWide g-holdWidth--midWide">

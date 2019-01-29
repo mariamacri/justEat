@@ -1,8 +1,7 @@
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
+
 <!DOCTYPE html>
 
 <html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
@@ -124,7 +123,7 @@ prefix="c" %>
 
 <div data-cookiebanner="" class="infoBar infoBar--dark infoBar--hideByDefault">
   <div class="l-container infoBar-row"> <a class="btn infoBar-btn" data-cookiebanner-btn="" data-test="cookieBannerBtn">Chiudi</a>
-    <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicità online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti all’uso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
+    <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicità  online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti allâuso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
     <p class="u-showBelowMid u-hideTextOverflow--narrow">JUST EAT utilizza diversi cookie: accedendo al sito, ne acconsenti l'uso.</p>
     <p class="u-showBelowMid">Qui puoi trovare i dettagli della nostra <a href="/cookies-policy">cookie policy</a></p>
   </div>
@@ -133,22 +132,26 @@ prefix="c" %>
   <div class="l-container l-vPad--small">
     <ul class="breadcrumb unstyled">
       <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="index.jsp" itemprop="url" title="Vai alla pagina iniziale di JUST EAT"> <span itemprop="title">Pagina iniziale</span> </a> </li>
-      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Account"> <span itemprop="title">Informazioni Attività</span> </li>
+      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Account"> <span itemprop="title">Informazioni Attività </span> </li>
     </ul>
   </div>
 </div>
 <div class="l-container l-pageContent">
   <div class="g g--gutter g--stack">
-  <aside class="sidebar g-col g-span3--mid u-showAboveMid">
-    <nav>
-      <ul class="controlList unstyled">
-      <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
+  <!-- Pannello Account Laterale -->
+  <!-- Pannello Account Laterale -->
+    <aside class="sidebar g-col g-span3--mid u-showAboveMid">
+      <nav>
+        <ul class="controlList unstyled">
+         <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
           <li class="controlList-item "> <a href="userOrders.jsp" id="orders-nav-link">Ordini</a> </li>
+			<c:if test="${ristorante==true}">
           <li class="controlList-item is-active"> <a href="restaurantInfo.jsp" id="credit-nav-link">Il mio Ristorante</a> </li>
-        <li class="controlList-item "> <a id="payment-nav-link" href="menuForm.jsp">Inserisci Menù Ristorante</a> </li></li>
-      </ul>
-    </nav>
-  </aside>
+        <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
+        </c:if>
+		  </ul>
+      </nav>
+    </aside>
   <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
     <form action="/account/info/" class="form" data-track-validation="{&quot;event&quot;:&quot;trackEvent&quot;,&quot;eventCategory&quot;:&quot;engagement&quot;,&quot;eventAction&quot;:&quot;form_account_info_update&quot;}" id="account-info-form" method="post" novalidate="novalidate">
       <fieldset class="form-fieldset">
@@ -160,19 +163,19 @@ prefix="c" %>
         </div>
         <input data-unsaved-changes-flag="true" data-unsaved-changes-message="I cambiamenti che hai fatto verranno persi abbandonando questa pagina." id="UnsavedChangesFlag" name="UnsavedChangesFlag" type="hidden" value="0">
         <div class="form-controlGroup">
-          <label class="form-label" for="Name">Nome Attività</label>
+          <label class="form-label" for="Name">Nome Attività </label>
           <div class="form-controlGroup-inputWrapper">
             <input class="form-input form-input--icon" data-test-id="name" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" data-val-regex="Il tuo nome non dovrebbe contenere numeri" data-val-regex-pattern="^[\.\(\),!\/&amp;:\u0022\u2019\u00b4\u0060\u00C0-\u00F6\u00F8-\u017Fa-zA-Z-'' ]*$" data-val-required="Inserisci Nome e Cognome" id="account-name" name="Name" type="text" value="rickym">
             <span class="field-validation-valid has-error" data-valmsg-for="Name" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
-          <label class="form-label" for="Email">Email Attività</label>
+          <label class="form-label" for="Email">Email Attività </label>
           <div class="form-controlGroup-inputWrapper">
             <input class="form-input form-input--icon" data-test-id="email" data-val="true" data-val-email="Inserisci il tuo indirizzo email valido" data-val-length="Inserisci il tuo indirizzo email valido" data-val-length-max="50" data-val-required="Inserisci il tuo indirizzo email" id="account-email" name="Email" type="email" value="prova@gmail.com">
             <span class="field-validation-valid has-error" data-valmsg-for="Email" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
-          <label class="form-label" for="Phone">Telefono Attività</label>
+          <label class="form-label" for="Phone">Telefono Attività </label>
           <div class="form-controlGroup-inputWrapper">
             <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
@@ -190,13 +193,13 @@ prefix="c" %>
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
-          <label class="form-label" for="Phone">Nome del Titolare dell'attività</label>
+          <label class="form-label" for="Phone">Nome del Titolare dell'attività </label>
           <div class="form-controlGroup-inputWrapper">
             <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
-          <label class="form-label" for="Phone">Cognome del Titolare dell'attività</label>
+          <label class="form-label" for="Phone">Cognome del Titolare dell'attività </label>
           <div class="form-controlGroup-inputWrapper">
             <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
@@ -208,7 +211,7 @@ prefix="c" %>
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
-          <label class="form-label" for="Phone">Coordinate Bancarie Attività</label>
+          <label class="form-label" for="Phone">Coordinate Bancarie Attività </label>
           <div class="form-controlGroup-inputWrapper">
             <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
