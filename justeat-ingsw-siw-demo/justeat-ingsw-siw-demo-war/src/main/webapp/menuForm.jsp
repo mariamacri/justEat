@@ -165,7 +165,7 @@ prefix="c" %>
                                     </div>
                                     <!-- end:Logo -->
                                     <div class="rest-descr">
-									   <h6><a href="#">$[pietanza.getNome()}</a></h6>
+									   <h6><a href="#">${utente.get}</a></h6>
                                        <h6><a href="#">$[pasto.getDescrizione()}</a></h6>
                                     </div>
                                     <!-- end:Description -->
