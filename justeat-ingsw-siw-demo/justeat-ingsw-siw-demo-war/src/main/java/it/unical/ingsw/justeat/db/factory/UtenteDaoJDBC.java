@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
+import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.UtenteDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
@@ -172,8 +173,14 @@ public class UtenteDaoJDBC implements UtenteDao {
 	}
 
 	@Override
-	public void setCartaDiCredito(Utente utente, String numero_carta) {
+	public void setCartaDiCredito(Utente utente, CartaDiCredito carta) {
 		Connection connection = this.dataSource.getConnection();
+		DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+		CartaDiCreditoDao cd=factory.getCartaDiCreditoDAO();
+		if(cd.findByPrimaryKey(carta.getNumero_Carta())==null)
+		{
+			cd.save(carta);
+		}
 		try {
 			String update = "update utente SET  carta_di_credito_usata=? WHERE email_utente=?";
 			PreparedStatement statement = connection.prepareStatement(update);

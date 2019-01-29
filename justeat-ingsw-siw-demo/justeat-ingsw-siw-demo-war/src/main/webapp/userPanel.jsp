@@ -198,7 +198,7 @@ prefix="c" %>
           <div class="form-controlGroup">
             <label class="form-label" for="Password">Password</label>
             <div class="form-editableText"> <a class="form-editableText-link" data-test-id="changePassword" href="editpassword.jsp" id="change-password">Modifica Password</a>
-              <p class="form-editableText-text text-masked">*********</p>
+              <p class="form-editableText-text text-masked" >*********</p>
             </div>
           </div>
           <button type="submit" value="${utente.getEmail_Utente()}" name="email" class="btn btn--primary btn--block" id="save-changes-button" data-test-id="saveButton"><span class="is-loading-hidden">Salva modifiche</span></button>

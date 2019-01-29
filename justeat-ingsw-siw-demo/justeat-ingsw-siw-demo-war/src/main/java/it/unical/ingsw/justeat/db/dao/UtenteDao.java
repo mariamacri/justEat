@@ -3,6 +3,7 @@ package it.unical.ingsw.justeat.db.dao;
 import java.util.List;
 
 import it.unical.ingsw.justeat.db.factory.UtenteCredenziali;
+import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Utente;
 
 public interface UtenteDao {
@@ -22,6 +23,6 @@ public interface UtenteDao {
     public UtenteCredenziali findByPrimaryKeyCredential(String email);
 	// Retrieve
     
-    public void setCartaDiCredito(Utente utente, String numero_carta);
+    public void setCartaDiCredito(Utente utente, CartaDiCredito carta);
 
 }

@@ -23,4 +23,6 @@ public interface RistoranteDao {
 	public Ristorante findByEmail(String Email);
 	
 	public void delete_pietanza_contenuta(Pietanza pietanza, Ristorante ristorante);
+	
+	public List<Pietanza> pietanze_del_ristorante(Ristorante ristorante);
 }

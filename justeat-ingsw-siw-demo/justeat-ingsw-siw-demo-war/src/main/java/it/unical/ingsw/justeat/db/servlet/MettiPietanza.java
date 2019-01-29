@@ -25,11 +25,11 @@ public class MettiPietanza extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
-		Utente u=(Utente) req.getSession().getAttribute("utente");
-		
+		//Utente u=(Utente) req.getSession().getAttribute("utente");
+		String email=req.getParameter("email");
 		RistoranteDao rd=factory.getRistoranteDAO();
 		
-		Ristorante r=rd.findByEmail(u.getEmail_Utente());
+		Ristorante r=rd.findByEmail(email);
 		
 		String nomePietanza= req.getParameter("Pietanza");
 		String prezzoPietanza= req.getParameter("PietanzaPrice");
@@ -44,9 +44,10 @@ public class MettiPietanza extends HttpServlet{
 		PietanzaDao pd=factory.getPietanzaDAO();
 		pd.save(p);
 		
-		pd.pietanza_contenuta_in(p, r);
 		
-		RequestDispatcher rde = req.getRequestDispatcher("menuForm.html");
+		pd.pietanza_contenuta_in(p, r);
+
+		RequestDispatcher rde = req.getRequestDispatcher("menuForm.jsp");
 		rde.forward(req, resp);
 		
 		
