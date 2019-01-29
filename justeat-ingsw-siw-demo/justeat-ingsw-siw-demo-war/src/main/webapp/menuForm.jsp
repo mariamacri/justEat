@@ -1,6 +1,5 @@
 
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
 <!DOCTYPE html>
@@ -8,7 +7,7 @@ prefix="c" %>
 <html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
 <head>
 <title>Informazioni Account | JUST EAT</title>
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -124,7 +123,7 @@ prefix="c" %>
 
 <div data-cookiebanner="" class="infoBar infoBar--dark infoBar--hideByDefault">
   <div class="l-container infoBar-row"> <a class="btn infoBar-btn" data-cookiebanner-btn="" data-test="cookieBannerBtn">Chiudi</a>
-    <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicità online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti all’uso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
+    <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicitÃ  online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti allâuso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
     <p class="u-showBelowMid u-hideTextOverflow--narrow">JUST EAT utilizza diversi cookie: accedendo al sito, ne acconsenti l'uso.</p>
     <p class="u-showBelowMid">Qui puoi trovare i dettagli della nostra <a href="/cookies-policy">cookie policy</a></p>
   </div>
@@ -151,28 +150,29 @@ prefix="c" %>
     </aside>
     <main class="g-col g-span8--mid g-span7--midWide g-offset1--midWide g-holdWidth--midWide">
 		<div>
-			<a class="form-editableText-link" href="menuInsert.jsp" id="insertpietanza">Inserisci Nuova Pietanza</a>
+			<a class="form-editableText-link pull-left"  href="menuInsert.jsp" id="insertpietanza">Inserisci Nuova Pietanza</a>
 		</div>
        
 		
 		   <!-- FOR PIETANZE INIZIO -->
-		<c:forEach items="${pasti}" var="pasto">
+		
+		<c:forEach items="${pietanze}" var="pasto">
 <div class="food-item">
                               <div class="row">
                                  <div class="col-xs-12 col-sm-12 col-lg-8">
-                                    <div class="rest-logo pull-left">
+                                 <!--   <div class="rest-logo pull-left">
                                        <a class="restaurant-logo pull-left" href="#"><img src="img/$[pasto.getImage()}" alt="Food logo"></a>
                                     </div>
                                     <!-- end:Logo -->
                                     <div class="rest-descr">
-									   <h6><a href="#">${utente.get}</a></h6>
-                                       <h6><a href="#">$[pasto.getDescrizione()}</a></h6>
+														   <h5><a href="#">${pasto.getNome()}</a></h5>
+                                       <h8><a href="#">${pasto.getDescrizione()}</a></h8>
                                     </div>
                                     <!-- end:Description -->
                                  </div>
                                  <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span>
-							     <a href="#" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal">&#43;</a> </div>
+                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left"><a href="#">Prezzo: € ${pasto.getPrezzo()}</a></span>
+							     <a href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal" >&#45;</a> </div>
                               </div>
                               <!-- end:row -->
                            </div>

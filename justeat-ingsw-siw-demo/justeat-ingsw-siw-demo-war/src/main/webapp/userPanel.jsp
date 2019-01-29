@@ -148,7 +148,7 @@ prefix="c" %>
           <li class="controlList-item "> <a href="userOrders.jsp" id="orders-nav-link">Ordini</a> </li>
 			<c:if test="${ristorante==true}">
           <li class="controlList-item"> <a href="restaurantInfo.jsp" id="credit-nav-link">Il mio Ristorante</a> </li>
-        <li class="controlList-item "> <a id="payment-nav-link" href="menuForm.jsp">Inserisci Menù Ristorante</a> </li></li>
+        <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
         </c:if>
 		  </ul>
       </nav>

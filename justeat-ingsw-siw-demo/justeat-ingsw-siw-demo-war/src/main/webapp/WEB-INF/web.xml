@@ -78,4 +78,14 @@
     <servlet-name>ModificaCarta</servlet-name>
     <url-pattern>/modificacarta</url-pattern>
   </servlet-mapping>
+  
+  
+     <servlet>
+  <servlet-name>ListaPietanze</servlet-name>
+    <servlet-class>it.unical.ingsw.justeat.db.servlet.listaPietanze</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListaPietanze</servlet-name>
+    <url-pattern>/pietanze</url-pattern>
+  </servlet-mapping>
 </web-app> 
