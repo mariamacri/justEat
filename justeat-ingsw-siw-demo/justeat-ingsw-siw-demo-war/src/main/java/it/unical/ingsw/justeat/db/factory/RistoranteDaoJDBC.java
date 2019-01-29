@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
+import it.unical.ingsw.justeat.db.dao.UtenteDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
@@ -397,6 +398,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 			ResultSet result = statement.executeQuery();
 			while (result.next()) {
 				ristorante = new Ristorante();
+				ristorante.setPartita_Iva(result.getString("partita_iva"));
 				ristorante.setNome_Ristorante(result.getString("nome_ristorante"));
 				ristorante.setIndirizzo_Legale(result.getString("indirizzo_legale"));
 				ristorante.setCoordinate_Bancarie_Ristorante(result.getString("coordinate_bancarie_ristorante"));				
@@ -417,6 +419,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				throw new PersistenceException(e.getMessage());
 			}
 		}
+		
 		return ristorante;
 	}
 	
@@ -442,4 +445,37 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 		
 	}
 
+	
+	@Override
+	public List<Pietanza> pietanze_del_ristorante(Ristorante ristorante) {
+		Connection connection = this.dataSource.getConnection();
+		List<Pietanza> pietanze  = new LinkedList<>();
+		try {
+			Pietanza pietanza;
+			PreparedStatement statement;
+			String query = "select * from pietanza where nome_pietanza in (select nome_pietanza_contenuta from contiene, ristorante where partita_iva_ristorante_contenente=?)";
+			statement = connection.prepareStatement(query);
+			statement.setString(1, ristorante.getPartita_Iva());
+			ResultSet result = statement.executeQuery();
+			while (result.next()) {
+				pietanza=new Pietanza();
+				pietanza.setNome(result.getString("nome_pietanza"));
+				pietanza.setDescrizione(result.getString("descrizione_pietanza"));
+				pietanza.setPrezzo(result.getDouble("prezzo_pietanza"));
+				
+				pietanze.add(pietanza);				
+			}
+			
+			
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		return pietanze;
+	}
 }

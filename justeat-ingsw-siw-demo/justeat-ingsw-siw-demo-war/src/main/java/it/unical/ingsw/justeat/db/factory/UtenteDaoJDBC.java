@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
+import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.UtenteDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
@@ -150,16 +151,15 @@ public class UtenteDaoJDBC implements UtenteDao {
 	public void update(Utente utente) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			String update = "update utente SET  nome_utente= ?, cognome_utente = ?, indirizzo_utente = ?,  password= ? carta_di_credito_usata=? , numero_telefono_utente=? WHERE email_utente=?";
+			String update = "update utente SET  nome_utente= ?, cognome_utente = ?, indirizzo_utente = ?, numero_telefono_utente=? WHERE email_utente=?";
 			PreparedStatement statement = connection.prepareStatement(update);
-			statement.setString(1, utente.getEmail_Utente());
-			statement.setString(2, utente.getNome_Utente());
-			statement.setString(3, utente.getCognome_Utente());
 			
-			statement.setString(4, utente.getIndirizzo_Utente());
-			statement.setString(5, utente.getPassword());
-			statement.setString(6, utente.getCarta_Credito_Usata().getNumero_Carta());
-			statement.setInt(7, utente.getNumero_telefono_utente());
+			statement.setString(1, utente.getNome_Utente());
+			statement.setString(2, utente.getCognome_Utente());
+			
+			statement.setString(3, utente.getIndirizzo_Utente());
+			statement.setInt(4, utente.getNumero_telefono_utente());
+			statement.setString(5, utente.getEmail_Utente());
 			statement.executeUpdate();
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -172,6 +172,36 @@ public class UtenteDaoJDBC implements UtenteDao {
 		}
 	}
 
+	@Override
+	public void setCartaDiCredito(Utente utente, CartaDiCredito carta) {
+		Connection connection = this.dataSource.getConnection();
+		DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+		CartaDiCreditoDao cd=factory.getCartaDiCreditoDAO();
+		if(cd.findByPrimaryKey(carta.getNumero_Carta())==null)
+		{
+			cd.save(carta);
+		}
+		try {
+			String update = "update utente SET  carta_di_credito_usata=? WHERE email_utente=?";
+			PreparedStatement statement = connection.prepareStatement(update);
+			
+			statement.setString(1, utente.getCarta_Credito_Usata().getNumero_Carta());
+			
+			statement.setString(2, utente.getEmail_Utente());
+			
+			
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+	}
+	
 	@Override
 	public void delete(Utente utente) {
 		Connection connection = this.dataSource.getConnection();

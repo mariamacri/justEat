@@ -176,7 +176,7 @@ prefix="c" %>
         <label for="exampleTextarea">Descrizione</label>
         <textarea class="form-control" id="exampleTextarea" name="FoodDescr" rows="3"></textarea>
       </div>
-          <button type="submit" class="btn btn--primary btn--block" id="addfood"><span class="is-loading-hidden">Aggiungi</span></button>
+          <button type="submit" class="btn btn--primary btn--block" id="addfood" value="${utente.getEmail_Utente()}" name="email"><span class="is-loading-hidden">Aggiungi</span></button>
         </fieldset>
       </form>
     </main>

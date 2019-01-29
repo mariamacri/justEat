@@ -170,7 +170,7 @@ prefix="c" %>
 		  
 		  <!-- Template lista ordini da generare con un for -->
 		  <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
-<form action="/account/change-password/" class="form" data-track-validation="{&quot;event&quot;:&quot;trackEvent&quot;,&quot;eventCategory&quot;:&quot;engagement&quot;,&quot;eventAction&quot;:&quot;form_account_change_password&quot;}" id="change-password-form" method="post" novalidate="novalidate">                    <fieldset class="form-fieldset">
+<form action="modificacarta" class="form" data-track-validation="{&quot;event&quot;:&quot;trackEvent&quot;,&quot;eventCategory&quot;:&quot;engagement&quot;,&quot;eventAction&quot;:&quot;form_account_change_password&quot;}" id="change-password-form" method="post" novalidate="novalidate">                    <fieldset class="form-fieldset">
   <h1 class="form-title beta title--alternate">Cambia carta</h1>
   <input name="__RequestVerificationToken" type="hidden" value="bIbz1CsvOE0LiuK4dgu_IlkcGHYe-R8eqzGhcSHmuIC96nz-x3i8G1jkr44-f6FXQyIqpL5y9MnBMph9d7KqCLyYgP4LRNGN8xANmaukEqTIOgbIIeXR7zqdb23Q5WADyfKVQA2">
                         
@@ -200,10 +200,10 @@ prefix="c" %>
                         <div class="form-controlGroup">
                             <label class="form-label" for="ConfirmPassword">Scadenza</label>
                             <div class="form-controlGroup-inputWrapper">
-                                <input class="form-input" name"scadenzacarta" type="date">
+                                <input class="form-input" name="scadenzacarta" type="date">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn--primary btn--block" id="save-changes-button"><span class="is-loading-hidden">Salva</span></button>
+                        <button type="submit" value="${utente.getEmail_Utente()}" name="email" class="btn btn--primary btn--block" id="save-changes-button"><span class="is-loading-hidden">Salva</span></button>
                     </fieldset>
 </form>        </main>
 		  

@@ -79,6 +79,17 @@ public class EsempioDataBase {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
 		
+		Utente u=new Utente();
+		u.setEmail_Utente("rocco@rocco.com");
+		u.setNome_Utente("rocco");
+		u.setIndirizzo_Utente("rocco");
+		u.setCognome_Utente("rocco");
+		u.setNumero_telefono_utente(123);
+		
+		UtenteDao ud=factory.getUtenteDAO();
+		ud.update(u);
+		
+		
 //		PietanzaDao pd=factory.getPietanzaDAO();
 //		
 //		Pietanza p=new Pietanza();
