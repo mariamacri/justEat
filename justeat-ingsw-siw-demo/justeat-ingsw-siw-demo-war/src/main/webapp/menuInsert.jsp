@@ -7,7 +7,7 @@ prefix="c" %>
 
 <html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
 <head>
-<title>Informazioni Account | JUST EAT</title>
+<title>Aggiungi Pietanza| JUST EAT</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -69,6 +69,7 @@ prefix="c" %>
 				 <!-- LISTA DA LOGGATO -->
 			<c:if test="${utente.getEmail_Utente() != null}">  
 			           
+
         <li class="nav-item dropdown"> 
 				
 			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="doLogin?logout=true" role="button" aria-haspopup="true" aria-expanded="false">Ciao, ${utente.getNome_Utente()}
@@ -149,37 +150,35 @@ prefix="c" %>
         </ul>
       </nav>
     </aside>
-    <main class="g-col g-span8--mid g-span7--midWide g-offset1--midWide g-holdWidth--midWide">
-		<div>
-			<a class="form-editableText-link" href="menuInsert.jsp" id="insertpietanza">Inserisci Nuova Pietanza</a>
-		</div>
-       
-		
-		   <!-- FOR PIETANZE INIZIO -->
-		<c:forEach items="${pasti}" var="pasto">
-<div class="food-item">
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-lg-8">
-                                    <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/$[pasto.getImage()}" alt="Food logo"></a>
-                                    </div>
-                                    <!-- end:Logo -->
-                                    <div class="rest-descr">
-									   <h6><a href="#">$[pietanza.getNome()}</a></h6>
-                                       <h6><a href="#">$[pasto.getDescrizione()}</a></h6>
-                                    </div>
-                                    <!-- end:Description -->
-                                 </div>
-                                 <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span>
-							     <a href="#" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal">&#43;</a> </div>
-                              </div>
-                              <!-- end:row -->
-                           </div>
-</c:forEach>
-		   <!-- FOR PIETANZE FINE -->
-		
-		
+    <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
+      <form action="aggiungiPietanza" class="form" id="menuform" method="post">
+        <fieldset class="form-fieldset">
+          <h1 class="form-title beta title--alternate">Il tuo menù</h1>
+          <input name="__RequestVerificationToken" type="hidden" value="jmR4IvWw3cRE18u_Hl7HZH7-VvP8Vyj6vPKgEo_Eay9fvStNU7bnkDKsdYWK9uDjToHD0aYXuEB4WBH8KJsF4sYqLxOEbOGN6auvtwTA8SofSJgOw7C_u61fnQWetmh75xKINQ2">
+          <div role="alert" aria-atomic="true" class="validation-summary-valid alert alert--danger" data-valmsg-summary="true" data-test-id="validationErrorSummary">
+            <ul>
+            </ul>
+          </div>
+          <input data-unsaved-changes-flag="true" data-unsaved-changes-message="I cambiamenti che hai fatto verranno persi abbandonando questa pagina." id="UnsavedChangesFlag" name="UnsavedChangesFlag" type="hidden" value="0">
+          <div class="form-controlGroup">
+            <label class="form-label" for="Name">Nome Pietanza</label>
+            <div class="form-controlGroup-inputWrapper">
+              <input class="form-input form-input--icon" name="Pietanza" type="text">
+              <span class="field-validation-valid has-error" data-valmsg-for="Name" data-valmsg-replace="true"></span> </div>
+          </div>
+			  <div class="form-controlGroup">
+            <label class="form-label" for="IndirizzoOrdini">Prezzo</label>
+            <div class="form-controlGroup-inputWrapper">
+              <input class="form-input form-input--icon" id="price" name="PietanzaPrice" type="text">
+            </div>
+          </div>
+			  <div class="form-group">
+        <label for="exampleTextarea">Descrizione</label>
+        <textarea class="form-control" id="exampleTextarea" name="FoodDescr" rows="3"></textarea>
+      </div>
+          <button type="submit" class="btn btn--primary btn--block" id="addfood"><span class="is-loading-hidden">Aggiungi</span></button>
+        </fieldset>
+      </form>
     </main>
   </div>
 </div>
