@@ -7,7 +7,7 @@ prefix="c" %>
 
 <html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
 <head>
-<title>Informazioni Account | JUST EAT</title>
+<title>Aggiungi Pietanza| JUST EAT</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,7 +44,7 @@ prefix="c" %>
 
 <div class="skipTo"> <a class="is-visuallyHidden focusable u-text-marker" href="#skipToMain">Vai al contenuto principale</a> </div>
 <header class="header"> </header>
-
+    
             <!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
@@ -69,6 +69,7 @@ prefix="c" %>
 				 <!-- LISTA DA LOGGATO -->
 			<c:if test="${utente.getEmail_Utente() != null}">  
 			           
+
         <li class="nav-item dropdown"> 
 				
 			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="doLogin?logout=true" role="button" aria-haspopup="true" aria-expanded="false">Ciao, ${utente.getNome_Utente()}
@@ -139,26 +140,20 @@ prefix="c" %>
 </div>
 <div class="l-container l-pageContent">
   <div class="g g--gutter g--stack">
-	  
-	   <!-- Pannello Account Laterale -->
     <aside class="sidebar g-col g-span3--mid u-showAboveMid">
       <nav>
         <ul class="controlList unstyled">
-         <li class="controlList-item is-active"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
+            <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
           <li class="controlList-item "> <a href="userOrders.jsp" id="orders-nav-link">Ordini</a> </li>
-			<c:if test="${ristorante==true}">
           <li class="controlList-item"> <a href="restaurantInfo.jsp" id="credit-nav-link">Il mio Ristorante</a> </li>
-        <li class="controlList-item "> <a id="payment-nav-link" href="menuForm.jsp">Inserisci Menù Ristorante</a> </li></li>
-        </c:if>
-		  </ul>
+        <li class="controlList-item is-active"> <a id="payment-nav-link" href="menuForm.jsp">Menù Ristorante</a> </li></li>
+        </ul>
       </nav>
     </aside>
-	
-	
     <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
-      <form class="form" action="modificadati" id="account-info-form" method="post" novalidate="novalidate">
+      <form action="aggiungiPietanza" class="form" id="menuform" method="post">
         <fieldset class="form-fieldset">
-          <h1 class="form-title beta title--alternate">Il mio Account</h1>
+          <h1 class="form-title beta title--alternate">Il tuo menù</h1>
           <input name="__RequestVerificationToken" type="hidden" value="jmR4IvWw3cRE18u_Hl7HZH7-VvP8Vyj6vPKgEo_Eay9fvStNU7bnkDKsdYWK9uDjToHD0aYXuEB4WBH8KJsF4sYqLxOEbOGN6auvtwTA8SofSJgOw7C_u61fnQWetmh75xKINQ2">
           <div role="alert" aria-atomic="true" class="validation-summary-valid alert alert--danger" data-valmsg-summary="true" data-test-id="validationErrorSummary">
             <ul>
@@ -166,46 +161,23 @@ prefix="c" %>
           </div>
           <input data-unsaved-changes-flag="true" data-unsaved-changes-message="I cambiamenti che hai fatto verranno persi abbandonando questa pagina." id="UnsavedChangesFlag" name="UnsavedChangesFlag" type="hidden" value="0">
           <div class="form-controlGroup">
-            <label class="form-label" for="Name">Nome</label>
+            <label class="form-label" for="Name">Nome Pietanza</label>
             <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="name" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" data-val-regex="Il tuo nome non dovrebbe contenere numeri" data-val-required="Inserisci Nome e Cognome" id="account-name" name="nome" type="text" value="${utente.getNome_Utente()}">
+              <input class="form-input form-input--icon" name="Pietanza" type="text">
               <span class="field-validation-valid has-error" data-valmsg-for="Name" data-valmsg-replace="true"></span> </div>
           </div>
-          <div class="form-controlGroup">
-            <label class="form-label" for="Email">Cognome</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="cognome" data-val="true" data-val-email="Inserisci il tuo indirizzo email valido" data-val-length="Inserisci il tuo indirizzo email valido" data-val-length-max="50" data-val-required="Inserisci il tuo indirizzo email" name="cognome" type="text" value="${utente.getCognome_Utente()}">
-              <span class="field-validation-valid has-error" data-valmsg-for="Email" data-valmsg-replace="true"></span> </div>
-          </div>
-          <div class="form-controlGroup">
-            <label class="form-label" for="Phone">Cellulare</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="numero_telefono_utente" type="tel" value="${utente.getNumero_telefono_utente()}">
-              <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
-          </div>
 			  <div class="form-controlGroup">
-            <label class="form-label" for="IndirizzoOrdini">Indirizzo</label>
+            <label class="form-label" for="IndirizzoOrdini">Prezzo</label>
             <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="IndirizzoOrdini" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" id="account-street" name="indirizzo" type="text" value="${utente.getIndirizzo_Utente()}">
+              <input class="form-input form-input--icon" id="price" name="PietanzaPrice" type="text">
             </div>
           </div>
-			  <div class="form-controlGroup">
-            <label class="form-label" for="NumeroCarta">Numero Carta</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="NumeroCarta" data-val="true" data-val-length="Lunghezza massima 16 caratteri" data-val-length-max="16" data-val-regex="Il tuo nome non dovrebbe contenere caratteri"id="cardnumber" name="numero_carta" type="text" value="${utente.getCarta_Credito_Usata().getNumero_Carta()}"></div>
-				  <a class="form-editableText-link" data-test-id="changePassword" href="editcreditcard.jsp" id="change-password">Modifica Numero Carta</a>
-          </div>
-          <div class="form-controlGroup">
-            <label class="form-label" for="Password">Password</label>
-            <div class="form-editableText"> <a class="form-editableText-link" data-test-id="changePassword" href="editpassword.jsp" id="change-password">Modifica Password</a>
-              <p class="form-editableText-text text-masked" >*********</p>
-            </div>
-          </div>
-          <button type="submit" value="${utente.getEmail_Utente()}" name="email" class="btn btn--primary btn--block" id="save-changes-button" data-test-id="saveButton"><span class="is-loading-hidden">Salva modifiche</span></button>
+			  <div class="form-group">
+        <label for="exampleTextarea">Descrizione</label>
+        <textarea class="form-control" id="exampleTextarea" name="FoodDescr" rows="3"></textarea>
+      </div>
+          <button type="submit" class="btn btn--primary btn--block" id="addfood" value="${utente.getEmail_Utente()}" name="email"><span class="is-loading-hidden">Aggiungi</span></button>
         </fieldset>
-        <div class="form-subSection u-separated--top">
-          <p class="u-text-soften">Desideri eliminare il tuo account Just Eat?</p>
-          <a href="/account/deactivate/" id="deactivate-account">Elimina il mio account</a> </div>
       </form>
     </main>
   </div>
