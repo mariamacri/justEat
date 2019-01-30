@@ -65,27 +65,27 @@
                      <div class="col-md-8">
                         <div class="widget">
                            <div class="widget-body">
-                              <form>
+                              <form action="registraUtente" method="post">
                                  <div class="row">
                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputEmail1">Nome*</label>
-                                       <input class="form-control" type="text" value="Mario" id="example-text-input"> 
+                                       <input class="form-control" type="text" placeholder="Mario" name="nome" id="example-text-input"> 
                                     </div>
                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputEmail1">Cognome*</label>
-                                       <input class="form-control" type="text" value="Rossi" id="example-text-input-2"> 
+                                       <input name="cognome" class="form-control" type="text" placeholder="Rossi" id="example-text-input-2"> 
                                     </div>
                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputEmail1">Indirizzo Email*</label>
-                                       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inserisci Email"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
+                                       <input name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inserisci Email"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
                                     </div>
                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputEmail1">Numero di Telefono*</label>
-                                       <input class="form-control" type="tel" value="348455555" id="example-tel-input-3"> <small class="form-text text-muted">We"ll never share your email with anyone else.</small> 
+                                       <input class="form-control" name="numero" type="tel" placeholder="348455555" id="example-tel-input-3"> <small class="form-text text-muted">We"ll never share your email with anyone else.</small> 
                                     </div>
                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputPassword1">Password</label>
-                                       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> 
+                                       <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"> 
                                     </div>
                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputPassword1">Ripeti password</label>
@@ -109,7 +109,7 @@ Cliente</label>
                                  </div>
                                  <div class="row">
                                     <div class="col-sm-4">
-                                       <p> <a href="#" class="btn theme-btn">Registrati</a> </p>
+										<p> <button type="submit" class="btn theme-btn">Registrati</button> </p>
                                     </div>
                                  </div>
                               </form>

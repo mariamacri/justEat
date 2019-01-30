@@ -16,9 +16,19 @@ public class Ristorante {
 	// utente che crea il ristorante
 	private Utente utente_Proprietario;
 	private Set<Categoria> categorie;
-
+	private String citta_Ristorante;
 
 	
+
+
+	public String getCitta_Ristorante() {
+		return citta_Ristorante;
+	}
+
+
+	public void setCitta_Ristorante(String citta_Ristorante) {
+		this.citta_Ristorante = citta_Ristorante;
+	}
 
 
 	@Override

@@ -113,13 +113,13 @@ prefix="c" %>
                   <h1>Ordina e Mangia come un Porco! </h1>
                     <h5 class="font-white space-xs">Cerca subito il cibo che vuoi mangiare! </h5>
                     <div class="banner-form">
-                      <form class="form-inline">
+                      <form class="form-inline" action="cercaRistorante" method="get">
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
                                 <div class="form-group">
-                                  <input type="text" class="form-control form-control-lg" id="exampleInputAmount" placeholder="Vorrei mangiare..."> </div>
+                                  <input type="text" class="form-control form-control-lg" id="exampleInputAmount" placeholder="In che città vivi?" name="cittaCercata"> </div>
                             </div>
-                            <button onclick="location.href='restaurants.html'" type="button" class="btn theme-btn btn-lg">Cerca</button>
+                            <button type="submit" class="btn theme-btn btn-lg">Cerca</button>
                         </form>
                     </div>
                     <div class="steps">
