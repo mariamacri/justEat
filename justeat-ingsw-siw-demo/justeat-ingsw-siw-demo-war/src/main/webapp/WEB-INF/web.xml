@@ -107,6 +107,7 @@
     <url-pattern>/registraUtente</url-pattern>
   </servlet-mapping>
   
+
   
      <servlet>
   <servlet-name>EliminaPietanza</servlet-name>
@@ -116,4 +117,16 @@
     <servlet-name>EliminaPietanza</servlet-name>
     <url-pattern>/eliminapietanza</url-pattern>
   </servlet-mapping>
+
+        <servlet>
+  <servlet-name>RicercaRistorante</servlet-name>
+    <servlet-class>it.unical.ingsw.justeat.db.servlet.CercaRistorante</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RicercaRistorante</servlet-name>
+    <url-pattern>/cercaRistorante</url-pattern>
+  </servlet-mapping>
+  
+  
+
 </web-app> 

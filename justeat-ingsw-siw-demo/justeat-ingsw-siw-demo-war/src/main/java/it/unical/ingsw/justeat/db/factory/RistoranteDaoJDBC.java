@@ -52,7 +52,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				utente=utenteDao.findByPrimaryKey(result.getString("email_utenteregistrato"));
 				ristorante.setUtente_Proprietario(utente);
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
-				ristorante.setCitta_Ristorante(result.getString("citta_ristorante"));
+				ristorante.setCitta_Ristorante(result.getString("citta"));
 
 				ristoranti.add(ristorante);
 				
@@ -76,7 +76,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 		try {
 	
 
-			String insert = "insert into ristorante(nome_ristorante, indirizzo_ristorante, indirizzo_legale, partita_iva, coordinate_bancarie_ristorante,codice_fiscale_titolare, email_utenteregistrato, descrizione_ristorante,citta_ristorante) values (?,?,?,?,?,?,?,?,?)";
+			String insert = "insert into ristorante(nome_ristorante, indirizzo_ristorante, indirizzo_legale, partita_iva, coordinate_bancarie_ristorante,codice_fiscale_titolare, email_utenteregistrato, descrizione_ristorante,citta) values (?,?,?,?,?,?,?,?,?)";
 			
 			PreparedStatement statement = connection.prepareStatement(insert);
 		
@@ -128,7 +128,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				utente.setEmail_Utente(result.getString("email_utenteregistrato"));
 				ristorante.setUtente_Proprietario(utente);
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
-				ristorante.setCitta_Ristorante(result.getString("citta_ristorante"));
+				ristorante.setCitta_Ristorante(result.getString("citta"));
 				ristoranti.add(ristorante);
 			}
 		} catch (SQLException e) {
@@ -151,13 +151,14 @@ public List<Ristorante> findByCitta(String citta) {
 		try {
 			Ristorante ristorante=null;
 			PreparedStatement statement;
-			String query = "select * from ristorante r where r.citta_ristorante=?";
+			String query = "select * from ristorante r where r.citta=?";
 			statement = connection.prepareStatement(query);
 			statement.setString(1,citta);
 			
 			ResultSet result = statement.executeQuery();
 			while (result.next()) {
 				ristorante = new Ristorante();
+				ristorante.setCitta_Ristorante(result.getString("citta"));
 				ristorante.setIndirizzo_Ristorante(result.getString("indirizzo_ristorante"));
 				ristorante.setNome_Ristorante(result.getString("nome_ristorante"));
 				ristorante.setIndirizzo_Legale(result.getString("indirizzo_legale"));
@@ -216,7 +217,7 @@ public List<Ristorante> findByCitta(String citta) {
 				utente.setEmail_Utente(result.getString("email_utenteregistrato"));
 				ristorante.setUtente_Proprietario(utente);
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
-				ristorante.setCitta_Ristorante(result.getString("citta_ristorante"));
+				ristorante.setCitta_Ristorante(result.getString("citta"));
 
 				ristoranti.add(ristorante);
 				
@@ -272,7 +273,7 @@ public List<Ristorante> findByCitta(String citta) {
 					utente=utenteDao.findByPrimaryKey(result.getString("email_utenteregistrato"));
 					ristorante.setUtente_Proprietario(utente);
 					ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
-					ristorante.setCitta_Ristorante(result.getString("citta_ristorante"));
+					ristorante.setCitta_Ristorante(result.getString("citta"));
 
 					primaRiga = false;
 				}
@@ -340,7 +341,7 @@ public List<Ristorante> findByCitta(String citta) {
 				utente.setEmail_Utente(result.getString("email_utenteregistrato"));
 				ristorante.setUtente_Proprietario(utente);
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
-				ristorante.setCitta_Ristorante(result.getString("citta_ristorante"));
+				ristorante.setCitta_Ristorante(result.getString("citta"));
 
 			}
 		} catch (SQLException e) {
@@ -387,7 +388,7 @@ public List<Ristorante> findByCitta(String citta) {
 	public void update(Ristorante ristorante) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			String update = "update ristorante SET  nome_ristorante= ?, indirizzo_ristorante = ?,  indirizzo_legale=?, coordinate bancarie_ristorante=? , codice_fiscale_titolare =? ,descrizione_ristorante=?, email_utenteregistrato=?, citta_ristorante =? WHERE partita_iva=?";
+			String update = "update ristorante SET  nome_ristorante= ?, indirizzo_ristorante = ?,  indirizzo_legale=?, coordinate bancarie_ristorante=? , codice_fiscale_titolare =? ,descrizione_ristorante=?, email_utenteregistrato=?, citta =? WHERE partita_iva=?";
 			PreparedStatement statement = connection.prepareStatement(update);
 			statement.setString(1, ristorante.getNome_Ristorante());
 			statement.setString(2, ristorante.getIndirizzo_Ristorante());
@@ -462,7 +463,7 @@ public List<Ristorante> findByCitta(String citta) {
 				utente.setEmail_Utente(result.getString("email_utenteregistrato"));
 				ristorante.setUtente_Proprietario(utente);
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
-				ristorante.setCitta_Ristorante(result.getString("cittas_ristorante"));
+				ristorante.setCitta_Ristorante(result.getString("citta"));
 			}
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());

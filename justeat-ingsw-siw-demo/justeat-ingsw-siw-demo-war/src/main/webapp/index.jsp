@@ -117,7 +117,7 @@ prefix="c" %>
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
                                 <div class="form-group">
-                                  <input type="text" class="form-control form-control-lg" id="exampleInputAmount" placeholder="In che città vivi?" name="cittaCercata"> </div>
+                                  <input type="text" class="form-control form-control-lg" id="exampleInputAmount" placeholder="In che città vivi?" name="citta"> </div>
                             </div>
                             <button type="submit" class="btn theme-btn btn-lg">Cerca</button>
                         </form>

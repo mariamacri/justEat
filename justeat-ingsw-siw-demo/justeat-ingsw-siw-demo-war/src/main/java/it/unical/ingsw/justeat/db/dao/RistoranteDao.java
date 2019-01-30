@@ -21,7 +21,7 @@ public interface RistoranteDao {
 
 	// public void setPassword(Ristorante ristorante, String password);
 	public Ristorante findByEmail(String Email);
-	
+	public List<Ristorante> findByCitta(String citta);
 	public void delete_pietanza_contenuta(Pietanza pietanza, Ristorante ristorante);
 	
 	public List<Pietanza> pietanze_del_ristorante(Ristorante ristorante);
