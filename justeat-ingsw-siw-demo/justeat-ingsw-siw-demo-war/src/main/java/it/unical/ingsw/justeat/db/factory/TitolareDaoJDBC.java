@@ -1,6 +1,7 @@
 package it.unical.ingsw.justeat.db.factory;
 
 import java.sql.Connection;
+import java.util.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,22 +26,21 @@ public class TitolareDaoJDBC implements TitolareDao {
 		Connection connection = this.dataSource.getConnection();
 		try {
 
-			String insert = "insert into titolare(cf_titolare, nome_titolare, cognome_titolare, indirizzo_titolare,carta_credito_intestata, numero_telefono_titolare,data_nascita_titolare ) values (?,?,?,?,?,?,?)";
+			String insert = "insert into titolare(cf_titolare, nome_titolare, cognome_titolare, indirizzo_titolare, carta_credito_intestata,  data_nascita_titolare ) values (?,?,?,?,?,?)";
 			PreparedStatement statement = connection.prepareStatement(insert);
 			statement.setString(1, titolare.getCf_Titolare());
 			statement.setString(2, titolare.getNome_Titolare());
 			statement.setString(3, titolare.getCognome_Titolare());
 			statement.setString(4, titolare.getIndirizzo_Titolare());
-			for (CartaDiCredito c : titolare.getCarteDiCredito()) {
-
-				statement.setString(5, c.getNumero_Carta());
-			}
-			statement.setInt(6, titolare.getNumero_Telefono_Titolare());
-			long secs = titolare.getData_Nascita_Titolare().getTime();
-			statement.setDate(7, new java.sql.Date(secs));
+			if(titolare.getCarta_di_credito()==null)
+				statement.setString(5, "none");
+			else
+				statement.setString(5, titolare.getCarta_di_credito().getNumero_Carta());
+			
+			statement.setDate(6, (java.sql.Date) titolare.getData_Nascita_Titolare());
 
 			statement.executeUpdate();
-			this.updateCarte(titolare, connection);
+			
 
 		} catch (SQLException e) {
 			if (connection != null) {
@@ -77,14 +77,11 @@ public class TitolareDaoJDBC implements TitolareDao {
 				long secs = result.getDate("data_nascita_titolare").getTime();
 				titolare.setData_Nascita_Titolare(new java.util.Date(secs));
 				titolare.setIndirizzo_Titolare(result.getString("indirizzo_titolare"));
-				titolare.setNumero_Telefono_Titolare(result.getInt("numero_telefono_titolare"));
+				
 				CartaDiCredito c = new CartaDiCredito();
 				c.setNumero_Carta(result.getString("carta_credito_intestata"));
-				titolare.addCarta(c);
-				titolare.setCarteDiCredito(titolare.getCarteDiCredito());
-				// un titolare ha da zero a n carte di credito
-				// che qui si devono aggiornare
-				// manca l'update delle sue carte di credito
+				titolare.setCarta_di_credito(c);
+				
 			}
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -98,65 +95,23 @@ public class TitolareDaoJDBC implements TitolareDao {
 		return titolare;
 	}
 
-	public void updateCarte(Titolare titolare, Connection connection) throws SQLException {
-		CartaDiCreditoDao cartaDao = new CartaDiCreditoDaoJDBC(dataSource);
-		for (CartaDiCredito carta : titolare.getCarteDiCredito()) {
-			if (cartaDao.findByPrimaryKey(carta.getNumero_Carta()) == null) {
-				cartaDao.save(carta);
-			}
-			// relazione 1 a n si fa così
 
-			String update = "update titolare SET carta_credito_intestata= ? WHERE cf_titolare= ?";
-			PreparedStatement statement = connection.prepareStatement(update);
-			statement.setString(1, titolare.getCf_Titolare());
-			statement.setString(2, carta.getNumero_Carta());
-			int s = statement.executeUpdate();
-
-		}
-//nelle relazioni (n a n) 
-//			String titolare = "select nome_titolare from titolare where carta_credito_intestata=? AND cf_titolare=?";
-//			PreparedStatement statementIscritto = connection.prepareStatement(iscritto);
-//			statementIscritto.setString(1, studente.getMatricola());
-//			statementIscritto.setLong(2, corso.getCodice());
-//			ResultSet result = statementIscritto.executeQuery();
-//			if (result.next()) {
-//				String update = "update studente SET corso_codice = ? WHERE id = ?";
-//				PreparedStatement statement = connection.prepareStatement(update);
-//				statement.setLong(1, corso.getCodice());
-//				statement.setLong(2, result.getLong("id"));
-//				statement.executeUpdate();
-//			} else {
-//				String iscrivi = "insert into iscritto(id, matricola_studente, corso_codice) values (?,?,?)";
-//				PreparedStatement statementIscrivi = connection.prepareStatement(iscrivi);
-//				Long id = IdBroker.getId(connection);
-//				statementIscrivi.setLong(1, id);
-//				statementIscrivi.setString(2, studente.getMatricola());
-//				statementIscrivi.setLong(3, corso.getCodice());
-//				statementIscrivi.executeUpdate();
-//			}
-//		}
-	}
 
 	@Override
 	public void update(Titolare titolare) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			String update = "update  titolare SET nome_titolare=?, cognome_titolare=?, indirizzo_titolare=?, carta_di_credito_intestata=?, numero_telefono_titolare=?, data_nascita_titolare=?  WHERE cf_titolare=?";
+			String update = "update  titolare SET nome_titolare=?, cognome_titolare=?, indirizzo_titolare=?, carta_di_credito_intestata=?,  data_nascita_titolare=?  WHERE cf_titolare=?";
 			PreparedStatement statement = connection.prepareStatement(update);
-			statement.setString(1, titolare.getCf_Titolare());
-			statement.setString(2, titolare.getNome_Titolare());
-			statement.setString(3, titolare.getCognome_Titolare());
-			statement.setString(4, titolare.getIndirizzo_Titolare());
-			for (CartaDiCredito c : titolare.getCarteDiCredito()) {
-
-				statement.setString(5, c.getNumero_Carta());
-			}
-			statement.setInt(6, titolare.getNumero_Telefono_Titolare());
-			long secs = titolare.getData_Nascita_Titolare().getTime();
-			statement.setDate(7, new java.sql.Date(secs));
-
+			
+			statement.setString(1, titolare.getNome_Titolare());
+			statement.setString(2, titolare.getCognome_Titolare());
+			statement.setString(3, titolare.getIndirizzo_Titolare());
+			statement.setString(4, titolare.getCarta_di_credito().getNumero_Carta());
+			statement.setDate(5, (java.sql.Date) titolare.getData_Nascita_Titolare());
+			statement.setString(6, titolare.getCf_Titolare());
 			statement.executeUpdate();
-			this.updateCarte(titolare, connection);
+			
 			
 			statement.executeUpdate();
 		} catch (SQLException e) {

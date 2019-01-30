@@ -122,58 +122,58 @@ prefix="c" %>
                      <div class="col-md-8">
                         <div class="widget">
                            <div class="widget-body">
-                              <form>
+                              <form action="registrazioneRistorante" method="post">
 								   <div class="form-group">
                                     <label for="exampleInputEmail1">Nome Utente</label>
-                                    <input class="form-control" type="text" placeholder="Mario96" id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
+                                    <input class="form-control" type="text" placeholder="Mario96" id="example-text-input" name="nome"> <small id="emailHelp" class="form-text text-muted"></small> 
                                  </div>
 								   <div class="form-group">
                                     <label for="exampleInputEmail1">Password</label>
-                                    <input class="form-control" type="text" placeholder="Lunghezza minima 6 caratteri" id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
+                                    <input class="form-control" type="text" placeholder="Lunghezza minima 6 caratteri" name="password" id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
                                  </div>
                                  <div class="form-group">
-                                    <label for="exampleInputEmail1">Nome AttivitÃ </label>
-                                   <input class="form-control" type="text" placeholder="Es. Da Pino" id="example-text-input"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
+                                    <label for="exampleInputEmail1">Nome Attività </label>
+                                   <input class="form-control" type="text" name="nome_attivita" placeholder="Es. Da Pino" id="example-text-input"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
                                  </div>
                                  <div class="form-group">
                                     <label for="exampleInputEmail1">Indirizzo E-mail</label>
-                                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inserisci un indirizzo E-mail per l'attivitÃ "> <small class="form-text text-muted">Non condivideremo la tua e-mail con terze parti.</small> 
+                                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inserisci un indirizzo E-mail per l'attività " name="email"> <small class="form-text text-muted">Non condivideremo la tua e-mail con terze parti.</small> 
                                  </div>
                                  <div class="form-group">
                                     <label for="exampleInputEmail1">Numero di Telefono</label>
-                                   <input class="form-control" type="tel" placeholder="0984000000" id="example-tel-input"> <small class="form-text text-muted">Il numero di telefono sarÃ  usato per essere contattato dai clienti.</small> 
+                                   <input class="form-control" type="tel" placeholder="0984000000" id="example-tel-input" name="telefono"> <small class="form-text text-muted">Il numero di telefono sarà  usato per essere contattato dai clienti.</small> 
                                  </div>
                                  <div class="form-group">
-                                    <label for="exampleInputEmail1">Indirizzo AttivitÃ </label>
-                                    <input class="form-control" type="url" placeholder="Via Farfalle 69" id="example-url-input"> <small class="form-text text-muted">L'indirizzo dove Ã¨ situata l'attivitÃ .</small> 
+                                    <label for="exampleInputEmail1">Indirizzo Attività </label>
+                                    <input class="form-control" type="text" placeholder="Via Farfalle 69" id="example-url-input" name="indirizzo"> <small class="form-text text-muted">L'indirizzo dove è situata l'attività .</small> 
                                  </div>
 								   <div class="form-group">
                                     <label for="exampleInputEmail1">Numero di iscrizione al registro delle imprese</label>
-                                    <input class="form-control" type="text" placeholder="Partita Iva (16 caratteri)" id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
+                                    <input class="form-control" type="text" placeholder="Partita Iva (16 caratteri)" id="example-text-input" name="iva"> <small id="emailHelp" class="form-text text-muted"></small> 
                                  </div>
 								   <div class="form-group">
-                                    <label for="exampleInputEmail1">Nome del Titolare dell'attivitÃ </label>
-                                    <input class="form-control" type="text" placeholder="Es. Pino" id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
+                                    <label for="exampleInputEmail1">Nome del Titolare dell'attività </label>
+                                    <input class="form-control" type="text" placeholder="Es. Pino" id="example-text-input" name="nome_titolare"> <small id="emailHelp" class="form-text text-muted"></small> 
                                  </div>
 								   <div class="form-group">
-                                    <label for="exampleInputEmail1">Cognome del Titolare dell'attivitÃ </label>
-                                    <input class="form-control" type="text" placeholder="Es. Abete" id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
+                                    <label for="exampleInputEmail1">Cognome del Titolare dell'attività </label>
+                                    <input class="form-control" type="text" placeholder="Es. Abete" id="example-text-input" name="cognome_titolare"> <small id="emailHelp" class="form-text text-muted"></small> 
                                  </div>
 								   <div class="form-group">
                                     <label for="exampleInputEmail1">Codice Fiscale Titolare</label>
-                                    <input class="form-control" type="text" placeholder="BTAPNI77T25A326K" id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
+                                    <input class="form-control" type="text" placeholder="BTAPNI77T25A326K" id="example-text-input" name="cf"> <small id="emailHelp" class="form-text text-muted"></small> 
                                  </div>
 								    <div class="form-group">
                                     <label for="exampleInputEmail1">Data di Nascita</label>
-                                    <input class="form-control" type="date" id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
+                                    <input class="form-control" type="date" id="example-text-input" name="data_nascita"> <small id="emailHelp" class="form-text text-muted"></small> 
                                  </div>
 							    <div class="form-group">
                                     <label for="exampleInputEmail1">Indirizzo di Residenza</label>
-                                    <input class="form-control" type="text" placeholder="Via Foresta Aosta (AO) " id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
+                                    <input class="form-control" type="text" placeholder="Via Foresta Aosta (AO) " id="example-text-input" name="residenza"> <small id="emailHelp" class="form-text text-muted"></small> 
                                  </div>
 								    <div class="form-group">
-                                    <label for="exampleInputEmail1">Coordinate Bancarie AttivitÃ </label>
-                                    <input class="form-control" type="text" placeholder="Codice Iban (16 Caratteri)" id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
+                                    <label for="exampleInputEmail1">Coordinate Bancarie Attività </label>
+                                    <input class="form-control" type="text" name="iban" placeholder="Codice Iban (16 Caratteri)" id="example-text-input"> <small id="emailHelp" class="form-text text-muted"></small> 
                                  </div>
 <div class="custom-controls-stacked m-b-20">
                      <label class="custom-control custom-radio  m-b-10">
@@ -193,7 +193,7 @@ prefix="c" %>
                      <!-- /REGISTER -->
                      <!-- WHY? -->
                      <div class="col-md-4">
-                        <h4>La registrazione Ã¨ facile, veloce e gratuita.</h4>
+                        <h4>La registrazione è facile, veloce e gratuita.</h4>
                         <p>Once you"re registered, you can:</p>
                         <hr>
                         <img src="img/Local.png" alt="" class="img-fluid">

@@ -88,4 +88,14 @@
     <servlet-name>ListaPietanze</servlet-name>
     <url-pattern>/pietanze</url-pattern>
   </servlet-mapping>
+  
+  
+      <servlet>
+  <servlet-name>RegistrazioneRistorante</servlet-name>
+    <servlet-class>it.unical.ingsw.justeat.db.servlet.registrazioneRistorante</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrazioneRistorante</servlet-name>
+    <url-pattern>/registrazioneRistorante</url-pattern>
+  </servlet-mapping>
 </web-app> 

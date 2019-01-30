@@ -33,7 +33,10 @@ public class UtenteDaoJDBC implements UtenteDao {
 
 			statement.setString(4, utente.getIndirizzo_Utente());
 			statement.setString(5, utente.getPassword());
-			statement.setString(6, utente.getCarta_Credito_Usata().getNumero_Carta());
+			if(utente.getCarta_Credito_Usata()!=null)
+				statement.setString(6, utente.getCarta_Credito_Usata().getNumero_Carta());
+			else
+				statement.setString(6, "none");
 			statement.setInt(7, utente.getNumero_telefono_utente());
 
 			statement.executeUpdate();

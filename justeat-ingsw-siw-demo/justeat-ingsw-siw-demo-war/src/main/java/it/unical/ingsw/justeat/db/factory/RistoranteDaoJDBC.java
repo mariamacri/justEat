@@ -73,30 +73,27 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 	public void save(Ristorante ristorante) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			// il ? si fa per evitare attacchi di sql injection
+	
 
 			String insert = "insert into ristorante(nome_ristorante, indirizzo_ristorante, indirizzo_legale, partita_iva, coordinate_bancarie_ristorante,codice_fiscale_titolare, email_utenteregistrato, descrizione_ristorante) values (?,?,?,?,?,?,?,?)";
-			// per eseguire la query dobbiamo creare un oggetto di tipo prepared statement,
-			// che serve per passare in input a postgres la query
-			// in modo da poterla effettuare
-			// prepareStatement prende in input una query
+			
 			PreparedStatement statement = connection.prepareStatement(insert);
-			// li settiamo così perchè cosi evitiamo sql injection
+		
 			statement.setString(1, ristorante.getNome_Ristorante());
 			statement.setString(2, ristorante.getIndirizzo_Ristorante());
 			statement.setString(3, ristorante.getIndirizzo_Legale());
 			statement.setString(4, ristorante.getPartita_Iva());
 			statement.setString(5, ristorante.getCoordinate_Bancarie_Ristorante());
 			statement.setString(6, ristorante.getTitolare().getCf_Titolare());
-			statement.setString(7,ristorante.getUtente_Proprietario().getEmail_Utente());
+			statement.setString(7, ristorante.getUtente_Proprietario().getEmail_Utente());
 			statement.setString(8, ristorante.getDescrizione_Ristorante());
 			statement.executeUpdate();
-			this.updateCategorie(ristorante, connection);
+		
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
 		} finally {
 			try {
-				// chiudiamo sempre la connessione
+				
 				connection.close();
 			} catch (SQLException e) {
 				throw new PersistenceException(e.getMessage());

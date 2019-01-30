@@ -255,97 +255,8 @@ prefix="c" %>
                      </div>
                   </div>
                   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
-                     <div class="menu-widget m-b-30">
-                        <div class="widget-heading">
-                           <h3 class="widget-title text-dark">
-                              POPULAR ORDERS Delicious hot food! <a class="btn btn-link pull-right" data-toggle="collapse" href="#popular" aria-expanded="true">
-                              <i class="fa fa-angle-right pull-right"></i>
-                              <i class="fa fa-angle-down pull-right"></i>
-                              </a>
-                           </h3>
-                           <div class="clearfix"></div>
-                        </div>
-                        <div class="collapse in" id="1">
-                           <div class="food-item white">
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-lg-8">
-                                    <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/food4.jpg" alt="Food logo"></a>
-                                    </div>
-                                    <!-- end:Logo -->
-                                    <div class="rest-descr">
-                                       <h6><a href="#">Veg Extravaganza</a></h6>
-                                       <p> Burgers, American, Sandwiches, Fast Food, BBQ</p>
-                                    </div>
-                                    <!-- end:Description -->
-                                 </div>
-                                 <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span> <a href="#" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal">&#43;</a> </div>
-                              </div>
-                              <!-- end:row -->
-                           </div>
-                           <!-- end:Food item -->
-                           <div class="food-item">
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-lg-8">
-                                    <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/food5.jpg" alt="Food logo"></a>
-                                    </div>
-                                    <!-- end:Logo -->
-                                    <div class="rest-descr">
-                                       <h6><a href="#">Veg Extravaganza</a></h6>
-                                       <p> Burgers, American, Sandwiches, Fast Food, BBQ</p>
-                                    </div>
-                                    <!-- end:Description -->
-                                 </div>
-                                 <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span> <a href="#" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal">&#43;</a> </div>
-                              </div>
-                              <!-- end:row -->
-                           </div>
-                           <!-- end:Food item -->
-                           <div class="food-item white">
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-lg-8">
-                                    <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/food6.jpg" alt="Food logo"></a>
-                                    </div>
-                                    <!-- end:Logo -->
-                                    <div class="rest-descr">
-                                       <h6><a href="#">Veg Extravaganza</a></h6>
-                                       <p> Burgers, American, Sandwiches, Fast Food, BBQ</p>
-                                    </div>
-                                    <!-- end:Description -->
-                                 </div>
-                                 <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span> <a href="#" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal">&#43;</a> </div>
-                              </div>
-                              <!-- end:row -->
-                           </div>
-                           <!-- end:Food item -->
-                           <div class="food-item">
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-lg-8">
-                                    <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/food7.jpg" alt="Food logo"></a>
-                                    </div>
-                                    <!-- end:Logo -->
-                                    <div class="rest-descr">
-                                       <h6><a href="#">Veg Extravaganza</a></h6>
-                                       <p> Burgers, American, Sandwiches, Fast Food, BBQ</p>
-                                    </div>
-                                    <!-- end:Description -->
-                                 </div>
-                                 <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span> <a href="#" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal">&#43;</a> </div>
-                              </div>
-                              <!-- end:row -->
-                           </div>
-                           <!-- end:Food item -->
-                        </div>
-                        <!-- end:Collapse -->
-                     </div>
-                     <!-- end:Widget menu -->
+<!-- end:Widget menu -->
+					  <!-- inizio for -->
                      <div class="menu-widget" id="2">
                         <div class="widget-heading">
                            <h3 class="widget-title text-dark">
@@ -356,16 +267,18 @@ prefix="c" %>
                            </h3>
                            <div class="clearfix"></div>
                         </div>
-                        <div class="collapse in" id="popular2">
-                           <div class="food-item">
+                       <div class="collapse in" id="popular2">
+						    <!-- inizio for -->
+              <c:forEach items="${pasti}" var="pasto">
+<div class="food-item">
                               <div class="row">
                                  <div class="col-xs-12 col-sm-12 col-lg-8">
                                     <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/food4.jpg" alt="Food logo"></a>
+                                       <a class="restaurant-logo pull-left" href="#"><img src="img/$[pasto.getImage()}" alt="Food logo"></a>
                                     </div>
                                     <!-- end:Logo -->
                                     <div class="rest-descr">
-                                       <h6><a href="#">Veg Extravaganza</a></h6>
+                                       <h6><a href="#">$[pasto.getDescrizione()}</a></h6>
                                        <p> Burgers, American, Sandwiches, Fast Food, BBQ</p>
                                     </div>
                                     <!-- end:Description -->
@@ -375,96 +288,26 @@ prefix="c" %>
                               </div>
                               <!-- end:row -->
                            </div>
-                           <!-- end:Food item -->
-                           <div class="food-item white">
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-lg-8">
-                                    <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/food5.jpg" alt="Food logo"></a>
-                                    </div>
-                                    <!-- end:Logo -->
-                                    <div class="rest-descr">
-                                       <h6><a href="#">Veg Extravaganza</a></h6>
-                                       <p> Burgers, American, Sandwiches, Fast Food, BBQ</p>
-                                    </div>
-                                    <!-- end:Description -->
-                                 </div>
-                                 <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span> <a href="#" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal">&#43;</a> </div>
-                              </div>
-                              <!-- end:row -->
-                           </div>
-                           <!-- end:Food item -->
-                           <div class="food-item">
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-lg-8">
-                                    <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/food6.jpg" alt="Food logo"></a>
-                                    </div>
-                                    <!-- end:Logo -->
-                                    <div class="rest-descr">
-                                       <h6><a href="#">Veg Extravaganza</a></h6>
-                                       <p> Burgers, American, Sandwiches, Fast Food, BBQ</p>
-                                    </div>
-                                    <!-- end:Description -->
-                                 </div>
-                                 <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span> <a href="#" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal">&#43;</a> </div>
-                              </div>
-                              <!-- end:row -->
-                           </div>
-                           <!-- end:Food item -->
-                           <div class="food-item white">
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-lg-8">
-                                    <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/food7.jpg" alt="Food logo"></a>
-                                    </div>
-                                    <!-- end:Logo -->
-                                    <div class="rest-descr">
-                                       <h6><a href="#">Veg Extravaganza</a></h6>
-                                       <p> Burgers, American, Sandwiches, Fast Food, BBQ</p>
-                                    </div>
-                                    <!-- end:Description -->
-                                 </div>
-                                 <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span> <a href="#" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal">&#43;</a> </div>
-                              </div>
-                              <!-- end:row -->
-                           </div>
-                           <!-- end:Food item -->
+</c:forEach>
+ <!-- Fine for -->
+						   <!-- end:Food item -->
+                         
+                         <!-- end:Food item -->
+                         
+                         <!-- end:Food item -->
+                           
+                          <!-- end:Food item -->
                         </div>
                         <!-- end:Collapse -->
-                     </div>
+                    </div>
+					   <!-- FINE FOR -->
                      <!-- end:Widget menu -->
                      <div class="row m-t-30">
-                        <div class="col-sm-12 col-xs-12">
-                           <div class="panel">
-                              <div class="panel-heading">
-                                 <h4 class="panel-title"><a data-parent="#accordion" data-toggle="collapse" class="panel-toggle collapsed" href="#faq1" aria-expanded="false">Can I viverra sit amet quam eget lacinia?</a></h4>
-                              </div>
-                              <div class="panel-collapse collapse" id="faq1" aria-expanded="false" role="article" style="height: 0px;">
-                                 <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ut erat a ultricies. Phasellus non auctor nisi, id aliquet lectus. Vestibulum libero eros, aliquet at tempus ut, scelerisque sit amet nunc. Vivamus id porta neque, in pulvinar ipsum. Vestibulum sit amet quam sem. Pellentesque accumsan consequat venenatis. Pellentesque sit amet justo dictum, interdum odio non, dictum nisi. Fusce sit amet turpis eget nibh elementum sagittis. Nunc consequat lacinia purus, in consequat neque consequat id.</div>
-                              </div>
-                           </div>
+                        <div class="col-sm-12">
+<!--//panel-->
+                           
                            <!--//panel-->
-                           <div class="panel">
-                              <div class="panel-heading">
-                                 <h4 class="panel-title"><a data-parent="#accordion" data-toggle="collapse" class="panel-toggle" href="#faq2"><i class="ti-info-alt"></i>What is the ipsum dolor sit amet quam tortor?</a></h4>
-                              </div>
-                              <div class="panel-collapse collapse" id="faq2">
-                                 <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ut erat a ultricies. Phasellus non auctor nisi, id aliquet lectus. Vestibulum libero eros, aliquet at tempus ut, scelerisque sit amet nunc. Vivamus id porta neque, in pulvinar ipsum. Vestibulum sit amet quam sem. Pellentesque accumsan consequat venenatis. Pellentesque sit amet justo dictum, interdum odio non, dictum nisi. Fusce sit amet turpis eget nibh elementum sagittis. Nunc consequat lacinia purus, in consequat neque consequat id.</div>
-                              </div>
-                           </div>
-                           <!--//panel-->
-                           <div class="panel">
-                              <div class="panel-heading">
-                                 <h4 class="panel-title"><a data-parent="#accordion" data-toggle="collapse" class="panel-toggle" href="#faq3"><i class="ti-info-alt"></i>How does lorem ipsum work?</a></h4>
-                              </div>
-                              <div class="panel-collapse collapse" id="faq3">
-                                 <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ut erat a ultricies. Phasellus non auctor nisi, id aliquet lectus. Vestibulum libero eros, aliquet at tempus ut, scelerisque sit amet nunc. Vivamus id porta neque, in pulvinar ipsum. Vestibulum sit amet quam sem. Pellentesque accumsan consequat venenatis. Pellentesque sit amet justo dictum, interdum odio non, dictum nisi. Fusce sit amet turpis eget nibh elementum sagittis. Nunc consequat lacinia purus, in consequat neque consequat id.</div>
-                              </div>
-                           </div>
+                           
                            <!--//panel-->
                            <div class="panel">
                               <div class="panel-heading">
@@ -473,13 +316,13 @@ prefix="c" %>
                               <div class="panel-collapse collapse" id="faq4">
                                  <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ut erat a ultricies. Phasellus non auctor nisi, id aliquet lectus. Vestibulum libero eros, aliquet at tempus ut, scelerisque sit amet nunc. Vivamus id porta neque, in pulvinar ipsum. Vestibulum sit amet quam sem. Pellentesque accumsan consequat venenatis. Pellentesque sit amet justo dictum, interdum odio non, dictum nisi. Fusce sit amet turpis eget nibh elementum sagittis. Nunc consequat lacinia purus, in consequat neque consequat id.</div>
                               </div>
-                           </div>
+                          </div>
                            <!--//panel-->
-                        </div>
+                       </div>
                      </div>
                      <!--/row -->
                   </div>
-                  <!-- end:Bar -->
+                 <!-- end:Bar -->
                   <div class="col-xs-12 col-md-12 col-lg-3">
                      <div class="sidebar-wrap">
                         <div class="widget widget-cart">
