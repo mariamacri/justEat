@@ -176,7 +176,8 @@ prefix="c" %>
                                  </div>
                                  <!-- end:col -->
                                  <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left"><a href="#">Prezzo: € ${pasto.getPrezzo()}</a></span>
-							     <a href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal" >&#45;</a> </div>
+									  <li class="controlList-item "> <a id="payment-nav-link" href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" >&#45 elimina</a> </li></li>
+							    <!-- <a href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal" >&#45;</a> </div> -->
                               </div>
                               <!-- end:row -->
                            </div>

@@ -17,7 +17,7 @@ import it.unical.ingsw.justeat.db.model.Ristorante;
 public class eliminaPietanza extends HttpServlet{
 	
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String email=req.getParameter("email");
 		String nome=req.getParameter("nome");
 		

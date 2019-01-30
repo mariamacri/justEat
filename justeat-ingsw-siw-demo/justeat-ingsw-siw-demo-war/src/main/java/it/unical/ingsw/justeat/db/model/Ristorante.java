@@ -1,6 +1,8 @@
 package it.unical.ingsw.justeat.db.model;
 //modificato
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 
@@ -15,7 +17,7 @@ public class Ristorante {
 	private String descrizione_Ristorante;
 	// utente che crea il ristorante
 	private Utente utente_Proprietario;
-	private Set<Categoria> categorie;
+	private List<Categoria> categorie;
 	private String citta_Ristorante;
 
 	
@@ -122,16 +124,16 @@ public class Ristorante {
 
 	public void addCategoria(Categoria categoria) {
 		if (categorie == null) {
-			categorie = new HashSet<Categoria>();
+			categorie = new LinkedList<Categoria>();
 		}
 		categorie.add(categoria);
 	}
 
-	public Set<Categoria> getCategorie() {
+	public List<Categoria> getCategorie() {
 		return categorie;
 	}
 
-	public void setCategorie(Set<Categoria> categoria) {
+	public void setCategorie(List<Categoria> categoria) {
 		this.categorie = categoria;
 	}
 
@@ -199,4 +201,11 @@ public class Ristorante {
 		this.utente_Proprietario = utente_Proprietario;
 	}
 
+	public String getElencoCat() {
+		String c="";
+		for(Categoria cat: categorie) {
+			c+=cat.getNome_Categoria()+" ";
+		}
+		return c;
+	}
 }

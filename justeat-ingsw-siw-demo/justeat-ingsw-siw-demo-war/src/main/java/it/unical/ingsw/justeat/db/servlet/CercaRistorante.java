@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.factory.DAOFactory;
 import it.unical.ingsw.justeat.db.factory.DatabaseManager;
+import it.unical.ingsw.justeat.db.model.Categoria;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 
 public class CercaRistorante extends HttpServlet{
@@ -19,14 +20,21 @@ public class CercaRistorante extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	;
 		String citta = req.getParameter("citta");
-		String citta2=citta.replaceAll(" ", "");
+		
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
-		RistoranteDao risDao = DatabaseManager.getInstance().getDaoFactory().getRistoranteDAO();
-		List<Ristorante> ristor = risDao.findByCitta(citta2);
+		RistoranteDao risDao = factory.getRistoranteDAO();
+		List<Ristorante> ristor = risDao.findByCitta(citta);
+		for(Ristorante r: ristor) {
+		
+			r.setCategorie(risDao.tipo_cucina(r));
+			
+		}
+		
+		
+		
+		
 		req.setAttribute("ristoranti", ristor);
 		
-		for(Ristorante r: ristor)
-		System.out.println(r.toString());
 		
 		RequestDispatcher rd = req.getRequestDispatcher("restaurants.jsp");
 		rd.forward(req, resp);

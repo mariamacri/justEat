@@ -1,7 +1,9 @@
 package it.unical.ingsw.justeat.db.dao;
 
 import java.util.List;
+import java.util.Set;
 
+import it.unical.ingsw.justeat.db.model.Categoria;
 import it.unical.ingsw.justeat.db.model.Pietanza;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 
@@ -25,4 +27,6 @@ public interface RistoranteDao {
 	public void delete_pietanza_contenuta(Pietanza pietanza, Ristorante ristorante);
 	
 	public List<Pietanza> pietanze_del_ristorante(Ristorante ristorante);
+	
+	public List<Categoria> tipo_cucina(Ristorante ristorante);
 }

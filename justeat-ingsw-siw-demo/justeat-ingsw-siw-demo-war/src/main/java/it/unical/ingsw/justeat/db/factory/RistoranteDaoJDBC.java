@@ -4,8 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.dao.UtenteDao;
@@ -158,6 +160,7 @@ public List<Ristorante> findByCitta(String citta) {
 			ResultSet result = statement.executeQuery();
 			while (result.next()) {
 				ristorante = new Ristorante();
+				ristorante.setPartita_Iva(result.getString("partita_iva"));
 				ristorante.setCitta_Ristorante(result.getString("citta"));
 				ristorante.setIndirizzo_Ristorante(result.getString("indirizzo_ristorante"));
 				ristorante.setNome_Ristorante(result.getString("nome_ristorante"));
@@ -532,5 +535,45 @@ public List<Ristorante> findByCitta(String citta) {
 			}
 		}
 		return pietanze;
+	}
+	
+	@Override
+	public List<Categoria> tipo_cucina(Ristorante ristorante){
+		Connection connection = this.dataSource.getConnection();
+		List<Categoria> categorie  = new LinkedList<>();
+		
+		
+		try {
+			Categoria cat;
+			PreparedStatement statement;
+			String query = "select * from categoria where id_categoria in (select id_categoria_cucina from tipo_cucina, ristorante where partita_iva_ristorante_tipo_cucina=?)";
+			statement = connection.prepareStatement(query);
+			statement.setString(1, ristorante.getPartita_Iva());
+			ResultSet result = statement.executeQuery();
+			
+			while (result.next()) {
+			
+				cat=new Categoria();
+				cat.setId_Categoria(result.getInt("id_categoria"));
+				cat.setNome_Categoria(result.getString("nome_categoria"));
+				
+				categorie.add(cat);	
+			
+			}
+			
+			
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		
+		
+		
+		return categorie;
 	}
 }

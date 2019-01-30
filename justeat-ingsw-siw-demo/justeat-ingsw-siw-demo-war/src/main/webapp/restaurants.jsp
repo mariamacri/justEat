@@ -243,7 +243,7 @@ prefix="c" %>
                       <div class="col-xs-12 col-sm-7 col-md-7 col-lg-9">
 						  
 						    <!-- INIZIO FOR -->
-                          <c:forEach items="${pasti}" var="pasto">
+                          <c:forEach items="${ristoranti}" var="ristor">
 <div class="bg-gray restaurant-entry">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
@@ -252,7 +252,10 @@ prefix="c" %>
                                         </div>
                                         <!-- end:Logo -->
                                         <div class="entry-dscr">
-                                            <h5><a href="#">${METTI NOME RISTORANTE QUI</a></h5> <span>${METTI CATEGORIE O DESCRIZIONE QUI} <a href="#">...</a></span>
+                                            <h5><a href="#">${ristor.getNome_Ristorante()}</a></h5> 
+											<p>${ristor.getIndirizzo_Ristorante()} </p>
+											<p>${ristor.getElencoCat()} </p>
+											
                                             <ul class="list-inline">
                                                 <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 10,00</li>
                                                 <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
