@@ -192,7 +192,7 @@ prefix="c" %>
                                     </form>
                                 </div>
                             </div>
-                            <div class="widget clearfix">
+                          <div class="widget clearfix">
                                 <!-- /widget heading -->
                                 <div class="widget-heading">
                                     <h3 class="widget-title text-dark">
@@ -207,7 +207,7 @@ prefix="c" %>
                                 </div>
                             </div>
                             <!-- end:Pricing widget -->
-                            <div class="widget clearfix">
+                          <div class="widget clearfix">
                                 <!-- /widget heading -->
                                 <div class="widget-heading">
                                     <h3 class="widget-title text-dark">
@@ -240,64 +240,11 @@ prefix="c" %>
                             </div>
                             <!-- end:Widget -->
                         </div>
-                        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-9">
-                            <div class="bg-gray restaurant-entry">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
-                                        <div class="entry-logo">
-                                            <a class="img-fluid" href="#"><img src="img/logo8.png" alt="Food logo"></a>
-                                        </div>
-                                        <!-- end:Logo -->
-                                        <div class="entry-dscr">
-                                            <h5><a href="#">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ,urgers, American, Sandwiches <a href="#">...</a></span>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 10,00</li>
-                                                <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
-                                            </ul>
-                                        </div>
-                                        <!-- end:Entry description -->
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
-                                        <div class="right-content bg-white">
-                                            <div class="right-review">
-                                                <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                                <p> 245 Reviews</p> <a href="profile.html" class="btn theme-btn-dash">View Menu</a> </div>
-                                        </div>
-                                        <!-- end:right info -->
-                                    </div>
-                                </div>
-                                <!--end:row -->
-                            </div>
-                            <!-- end:Restaurant entry -->
-                            <div class="bg-gray restaurant-entry">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
-                                        <div class="entry-logo">
-                                            <a class="img-fluid" href="#"><img src="img/logo5.png" alt="Food logo"></a>
-                                        </div>
-                                        <!-- end:Logo -->
-                                        <div class="entry-dscr">
-                                            <h5><a href="#">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ,urgers, American, Sandwiches <a href="#">...</a></span>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 10,00</li>
-                                                <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
-                                            </ul>
-                                        </div>
-                                        <!-- end:Entry description -->
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
-                                        <div class="right-content bg-white">
-                                            <div class="right-review">
-                                                <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                                <p> 245 Reviews</p> <a href="profile.html" class="btn theme-btn-dash">View Menu</a> </div>
-                                        </div>
-                                        <!-- end:right info -->
-                                    </div>
-                                </div>
-                                <!--end:row -->
-                            </div>
-                            <!-- end:Restaurant entry -->
-                            <div class="bg-gray restaurant-entry">
+                      <div class="col-xs-12 col-sm-7 col-md-7 col-lg-9">
+						  
+						    <!-- INIZIO FOR -->
+                          <c:forEach items="${pasti}" var="pasto">
+<div class="bg-gray restaurant-entry">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
                                         <div class="entry-logo">
@@ -305,7 +252,7 @@ prefix="c" %>
                                         </div>
                                         <!-- end:Logo -->
                                         <div class="entry-dscr">
-                                            <h5><a href="#">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ,urgers, American, Sandwiches <a href="#">...</a></span>
+                                            <h5><a href="#">${METTI NOME RISTORANTE QUI</a></h5> <span>${METTI CATEGORIE O DESCRIZIONE QUI} <a href="#">...</a></span>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 10,00</li>
                                                 <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
@@ -317,126 +264,16 @@ prefix="c" %>
                                         <div class="right-content bg-white">
                                             <div class="right-review">
                                                 <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                                <p> 245 Reviews</p> <a href="profile.html" class="btn theme-btn-dash">View Menu</a> </div>
+                                                <p> METTI RECENSIONI QUI</p> <a href="profile.html" class="btn theme-btn-dash">Vedi Menù</a> </div>
                                         </div>
                                         <!-- end:right info -->
                                     </div>
                                 </div>
                                 <!--end:row -->
                             </div>
-                            <!-- end:Restaurant entry -->
-                            <div class="bg-gray restaurant-entry">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
-                                        <div class="entry-logo">
-                                            <a class="img-fluid" href="#"><img src="img/logo6.png" alt="Food logo"></a>
-                                        </div>
-                                        <!-- end:Logo -->
-                                        <div class="entry-dscr">
-                                            <h5><a href="#">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ,urgers, American, Sandwiches <a href="#">...</a></span>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 10,00</li>
-                                                <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
-                                            </ul>
-                                        </div>
-                                        <!-- end:Entry description -->
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
-                                        <div class="right-content bg-white">
-                                            <div class="right-review">
-                                                <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                                <p> 245 Reviews</p> <a href="profile.html" class="btn theme-btn-dash">View Menu</a> </div>
-                                        </div>
-                                        <!-- end:right info -->
-                                    </div>
-                                </div>
-                                <!--end:row -->
-                            </div>
-                            <!-- end:Restaurant entry -->
-                            <div class="bg-gray restaurant-entry">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
-                                        <div class="entry-logo">
-                                            <a class="img-fluid" href="#"><img src="img/logo6.png" alt="Food logo"></a>
-                                        </div>
-                                        <!-- end:Logo -->
-                                        <div class="entry-dscr">
-                                            <h5><a href="#">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ,urgers, American, Sandwiches <a href="#">...</a></span>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 10,00</li>
-                                                <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
-                                            </ul>
-                                        </div>
-                                        <!-- end:Entry description -->
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
-                                        <div class="right-content bg-white">
-                                            <div class="right-review">
-                                                <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                                <p> 245 Reviews</p> <a href="profile.html" class="btn theme-btn-dash">View Menu</a> </div>
-                                        </div>
-                                        <!-- end:right info -->
-                                    </div>
-                                </div>
-                                <!--end:row -->
-                            </div>
-                            <!-- end:Restaurant entry -->
-                            <div class="bg-gray restaurant-entry">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
-                                        <div class="entry-logo">
-                                            <a class="img-fluid" href="#"><img src="img/logo6.png" alt="Food logo"></a>
-                                        </div>
-                                        <!-- end:Logo -->
-                                        <div class="entry-dscr">
-                                            <h5><a href="#">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ,urgers, American, Sandwiches <a href="#">...</a></span>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 10,00</li>
-                                                <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
-                                            </ul>
-                                        </div>
-                                        <!-- end:Entry description -->
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
-                                        <div class="right-content bg-white">
-                                            <div class="right-review">
-                                                <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                                <p> 245 Reviews</p> <a href="profile.html" class="btn theme-btn-dash">View Menu</a> </div>
-                                        </div>
-                                        <!-- end:right info -->
-                                    </div>
-                                </div>
-                                <!--end:row -->
-                            </div>
-                            <!-- end:Restaurant entry -->
-                            <div class="bg-gray restaurant-entry">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
-                                        <div class="entry-logo">
-                                            <a class="img-fluid" href="#"><img src="img/logo6.png" alt="Food logo"></a>
-                                        </div>
-                                        <!-- end:Logo -->
-                                        <div class="entry-dscr">
-                                            <h5><a href="#">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ,urgers, American, Sandwiches <a href="#">...</a></span>
-                                            <ul class="list-inline">
-                                                <li class="list-inline-item"><i class="fa fa-check"></i> Min $ 10,00</li>
-                                                <li class="list-inline-item"><i class="fa fa-motorcycle"></i> 30 min</li>
-                                            </ul>
-                                        </div>
-                                        <!-- end:Entry description -->
-                                    </div>
-                                    <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
-                                        <div class="right-content bg-white">
-                                            <div class="right-review">
-                                                <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                                <p> 245 Reviews</p> <a href="profile.html" class="btn theme-btn-dash">View Menu</a> </div>
-                                        </div>
-                                        <!-- end:right info -->
-                                    </div>
-                                </div>
-                                <!--end:row -->
-                            </div>
-                            <!-- end:Restaurant entry -->
+</c:forEach>
+						     <!-- CHIUSURA FOR -->
+                        
                 </div>
             </section>
             <section class="app-section"> </section>
