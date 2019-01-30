@@ -18,7 +18,17 @@ public class Ristorante {
 	private Set<Categoria> categorie;
 	private String citta_Ristorante;
 
+	private int numero_Telefono_Ristorante;
+
 	
+	public int getNumero_Telefono_Ristorante() {
+		return numero_Telefono_Ristorante;
+	}
+
+
+	public void setNumero_Telefono_Ristorante(int numero_Telefono_Ristorante) {
+		this.numero_Telefono_Ristorante = numero_Telefono_Ristorante;
+	}
 
 
 	@Override
@@ -27,7 +37,7 @@ public class Ristorante {
 				+ ", indirizzo_Legale=" + indirizzo_Legale + ", partita_Iva=" + partita_Iva
 				+ ", coordinate_Bancarie_Ristorante=" + coordinate_Bancarie_Ristorante + ", titolare=" + titolare
 				+ ", descrizione_Ristorante=" + descrizione_Ristorante + ", utente_Proprietario=" + utente_Proprietario
-				+ ", categorie=" + categorie + ", citta_Ristorante=" + citta_Ristorante + "]";
+				+ ", categorie=" + categorie + ", citta_Ristorante=" + citta_Ristorante + "numero Telefono"+numero_Telefono_Ristorante+ "]";
 	}
 
 
