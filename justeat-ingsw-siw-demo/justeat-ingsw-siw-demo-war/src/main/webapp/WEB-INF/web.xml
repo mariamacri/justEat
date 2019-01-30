@@ -1,102 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
 
- <display-name>justeat-ingsw-siw-demo-war</display-name>
-  <welcome-file-list>
-    
-        <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>  
+	<display-name>justeat-ingsw-siw-demo-war</display-name>
+	<welcome-file-list>
 
-  
-    <servlet>
-  	<servlet-name>InserisciPietanza</servlet-name>
-  	<servlet-class>it.unical.ingsw.justeat.db.servlet.MettiPietanza</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>InserisciPietanza</servlet-name>
-  	<url-pattern>/aggiungiPietanza</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>Credenziali</servlet-name>
-  	<servlet-class>it.unical.ingsw.justeat.db.servlet.CredenzialiLogin</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>Credenziali</servlet-name>
-  	<url-pattern>/inviaCredenziali</url-pattern>
-  </servlet-mapping>
-  <servlet>
-  	<servlet-name>FaiLogin</servlet-name>
-  	<servlet-class>it.unical.ingsw.justeat.db.servlet.Login</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>FaiLogin</servlet-name>
-  	<url-pattern>/doLogin</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>HomeServlet</servlet-name>
-    <servlet-class>it.unical.ingsw.justeat.db.servlet.Home</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HomeServlet</servlet-name>
-    <url-pattern>/ciao</url-pattern>
-  </servlet-mapping>
-  <servlet>
- <servlet-name>ioSono</servlet-name>
-    <servlet-class>it.unical.ingsw.justeat.db.servlet.cosaSono</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ioSono</servlet-name>
-    <url-pattern>/what</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  <servlet-name>ModificaDati</servlet-name>
-    <servlet-class>it.unical.ingsw.justeat.db.servlet.modificaDati</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ModificaDati</servlet-name>
-    <url-pattern>/modificadati</url-pattern>
-  </servlet-mapping>
-  
-  
-    <servlet>
-  <servlet-name>ModificaPassword</servlet-name>
-    <servlet-class>it.unical.ingsw.justeat.db.servlet.modificaPassword</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ModificaPassword</servlet-name>
-    <url-pattern>/modificapassword</url-pattern>
-  </servlet-mapping>
-  
-  
-     <servlet>
-  <servlet-name>ModificaCarta</servlet-name>
-    <servlet-class>it.unical.ingsw.justeat.db.servlet.modificaCarta</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ModificaCarta</servlet-name>
-    <url-pattern>/modificacarta</url-pattern>
-  </servlet-mapping>
-  
-  
-     <servlet>
-  <servlet-name>ListaPietanze</servlet-name>
-    <servlet-class>it.unical.ingsw.justeat.db.servlet.listaPietanze</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ListaPietanze</servlet-name>
-    <url-pattern>/pietanze</url-pattern>
-  </servlet-mapping> 
-  
-      <servlet>
-  <servlet-name>RegistrazioneRistorante</servlet-name>
-    <servlet-class>it.unical.ingsw.justeat.db.servlet.registrazioneRistorante</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RegistrazioneRistorante</servlet-name>
-    <url-pattern>/registrazioneRistorante</url-pattern>
-  </servlet-mapping>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
 
       <servlet>
   <servlet-name>RegistrazioneUtente</servlet-name>
@@ -128,5 +41,118 @@
   </servlet-mapping>
   
   
+
+
+
+	<servlet>
+		<servlet-name>InserisciPietanza</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.MettiPietanza</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InserisciPietanza</servlet-name>
+		<url-pattern>/aggiungiPietanza</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Credenziali</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.CredenzialiLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Credenziali</servlet-name>
+		<url-pattern>/inviaCredenziali</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>FaiLogin</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FaiLogin</servlet-name>
+		<url-pattern>/doLogin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>HomeServlet</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.Home</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HomeServlet</servlet-name>
+		<url-pattern>/ciao</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ioSono</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.cosaSono</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ioSono</servlet-name>
+		<url-pattern>/what</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ModificaDati</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.modificaDati</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModificaDati</servlet-name>
+		<url-pattern>/modificadati</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ModificaPassword</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.modificaPassword</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModificaPassword</servlet-name>
+		<url-pattern>/modificapassword</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ModificaCarta</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.modificaCarta</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModificaCarta</servlet-name>
+		<url-pattern>/modificacarta</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ListaPietanze</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.listaPietanze</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListaPietanze</servlet-name>
+		<url-pattern>/pietanze</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegistrazioneRistorante</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.registrazioneRistorante</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegistrazioneRistorante</servlet-name>
+		<url-pattern>/registrazioneRistorante</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>ModificaDatiRistorante</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.modificaDatiRistorante</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModificaDatiRistorante</servlet-name>
+		<url-pattern>/modificaRistorante</url-pattern>
+	</servlet-mapping>
+
+
+<servlet>
+		<servlet-name>OttieniRistorante</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.ottieniRistorante</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OttieniRistorante</servlet-name>
+		<url-pattern>/ottieniRistorante</url-pattern>
+	</servlet-mapping>
 
 </web-app> 

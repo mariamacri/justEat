@@ -153,7 +153,7 @@ prefix="c" %>
       </nav>
     </aside>
   <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
-    <form action="/account/info/" class="form" data-track-validation="{&quot;event&quot;:&quot;trackEvent&quot;,&quot;eventCategory&quot;:&quot;engagement&quot;,&quot;eventAction&quot;:&quot;form_account_info_update&quot;}" id="account-info-form" method="post" novalidate="novalidate">
+    <form action="modificaRistorante" class="form" id="account-info-form" method="post" novalidate="novalidate">
       <fieldset class="form-fieldset">
         <h1 class="form-title beta title--alternate">Il mio Ristorante</h1>
         <input name="__RequestVerificationToken" type="hidden" value="jmR4IvWw3cRE18u_Hl7HZH7-VvP8Vyj6vPKgEo_Eay9fvStNU7bnkDKsdYWK9uDjToHD0aYXuEB4WBH8KJsF4sYqLxOEbOGN6auvtwTA8SofSJgOw7C_u61fnQWetmh75xKINQ2">
@@ -165,55 +165,55 @@ prefix="c" %>
         <div class="form-controlGroup">
           <label class="form-label" for="Name">Nome Attività </label>
           <div class="form-controlGroup-inputWrapper">
-            <input class="form-input form-input--icon" data-test-id="name" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" data-val-regex="Il tuo nome non dovrebbe contenere numeri" data-val-regex-pattern="^[\.\(\),!\/&amp;:\u0022\u2019\u00b4\u0060\u00C0-\u00F6\u00F8-\u017Fa-zA-Z-'' ]*$" data-val-required="Inserisci Nome e Cognome" id="account-name" name="Name" type="text" value="rickym">
+            <input class="form-input form-input--icon" data-test-id="name" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" data-val-regex="Il tuo nome non dovrebbe contenere numeri" data-val-required="Inserisci Nome e Cognome" id="account-name" name="nomeAttivita" type="text" value="${ristor.getNome_Ristorante()}">
             <span class="field-validation-valid has-error" data-valmsg-for="Name" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
           <label class="form-label" for="Email">Email Attività </label>
           <div class="form-controlGroup-inputWrapper">
-            <input class="form-input form-input--icon" data-test-id="email" data-val="true" data-val-email="Inserisci il tuo indirizzo email valido" data-val-length="Inserisci il tuo indirizzo email valido" data-val-length-max="50" data-val-required="Inserisci il tuo indirizzo email" id="account-email" name="Email" type="email" value="prova@gmail.com">
+            <input class="form-input form-input--icon" data-test-id="email" data-val="true" data-val-email="Inserisci il tuo indirizzo email valido" data-val-length="Inserisci il tuo indirizzo email valido" data-val-length-max="50" data-val-required="Inserisci il tuo indirizzo email" id="account-email" name="emailAttivita" type="email" value="${ristor.getUtente_Proprietario().getEmail_Utente()}">
             <span class="field-validation-valid has-error" data-valmsg-for="Email" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
           <label class="form-label" for="Phone">Telefono Attività </label>
           <div class="form-controlGroup-inputWrapper">
-            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
+            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="telefonoAttivita" type="tel" value="${ristor.getNumero_Telefono_Ristorante()}">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
           <label class="form-label" for="Phone">Indirizzo</label>
           <div class="form-controlGroup-inputWrapper">
-            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
+            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="indirizzoAttivita" type="tel" value="${ristor.getIndirizzo_Ristorante()}">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
           <label class="form-label" for="Phone">Numero di iscrizione al registro delle imprese</label>
           <div class="form-controlGroup-inputWrapper">
-            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
+            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="partitaIva" type="tel" value="${ristor.getPartita_Iva()}">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
           <label class="form-label" for="Phone">Nome del Titolare dell'attività </label>
           <div class="form-controlGroup-inputWrapper">
-            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
+            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="nomeTitolare" type="tel" value="${ristor.getTitolare().getNome_Titolare()}">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
           <label class="form-label" for="Phone">Cognome del Titolare dell'attività </label>
           <div class="form-controlGroup-inputWrapper">
-            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
+            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="cognomeTitolare" type="tel" value="${ristor.getTitolare().getCognome_Titolare()}">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
           <label class="form-label" for="Phone">Codice Fiscale Titolare</label>
           <div class="form-controlGroup-inputWrapper">
-            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
+            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="cfTitolare" type="tel" value="${ristor.getTitolare().getCf_Titolare()}">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup">
           <label class="form-label" for="Phone">Coordinate Bancarie Attività </label>
           <div class="form-controlGroup-inputWrapper">
-            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="Phone" type="tel" value="">
+            <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="coordinateBancarie" type="tel" value="${ristor.getCoordinate_Bancarie_Ristorante()}">
             <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
         </div>
         <div class="form-controlGroup"> </div>
