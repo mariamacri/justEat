@@ -79,9 +79,12 @@ public class EsempioDataBase {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
 		RistoranteDao ristoranteDao=factory.getRistoranteDAO();
-		Ristorante r=ristoranteDao.findByPrimaryKey("123");
-	
-		ristoranteDao.delete(r);
+		//Ristorante r=ristoranteDao.findByPrimaryKey("123");
+		
+		List<Ristorante> trova=ristoranteDao.findByCitta("pollo");
+		for(Ristorante r: trova)
+			System.out.println(r.toString());
+		//ristoranteDao.delete(r);
 //		Utente u=new Utente();
 //		u.setEmail_Utente("rocco@rocco.com");
 //		u.setNome_Utente("rocco");

@@ -21,6 +21,16 @@ public class Ristorante {
 	
 
 
+	@Override
+	public String toString() {
+		return "Ristorante [nome_Ristorante=" + nome_Ristorante + ", indirizzo_Ristorante=" + indirizzo_Ristorante
+				+ ", indirizzo_Legale=" + indirizzo_Legale + ", partita_Iva=" + partita_Iva
+				+ ", coordinate_Bancarie_Ristorante=" + coordinate_Bancarie_Ristorante + ", titolare=" + titolare
+				+ ", descrizione_Ristorante=" + descrizione_Ristorante + ", utente_Proprietario=" + utente_Proprietario
+				+ ", categorie=" + categorie + ", citta_Ristorante=" + citta_Ristorante + "]";
+	}
+
+
 	public String getCitta_Ristorante() {
 		return citta_Ristorante;
 	}
