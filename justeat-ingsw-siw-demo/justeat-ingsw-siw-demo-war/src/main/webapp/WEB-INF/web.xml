@@ -157,12 +157,22 @@
 	
 	
 	<servlet>
-		<servlet-name>Carrello</servlet-name>
+		<servlet-name>CarrelloTemp</servlet-name>
 		<servlet-class>it.unical.ingsw.justeat.db.servlet.CarrelloTemporaneo</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Carrello</servlet-name>
-		<url-pattern>/carrello</url-pattern>
+		<servlet-name>CarrelloTemp</servlet-name>
+		<url-pattern>/carrellotemp</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ListaPietanzeProfile</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.listaPietanzeProfilo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListaPietanzeProfile</servlet-name>
+		<url-pattern>/foodprofilelist</url-pattern>
+	</servlet-mapping>
+
 
 </web-app> 

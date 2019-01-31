@@ -269,7 +269,7 @@ prefix="c" %>
                         </div>
                        <div class="collapse in" id="popular2">
 						    <!-- inizio for -->
-              <c:forEach items="${pasti}" var="pasto">
+              <c:forEach items="${pietanze}" var="pasto">
 <div class="food-item">
                               <div class="row">
                                  <div class="col-xs-12 col-sm-12 col-lg-8">
@@ -278,7 +278,7 @@ prefix="c" %>
                                     </div>
                                     <!-- end:Logo -->
                                     <div class="rest-descr">
-                                       <h6><a href="#">$[pasto.getDescrizione()}</a></h6>
+                                       <h6><a href="#">${pasto.getNome()}</a></h6>
                                        <p> Burgers, American, Sandwiches, Fast Food, BBQ</p>
                                     </div>
                                     <!-- end:Description -->
@@ -335,14 +335,14 @@ prefix="c" %>
                            <div class="order-row bg-white">
                               <div class="widget-body">
 								  <!-- INIZIA FOR LISTA QUI -->
-								  
-                                 <div class="title-row">Pizza Quatro Stagione <a href="#"><i class="fa fa-trash pull-right"></i></a></div>
-								  
+								  <c:forEach items="${ordine.getPietanze()}" var="pietanza">
+                                 <div class="title-row">${pietanza.getNome()}<a href="#"><i class="fa fa-trash pull-right"></i></a></div>
+								  </c:forEach>
 								  <!-- FINE FOR LISTA-->
                                  <div class="form-group row no-gutter">
                                     <div class="col-xs-8"> </div>
                                     <div class="col-xs-4">
-                                       <h6>Prezzo:</h6> 
+                                       <h6>Prezzo: ${pietanza.getPrezzo()}</h6> 
                                     </div>
                                  </div>
                               </div>
@@ -356,7 +356,7 @@ prefix="c" %>
                            <div class="widget-body">
                               <div class="price-wrap text-xs-center">
                                  <p>Totale</p>
-                                 <h3 class="value"><strong>€ 25,49</strong></h3>
+                                 <h3 class="value"><strong>€ ${ordine.getPrezzo_Totale_odrine()}</strong></h3>
                                  <p>Ordine Minimo: </p>
                                  <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn btn-lg">Paga Ordine</button>
                               </div>

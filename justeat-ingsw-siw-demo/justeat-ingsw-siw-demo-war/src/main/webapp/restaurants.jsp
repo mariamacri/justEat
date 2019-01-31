@@ -248,7 +248,7 @@ prefix="c" %>
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
                                         <div class="entry-logo">
-                                            <a class="img-fluid" href="#"><img src="img/logo6.png" alt="Food logo"></a>
+                                            <a class="img-fluid" href="foodprofilelist?partita_iva=${ristor.getPartita_Iva()}"><img src="img/logo6.png" alt="Food logo"></a>
                                         </div>
                                         <!-- end:Logo -->
                                         <div class="entry-dscr">
@@ -267,7 +267,7 @@ prefix="c" %>
                                         <div class="right-content bg-white">
                                             <div class="right-review">
                                                 <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                                <p> METTI RECENSIONI QUI</p> <a href="profile.html" class="btn theme-btn-dash">Vedi Menù</a> </div>
+                                                <p> METTI RECENSIONI QUI</p> <a href="foodprofilelist?partita_iva=${ristor.getPartita_Iva()}" class="btn theme-btn-dash">Vedi Menù</a> </div>
                                         </div>
                                         <!-- end:right info -->
                                     </div>

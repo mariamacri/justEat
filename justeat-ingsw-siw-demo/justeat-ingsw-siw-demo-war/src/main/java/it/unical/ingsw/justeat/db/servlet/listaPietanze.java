@@ -30,7 +30,7 @@ public class listaPietanze extends HttpServlet{
 		List<Pietanza> pietanze= rd.pietanze_del_ristorante(ristorante);
 		
 		req.getSession().setAttribute("pietanze", pietanze);
-		
+		System.out.println(pietanze.toString());
 		RequestDispatcher rde = req.getRequestDispatcher("menuForm.jsp");
 		rde.forward(req, resp);
 	}
