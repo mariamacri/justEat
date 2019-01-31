@@ -11,6 +11,9 @@ public class Ordine {
 	private double commissioni_ordine;
 	private double spesa_minima;
 	private List<Pietanza> pietanze=null;
+	
+	
+	
 	public int getId_ordine() {
 		return id_ordine;
 	}
@@ -24,6 +27,11 @@ public class Ordine {
 		this.pagamento = pagamento;
 	}
 	public double getPrezzo_totale_ordine() {
+		double tot=0.0;
+		for(Pietanza p: pietanze) {
+			tot+=p.getPrezzo();
+		}
+		prezzo_totale_ordine=tot;
 		return prezzo_totale_ordine;
 	}
 	public void setPrezzo_totale_ordine(double prezzo_totale_ordine) {

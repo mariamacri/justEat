@@ -24,6 +24,11 @@ public class OrdineDaoJDBC implements OrdineDao{
 		this.dataSource = dataSource;
 	}
 	
+	
+	
+	
+	
+	
 	@Override
 	public void save(Ordine ordine) {
 		Connection connection = this.dataSource.getConnection();
@@ -240,6 +245,42 @@ public List<Pietanza> comprende(Ordine ordine) {
 					throw new PersistenceException(e.getMessage());
 				}
 			}
+	}
+	
+	
+	@Override
+	public List<Ordine> findAll() {
+		Connection connection = this.dataSource.getConnection();
+		List<Ordine> ordini = new LinkedList<>();
+		try {
+			Ordine ordine;
+			PreparedStatement statement;
+			String query = "select * from ordine";
+			statement = connection.prepareStatement(query);
+			ResultSet result = statement.executeQuery();
+			while (result.next()) {
+				ordine=new Ordine();
+				ordine.setId_ordine(result.getInt("id_ordine"));
+				ordine.setCommissioni_ordine(result.getDouble("commissioni_ordine"));
+				Pagamento p=new Pagamento();
+				p.setId_pagamento(result.getInt("id_pagamento_ordine"));
+				ordine.setPagamento(p);
+				ordine.setPrezzo_totale_ordine(result.getDouble("prezzo_totale_ordine"));
+				ordine.setSpesa_minima(result.getDouble("spesa_minima"));
+				
+				ordini.add(ordine);
+			}
+
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		return ordini;
 	}
 	
 

@@ -15,5 +15,7 @@ public interface OrdineDao {
 	public List<Pietanza> comprende(Ordine ordine);
 	
 	public double totale_ordine(Ordine ordine);
+	
+	public List<Ordine> findAll();
 
 }
