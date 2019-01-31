@@ -20,41 +20,29 @@ public class modificaDatiRistorante extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		String email=req.getParameter("email");
 		String nomeAttivita = req.getParameter("nomeAttivita");
-		String emailAttivita = req.getParameter("emailAttivita");
+	
 		String telefonoAttivita = req.getParameter("telefonoAttivita");
 		String indirizzoAttivita = req.getParameter("indirizzoAttivita");
-		String partitaIva = req.getParameter("partitaIva");
-		String nomeTitolare = req.getParameter("nomeTitolare");
-		String cognomeTitolare = req.getParameter("cognomeTitolare");
-		String cfTitolare = req.getParameter("cfTitolare");
+
+		String citta=req.getParameter("citta");
 		String coordinateBancarie = req.getParameter("coordinateBancarie");
 
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		RistoranteDao rd = factory.getRistoranteDAO();
-		//Ristorante ristorante = rd.findByEmail(emailAttivita);
-		Ristorante ristorante =new Ristorante();
+		Ristorante ristorante = rd.findByEmail(email);
 		ristorante.setNome_Ristorante(nomeAttivita);
-		
-		UtenteDao ud = factory.getUtenteDAO();
-		Utente utente = ud.findByPrimaryKey(emailAttivita);
-		
-		ristorante.setUtente_Proprietario(utente);
-		// set telefono
-		
+		ristorante.setNumero_Telefono_Ristorante(Integer.parseInt(telefonoAttivita));
 		ristorante.setIndirizzo_Ristorante(indirizzoAttivita);
-		ristorante.setPartita_Iva(partitaIva);
+		ristorante.setCitta_Ristorante(citta);
 		ristorante.setCoordinate_Bancarie_Ristorante(coordinateBancarie);
 		
-		TitolareDao titolareDao = factory.getTitolareDAO();
-		Titolare titolare=titolareDao.findByPrimaryKey(cfTitolare);
-		
-		ristorante.setTitolare(titolare);
 		rd.update(ristorante);
 		
-		req.getSession().setAttribute("ristorante",ristorante);
-		System.out.println(ristorante.toString());
+		
+		req.getSession().setAttribute("ristor",ristorante);
+		
 		RequestDispatcher reqDisp=req.getRequestDispatcher("restaurantInfo.jsp");
 		reqDisp.forward(req, resp);
 		

@@ -74,8 +74,8 @@ public class TitolareDaoJDBC implements TitolareDao {
 				titolare.setCf_Titolare(result.getString("cf_titolare"));
 				titolare.setNome_Titolare(result.getString("nome_titolare"));
 				titolare.setCognome_Titolare(result.getString("cognome_titolare"));
-				long secs = result.getDate("data_nascita_titolare").getTime();
-				titolare.setData_Nascita_Titolare(new java.util.Date(secs));
+				titolare.setData_Nascita_Titolare(result.getDate("data_nascita_titolare"));
+				
 				titolare.setIndirizzo_Titolare(result.getString("indirizzo_titolare"));
 				
 				CartaDiCredito c = new CartaDiCredito();

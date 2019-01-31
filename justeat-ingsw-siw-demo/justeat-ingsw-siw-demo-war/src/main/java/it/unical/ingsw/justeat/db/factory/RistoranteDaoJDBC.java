@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Set;
 
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
+import it.unical.ingsw.justeat.db.dao.TitolareDao;
 import it.unical.ingsw.justeat.db.dao.UtenteDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
@@ -389,7 +390,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 	public void update(Ristorante ristorante) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			String update = "update ristorante SET  nome_ristorante= ?, indirizzo_ristorante = ?,  indirizzo_legale=?, coordinate bancarie_ristorante=? , codice_fiscale_titolare =? ,descrizione_ristorante=?, email_utenteregistrato=?, citta =?, numero_telefono_ristorante=? WHERE partita_iva=?";
+			String update = "update ristorante SET  nome_ristorante= ?, indirizzo_ristorante = ?,  indirizzo_legale=?, coordinate_bancarie_ristorante=? , codice_fiscale_titolare =? ,descrizione_ristorante=?, email_utenteregistrato=?, citta =?, numero_telefono_ristorante=? WHERE partita_iva=?";
 			PreparedStatement statement = connection.prepareStatement(update);
 			statement.setString(1, ristorante.getNome_Ristorante());
 			statement.setString(2, ristorante.getIndirizzo_Ristorante());
@@ -404,7 +405,6 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 			statement.setString(10, ristorante.getPartita_Iva());
 
 			statement.executeUpdate();
-			this.updateCategorie(ristorante, connection);
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
 		} finally {
@@ -457,10 +457,16 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				ristorante.setPartita_Iva(result.getString("partita_iva"));
 				ristorante.setNome_Ristorante(result.getString("nome_ristorante"));
 				ristorante.setIndirizzo_Legale(result.getString("indirizzo_legale"));
+				ristorante.setIndirizzo_Ristorante(result.getString("indirizzo_ristorante"));
 				ristorante.setCoordinate_Bancarie_Ristorante(result.getString("coordinate_bancarie_ristorante"));
-				Titolare titolare = new Titolare();
-				titolare.setCf_Titolare(result.getString("codice_fiscale_titolare"));
+//				Titolare titolare = new Titolare();
+//				titolare.setCf_Titolare(result.getString("codice_fiscale_titolare"));
+				DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+				TitolareDao td=factory.getTitolareDAO();
+				
+				Titolare titolare=td.findByPrimaryKey(result.getString("codice_fiscale_titolare"));
 				ristorante.setTitolare(titolare);
+				
 				Utente utente = new Utente();
 				utente.setEmail_Utente(result.getString("email_utenteregistrato"));
 				ristorante.setUtente_Proprietario(utente);
