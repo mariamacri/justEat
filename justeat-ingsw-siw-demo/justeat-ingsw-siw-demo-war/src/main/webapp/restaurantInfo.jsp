@@ -2,11 +2,16 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" 
 prefix="c" %>
 
+	
 <!DOCTYPE html>
 
 <html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
 <head>
 <title>Informazioni Account | JUST EAT</title>
+	
+		
+
+	
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,9 +26,10 @@ prefix="c" %>
 <link href="css/animsition.min.css" rel="stylesheet">
 <link href="css/animate.css" rel="stylesheet">
 <!-- Custom styles for this template -->
+	<link rel="stylesheet" href="css/je-67b0186d66.min.css">
 <link href="css/style.css" rel="stylesheet">
-<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C33BB16D-A6ED-BE42-AEC0-323877E5D848/main.js" charset="UTF-8"></script>
-<link rel="stylesheet" href="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/css/je-67b0186d66.min.css">
+
+
 </head>
 <!--Push backend validation errors-->
 
@@ -200,64 +206,64 @@ prefix="c" %>
       </fieldset>
       <div class="form-group">
         <label for="exampleInputEmail1">Orario di Apertura</label>
-        <input class="form-control" type="time">
+        <input class="form-control" type="time" name="orarioApertura">
         <small class="form-text text-muted"></small> </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Orario di Chiusura</label>
-        <input class="form-control" type="time">
+        <input class="form-control" type="time" name="orarioChiusura">
         <small class="form-text text-muted"></small> </div>
       <div class="form-group">
         <label>Giorni Lavorativi</label>
         <br>
         <div class="btn-group" data-toggle="buttons">
-          <label class="btn theme-btn active">
-            <input type="checkbox" checked>
+         <label class="btn btn-primary" >
+            <input type="checkbox" value="Lunedì" name="lun">
             Lunedì </label>
-          <label class="btn theme-btn active">
-            <input type="checkbox">
+          <label class="btn btn-primary" >
+            <input type="checkbox"  value="Martedì" name="mar">
             Martedì </label>
-          <label class="btn theme-btn active">
-            <input type="checkbox">
+          <label class="btn btn-primary" >
+            <input type="checkbox" value="Mercoledì" name="mer">
             Mercoledì </label>
-          <label class="btn theme-btn active">
-            <input type="checkbox">
+          <label class="btn btn-primary" >
+            <input type="checkbox" value="Giovedì" name="gio">
             Giovedì </label>
-          <label class="btn btn-secondary">
-            <input type="checkbox">
+          <label class="btn btn-primary" >
+            <input type="checkbox" value="Venerdì" name="ven">
             Venerdì </label>
-          <label class="btn btn-secondary">
-            <input type="checkbox">
+          <label class="btn btn-primary" >
+            <input type="checkbox" value="Sabato" name="sab">
             Sabato </label>
-          <label class="btn btn-secondary">
-            <input type="checkbox">
+          <label class="btn btn-primary" >
+            <input type="checkbox" value="Domenica" name="dom">
             Domenica </label>
         </div>
       </div>
       <label>Categoria di Cucina</label>
       <br>
       <div class="btn-group" data-toggle="buttons">
-        <label class="btn theme-btn active">
-          <input type="checkbox" checked>
+        <label class="btn btn-primary" >
+          <input type="checkbox">
           Italiana</label>
-        <label class="btn theme-btn active">
+        <label class="btn btn-primary" >
           <input type="checkbox">
           Orientale</label>
-        <label class="btn theme-btn active">
+        <label class="btn btn-primary" >
           <input type="checkbox">
           Fast Food</label>
-        <label class="btn theme-btn active">
+        <label class="btn btn-primary" >
           <input type="checkbox">
           Pizzeria</label>
-        <label class="btn btn-secondary">
+        <label class="btn btn-primary" >
           <input type="checkbox">
           Bevande</label>
-        <label class="btn btn-secondary">
+        <label class="btn btn-primary" >
           <input type="checkbox">
           Braceria</label>
-        <label class="btn btn-secondary">
+        <label class="btn btn-primary" >
           <input type="checkbox">
           Paninoteca</label>
-        <label class="btn btn-secondary">
+        <label class="btn btn-primary" >
           <input type="checkbox">
           Altro</label>
       </div>

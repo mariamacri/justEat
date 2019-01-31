@@ -28,7 +28,8 @@ public class modificaDatiRistorante extends HttpServlet {
 
 		String citta=req.getParameter("citta");
 		String coordinateBancarie = req.getParameter("coordinateBancarie");
-
+		String lun=req.getParameter("lun");
+		System.out.println(lun);
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		RistoranteDao rd = factory.getRistoranteDAO();
 		Ristorante ristorante = rd.findByEmail(email);

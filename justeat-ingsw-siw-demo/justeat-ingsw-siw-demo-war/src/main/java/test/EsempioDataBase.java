@@ -1,5 +1,6 @@
 package test;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -8,6 +9,7 @@ import java.util.TimeZone;
 
 import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.CategoriaDao;
+import it.unical.ingsw.justeat.db.dao.GiornoAttivitaDao;
 import it.unical.ingsw.justeat.db.dao.MenuDao;
 import it.unical.ingsw.justeat.db.dao.OrdineDao;
 import it.unical.ingsw.justeat.db.dao.PagamentoDao;
@@ -20,6 +22,7 @@ import it.unical.ingsw.justeat.db.factory.DataSource;
 import it.unical.ingsw.justeat.db.factory.UtilDao;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
+import it.unical.ingsw.justeat.db.model.GiornoAtivita;
 import it.unical.ingsw.justeat.db.model.Menu;
 import it.unical.ingsw.justeat.db.model.Ordine;
 import it.unical.ingsw.justeat.db.model.Pagamento;
@@ -78,12 +81,27 @@ public class EsempioDataBase {
 		DataSource dataSource = new DataSource("jdbc:postgresql://localhost:5432/justeat", "postgres", "sette77");
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
-		RistoranteDao ristoranteDao=factory.getRistoranteDAO();
-		//Ristorante r=ristoranteDao.findByPrimaryKey("123");
 		
-		List<Ristorante> trova=ristoranteDao.findByCitta("pollo");
-		for(Ristorante r: trova)
-			System.out.println(r.toString());
+		GiornoAttivitaDao gd=factory.getGiornoAttivitaDao();
+		
+		GiornoAtivita giorno=new GiornoAtivita();
+		
+		giorno.setOrarioApertura(new Time(01,01,01));
+		giorno.setOrarioChiusura(new Time(01,01,01));
+		giorno.setGiorno("prova");
+		giorno.setPartita_iva_ristorante_aprente("123");
+		
+		gd.delete(giorno);
+		
+		
+		
+		
+//		RistoranteDao ristoranteDao=factory.getRistoranteDAO();
+//		//Ristorante r=ristoranteDao.findByPrimaryKey("123");
+//		
+//		List<Ristorante> trova=ristoranteDao.findByCitta("pollo");
+//		for(Ristorante r: trova)
+//			System.out.println(r.toString());
 		//ristoranteDao.delete(r);
 //		Utente u=new Utente();
 //		u.setEmail_Utente("rocco@rocco.com");

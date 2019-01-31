@@ -23,7 +23,8 @@ prefix="c" %>
 <link href="css/animate.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="css/style.css" rel="stylesheet">
-<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C33BB16D-A6ED-BE42-AEC0-323877E5D848/main.js" charset="UTF-8"></script>
+	<link rel="stylesheet" href="css/je-67b0186d66.min.css">
+
 <link rel="stylesheet" href="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/css/je-67b0186d66.min.css">
 </head>
 <!--Push backend validation errors-->
