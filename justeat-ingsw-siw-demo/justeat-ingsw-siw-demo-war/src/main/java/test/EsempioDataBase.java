@@ -82,18 +82,26 @@ public class EsempioDataBase {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
 		
-		GiornoAttivitaDao gd=factory.getGiornoAttivitaDao();
+//		GiornoAttivitaDao gd=factory.getGiornoAttivitaDao();
+//		
+//		GiornoAtivita giorno=new GiornoAtivita();
+//		
+//		giorno.setOrarioApertura(new Time(01,01,01));
+//		giorno.setOrarioChiusura(new Time(01,01,01));
+//		giorno.setGiorno("prova");
+//		giorno.setPartita_iva_ristorante_aprente("123");
+//		
+//		gd.delete(giorno);
+		//String partita_iva=req.getParameter("partita_iva");
 		
-		GiornoAtivita giorno=new GiornoAtivita();
+		//DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+		RistoranteDao rd=factory.getRistoranteDAO();
 		
-		giorno.setOrarioApertura(new Time(01,01,01));
-		giorno.setOrarioChiusura(new Time(01,01,01));
-		giorno.setGiorno("prova");
-		giorno.setPartita_iva_ristorante_aprente("123");
-		
-		gd.delete(giorno);
-		
-		
+		//Ristorante ristorante=rd.findByEmail("rocco@rocco.com");
+		Ristorante ristorante=rd.findByPrimaryKey("123");
+		List<Pietanza> pietanze= rd.pietanze_del_ristorante(ristorante);
+		//for(Pietanza p: pietanze)
+		System.out.println(pietanze.toString());
 		
 		
 //		RistoranteDao ristoranteDao=factory.getRistoranteDAO();

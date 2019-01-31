@@ -329,7 +329,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 
 			if (result.next()) {
 				ristorante = new Ristorante();
-
+				ristorante.setPartita_Iva(result.getString("partita_iva"));
 				ristorante.setNome_Ristorante(result.getString("nome_ristorante"));
 				ristorante.setIndirizzo_Ristorante(result.getString("indirizzo_ristorante"));
 				ristorante.setIndirizzo_Legale(result.getString("indirizzo_legale"));
