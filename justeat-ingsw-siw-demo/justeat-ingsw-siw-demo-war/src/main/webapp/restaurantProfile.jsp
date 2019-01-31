@@ -328,63 +328,37 @@ prefix="c" %>
                         <div class="widget widget-cart">
                            <div class="widget-heading">
                               <h3 class="widget-title text-dark">
-                                 Your Shopping Cart
+                                Il tuo carrello
                               </h3>
                               <div class="clearfix"></div>
                            </div>
                            <div class="order-row bg-white">
                               <div class="widget-body">
+								  <!-- INIZIA FOR LISTA QUI -->
+								  
                                  <div class="title-row">Pizza Quatro Stagione <a href="#"><i class="fa fa-trash pull-right"></i></a></div>
+								  
+								  <!-- FINE FOR LISTA-->
                                  <div class="form-group row no-gutter">
-                                    <div class="col-xs-8">
-                                       <select class="form-control b-r-0" id="exampleSelect1">
-                                          <option>Size SM</option>
-                                          <option>Size LG</option>
-                                          <option>Size XL</option>
-                                       </select>
-                                    </div>
+                                    <div class="col-xs-8"> </div>
                                     <div class="col-xs-4">
-                                       <input class="form-control" type="number" value="2" id="example-number-input"> 
+                                       <h6>Prezzo:</h6> 
                                     </div>
                                  </div>
                               </div>
                            </div>
-                           <div class="order-row">
-                              <div class="widget-body">
-                                 <div class="title-row">Carlsberg Beer <a href="#"><i class="fa fa-trash pull-right"></i></a></div>
-                                 <div class="form-group row no-gutter">
-                                    <div class="col-xs-8">
-                                       <select class="form-control b-r-0">
-                                          <option>Size SM</option>
-                                          <option>Size LG</option>
-                                          <option>Size XL</option>
-                                       </select>
-                                    </div>
-                                    <div class="col-xs-4">
-                                       <input class="form-control" value="4" id="quant-input"> 
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+                           <div class="order-row"> </div>
                            <!-- end:Order row -->
                            <div class="widget-delivery clearfix">
                               <form>
-                                 <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6 b-t-0">
-                                    <label class="custom-control custom-radio">
-                                    <input id="radio4" name="radio" type="radio" class="custom-control-input" checked=""> <span class="custom-control-indicator"></span> <span class="custom-control-description">Delivery</span> </label>
-                                 </div>
-                                 <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6 b-t-0">
-                                    <label class="custom-control custom-radio">
-                                    <input id="radio3" name="radio" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Takeout</span> </label>
-                                 </div>
-                              </form>
+</form>
                            </div>
                            <div class="widget-body">
                               <div class="price-wrap text-xs-center">
-                                 <p>TOTAL</p>
-                                 <h3 class="value"><strong>$ 25,49</strong></h3>
-                                 <p>Free Shipping</p>
-                                 <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn btn-lg">Checkout</button>
+                                 <p>Totale</p>
+                                 <h3 class="value"><strong>€ 25,49</strong></h3>
+                                 <p>Ordine Minimo: </p>
+                                 <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn btn-lg">Paga Ordine</button>
                               </div>
                            </div>
                         </div>

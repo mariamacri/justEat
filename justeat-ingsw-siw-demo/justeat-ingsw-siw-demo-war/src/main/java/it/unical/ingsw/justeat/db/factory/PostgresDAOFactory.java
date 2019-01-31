@@ -2,6 +2,7 @@ package it.unical.ingsw.justeat.db.factory;
 
 import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.CategoriaDao;
+import it.unical.ingsw.justeat.db.dao.GiornoAttivitaDao;
 import it.unical.ingsw.justeat.db.dao.MenuDao;
 import it.unical.ingsw.justeat.db.dao.OrdineDao;
 import it.unical.ingsw.justeat.db.dao.PagamentoDao;
@@ -87,6 +88,11 @@ public class PostgresDAOFactory extends DAOFactory {
 	public OrdineDao getOrdineDAO() {
 		
 		return new OrdineDaoJDBC(dataSource);
+	}
+	
+	@Override
+	public GiornoAttivitaDao getGiornoAttivitaDao() {
+		return new GiornoAttivitaDaoJDBC(dataSource);
 	}
 
 }
