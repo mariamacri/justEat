@@ -27,25 +27,17 @@ prefix="c" %>
          <!--header starts-->
          <header id="header" class="header-scroll top-header headrom">
 			 
-                       <!-- .navbar -->
+                        <!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-    <a class="navbar-brand" href="index.html"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="70"> </a>
+    <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="30"> </a>
     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
       <ul class="nav navbar-nav">
 		     <!-- LISTA Home -->
         <li class="nav-item"> <a class="nav-link active" href="index.jsp">Home <span class="sr-only">(current)</span></a> </li>
-		     <!-- LISTA Cibo -->
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cibo</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.jsp">Risultati Cibo</a> <a class="dropdown-item" href="map_results.jsp">Risultati Mappa</a></div>
-        </li>
-		  
-		     <!-- Lista Ristoranti -->
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ristoranti</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="restaurantInfo.jsp">Search results</a> <a class="dropdown-item" href="restaurantProfile.jsp">Profilo Ristoranti</a></div>
-        </li>
-        <!-- Inizio Lista utente -->
+		     <
+	        <!-- Lista Ristoranti -->        <!-- Inizio Lista utente -->
 		<!--  <h1>${utente.getEmail_Utente() }</h1>-->
 		  
 				 <!-- LISTA DA LOGGATO -->
@@ -60,11 +52,7 @@ prefix="c" %>
 				
 				
 			    <div class="dropdown-menu"> 
-			  <a class="dropdown-item" data-test-id="accountInfo" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userPanel.jsp" id="account-nav-link">Area Utente</a>
-					
-					
-			  <a class="dropdown-item" data-test-id="orders" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userOrders.jsp" id="orders-nav-link">Ordini</a>
-            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			  <a class="dropdown-item" data-test-id="accountInfo" href="what?email=${utente.getEmail_Utente()}" id="account-nav-link">Area Utente</a>
 			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" name="logout" href="doLogin?logout=true">Esci</a>
 			</div>
 				
@@ -78,23 +66,21 @@ prefix="c" %>
 				
 				
 				    <div class="dropdown-menu"> 
-						<a class="dropdown-item" href="login.html">Login</a>
-			    <a class="dropdown-item" href="registration.html">Registrazione</a>
+						<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.html">Login</a>
+			    <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/registration.html">Registrazione</a>
 
-			  <a class="dropdown-item" href="restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
-            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
 			</div>
         </li>
 			
 				</c:if>	
 			
-          <div class="dropdown-menu"> 
-			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link">Area Utente</a> <a class="dropdown-item" href="login.html">Login</a>
+          <div class="dropdown-menu" > 
+			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link" >Area Utente</a> <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.html">Login</a>
 			    <a class="dropdown-item" href="registration.html">Registrazione</a>
-			  <a class="dropdown-item" data-test-id="orders" href="file:///C|/Users/ricky/git/justEat/justeat-ingsw-siw-demo/justeat-ingsw-siw-demo-war/src/main/webapp/userOrders.html" id="orders-nav-link">Ordini</a>
-			  <a class="dropdown-item" data-test-id="addressBook" href="/account/addressbook/" id="address-nav-link">Indirizzi di consegna</a>
-			  <a class="dropdown-item" href="restaurantRegistration.jsp">Inserisci Nuovo Ristorante</a>
-            <a class="dropdown-item" href="checkout.jsp">Checkout</a>
+			  <a class="dropdown-item" data-test-id="orders" href="/justeat-ingsw-siw-demo-war/userOrders.html" id="orders-nav-link">Ordini</a>
+			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Inserisci Nuovo Ristorante</a>
+            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" href="/account/logout/?returnurl=%2Faccount%2Finfo%2F">Esci</a>
 			</div>
         </li>
@@ -106,21 +92,11 @@ prefix="c" %>
   </div>
 </nav>
 <!-- /.navbar -->
-		 
          </header>
+	
+	
          <div class="page-wrapper">
-            <!-- top Links -->
-            <div class="top-links">
-               <div class="container">
-                  <ul class="row links">
-                    <li class="col-xs-12 col-sm-3 link-item"><span>1</span><a href="index.html">Inserisci il tuo Indirizzo</a></li>
-                    <li class="col-xs-12 col-sm-3 link-item"><span>2</span><a href="restaurants.html">Scegli il Ristorante</a></li>
-                    <li class="col-xs-12 col-sm-3 link-item active"><span>3</span><a href="profile.html">Scegli il tuo cibo preferito</a></li>
-                    <li class="col-xs-12 col-sm-3 link-item"><span>4</span><a href="checkout.html">Ordina e paga Online</a></li>
-                  </ul>
-               </div>
-            </div>
-            <!-- end:Top links -->
+           
             <!-- start: Inner page hero -->
             <section class="inner-page-hero bg-image" data-image-src="img/profile-banner.jpg">
                <div class="profile">
