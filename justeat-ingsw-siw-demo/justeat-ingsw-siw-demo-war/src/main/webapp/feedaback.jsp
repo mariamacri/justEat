@@ -4,11 +4,10 @@ prefix="c" %>
 
 <!DOCTYPE html>
 
-
-<html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
+<html lang="it">
 <head>
 <title>Informazioni Account | JUST EAT</title>
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -23,8 +22,8 @@ prefix="c" %>
 <link href="css/animate.css" rel="stylesheet">
 <!-- Custom styles for this template -->
 <link href="css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/je-67b0186d66.min.css">
-
+<link rel="stylesheet" href="css/je-67b0186d66.min.css">
+	
 <link rel="stylesheet" href="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/css/je-67b0186d66.min.css">
 </head>
 <!--Push backend validation errors-->
@@ -45,8 +44,9 @@ prefix="c" %>
 
 <div class="skipTo"> <a class="is-visuallyHidden focusable u-text-marker" href="#skipToMain">Vai al contenuto principale</a> </div>
 <header class="header"> </header>
-    
-            <!-- .navbar -->
+		
+        
+<!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
@@ -110,8 +110,29 @@ prefix="c" %>
     </div>
   </div>
 </nav>
-<!-- /.navbar -->
 
+<!-- /.navbar -->
+	
+<div class="u-divider u-horizontalRule">
+    <div class="l-container l-vPad--small">
+        <ul class="breadcrumb unstyled">
+    <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="/" itemprop="url" title="Vai alla pagina iniziale di JUST EAT">
+            <span itemprop="title">Pagina iniziale</span>
+        </a>
+    </li>
+        <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Account">
+                <a href="/account/info/" itemprop="url" title="Account">
+                    <span itemprop="title">Account</span>
+                </a>
+        </li>
+        <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Modifica Password">
+                <span itemprop="title">Modifica Password</span>
+        </li>
+</ul>
+
+    </div>
+</div>
 <div data-cookiebanner="" class="infoBar infoBar--dark infoBar--hideByDefault">
   <div class="l-container infoBar-row"> <a class="btn infoBar-btn" data-cookiebanner-btn="" data-test="cookieBannerBtn">Chiudi</a>
     <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicitÃ  online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti allâuso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
@@ -119,62 +140,63 @@ prefix="c" %>
     <p class="u-showBelowMid">Qui puoi trovare i dettagli della nostra <a href="/cookies-policy">cookie policy</a></p>
   </div>
 </div>
-<div class="u-divider u-horizontalRule">
-  <div class="l-container l-vPad--small">
-    <ul class="breadcrumb unstyled">
-      <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="index.jsp" itemprop="url" title="Vai alla pagina iniziale di JUST EAT"> <span itemprop="title">Pagina iniziale</span> </a> </li>
-      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Account"> <span itemprop="title">Account</span> </li>
-    </ul>
-  </div>
-</div>
 <div class="l-container l-pageContent">
   <div class="g g--gutter g--stack">
-    <!-- Pannello Account Laterale -->
+	 <!-- Pannello Account Laterale -->
     <aside class="sidebar g-col g-span3--mid u-showAboveMid">
       <nav>
         <ul class="controlList unstyled">
-         <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
+         <li class="controlList-item is-active"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
           <li class="controlList-item "> <a href="userOrders.jsp" id="orders-nav-link">Ordini</a> </li>
 			<c:if test="${ristorante==true}">
           <li class="controlList-item"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
-        <li class="controlList-item is-active"> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
+        <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
         </c:if>
 		  </ul>
       </nav>
     </aside>
-    <main class="g-col g-span8--mid g-span7--midWide g-offset1--midWide g-holdWidth--midWide">
-		<div>
-			<a class="form-editableText-link pull-left"  href="menuInsert.jsp" id="insertpietanza">Inserisci Nuova Pietanza</a>
-		</div>
-       
-		
-		   <!-- FOR PIETANZE INIZIO -->
-		
-		<c:forEach items="${pietanze}" var="pasto">
-<div class="food-item">
-                              <div class="row">
-                                 <div class="col-xs-12 col-sm-12 col-lg-8">
-                                 <!--   <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/$[pasto.getImage()}" alt="Food logo"></a>
-                                    </div>
-                                    <!-- end:Logo -->
-                                    <div class="rest-descr">
-														   <h5><a href="#">${pasto.getNome()}</a></h5>
-                                       <h8><a href="#">${pasto.getDescrizione()}</a></h8>
-                                    </div>
-                                    <!-- end:Description -->
-                                 </div>
-                                 <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left"><a href="#">Prezzo: € ${pasto.getPrezzo()}</a></span>
-									  <li class="controlList-item "> <a id="payment-nav-link" href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" >&#45 elimina</a> </li></li>
-							    <!-- <a href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal" >&#45;</a> </div> -->
-                              </div>
-                              <!-- end:row -->
-                           </div>
-</c:forEach>
-		   <!-- FOR PIETANZE FINE -->
-		
-		
+    <main class="g-col g-span9--mid g-span7--wide">
+      <ol id="orderList" class="listing unstyled u-divider--top">
+		  
+		  <!-- Template lista ordini da generare con un for -->
+		  <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
+<form action="modificapassword" class="form" data-track-validation="{&quot;event&quot;:&quot;trackEvent&quot;,&quot;eventCategory&quot;:&quot;engagement&quot;,&quot;eventAction&quot;:&quot;form_account_change_password&quot;}" id="change-password-form" method="post" novalidate="novalidate">                    <fieldset class="form-fieldset">
+  <h1 class="form-title beta title--alternate">Dai una valutazione a NOME RISTORANTE</h1>
+  <input name="__RequestVerificationToken" type="hidden" value="bIbz1CsvOE0LiuK4dgu_IlkcGHYe-R8eqzGhcSHmuIC96nz-x3i8G1jkr44-f6FXQyIqpL5y9MnBMph9d7KqCLyYgP4LRNGN8xANmaukEqTIOgbIIeXR7zqdb23Q5WADyfKVQA2">
+                        
+<div role="alert" aria-atomic="true" class="validation-summary-valid alert alert--danger" data-valmsg-summary="true" data-test-id="validationErrorSummary">
+    <ul>
+    </ul>
+</div>
+
+
+
+
+
+
+
+                        <div class="form-controlGroup">
+                            <label class="form-label" for="OldPassword">Numero stelle</label>
+                            <div class="form-controlGroup-inputWrapper">
+								<output name="amount" for="feedback"> <h4>0</h4></output>
+                                <input class="form-input" value="1" id="feedback" name="feedback" type="range" min="1" max="5" oninput="amount.value=feedback.value" >
+                                
+                            </div>
+                        </div>
+                       
+                 
+                            <div class="form-controlGroup-inputWrapper">
+                                <label for="exampleTextarea"><h6>Lascia una breve descrizione</h6></label>
+                                       <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                        
+                        </div>
+                        <button type="submit" value="${utente.getEmail_Utente()}" name="email" class="btn btn--primary btn--block" id="save-changes-button" data-test-id="savePassword"><span class="is-loading-hidden">Salva</span></button>
+                    </fieldset>
+</form>        </main>
+		  
+		  <!-- Fine template -->
+		  
+      </ol>
     </main>
   </div>
 </div>

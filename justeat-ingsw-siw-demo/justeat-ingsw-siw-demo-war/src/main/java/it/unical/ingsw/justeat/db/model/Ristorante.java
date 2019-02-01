@@ -19,6 +19,16 @@ public class Ristorante {
 	private Utente utente_Proprietario;
 	private List<Categoria> categorie;
 	private String citta_Ristorante;
+	private Double spesa_minima;
+
+	public Double getSpesa_minima() {
+		return spesa_minima;
+	}
+
+
+	public void setSpesa_minima(Double spesa_minima) {
+		this.spesa_minima = spesa_minima;
+	}
 
 	private int numero_Telefono_Ristorante;
 

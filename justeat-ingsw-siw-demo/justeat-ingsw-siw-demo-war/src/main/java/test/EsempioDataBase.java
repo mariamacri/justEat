@@ -22,7 +22,6 @@ import it.unical.ingsw.justeat.db.factory.DataSource;
 import it.unical.ingsw.justeat.db.factory.UtilDao;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
-import it.unical.ingsw.justeat.db.model.GiornoAtivita;
 import it.unical.ingsw.justeat.db.model.Menu;
 import it.unical.ingsw.justeat.db.model.Ordine;
 import it.unical.ingsw.justeat.db.model.Pagamento;

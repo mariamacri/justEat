@@ -110,4 +110,26 @@ public class CategoriaDaoJDBC implements CategoriaDao {
 		}
 	}
 
+	
+	@Override
+	public void tipo_cucina_ristorante(int id, String partita_iva) {
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String insert = "insert into tipo_cucina(partita_iva_ristorante_tipo_cucina, id_categoria_cucina) values (?,?)";
+			PreparedStatement statement = connection.prepareStatement(insert);
+			statement.setString(1, partita_iva);
+			statement.setInt(2, id);
+
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		
+	}
 }

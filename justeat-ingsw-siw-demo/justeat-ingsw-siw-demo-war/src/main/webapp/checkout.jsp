@@ -27,26 +27,17 @@ prefix="c" %>
     <div class="site-wrapper">
         <!--header starts-->
         <header id="header" class="header-scroll top-header headrom">
-			
-            <!-- .navbar -->
+			<!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-    <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="70"> </a>
+    <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="30"> </a>
     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
       <ul class="nav navbar-nav">
 		     <!-- LISTA Home -->
         <li class="nav-item"> <a class="nav-link active" href="index.jsp">Home <span class="sr-only">(current)</span></a> </li>
-		     <!-- LISTA Cibo -->
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cibo</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.jsp">Risultati Cibo</a> <a class="dropdown-item" href="map_results.jsp">Risultati Mappa</a></div>
-        </li>
-		  
-		     <!-- Lista Ristoranti -->
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ristoranti</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="restaurantInfo.jsp">Search results</a> <a class="dropdown-item" href="restaurantProfile.jsp">Profilo Ristoranti</a></div>
-        </li>
-        <!-- Inizio Lista utente -->
+		     <
+	        <!-- Lista Ristoranti -->        <!-- Inizio Lista utente -->
 		<!--  <h1>${utente.getEmail_Utente() }</h1>-->
 		  
 				 <!-- LISTA DA LOGGATO -->
@@ -62,8 +53,6 @@ prefix="c" %>
 				
 			    <div class="dropdown-menu"> 
 			  <a class="dropdown-item" data-test-id="accountInfo" href="what?email=${utente.getEmail_Utente()}" id="account-nav-link">Area Utente</a>
-					<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
-            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" name="logout" href="doLogin?logout=true">Esci</a>
 			</div>
 				
@@ -81,7 +70,6 @@ prefix="c" %>
 			    <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/registration.html">Registrazione</a>
 
 			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
-            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			</div>
         </li>
 			
@@ -103,20 +91,12 @@ prefix="c" %>
     </div>
   </div>
 </nav>
+
 <!-- /.navbar -->
 			
         </header>
         <div class="page-wrapper">
-            <div class="top-links">
-                <div class="container">
-                    <ul class="row links">
-                        <li class="col-xs-12 col-sm-3 link-item active"><span>1</span><a href="index.html">Inserisci il tuo Indirizzo</a></li>
-                        <li class="col-xs-12 col-sm-3 link-item active"><span>2</span><a href="restaurants.html">Scegli il Ristorante</a></li>
-                        <li class="col-xs-12 col-sm-3 link-item active"><span>3</span><a href="profile.html">Scegli il tuo cibo preferito</a></li>
-                        <li class="col-xs-12 col-sm-3 link-item"><span>4</span><a href="checkout.html">Ordina e paga Online</a></li>
-                    </ul>
-                </div>
-            </div>
+         
             <div class="container m-t-30">
                 <div class="widget clearfix">
                     <!-- /widget heading -->
@@ -130,80 +110,13 @@ prefix="c" %>
                         <form method="post" action="#">
                             <div class="row">
                                 <div class="col-sm-6 margin-b-30">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>Nome*</label>
-                                                <input type="text" class="form-control" placeholder="John"> </div>
-                                            <!--/form-group-->
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>Cognome*</label>
-                                                <input type="text" class="form-control" placeholder="Rossi"> </div>
-                                            <!--/form-group-->
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>Paese*</label>
-                                                <select class="form-control">
-                                                    <option>Italia</option>
-                                                    <option>Francia</option>
-                                                    <option>Spagna</option>
-                                                    <option>Germania</option>
-                                                    <option>Uk</option>
-                                                    <option>Olanda</option>
-                                                    <option>Grecia</option>
-                                                </select>
-                                            </div>
-                                            <!--/form-group-->
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>Nome Attività </label>
-                                                <input type="text" class="form-control" placeholder="Dolci freschi"> </div>
-                                            <!--/form-group-->
-                                        </div>
-                                    </div>
+<div class="row"> </div>
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label>Indirizzo Completo*</label>
-                                                <input type="text" class="form-control" placeholder="Via dei Mandarini"> </div>
-                                            <!--/form-group-->
-                                        </div>
+                                           
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>Città *</label>
-                                                <input type="text" class="form-control" placeholder="Milano"> </div>
-                                            <!--/form-group-->
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>Codice Postale*</label>
-                                                <input type="text" class="form-control" placeholder="87000"> </div>
-                                            <!--/form-group-->
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>Indirizzo Email*</label>
-                                                <input type="text" class="form-control" placeholder="rossi@gmail.com"> </div>
-                                            <!--/form-group-->
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label>Telefono*</label>
-                                                <input type="text" class="form-control" placeholder="3411112221"> </div>
-                                            <!--/form-group-->
-                                        </div>
-                                    </div>
-                                </div>
+                                    <div class="row"> </div>
+</div>
                                 <div class="col-sm-6">
                                     <div class="cart-totals margin-b-20">
                                         <div class="cart-totals-title">
@@ -224,6 +137,8 @@ prefix="c" %>
                                                         <td class="text-color"><strong>Totale</strong></td>
                                                         <td class="text-color"><strong>€31.00</strong></td>
                                                     </tr>
+													<label>Indirizzo di consegna:</label>
+                                                <h6>VIA DI CONSEGNA</h6> </div>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -238,7 +153,7 @@ prefix="c" %>
                                             </li>
                                             <li>
                                                 <label class="custom-control custom-radio  m-b-10">
-                                                    <input name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paypal <img src="img/paypal.jpg" alt="" width="90"></span> </label>
+                                                    <input name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paga con carta:  </div>  <img src="img/paypal.jpg" alt="" width="90"></span> </label><label>Numero Carta Utilizzata:</label><h6>NUMERO CARTA</h6>
                                             </li>
                                         </ul>
                                         <p class="text-xs-center"> <a href="#" class="btn btn-outline-success btn-block">Paga Ora</a> </p>

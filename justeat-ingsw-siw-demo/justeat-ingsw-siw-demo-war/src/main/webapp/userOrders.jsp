@@ -46,25 +46,17 @@ prefix="c" %>
 <header class="header"> </header>
 		
         
-            <!-- .navbar -->
+             <!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-    <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="70"> </a>
+    <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="30"> </a>
     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
       <ul class="nav navbar-nav">
 		     <!-- LISTA Home -->
         <li class="nav-item"> <a class="nav-link active" href="index.jsp">Home <span class="sr-only">(current)</span></a> </li>
-		     <!-- LISTA Cibo -->
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cibo</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.jsp">Risultati Cibo</a> <a class="dropdown-item" href="map_results.jsp">Risultati Mappa</a></div>
-        </li>
-		  
-		     <!-- Lista Ristoranti -->
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ristoranti</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="restaurantInfo.jsp">Search results</a> <a class="dropdown-item" href="restaurantProfile.jsp">Profilo Ristoranti</a></div>
-        </li>
-        <!-- Inizio Lista utente -->
+		     <
+	        <!-- Lista Ristoranti -->        <!-- Inizio Lista utente -->
 		<!--  <h1>${utente.getEmail_Utente() }</h1>-->
 		  
 				 <!-- LISTA DA LOGGATO -->
@@ -80,8 +72,6 @@ prefix="c" %>
 				
 			    <div class="dropdown-menu"> 
 			  <a class="dropdown-item" data-test-id="accountInfo" href="what?email=${utente.getEmail_Utente()}" id="account-nav-link">Area Utente</a>
-					<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
-            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" name="logout" href="doLogin?logout=true">Esci</a>
 			</div>
 				
@@ -99,7 +89,6 @@ prefix="c" %>
 			    <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/registration.html">Registrazione</a>
 
 			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
-            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			</div>
         </li>
 			
@@ -147,7 +136,7 @@ prefix="c" %>
          <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
           <li class="controlList-item is-active "> <a href="userOrders.jsp" id="orders-nav-link">Ordini</a> </li>
 			<c:if test="${ristorante==true}">
-          <li class="controlList-item"> <a href="restaurantInfo.jsp" id="credit-nav-link">Il mio Ristorante</a> </li>
+          <li class="controlList-item"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
         <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
         </c:if>
 		  </ul>
@@ -158,30 +147,19 @@ prefix="c" %>
       <p class="u-text-knockedBack u-text-soften">Qui trovi lo storico dei tuoi ordini.</p>
       <ol id="orderList" class="listing unstyled u-divider--top">
 		  
-		  <!-- Template lista ordini da generare con un for -->
+		
 		  
-		  <li class="listing-item" itemscope="" itemtype="http://schema.org/Restaurant" data-test="orderHistoryItem" data-test-order-listing-id="29385942">
-        <a href="/account/order/29385942/" class="mediaElement" data-test="orderSummaryLink" data-gtm="engagement|previous_order|click_details">
-            <div class="listing-item-img mediaElement-img mediaElement-img--outlined mediaElement-img--small">
-                <img src="//d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/207929.gif" alt="The Burger Station" itemprop="image">
-
-                <noscript>
-                    <img src="//d2egcvq7li5bpq.cloudfront.net/it/images/restaurants/207929.gif" alt="The Burger Station" itemprop="image" />
-                </noscript>
-            </div>
+	<!-- INIZIO FOR-->
+		   <c:forEach items="${Ordine CHE HA EFFETTUATO L'UTENTE}" var="ordine">
+        <a  class="mediaElement">
             <div class="listing-item-info mediaElement-content">
-                <h3 class="listing-item-title" data-order-id="29385942" data-test-restaurant-name="" itemprop="name">The Burger Station</h3>
-
-                <p class="infoText">â¬ 16,80</p>
-                <p class="infoText" data-order-id="29385942" data-test-order-details="">27/01/2019 Â· Consegna</p>
-
-
+                <h3 class="listing-item-title"  >METTI IL NOME RISTORANTE DELL?ORDINE CON $ QUI</h3>
+				<p class="infoText">€ 16,80 METTI PREZZO TOTALE CON $</p>
             </div>
-
-            <button class="btn btn--primary btn--cta" data-restaurant-id="item.OrderContainer.RestaurantInfo.Id">Dettagli dell'ordine</button>
+            <button class="btn btn--primary btn--cta" >Recensisci</button>
         </a>
-    </li>
-		  <!-- Fine template -->
+			   </c:forEach>
+		  <!-- Fine FOR-->
 		  
       </ol>
     </main>

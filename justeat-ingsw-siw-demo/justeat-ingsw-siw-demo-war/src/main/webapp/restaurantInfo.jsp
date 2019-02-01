@@ -50,25 +50,17 @@ prefix="c" %>
 <div class="skipTo"> <a class="is-visuallyHidden focusable u-text-marker" href="#skipToMain">Vai al contenuto principale</a> </div>
 <header class="header"> </header>
 
-            <!-- .navbar -->
+             <!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-    <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="70"> </a>
+    <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="30"> </a>
     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
       <ul class="nav navbar-nav">
 		     <!-- LISTA Home -->
         <li class="nav-item"> <a class="nav-link active" href="index.jsp">Home <span class="sr-only">(current)</span></a> </li>
-		     <!-- LISTA Cibo -->
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cibo</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.jsp">Risultati Cibo</a> <a class="dropdown-item" href="map_results.jsp">Risultati Mappa</a></div>
-        </li>
-		  
-		     <!-- Lista Ristoranti -->
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ristoranti</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="restaurantInfo.jsp">Search results</a> <a class="dropdown-item" href="restaurantProfile.jsp">Profilo Ristoranti</a></div>
-        </li>
-        <!-- Inizio Lista utente -->
+		     <
+	        <!-- Lista Ristoranti -->        <!-- Inizio Lista utente -->
 		<!--  <h1>${utente.getEmail_Utente() }</h1>-->
 		  
 				 <!-- LISTA DA LOGGATO -->
@@ -84,8 +76,6 @@ prefix="c" %>
 				
 			    <div class="dropdown-menu"> 
 			  <a class="dropdown-item" data-test-id="accountInfo" href="what?email=${utente.getEmail_Utente()}" id="account-nav-link">Area Utente</a>
-					<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
-            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" name="logout" href="doLogin?logout=true">Esci</a>
 			</div>
 				
@@ -103,7 +93,6 @@ prefix="c" %>
 			    <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/registration.html">Registrazione</a>
 
 			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
-            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			</div>
         </li>
 			
@@ -152,7 +141,7 @@ prefix="c" %>
          <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
           <li class="controlList-item "> <a href="userOrders.jsp" id="orders-nav-link">Ordini</a> </li>
 			<c:if test="${ristorante==true}">
-          <li class="controlList-item is-active"> <a href="restaurantInfo.jsp" id="credit-nav-link">Il mio Ristorante</a> </li>
+          <li class="controlList-item is-active"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
         <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
         </c:if>
 		  </ul>
@@ -206,30 +195,30 @@ prefix="c" %>
       </fieldset>
       <div class="form-group">
         <label for="exampleInputEmail1">Orario di Apertura</label>
-        <input class="form-control" type="time" name="orarioApertura">
+        <input class="form-control" type="time" name="orarioApertura" value="${giorni.get(0).getOrarioApertura()}">
         <small class="form-text text-muted"></small> </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Orario di Chiusura</label>
-        <input class="form-control" type="time" name="orarioChiusura">
+        <input class="form-control" type="time" name="orarioChiusura" value="${giorni.get(0).getOrarioChiusura()}">
         <small class="form-text text-muted"></small> </div>
       <div class="form-group">
         <label>Giorni Lavorativi</label>
         <br>
         <div class="btn-group" data-toggle="buttons">
          <label class="btn btn-primary" >
-            <input type="checkbox" value="Lunedì" name="lun">
+            <input type="checkbox" value="Lunedi" name="lun">
             Lunedì </label>
           <label class="btn btn-primary" >
-            <input type="checkbox"  value="Martedì" name="mar">
+            <input type="checkbox"  value="Martedi" name="mar">
             Martedì </label>
           <label class="btn btn-primary" >
-            <input type="checkbox" value="Mercoledì" name="mer">
+            <input type="checkbox" value="Mercoledi" name="mer">
             Mercoledì </label>
           <label class="btn btn-primary" >
-            <input type="checkbox" value="Giovedì" name="gio">
+            <input type="checkbox" value="Giovedi" name="gio">
             Giovedì </label>
           <label class="btn btn-primary" >
-            <input type="checkbox" value="Venerdì" name="ven">
+            <input type="checkbox" value="Venerdi" name="ven">
             Venerdì </label>
           <label class="btn btn-primary" >
             <input type="checkbox" value="Sabato" name="sab">
@@ -243,45 +232,49 @@ prefix="c" %>
       <br>
       <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="2" name="italiana">
           Italiana</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="3" name="orientale">
           Orientale</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="4" name="fastfood">
           Fast Food</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="5" name="pizzeria">
           Pizzeria</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="6" name="bevande">
           Bevande</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="7" name="braceria">
           Braceria</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="8" name="paninoteca">
           Paninoteca</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="9" name="altro">
           Altro</label>
       </div>
       </div>
       <div class="form-group">
         <label for="exampleSelect1">Spesa Minima</label>
-        <select class="form-control" id="exampleSelect1">
-          <option>1,00€</option>
-          <option>2,00€</option>
-          <option>3,00€</option>
-          <option>4,00€</option>
-          <option>5,00€</option>
+        <select class="form-control" id="exampleSelect1" name="spesa">
+          <option value="1.00">1,00€</option>
+          <option value="2.00">2,00€</option>
+          <option value="3.00">3,00€</option>
+          <option value="4.00">4,00€</option>
+          <option value="5.00">5,00€</option>
         </select>
       </div>
-      <div class="form-group">
-        <label for="exampleTextarea">Descrizione Ristorante</label>
-        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-      </div>
+
+        <div class="form-controlGroup">
+          <label class="form-label" for="Name">Descrizione</label>
+          <div class="form-controlGroup-inputWrapper">
+            <input class="form-input form-input--textarea"  name="descrizione" type="text" value="${ristor.getDescrizione_Ristorante()}">
+             </div>
+        </div>
+
       <div class="form-group">
         <label for="exampleInputFile">Carica Immagini ristorante</label>
         <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">

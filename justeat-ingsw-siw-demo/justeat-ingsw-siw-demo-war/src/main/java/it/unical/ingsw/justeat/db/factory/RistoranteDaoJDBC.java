@@ -59,6 +59,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
 				ristorante.setCitta_Ristorante(result.getString("citta"));
 				ristorante.setNumero_Telefono_Ristorante(result.getInt("numero_telefono_ristorante"));
+				ristorante.setSpesa_minima(result.getDouble("spesa_minima"));
 				ristoranti.add(ristorante);
 
 			}
@@ -80,7 +81,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 		Connection connection = this.dataSource.getConnection();
 		try {
 
-			String insert = "insert into ristorante(nome_ristorante, indirizzo_ristorante, indirizzo_legale, partita_iva, coordinate_bancarie_ristorante,codice_fiscale_titolare, email_utenteregistrato, descrizione_ristorante,citta, numero_telefono_ristorante) values (?,?,?,?,?,?,?,?,?,?)";
+			String insert = "insert into ristorante(nome_ristorante, indirizzo_ristorante, indirizzo_legale, partita_iva, coordinate_bancarie_ristorante,codice_fiscale_titolare, email_utenteregistrato, descrizione_ristorante,citta, numero_telefono_ristorante, spesa_minima) values (?,?,?,?,?,?,?,?,?,?,?)";
 
 			PreparedStatement statement = connection.prepareStatement(insert);
 
@@ -94,6 +95,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 			statement.setString(8, ristorante.getDescrizione_Ristorante());
 			statement.setString(9, ristorante.getCitta_Ristorante());
 			statement.setInt(10, ristorante.getNumero_Telefono_Ristorante());
+			statement.setDouble(11, ristorante.getSpesa_minima());
 
 			statement.executeUpdate();
 
@@ -137,6 +139,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
 				ristorante.setCitta_Ristorante(result.getString("citta"));
 				ristorante.setNumero_Telefono_Ristorante(result.getInt("numero_telefono_ristorante"));
+				ristorante.setSpesa_minima(result.getDouble("spesa_minima"));
 				ristoranti.add(ristorante);
 			}
 		} catch (SQLException e) {
@@ -180,6 +183,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				ristorante.setUtente_Proprietario(utente);
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
 				ristorante.setNumero_Telefono_Ristorante(result.getInt("numero_telefono_ristorante"));
+				ristorante.setSpesa_minima(result.getDouble("spesa_minima"));
 				ristoranti.add(ristorante);
 			}
 		} catch (SQLException e) {
@@ -220,6 +224,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
 				ristorante.setCitta_Ristorante(result.getString("citta"));
 				ristorante.setNumero_Telefono_Ristorante(result.getInt("numero_telefono_ristorante"));
+				ristorante.setSpesa_minima(result.getDouble("spesa_minima"));
 				ristoranti.add(ristorante);
 
 			}
@@ -343,6 +348,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
 				ristorante.setCitta_Ristorante(result.getString("citta"));
 				ristorante.setNumero_Telefono_Ristorante(result.getInt("numero_telefono_ristorante"));
+				ristorante.setSpesa_minima(result.getDouble("spesa_minima"));
 			}
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -390,7 +396,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 	public void update(Ristorante ristorante) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			String update = "update ristorante SET  nome_ristorante= ?, indirizzo_ristorante = ?,  indirizzo_legale=?, coordinate_bancarie_ristorante=? , codice_fiscale_titolare =? ,descrizione_ristorante=?, email_utenteregistrato=?, citta =?, numero_telefono_ristorante=? WHERE partita_iva=?";
+			String update = "update ristorante SET  nome_ristorante= ?, indirizzo_ristorante = ?,  indirizzo_legale=?, coordinate_bancarie_ristorante=? , codice_fiscale_titolare =? ,descrizione_ristorante=?, email_utenteregistrato=?, citta =?, numero_telefono_ristorante=?, spesa_minima=? WHERE partita_iva=?";
 			PreparedStatement statement = connection.prepareStatement(update);
 			statement.setString(1, ristorante.getNome_Ristorante());
 			statement.setString(2, ristorante.getIndirizzo_Ristorante());
@@ -402,7 +408,8 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 			statement.setString(8, ristorante.getCitta_Ristorante());
 
 			statement.setInt(9, ristorante.getNumero_Telefono_Ristorante());
-			statement.setString(10, ristorante.getPartita_Iva());
+			statement.setDouble(10, ristorante.getSpesa_minima());
+			statement.setString(11, ristorante.getPartita_Iva());
 
 			statement.executeUpdate();
 		} catch (SQLException e) {
@@ -459,6 +466,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				ristorante.setIndirizzo_Legale(result.getString("indirizzo_legale"));
 				ristorante.setIndirizzo_Ristorante(result.getString("indirizzo_ristorante"));
 				ristorante.setCoordinate_Bancarie_Ristorante(result.getString("coordinate_bancarie_ristorante"));
+				ristorante.setSpesa_minima(result.getDouble("spesa_minima"));
 //				Titolare titolare = new Titolare();
 //				titolare.setCf_Titolare(result.getString("codice_fiscale_titolare"));
 				DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
