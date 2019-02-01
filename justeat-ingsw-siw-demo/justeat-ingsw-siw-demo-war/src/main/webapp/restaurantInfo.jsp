@@ -267,10 +267,12 @@ prefix="c" %>
           <option>5,00€</option>
         </select>
       </div>
-      <div class="form-group">
-        <label for="exampleTextarea">Descrizione Ristorante</label>
-        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-      </div>
+        <div class="form-controlGroup">
+          <label class="form-label" for="Name">Descrizione</label>
+          <div class="form-controlGroup-inputWrapper">
+            <input class="form-input form-input--textarea"  name="" type="text" value="">
+             </div>
+        </div>
       <div class="form-group">
         <label for="exampleInputFile">Carica Immagini ristorante</label>
         <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
