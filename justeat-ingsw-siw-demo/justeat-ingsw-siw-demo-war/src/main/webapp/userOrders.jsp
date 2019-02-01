@@ -153,8 +153,8 @@ prefix="c" %>
 		   <c:forEach items="${Ordine CHE HA EFFETTUATO L'UTENTE}" var="ordine">
         <a  class="mediaElement">
             <div class="listing-item-info mediaElement-content">
-                <h3 class="listing-item-title"  >The Burger Station</h3>
-				<p class="infoText">€ 16,80</p>
+                <h3 class="listing-item-title"  >METTI IL NOME RISTORANTE DELL?ORDINE CON $ QUI</h3>
+				<p class="infoText">€ 16,80 METTI PREZZO TOTALE CON $</p>
             </div>
             <button class="btn btn--primary btn--cta" >Recensisci</button>
         </a>
