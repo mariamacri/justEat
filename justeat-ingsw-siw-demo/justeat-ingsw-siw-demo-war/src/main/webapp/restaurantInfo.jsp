@@ -206,30 +206,30 @@ prefix="c" %>
       </fieldset>
       <div class="form-group">
         <label for="exampleInputEmail1">Orario di Apertura</label>
-        <input class="form-control" type="time" name="orarioApertura">
+        <input class="form-control" type="time" name="orarioApertura" value="${giorni.get(0).getOrarioApertura()}">
         <small class="form-text text-muted"></small> </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Orario di Chiusura</label>
-        <input class="form-control" type="time" name="orarioChiusura">
+        <input class="form-control" type="time" name="orarioChiusura" value="${giorni.get(0).getOrarioChiusura()}">
         <small class="form-text text-muted"></small> </div>
       <div class="form-group">
         <label>Giorni Lavorativi</label>
         <br>
         <div class="btn-group" data-toggle="buttons">
          <label class="btn btn-primary" >
-            <input type="checkbox" value="Lunedì" name="lun">
+            <input type="checkbox" value="Lunedi" name="lun">
             Lunedì </label>
           <label class="btn btn-primary" >
-            <input type="checkbox"  value="Martedì" name="mar">
+            <input type="checkbox"  value="Martedi" name="mar">
             Martedì </label>
           <label class="btn btn-primary" >
-            <input type="checkbox" value="Mercoledì" name="mer">
+            <input type="checkbox" value="Mercoledi" name="mer">
             Mercoledì </label>
           <label class="btn btn-primary" >
-            <input type="checkbox" value="Giovedì" name="gio">
+            <input type="checkbox" value="Giovedi" name="gio">
             Giovedì </label>
           <label class="btn btn-primary" >
-            <input type="checkbox" value="Venerdì" name="ven">
+            <input type="checkbox" value="Venerdi" name="ven">
             Venerdì </label>
           <label class="btn btn-primary" >
             <input type="checkbox" value="Sabato" name="sab">
@@ -280,7 +280,7 @@ prefix="c" %>
       </div>
       <div class="form-group">
         <label for="exampleTextarea">Descrizione Ristorante</label>
-        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+        <textarea class="form-control" id="exampleTextarea" rows="3" value="${ristor.getCoordinate_Bancarie_Ristorante()}" name="descrizione"></textarea>
       </div>
       <div class="form-group">
         <label for="exampleInputFile">Carica Immagini ristorante</label>

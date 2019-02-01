@@ -2,7 +2,7 @@ package it.unical.ingsw.justeat.db.model;
 
 import java.sql.Time;
 
-public class GiornoAtivita {
+public class GiornoAttivita {
 	Time orarioApertura;
 	Time orarioChiusura;
 	String giorno;
@@ -50,7 +50,7 @@ public class GiornoAtivita {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		GiornoAtivita other = (GiornoAtivita) obj;
+		GiornoAttivita other = (GiornoAttivita) obj;
 		if (giorno == null) {
 			if (other.giorno != null)
 				return false;

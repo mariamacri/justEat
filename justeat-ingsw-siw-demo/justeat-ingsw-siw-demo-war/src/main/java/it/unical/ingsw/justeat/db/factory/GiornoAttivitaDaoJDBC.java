@@ -9,7 +9,7 @@ import java.sql.Time;
 import it.unical.ingsw.justeat.db.dao.GiornoAttivitaDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
-import it.unical.ingsw.justeat.db.model.GiornoAtivita;
+import it.unical.ingsw.justeat.db.model.GiornoAttivita;
 
 public class GiornoAttivitaDaoJDBC implements GiornoAttivitaDao{
 	
@@ -23,7 +23,7 @@ public class GiornoAttivitaDaoJDBC implements GiornoAttivitaDao{
 	
 	
 	@Override
-	public void delete(GiornoAtivita giorno) {
+	public void delete(GiornoAttivita giorno) {
 		Connection connection = this.dataSource.getConnection();
 		try {
 			String delete = "delete FROM giornoattivita WHERE partita_iva_ristorante_aprente = ? ";
@@ -43,7 +43,7 @@ public class GiornoAttivitaDaoJDBC implements GiornoAttivitaDao{
 		
 	
 	@Override
-	public void save(GiornoAtivita giorno) {
+	public void save(GiornoAttivita giorno) {
 		Connection connection = this.dataSource.getConnection();
 		try {
 
@@ -70,9 +70,9 @@ public class GiornoAttivitaDaoJDBC implements GiornoAttivitaDao{
 		
 	}
 	@Override
-	public GiornoAtivita findByPrimaryKey(String giorno, String partita_iva) {
+	public GiornoAttivita findByPrimaryKey(String giorno, String partita_iva) {
 		Connection connection = this.dataSource.getConnection();
-		GiornoAtivita giornoAttivita=null;
+		GiornoAttivita giornoAttivita=null;
 		try {
 			PreparedStatement statement;
 
@@ -84,7 +84,7 @@ public class GiornoAttivitaDaoJDBC implements GiornoAttivitaDao{
 			ResultSet result = statement.executeQuery();
 
 			if (result.next()) {
-				giornoAttivita =new GiornoAtivita();
+				giornoAttivita =new GiornoAttivita();
 				giornoAttivita.setOrarioApertura(result.getTime("orarioapertura"));
 				giornoAttivita.setOrarioChiusura(result.getTime("orariochiusura"));
 				giornoAttivita.setGiorno(result.getString("giorno"));
@@ -104,7 +104,7 @@ public class GiornoAttivitaDaoJDBC implements GiornoAttivitaDao{
 		return giornoAttivita;
 	}
 	@Override
-	public void update(GiornoAtivita giorno) {
+	public void update(GiornoAttivita giorno) {
 		Connection connection = this.dataSource.getConnection();
 		try {
 			String update = "update  giornoattivita SET  orarioapertura=?, orariochiusura=? WHERE giorno=? and partita_iva_ristorante_aprente=?";
@@ -128,7 +128,7 @@ public class GiornoAttivitaDaoJDBC implements GiornoAttivitaDao{
 	}
 	
 	@Override
-	public void delete_giorno_partita_iva(GiornoAtivita giorno) {
+	public void delete_giorno_partita_iva(GiornoAttivita giorno) {
 		Connection connection = this.dataSource.getConnection();
 		try {
 			String delete = "delete FROM giornoattivita WHERE partita_iva_ristorante_aprente = ? and giorno=?";
