@@ -26,7 +26,7 @@ public class modificaDatiRistorante extends HttpServlet {
 		String nomeAttivita = req.getParameter("nomeAttivita");
 		String telefonoAttivita = req.getParameter("telefonoAttivita");
 		String indirizzoAttivita = req.getParameter("indirizzoAttivita");
-
+		String descrizione=req.getParameter("descrizione");
 		String citta=req.getParameter("citta");
 		String coordinateBancarie = req.getParameter("coordinateBancarie");
 		String lun=req.getParameter("lun");
@@ -36,11 +36,16 @@ public class modificaDatiRistorante extends HttpServlet {
 		String ven=req.getParameter("ven");
 		String sab=req.getParameter("sab");
 		String dom=req.getParameter("dom");
+		String spesa=req.getParameter("spesa");
+		Double minima=Double.parseDouble(spesa);
+		
+		
 		
 		Time apertura;
 		Time chiusura;
 		
 		String orarioApertura=req.getParameter("orarioApertura");
+		
 		if(orarioApertura.length()==5)
 			apertura=Time.valueOf(orarioApertura+":00");
 		else
@@ -62,7 +67,8 @@ public class modificaDatiRistorante extends HttpServlet {
 		ristorante.setIndirizzo_Ristorante(indirizzoAttivita);
 		ristorante.setCitta_Ristorante(citta);
 		ristorante.setCoordinate_Bancarie_Ristorante(coordinateBancarie);
-		
+		ristorante.setDescrizione_Ristorante(descrizione);
+		ristorante.setSpesa_minima(minima);
 		rd.update(ristorante);
 		
 		

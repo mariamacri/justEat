@@ -259,19 +259,19 @@ prefix="c" %>
       </div>
       <div class="form-group">
         <label for="exampleSelect1">Spesa Minima</label>
-        <select class="form-control" id="exampleSelect1">
-          <option>1,00€</option>
-          <option>2,00€</option>
-          <option>3,00€</option>
-          <option>4,00€</option>
-          <option>5,00€</option>
+        <select class="form-control" id="exampleSelect1" name="spesa">
+          <option value="1.00">1,00€</option>
+          <option value="2.00">2,00€</option>
+          <option value="3.00">3,00€</option>
+          <option value="4.00">4,00€</option>
+          <option value="5.00">5,00€</option>
         </select>
       </div>
 
         <div class="form-controlGroup">
           <label class="form-label" for="Name">Descrizione</label>
           <div class="form-controlGroup-inputWrapper">
-            <input class="form-input form-input--textarea"  name="" type="text" value="">
+            <input class="form-input form-input--textarea"  name="descrizione" type="text" value="${ristor.getDescrizione_Ristorante()}">
              </div>
         </div>
 
