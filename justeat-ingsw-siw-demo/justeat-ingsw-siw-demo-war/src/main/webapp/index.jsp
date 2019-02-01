@@ -31,21 +31,13 @@ prefix="c" %>
 <nav class="navbar navbar-dark">
   <div class="container">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-    <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="70"> </a>
+    <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="30"> </a>
     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
       <ul class="nav navbar-nav">
 		     <!-- LISTA Home -->
         <li class="nav-item"> <a class="nav-link active" href="index.jsp">Home <span class="sr-only">(current)</span></a> </li>
-		     <!-- LISTA Cibo -->
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cibo</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="food_results.jsp">Risultati Cibo</a> <a class="dropdown-item" href="map_results.jsp">Risultati Mappa</a></div>
-        </li>
-		  
-		     <!-- Lista Ristoranti -->
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ristoranti</a>
-          <div class="dropdown-menu"> <a class="dropdown-item" href="restaurantInfo.jsp">Search results</a> <a class="dropdown-item" href="restaurantProfile.jsp">Profilo Ristoranti</a></div>
-        </li>
-        <!-- Inizio Lista utente -->
+		     <
+	        <!-- Lista Ristoranti -->        <!-- Inizio Lista utente -->
 		<!--  <h1>${utente.getEmail_Utente() }</h1>-->
 		  
 				 <!-- LISTA DA LOGGATO -->
@@ -61,8 +53,6 @@ prefix="c" %>
 				
 			    <div class="dropdown-menu"> 
 			  <a class="dropdown-item" data-test-id="accountInfo" href="what?email=${utente.getEmail_Utente()}" id="account-nav-link">Area Utente</a>
-					<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
-            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" name="logout" href="doLogin?logout=true">Esci</a>
 			</div>
 				
@@ -80,7 +70,6 @@ prefix="c" %>
 			    <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/registration.html">Registrazione</a>
 
 			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
-            <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
 			</div>
         </li>
 			
@@ -160,87 +149,7 @@ prefix="c" %>
             </div>
         </div>
         <!-- location match part ends -->
-        <!-- Popular block starts -->
-        <section class="popular">
-            <div class="container">
-                <div class="title text-xs-center m-b-30">
-                  <h2>Popolari questo mese nella tua CittÃ </h2>
-                  <p class="lead">La via piÃ¹ facile per trovare il tuo cibo preferito</p>
-                </div>
-                <div class="row">
-                    <!-- Each popular food item starts -->
-                    <div class="col-xs-12 col-sm-6 col-md-4 food-item">
-                        <div class="food-item-wrap">
-                            <div class="figure-wrap bg-image" data-image-src="img/food1.jpg">
-                                <div class="distance"><i class="fa fa-pin"></i>1240m</div>
-                                <div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                <div class="review pull-right"><a href="#">198 reviews</a> </div>
-                            </div>
-                            <div class="content">
-                                <h5><a href="profile.html">The South"s Best Fried Chicken</a></h5>
-                                <div class="product-name">Fried Chicken with cheese</div>
-                                <div class="price-btn-block"> <span class="price">$ 15,99</span> <a href="#" class="btn theme-btn-dash pull-right">Ordina Ora</a> </div>
-                            </div>
-                          <div class="restaurant-block">
-                                <div class="left">
-                                    <a class="pull-left" href="profile.html"> <img src="img/logo1.png" alt="Restaurant logo" /> </a>
-                                    <div class="pull-left right-text"> <a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span> </div>
-                                </div>
-                                <div class="right-like-part pull-right"> <i class="fa fa-heart-o"></i> <span>48</span> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Each popular food item starts -->
-                    <!-- Each popular food item starts -->
-                    <div class="col-xs-12 col-sm-6 col-md-4 food-item">
-                        <div class="food-item-wrap">
-                            <div class="figure-wrap bg-image" data-image-src="img/food2.jpg">
-                                <div class="distance"><i class="fa fa-pin"></i>1240m</div>
-                                <div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                <div class="review pull-right"><a href="#">198 reviews</a> </div>
-                            </div>
-                            <div class="content">
-                                <h5><a href="profile.html">The South"s Best Fried Chicken</a></h5>
-                                <div class="product-name">Fried Chicken with cheese</div>
-                                <div class="price-btn-block"> <span class="price">$ 18,49</span> <a href="#" class="btn theme-btn-dash pull-right">Ordina Ora</a> </div>
-                            </div>
-                            <div class="restaurant-block">
-                                <div class="left">
-                                    <a class="pull-left" href="profile.html"> <img src="img/logo2.png" alt="Restaurant logo" /> </a>
-                                    <div class="pull-left right-text"> <a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span> </div>
-                                </div>
-                                <div class="right-like-part pull-right"> <i class="fa fa-heart-o"></i> <span>48</span> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Each popular food item starts -->
-                    <!-- Each popular food item starts -->
-                    <div class="col-xs-12 col-sm-6 col-md-4 food-item">
-                        <div class="food-item-wrap">
-                            <div class="figure-wrap bg-image" data-image-src="img/food3.jpg">
-                                <div class="distance"><i class="fa fa-pin"></i>1240m</div>
-                                <div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                                <div class="review pull-right"><a href="#">198 reviews</a> </div>
-                            </div>
-                            <div class="content">
-                                <h5><a href="profile.html">The South"s Best Fried Chicken</a></h5>
-                                <div class="product-name">Fried Chicken with cheese</div>
-                                <div class="price-btn-block"> <span class="price">$ 21,19</span> <a href="#" class="btn theme-btn-dash pull-right">Ordina Ora</a> </div>
-                            </div>
-                            <div class="restaurant-block">
-                                <div class="left">
-                                    <a class="pull-left" href="profile.html"> <img src="img/logo3.png" alt="Restaurant logo" /> </a>
-                                    <div class="pull-left right-text"> <a href="#">Chicken Restaurant</a> <span>68 5th Avenue New York</span> </div>
-                                </div>
-                                <div class="right-like-part pull-right"> <i class="fa fa-heart-o"></i> <span>48</span> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Each popular food item starts -->
-                </div>
-            </div>
-        </section>
-        <!-- Popular block ends -->
+        <!-- Popular block starts -->        <!-- Popular block ends -->
         <!-- How it works block starts -->
         <section class="how-it-works">
             <div class="container">
@@ -298,201 +207,8 @@ prefix="c" %>
         <!-- How it works block ends -->
         <!-- Featured restaurants starts -->
         <section class="featured-restaurants">
-            <div class="container">
-              <div class="row">
-                    <div class="col-sm-4">
-                        <div class="title-block pull-left">
-                            <h4>Featured restaurants</h4> </div>
-                    </div>
-                <div class="col-sm-8">
-                        <!-- restaurants filter nav starts -->
-                  <div class="restaurants-filter pull-right">
-                            <nav class="primary pull-left">
-                                <ul>
-                                    <li><a href="#" class="selected" data-filter="*">Grill</a> </li>
-                                    <li><a href="#" data-filter=".pizza">Pizza</a> </li>
-                                    <li><a href="#" data-filter=".pasta">Pasta</a> </li>
-                                    <li><a href="#" data-filter=".thaifood">thai food</a> </li>
-                                    <li><a href="#" data-filter=".fish">Pesce</a>&nbsp;</li>
-                                </ul>
-                          </nav>
-                        </div>
-                        <!-- restaurants filter nav ends -->
-                    </div>
-                </div>
-                <!-- restaurants listing starts -->
-                <div class="row">
-                    <div class="restaurant-listing">
-                        <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant grill fish thaifood pizza">
-                            <div class="restaurant-wrap">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                        <a class="restaurant-logo" href="#"> <img src="img/big-logo7.jpg" alt="Restaurant logo"> </a>
-                                  </div>
-                                    <!--end:col -->
-                                    <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                        <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                        <div class="bottom-part">
-                                            <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                            <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                            <div class="ratings"> <span>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </span> (122) </div>
-                                        </div>
-                                    </div>
-                                    <!-- end:col -->
-                              </div>
-                                <!-- end:row -->
-                          </div>
-                            <!--end:Restaurant wrap -->
-                      </div>
-                        <!--end: col -->
-                        <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant grill fish pasta thaifood">
-                            <div class="restaurant-wrap">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                        <a class="restaurant-logo" href="#"> <img src="img/logo-plate.png" alt="Restaurant logo"> </a>
-                                    </div>
-                                    <!--end:col -->
-                                    <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                        <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                        <div class="bottom-part">
-                                            <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                            <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                            <div class="ratings"> <span>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </span> (122) </div>
-                                        </div>
-                                    </div>
-                                    <!-- end:col -->
-                                </div>
-                                <!-- end:row -->
-                            </div>
-                            <!--end:Restaurant wrap -->
-                        </div>
-                        <!--end: col -->
-                        <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant grill thaifood pasta pizza">
-                            <div class="restaurant-wrap">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                        <a class="restaurant-logo" href="#"> <img src="img/big-logo8.png" alt="Restaurant logo"> </a>
-                                    </div>
-                                    <!--end:col -->
-                                    <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                        <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                        <div class="bottom-part">
-                                            <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                            <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                            <div class="ratings"> <span>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </span> (122) </div>
-                                        </div>
-                                    </div>
-                                    <!-- end:col -->
-                                </div>
-                                <!-- end:row -->
-                            </div>
-                            <!--end:Restaurant wrap -->
-                        </div>
-                        <!--end: col -->
-                        <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant thaifood fish pasta">
-                            <div class="restaurant-wrap">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                        <a class="restaurant-logo" href="#"> <img src="img/big-logo4.png" alt="Restaurant logo"> </a>
-                                    </div>
-                                    <!--end:col -->
-                                    <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                        <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                        <div class="bottom-part">
-                                            <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                            <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                            <div class="ratings"> <span>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </span> (122) </div>
-                                        </div>
-                                    </div>
-                                    <!-- end:col -->
-                                </div>
-                                <!-- end:row -->
-                            </div>
-                            <!--end:Restaurant wrap -->
-                        </div>
-                        <!--end: col -->
-                        <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant grill fish thaifood pasta pizza">
-                            <div class="restaurant-wrap">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                        <a class="restaurant-logo" href="#"> <img src="img/big-logo3.png" alt="Restaurant logo"> </a>
-                                    </div>
-                                    <!--end:col -->
-                                    <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                        <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                        <div class="bottom-part">
-                                            <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                            <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                            <div class="ratings"> <span>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </span> (122) </div>
-                                        </div>
-                                    </div>
-                                    <!-- end:col -->
-                                </div>
-                                <!-- end:row -->
-                            </div>
-                            <!--end:Restaurant wrap -->
-                        </div>
-                        <!--end: col -->
-                        <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant grill pasta pizza">
-                            <div class="restaurant-wrap">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-                                        <a class="restaurant-logo" href="#"> <img src="img/big-logo2.png" alt="Restaurant logo"> </a>
-                                    </div>
-                                    <!--end:col -->
-                                    <div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-                                        <h5><a href="profile.html">Maenaam Thai Restaurant</a></h5> <span>Burgers, American, Sandwiches, Fast Food, BBQ</span>
-                                        <div class="bottom-part">
-                                            <div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-                                            <div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-                                            <div class="ratings"> <span>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-o"></i>
-                                        </span> (122) </div>
-                                        </div>
-                                    </div>
-                                    <!-- end:col -->
-                                </div>
-                                <!-- end:row -->
-                            </div>
-                            <!--end:Restaurant wrap -->
-                        </div>
-                        <!--end: col -->
-                  </div>
-              </div>
+            <div class="container"> <!-- restaurants listing starts -->
+              <div class="row"> </div>
                 <!-- restaurants listing ends -->
                 <!-- add restaurant starts -->
                 <section class="add-restaurants">
