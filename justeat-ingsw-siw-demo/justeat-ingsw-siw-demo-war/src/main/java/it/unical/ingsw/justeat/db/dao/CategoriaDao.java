@@ -15,4 +15,5 @@ public interface CategoriaDao {
 	
 	public void tipo_cucina_ristorante(int id, String partita_iva);
 
+	public void delete_tipo_cucina(int id, String partita_iva);
 }

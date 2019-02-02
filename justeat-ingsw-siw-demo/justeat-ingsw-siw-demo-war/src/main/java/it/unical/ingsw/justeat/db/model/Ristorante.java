@@ -224,7 +224,7 @@ public class Ristorante {
 	public String getElencoCat() {
 		String c="";
 		for(Categoria cat: categorie) {
-			c+=cat.getNome_Categoria()+" ";
+			c+=cat.getNome_Categoria()+", ";
 		}
 		return c;
 	}

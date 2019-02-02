@@ -109,13 +109,13 @@ prefix="c" %>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-desc">
                            <div class="pull-left right-text white-txt">
-                              <h6><a href="#">Maenaam Thai Restaurant</a></h6>
+                              <h6><a href="#">${ristor.getNome_Ristorante()}</a></h6>
                               <a class="btn btn-small btn-green">Open</a>
-                              <p>Burgers, American, Sandwiches, Fast Food, BBQ</p>
+                              <p>${ristor.getElencoCat()}</p>
                               <ul class="nav nav-inline">
-                                 <li class="nav-item"> <a class="nav-link active" href="#"><i class="fa fa-check"></i> Min $ 10,00</a> </li>
-                                 <li class="nav-item"> <a class="nav-link" href="#"><i class="fa fa-motorcycle"></i> 30 min</a> </li>
-                                 <li class="nav-item ratings">
+                                <li class="nav-item"> <a class="nav-link active" href="#"><em class="fa fa-check"></em>Spesa Minima: €  ${ristor.getSpesa_minima()}</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#"></a></li>
+                                <li class="nav-item ratings">
                                     <a class="nav-link" href="#"> <span>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -136,8 +136,8 @@ prefix="c" %>
                <div class="container">
                   <ul>
                      <li><a href="#" class="active">Home</a></li>
-                     <li><a href="#">Search results</a></li>
-                     <li>Profile</li>
+                     <li><a href="#">Lista Ristoranti</a></li>
+                     <li>Profilo Ristorante</li>
                   </ul>
                </div>
             </div>
@@ -147,89 +147,27 @@ prefix="c" %>
                      <div class="sidebar clearfix m-b-20">
                         <div class="main-block">
                            <div class="sidebar-title white-txt">
-                              <h6>Choose Cusine</h6>
+                              <h6>Scegli un tipo di Cucina</h6>
                               <i class="fa fa-cutlery pull-right"></i> 
                            </div>
                            <ul>
-                              <li><a href="#1" class="scroll active">Pizza</a></li>
-                              <li><a href="#2" class="scroll">Barbecuing and Grilling</a></li>
-                              <li><a href="#3" class="scroll">Appetizers</a></li>
-                              <li><a href="#4" class="scroll">Soup and salads</a></li>
-                              <li><a href="#5" class="scroll">Pasta</a></li>
-                              <li><a href="#6" class="scroll">Seafood</a></li>
-                              <li><a href="#7" class="scroll">Beverages</a></li>
+                              <li><a href="#1" class="scroll active">Pizzeria</a></li>
+                              <li><a href="#2" class="scroll">Bevande</a></li>
+                              <li><a href="#3" class="scroll">Fast Food</a></li>
+                              <li><a href="#4" class="scroll">Italiana</a></li>
+                              <li><a href="#5" class="scroll">Orientale</a></li>
+                              <li><a href="#6" class="scroll">Braceria</a></li>
+                              <li><a href="#7" class="scroll">Paninoteca</a></li>
                            </ul>
                            <div class="clearfix"></div>
                         </div>
                         <!-- end:Sidebar nav -->
                         <div class="widget-delivery">
                            <form>
-                              <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6">
-                                 <label class="custom-control custom-radio">
-                                 <input id="radio1" name="radio" type="radio" class="custom-control-input" checked=""> <span class="custom-control-indicator"></span> <span class="custom-control-description">Delivery</span> </label>
-                              </div>
-                              <div class="col-xs-6 col-sm-12 col-md-6 col-lg-6">
-                                 <label class="custom-control custom-radio">
-                                 <input id="radio2" name="radio" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Takeout</span> </label>
-                              </div>
-                           </form>
+</form>
                         </div>
                      </div>
-                     <!-- end:Left Sidebar -->
-                     <div class="widget clearfix">
-                        <!-- /widget heading -->
-                        <div class="widget-heading">
-                           <h3 class="widget-title text-dark">
-                              Popular tags
-                           </h3>
-                           <div class="clearfix"></div>
-                        </div>
-                        <div class="widget-body">
-                           <ul class="tags">
-                              <li> <a href="#" class="tag">
-                                 Coupons
-                                 </a> 
-                              </li>
-                              <li> <a href="#" class="tag">
-                                 Discounts
-                                 </a> 
-                              </li>
-                              <li> <a href="#" class="tag">
-                                 Deals
-                                 </a> 
-                              </li>
-                              <li> <a href="#" class="tag">
-                                 Amazon 
-                                 </a> 
-                              </li>
-                              <li> <a href="#" class="tag">
-                                 Ebay
-                                 </a> 
-                              </li>
-                              <li> <a href="#" class="tag">
-                                 Fashion
-                                 </a> 
-                              </li>
-                              <li> <a href="#" class="tag">
-                                 Shoes
-                                 </a> 
-                              </li>
-                              <li> <a href="#" class="tag">
-                                 Kids
-                                 </a> 
-                              </li>
-                              <li> <a href="#" class="tag">
-                                 Travel
-                                 </a> 
-                              </li>
-                              <li> <a href="#" class="tag">
-                                 Hosting
-                                 </a> 
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
+                     <!-- end:Left Sidebar -->                  </div>
                   <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
 <!-- end:Widget menu -->
 					  <!-- inizio for -->
@@ -254,12 +192,12 @@ prefix="c" %>
                                     <!-- end:Logo -->
                                     <div class="rest-descr">
                                        <h6><a href="#">${pasto.getNome()}</a></h6>
-                                       <p> Burgers, American, Sandwiches, Fast Food, BBQ</p>
+                                       <p> ${pasto.getDescrizione()}</p>
                                     </div>
                                     <!-- end:Description -->
                                  </div>
                                  <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span> 
+                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">Prezzo: € ${pasto.getPrezzo()} </span> 
 									 
 									 <a href="AggiungiAlCarrelloTemp?nomePietanza=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" >&#43;</a> 
 								  
@@ -290,16 +228,16 @@ prefix="c" %>
                               <div class="widget-body">
 								  <!-- INIZIA FOR LISTA QUI -->
 								  <c:forEach items="${carrello}" var="car">
-								  <c:forEach items="${carrello}" var="car">
                                  <div class="title-row">${car.getNome()}<a href="#"><em class="fa fa-trash pull-right"></em></a></div>
-								  </c:forEach>
-								  <!-- FINE FOR LISTA-->
-                                 <div class="form-group row no-gutter">
+									 <div class="form-group row no-gutter">
                                     <div class="col-xs-8"> </div>
                                     <div class="col-xs-4">
                                        <h6>Prezzo: ${car.getPrezzo()}</h6> 
                                     </div>
-                                 </div>
+                                 </div> 
+								  </c:forEach>
+								  <!-- FINE FOR LISTA-->
+                                 
                               </div>
                            </div>
                            <div class="order-row"> </div>
@@ -311,7 +249,7 @@ prefix="c" %>
                            <div class="widget-body">
                               <div class="price-wrap text-xs-center">
                                  <p>Totale</p>
-                                 <h3 class="value"><strong>€ </strong></h3>
+                                 <h3 class="value"><strong>€ ${tot}</strong></h3>
                                  <p>Ordine Minimo: </p>
                                  <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn btn-lg">Paga Ordine</button>
                               </div>

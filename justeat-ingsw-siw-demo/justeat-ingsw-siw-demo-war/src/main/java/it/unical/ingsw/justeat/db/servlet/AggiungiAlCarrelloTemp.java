@@ -22,17 +22,24 @@ public class AggiungiAlCarrelloTemp extends HttpServlet{
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 
 		String nomePietanza = req.getParameter("nomePietanza");
-		System.out.println(nomePietanza);
+
 		PietanzaDao pdao = factory.getPietanzaDAO();
 		Pietanza pie=pdao.findByPrimaryKey(nomePietanza);
 
 		List <Pietanza> carrello= (List<Pietanza>) req.getSession().getAttribute("carrello");
-
+		req.getSession().removeAttribute("tot");
+		double tot=0.0;
+		
+		
 		if(carrello!=null)
 		{
 			
 			carrello.add(pie);
-			
+			for(Pietanza p: carrello)
+			{
+				tot+=p.getPrezzo();
+			}
+			req.getSession().setAttribute("tot", tot);
 			req.getSession().setAttribute("carrello", carrello);
 			RequestDispatcher rde = req.getRequestDispatcher("restaurantProfile.jsp");
 			rde.forward(req, resp);
@@ -41,6 +48,11 @@ public class AggiungiAlCarrelloTemp extends HttpServlet{
 			
 			carrello = new LinkedList<Pietanza>();
 			carrello.add(pie);
+			for(Pietanza p: carrello)
+			{
+				tot+=p.getPrezzo();
+			}
+			req.getSession().setAttribute("tot", tot);
 			req.getSession().setAttribute("carrello", carrello);
 			RequestDispatcher rde = req.getRequestDispatcher("restaurantProfile.jsp");
 			rde.forward(req, resp);

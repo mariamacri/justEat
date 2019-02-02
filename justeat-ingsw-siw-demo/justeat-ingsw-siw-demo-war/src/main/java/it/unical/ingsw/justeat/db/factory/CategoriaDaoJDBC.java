@@ -109,6 +109,26 @@ public class CategoriaDaoJDBC implements CategoriaDao {
 			}
 		}
 	}
+	
+	@Override
+	public void delete_tipo_cucina(int id, String partita_iva) {
+		Connection connection = this.dataSource.getConnection();
+		try {
+			String delete = "delete FROM tipo_cucina WHERE id_categoria_cucina = ? and partita_iva_ristorante_tipo_cucina=?";
+			PreparedStatement statement = connection.prepareStatement(delete);
+			statement.setInt(1, id);
+			statement.setString(2, partita_iva);
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+	}
 
 	
 	@Override

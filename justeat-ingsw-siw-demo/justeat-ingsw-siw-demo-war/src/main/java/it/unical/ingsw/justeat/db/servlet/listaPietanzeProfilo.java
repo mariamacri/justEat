@@ -26,10 +26,15 @@ public class listaPietanzeProfilo  extends HttpServlet{
 			
 			Ristorante ristorante=rd.findByPrimaryKey(partita_iva);
 			
+			ristorante.setCategorie(rd.tipo_cucina(ristorante));
 			List<Pietanza> pietanze= rd.pietanze_del_ristorante(ristorante);
 			
 			req.getSession().removeAttribute("carrello");
 			req.getSession().setAttribute("pietanze", pietanze);
+			req.getSession().setAttribute("ristor", ristorante);
+			
+		
+			
 			RequestDispatcher rde = req.getRequestDispatcher("restaurantProfile.jsp");
 			rde.forward(req, resp);
 		}

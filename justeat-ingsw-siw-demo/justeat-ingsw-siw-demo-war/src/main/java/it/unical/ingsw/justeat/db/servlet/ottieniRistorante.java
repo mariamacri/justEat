@@ -1,6 +1,7 @@
 package it.unical.ingsw.justeat.db.servlet;
 
 import java.io.IOException;
+import java.sql.Time;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -35,32 +36,42 @@ public class ottieniRistorante extends HttpServlet {
 		
 		GiornoAttivita giorno =ga.findByPrimaryKey("Lunedi",ristorante.getPartita_Iva() );
 		if(giorno !=null)
-		giorni.add(giorno);
+			giorni.add(giorno);
 		
 		
 		giorno = ga.findByPrimaryKey("Martedi",ristorante.getPartita_Iva() );
 		if(giorno !=null)
-		giorni.add(giorno);
+			giorni.add(giorno);
 		
 		giorno = ga.findByPrimaryKey("Mercoledi",ristorante.getPartita_Iva() );
 		if(giorno !=null)
-		giorni.add(giorno);
+			giorni.add(giorno);
 		
 		giorno = ga.findByPrimaryKey("Giovedi",ristorante.getPartita_Iva() );
 		if(giorno !=null)
-		giorni.add(giorno);
+			giorni.add(giorno);
 		
 		giorno = ga.findByPrimaryKey("Venerdi",ristorante.getPartita_Iva() );
 		if(giorno !=null)
-		giorni.add(giorno);
+			giorni.add(giorno);
 		
 		giorno = ga.findByPrimaryKey("Sabato",ristorante.getPartita_Iva() );
 		if(giorno !=null)
-		giorni.add(giorno);
+			giorni.add(giorno);
 		
 		giorno = ga.findByPrimaryKey("Domenica",ristorante.getPartita_Iva() );
 		if(giorno !=null)
-		giorni.add(giorno);
+			giorni.add(giorno);
+		
+		if(giorni.size()==0)
+		{
+			giorno=new GiornoAttivita();
+			giorno.setGiorno("Lunedi");
+			giorno.setOrarioApertura(Time.valueOf("00:00:00"));
+			giorno.setOrarioChiusura(Time.valueOf("00:00:00"));
+			giorno.setPartita_iva_ristorante_aprente(ristorante.getPartita_Iva());
+			giorni.add(giorno);
+		}
 		
 		req.getSession().setAttribute("ristor", ristorante);
 		req.getSession().setAttribute("giorni", giorni);
