@@ -31,6 +31,7 @@ public class listaPietanzeProfilo  extends HttpServlet{
 			
 			req.getSession().removeAttribute("carrello");
 			req.getSession().setAttribute("pietanze", pietanze);
+			req.getSession().setAttribute("tot", 0.0);
 			req.getSession().setAttribute("ristor", ristorante);
 			
 		

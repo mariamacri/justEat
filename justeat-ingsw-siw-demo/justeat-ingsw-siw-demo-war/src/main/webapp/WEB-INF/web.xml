@@ -191,4 +191,17 @@
 		<servlet-name>ListaOrdiniUtente</servlet-name>
 		<url-pattern>/ordiniutente</url-pattern>
 	</servlet-mapping>
+	
+	
+		<servlet>
+		<servlet-name>TogliPietanza</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.togliUnaPietanza</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TogliPietanza</servlet-name>
+		<url-pattern>/togliUnaPietanza</url-pattern>
+	</servlet-mapping>
+	
+	
+	
 </web-app> 
