@@ -17,5 +17,7 @@ public interface OrdineDao {
 	public double totale_ordine(Ordine ordine);
 	
 	public List<Ordine> findAll();
+	public List<Ordine> ordini_dell_utente(Utente utente);
+	public void ordine_contenuto_in_effettua(Ordine ordine, Utente utente);
 
 }

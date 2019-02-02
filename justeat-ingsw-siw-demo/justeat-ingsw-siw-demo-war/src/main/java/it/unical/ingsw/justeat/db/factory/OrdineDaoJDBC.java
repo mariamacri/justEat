@@ -282,6 +282,60 @@ public List<Pietanza> comprende(Ordine ordine) {
 		}
 		return ordini;
 	}
+	//insert into effettua (email_effettuante, id_ordine_effettuato) values('rocco@rocco.com',13)
+	@Override
+	public List<Ordine> ordini_dell_utente(Utente utente) {
+		Connection connection = this.dataSource.getConnection();
+		List<Ordine> ordini = new LinkedList<>();
+		try {
+			Ordine ordine;
+			PreparedStatement statement;
+			String query = "select * from ordine where id_ordine in (select id_ordine_effettuato from effettua, ordine where email_effettuante=?)";
+			statement = connection.prepareStatement(query);
+			statement.setString(1, utente.getEmail_Utente());
+			ResultSet result = statement.executeQuery();
+			while (result.next()) {
+				ordine = new Ordine();
+				ordine.setId_ordine(result.getInt("id_ordine"));
+				ordine.setPrezzo_totale_ordine(result.getInt("prezzo_totale_ordine"));
+				
+
+				ordini.add(ordine);
+			}
+
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		return ordini;
+	}
+	@Override
+	public void ordine_contenuto_in_effettua(Ordine ordine, Utente utente) {
+		Connection connection= this.dataSource.getConnection();
+		
+		try {
+			String save = "insert into effettua(email_effettuante,id_ordine_ricevuto) values (?,?) ";
+			PreparedStatement statement = connection.prepareStatement(save);
+			statement.setString(1,utente.getEmail_Utente());
+			statement.setInt(2, ordine.getId_ordine());
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		
+	}
+	
 	
 
 }

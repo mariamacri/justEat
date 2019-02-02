@@ -1,7 +1,10 @@
 package it.unical.ingsw.justeat.db.factory;
 
+import java.util.List;
+
 import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.CategoriaDao;
+import it.unical.ingsw.justeat.db.dao.FeedbackDao;
 import it.unical.ingsw.justeat.db.dao.GiornoAttivitaDao;
 import it.unical.ingsw.justeat.db.dao.MenuDao;
 import it.unical.ingsw.justeat.db.dao.OrdineDao;
@@ -10,6 +13,7 @@ import it.unical.ingsw.justeat.db.dao.PietanzaDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.dao.TitolareDao;
 import it.unical.ingsw.justeat.db.dao.UtenteDao;
+import it.unical.ingsw.justeat.db.model.Feedback;
 
 public class PostgresDAOFactory extends DAOFactory {
 
@@ -93,6 +97,11 @@ public class PostgresDAOFactory extends DAOFactory {
 	@Override
 	public GiornoAttivitaDao getGiornoAttivitaDao() {
 		return new GiornoAttivitaDaoJDBC(dataSource);
+	}
+
+	@Override
+	public FeedbackDao getFeedbackDAO() {
+		return new FeedbackDaoJDBC(dataSource) ;
 	}
 
 }

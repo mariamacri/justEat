@@ -9,6 +9,7 @@ import java.util.TimeZone;
 
 import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
 import it.unical.ingsw.justeat.db.dao.CategoriaDao;
+import it.unical.ingsw.justeat.db.dao.FeedbackDao;
 import it.unical.ingsw.justeat.db.dao.GiornoAttivitaDao;
 import it.unical.ingsw.justeat.db.dao.MenuDao;
 import it.unical.ingsw.justeat.db.dao.OrdineDao;
@@ -22,6 +23,7 @@ import it.unical.ingsw.justeat.db.factory.DataSource;
 import it.unical.ingsw.justeat.db.factory.UtilDao;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
+import it.unical.ingsw.justeat.db.model.Feedback;
 import it.unical.ingsw.justeat.db.model.Menu;
 import it.unical.ingsw.justeat.db.model.Ordine;
 import it.unical.ingsw.justeat.db.model.Pagamento;
@@ -80,6 +82,26 @@ public class EsempioDataBase {
 		DataSource dataSource = new DataSource("jdbc:postgresql://localhost:5432/justeat", "postgres", "sette77");
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
+		//test feedback ok
+//		 RistoranteDao ristoranteDao = factory.getRistoranteDAO();
+//		 UtenteDao utenteDao = factory.getUtenteDAO();
+//		 FeedbackDao feedackDao=factory.getFeedbackDAO();
+//		 //mi ritorna il ristorante Riccardo
+//		 Ristorante r=ristoranteDao.findByPrimaryKey("123");
+//		 Utente m=utenteDao.findByPrimaryKey("rocco@rocco.com");
+//		 Feedback f=new Feedback();
+//		 f.setDescrizione("ristorante molto riccardissimo");
+//		 f.setId_feedback(1);
+//		 f.setNumero_stelle(5);
+//		 f.setRistorante_recensito(r);
+//		 f.setUtente_recensore(m);
+//		 feedackDao.save(f);
+//		 System.out.println(feedackDao.findByPrimaryKey(1));
+		
+		
+		
+		
+		
 		
 //		GiornoAttivitaDao gd=factory.getGiornoAttivitaDao();
 //		
@@ -94,14 +116,25 @@ public class EsempioDataBase {
 		//String partita_iva=req.getParameter("partita_iva");
 		
 		//DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
-		RistoranteDao rd=factory.getRistoranteDAO();
+//		RistoranteDao rd=factory.getRistoranteDAO();
+//		
+//		//Ristorante ristorante=rd.findByEmail("rocco@rocco.com");
+//		Ristorante ristorante=rd.findByPrimaryKey("123");
+//		List<Pietanza> pietanze= rd.pietanze_del_ristorante(ristorante);
+//		//for(Pietanza p: pietanze)
+//		System.out.println(pietanze.toString());
 		
-		//Ristorante ristorante=rd.findByEmail("rocco@rocco.com");
-		Ristorante ristorante=rd.findByPrimaryKey("123");
-		List<Pietanza> pietanze= rd.pietanze_del_ristorante(ristorante);
-		//for(Pietanza p: pietanze)
-		System.out.println(pietanze.toString());
 		
+		
+		
+		//prova lista ordini
+		UtenteDao ud=factory.getUtenteDAO();
+		Utente utente=ud.findByPrimaryKey("rocco@rocco.com");
+		OrdineDao rd=factory.getOrdineDAO();
+		List<Ordine> ordini=rd.ordini_dell_utente(utente);
+		
+		
+		System.out.println(ordini.toString());
 		
 //		RistoranteDao ristoranteDao=factory.getRistoranteDAO();
 //		//Ristorante r=ristoranteDao.findByPrimaryKey("123");
@@ -165,8 +198,7 @@ public class EsempioDataBase {
 
 		// ***************************************************************************************************+
 		// test ristorante
-//		 RistoranteDao ristoranteDao = factory.getRistoranteDAO();
-//
+		
 //		Ristorante ristorante = new Ristorante();
 //		ristorante.setNome("pomodoro_rosso");
 //		ristorante.setIndirizzo("via G. Cesare");
