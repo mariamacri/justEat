@@ -250,8 +250,8 @@ prefix="c" %>
                               <div class="price-wrap text-xs-center">
                                  <p>Totale</p>
                                  <h3 class="value"><strong>€ ${tot}</strong></h3>
-                                 <p>Ordine Minimo: </p>
-                                 <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn btn-lg">Paga Ordine</button>
+                                 <p>Ordine Minimo: ${ristor.getSpesa_minima()}</p>
+                                  <a href="confermaOrdine" class="btn theme-btn-dash">Paga Ora!</a> </div>
                               </div>
                            </div>
                         </div>

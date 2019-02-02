@@ -17,19 +17,13 @@ public class ConfermaOrdine extends HttpServlet {
 	
 	
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		//quando clicco il bottone conferma deve salvare l'ordine e invia la notifica al ristorante 
-		String id_ordine=req.getParameter("id_ordine");
+		double totConsegna=(double) req.getSession().getAttribute("tot");
 		
-		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
-		OrdineDao od = factory.getOrdineDAO();
-		Ordine ordine=new Ordine(); 
-		ordine.setId_ordine(Integer.parseInt(id_ordine));
+		totConsegna+=2.00;
 		
-		od.save(ordine);
-		req.getSession().setAttribute("ordine",ordine);
-		
+		req.getSession().setAttribute("totConsegna", totConsegna);
 		RequestDispatcher reqDisp=req.getRequestDispatcher("checkout.jsp");
 		reqDisp.forward(req, resp);
 		

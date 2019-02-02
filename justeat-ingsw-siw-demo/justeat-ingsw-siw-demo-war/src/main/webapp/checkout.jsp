@@ -104,7 +104,15 @@ prefix="c" %>
                         <h3 class="widget-title text-dark">
                                       Riassunto del carrello
                                     </h3>
-                        <div class="clearfix"></div>
+                        <div class="col-sm-5">								  <c:forEach items="${carrello}" var="car">
+                                 <div class="title-row"><h5>${car.getNome()}</h5></div>
+									 <div class="form-group row no-gutter">
+                                    <div class="col-xs-8"> </div>
+                                    <div class="col-xs-4">
+                                       <h6>Prezzo: ${car.getPrezzo()}</h6> 
+                                    </div>
+                                 </div> 
+								  </c:forEach></div>
                     </div>
                     <div class="widget-body">
                         <form method="post" action="#">
@@ -127,7 +135,7 @@ prefix="c" %>
                                                 <tbody>
                                                     <tr>
                                                         <td>Subtotale</td>
-                                                        <td>€29.00</td>
+                                                        <td>€ ${tot}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Costi di consegna</td>
@@ -135,10 +143,10 @@ prefix="c" %>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-color"><strong>Totale</strong></td>
-                                                        <td class="text-color"><strong>€31.00</strong></td>
+                                                        <td class="text-color"><strong>€ ${totConsegna}</strong></td>
                                                     </tr>
 													<label>Indirizzo di consegna:</label>
-                                                <h6>VIA DI CONSEGNA</h6> </div>
+                                                <h6>${utente.getIndirizzo()}</h6> </div>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -153,7 +161,7 @@ prefix="c" %>
                                             </li>
                                             <li>
                                                 <label class="custom-control custom-radio  m-b-10">
-                                                    <input name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paga con carta:  </div>  <img src="img/paypal.jpg" alt="" width="90"></span> </label><label>Numero Carta Utilizzata:</label><h6>NUMERO CARTA</h6>
+                                                    <input name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paga con carta:  </div>  <img src="img/paypal.jpg" alt="" width="90"></span> </label><label>Numero Carta Utilizzata:</label><h6>${utente.getCarta_Credito_Usata()}</h6>
                                             </li>
                                         </ul>
                                         <p class="text-xs-center"> <a href="#" class="btn btn-outline-success btn-block">Paga Ora</a> </p>
