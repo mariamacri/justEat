@@ -235,8 +235,7 @@ prefix="c" %>
 					  <!-- inizio for -->
                      <div class="menu-widget" id="2">
                         <div class="widget-heading">
-                           <h3 class="widget-title text-dark">
-                              POPULAR ORDERS Delicious hot food! <a class="btn btn-link pull-right" data-toggle="collapse" href="#popular2" aria-expanded="true">
+                           <h3 class="widget-title text-dark">Offerta del ristorante <a class="btn btn-link pull-right" data-toggle="collapse" href="#popular2" aria-expanded="true">
                               <i class="fa fa-angle-right pull-right"></i>
                               <i class="fa fa-angle-down pull-right"></i>
                               </a>
@@ -250,7 +249,7 @@ prefix="c" %>
                               <div class="row">
                                  <div class="col-xs-12 col-sm-12 col-lg-8">
                                     <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="img/$[pasto.getImage()}" alt="Food logo"></a>
+                                       <a class="restaurant-logo pull-left" href="#"><img src="" alt="Food logo"></a>
                                     </div>
                                     <!-- end:Logo -->
                                     <div class="rest-descr">
@@ -260,43 +259,22 @@ prefix="c" %>
                                     <!-- end:Description -->
                                  </div>
                                  <!-- end:col -->
-                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span> <a href="#" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal">&#43;</a> </div>
+                                 <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">$ 19.99</span> 
+									 
+									 <a href="AggiungiAlCarrelloTemp?nomePietanza=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" >&#43;</a> 
+								  
+								  </div>
                               </div>
                               <!-- end:row -->
                            </div>
 </c:forEach>
  <!-- Fine for -->
-						   <!-- end:Food item -->
-                         
-                         <!-- end:Food item -->
-                         
-                         <!-- end:Food item -->
-                           
-                          <!-- end:Food item -->
+
                         </div>
                         <!-- end:Collapse -->
                     </div>
 					   <!-- FINE FOR -->
-                     <!-- end:Widget menu -->
-                     <div class="row m-t-30">
-                        <div class="col-sm-12">
-<!--//panel-->
-                           
-                           <!--//panel-->
-                           
-                           <!--//panel-->
-                           <div class="panel">
-                              <div class="panel-heading">
-                                 <h4 class="panel-title"><a data-parent="#accordion" data-toggle="collapse" class="panel-toggle" href="#faq4"><i class="ti-info-alt"></i>Can I ipsum dolor sit amet nascetur ridiculus?</a></h4>
-                              </div>
-                              <div class="panel-collapse collapse" id="faq4">
-                                 <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rutrum ut erat a ultricies. Phasellus non auctor nisi, id aliquet lectus. Vestibulum libero eros, aliquet at tempus ut, scelerisque sit amet nunc. Vivamus id porta neque, in pulvinar ipsum. Vestibulum sit amet quam sem. Pellentesque accumsan consequat venenatis. Pellentesque sit amet justo dictum, interdum odio non, dictum nisi. Fusce sit amet turpis eget nibh elementum sagittis. Nunc consequat lacinia purus, in consequat neque consequat id.</div>
-                              </div>
-                          </div>
-                           <!--//panel-->
-                       </div>
-                     </div>
-                     <!--/row -->
+                     <!-- end:Widget menu -->                     <!--/row -->
                   </div>
                  <!-- end:Bar -->
                   <div class="col-xs-12 col-md-12 col-lg-3">
@@ -311,14 +289,15 @@ prefix="c" %>
                            <div class="order-row bg-white">
                               <div class="widget-body">
 								  <!-- INIZIA FOR LISTA QUI -->
-								  <c:forEach items="${ordine.getPietanze()}" var="pietanza">
-                                 <div class="title-row">${pietanza.getNome()}<a href="#"><i class="fa fa-trash pull-right"></i></a></div>
+								  <c:forEach items="${carrello}" var="car">
+								  <c:forEach items="${carrello}" var="car">
+                                 <div class="title-row">${car.getNome()}<a href="#"><em class="fa fa-trash pull-right"></em></a></div>
 								  </c:forEach>
 								  <!-- FINE FOR LISTA-->
                                  <div class="form-group row no-gutter">
                                     <div class="col-xs-8"> </div>
                                     <div class="col-xs-4">
-                                       <h6>Prezzo: ${pietanza.getPrezzo()}</h6> 
+                                       <h6>Prezzo: ${car.getPrezzo()}</h6> 
                                     </div>
                                  </div>
                               </div>
@@ -332,7 +311,7 @@ prefix="c" %>
                            <div class="widget-body">
                               <div class="price-wrap text-xs-center">
                                  <p>Totale</p>
-                                 <h3 class="value"><strong>€ ${ordine.getPrezzo_Totale_odrine()}</strong></h3>
+                                 <h3 class="value"><strong>€ </strong></h3>
                                  <p>Ordine Minimo: </p>
                                  <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn btn-lg">Paga Ordine</button>
                               </div>
@@ -477,103 +456,8 @@ prefix="c" %>
                      </div>
                      <!-- end:row -->
                   </div>
-                  <!-- end:Food item -->
-                  <div class="food-item">
-                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-lg-6">
-                           <div class="item-img pull-left">
-                              <a class="restaurant-logo pull-left" href="#"><img src="img/cola.jpg" alt="Food logo"></a>
-                           </div>
-                           <!-- end:Logo -->
-                           <div class="rest-descr">
-                              <h6><a href="#">Sandwich de Alegranza Grande MenÃ¼ (28 - 30 cm.)</a></h6>
-                           </div>
-                           <!-- end:Description -->
-                        </div>
-                        <!-- end:col -->
-                        <div class="col-xs-6 col-sm-2 col-lg-2 text-xs-center"> <span class="price pull-left">$ 2.49</span></div>
-                        <div class="col-xs-6 col-sm-4 col-lg-4">
-                           <div class="row no-gutter">
-                              <div class="col-xs-7">
-                                 <select class="form-control b-r-0" id="exampleSelect3">
-                                    <option>Size SM</option>
-                                    <option>Size LG</option>
-                                    <option>Size XL</option>
-                                 </select>
-                              </div>
-                              <div class="col-xs-5">
-                                 <input class="form-control" type="number" value="0" id="quant-input-3"> 
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- end:row -->
-                  </div>
-                  <!-- end:Food item -->
-                  <div class="food-item">
-                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-lg-6">
-                           <div class="item-img pull-left">
-                              <a class="restaurant-logo pull-left" href="#"><img src="img/fanta.jpg" alt="Food logo"></a>
-                           </div>
-                           <!-- end:Logo -->
-                           <div class="rest-descr">
-                              <h6><a href="#">Sandwich de Alegranza Grande MenÃ¼ (28 - 30 cm.)</a></h6>
-                           </div>
-                           <!-- end:Description -->
-                        </div>
-                        <!-- end:col -->
-                        <div class="col-xs-6 col-sm-2 col-lg-2 text-xs-center"> <span class="price pull-left">$ 1.99</span></div>
-                        <div class="col-xs-6 col-sm-4 col-lg-4">
-                           <div class="row no-gutter">
-                              <div class="col-xs-7">
-                                 <select class="form-control b-r-0" id="exampleSelect5">
-                                    <option>Size SM</option>
-                                    <option>Size LG</option>
-                                    <option>Size XL</option>
-                                 </select>
-                              </div>
-                              <div class="col-xs-5">
-                                 <input class="form-control" type="number" value="0" id="quant-input-4"> 
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- end:row -->
-                  </div>
-                  <!-- end:Food item -->
-                  <div class="food-item">
-                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-lg-6">
-                           <div class="item-img pull-left">
-                              <a class="restaurant-logo pull-left" href="#"><img src="img/beer.jpg" alt="Food logo"></a>
-                           </div>
-                           <!-- end:Logo -->
-                           <div class="rest-descr">
-                              <h6><a href="#">Sandwich de Alegranza Grande MenÃ¼ (28 - 30 cm.)</a></h6>
-                           </div>
-                           <!-- end:Description -->
-                        </div>
-                        <!-- end:col -->
-                        <div class="col-xs-6 col-sm-2 col-lg-2 text-xs-center"> <span class="price pull-left">$ 3.15</span></div>
-                        <div class="col-xs-6 col-sm-4 col-lg-4">
-                           <div class="row no-gutter">
-                              <div class="col-xs-7">
-                                 <select class="form-control b-r-0" id="exampleSelect6">
-                                    <option>Size SM</option>
-                                    <option>Size LG</option>
-                                    <option>Size XL</option>
-                                 </select>
-                              </div>
-                              <div class="col-xs-5">
-                                 <input class="form-control" type="number" value="0" id="quant-input-5"> 
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- end:row -->
-                  </div>
-                  <!-- end:Food item -->
+            
+                 
                </div>
                <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -30,44 +30,6 @@ public class CarrelloTemporaneo extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		
-		
-		String nome=req.getParameter("nome");
-		String prezzo=req.getParameter("prezzo");
-		
-		//String userEmail=req.getParameter("userEmail");
-		
-		//String partita_iva=req.getParameter("partita_iva");
-	
-		
-	//	DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
-		
-	
-		
-	
-		
-		Pietanza pietanza=new Pietanza(); 
-		pietanza.setNome(nome);
-		pietanza.setPrezzo(Double.parseDouble(prezzo));
-		//OrdineDao ordineDao=factory.getOrdineDAO(); 
-		Ordine ordine=new Ordine(); 
-		
-		ordine.add(pietanza);
-	
-		
-	
-		
-		
-		
-		
-	
-	
-		req.getSession().setAttribute("ordine", ordine);
-		
-		RequestDispatcher rd = req.getRequestDispatcher("checkout.jsp");
-		rd.forward(req, resp);
-		
-		
-		
 	
 		
 		

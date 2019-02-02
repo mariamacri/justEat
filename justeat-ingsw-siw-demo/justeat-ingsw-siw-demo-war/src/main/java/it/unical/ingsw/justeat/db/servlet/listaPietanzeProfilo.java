@@ -28,6 +28,7 @@ public class listaPietanzeProfilo  extends HttpServlet{
 			
 			List<Pietanza> pietanze= rd.pietanze_del_ristorante(ristorante);
 			
+			req.getSession().removeAttribute("carrello");
 			req.getSession().setAttribute("pietanze", pietanze);
 			RequestDispatcher rde = req.getRequestDispatcher("restaurantProfile.jsp");
 			rde.forward(req, resp);
