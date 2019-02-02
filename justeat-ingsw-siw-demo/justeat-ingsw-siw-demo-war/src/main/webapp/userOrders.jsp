@@ -134,7 +134,7 @@ prefix="c" %>
       <nav>
         <ul class="controlList unstyled">
          <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
-          <li class="controlList-item is-active "> <a href="userOrders.jsp" id="orders-nav-link">Ordini</a> </li>
+          <li class="controlList-item is-active "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
 			<c:if test="${ristorante==true}">
           <li class="controlList-item"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
         <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
@@ -150,11 +150,11 @@ prefix="c" %>
 		
 		  
 	<!-- INIZIO FOR-->
-		   <c:forEach items="${Ordine CHE HA EFFETTUATO L'UTENTE}" var="ordine">
+		   <c:forEach items="${ordini}" var="ordine">
         <a  class="mediaElement">
             <div class="listing-item-info mediaElement-content">
-                <h3 class="listing-item-title"  >METTI IL NOME RISTORANTE DELL?ORDINE CON $ QUI</h3>
-				<p class="infoText">€ 16,80 METTI PREZZO TOTALE CON $</p>
+                <h3 class="listing-item-title"  ><!--nome ristorante--></h3>
+				<p class="infoText">${ordine.getPrezzo_totale_ordine()} </p>
             </div>
             <button class="btn btn--primary btn--cta" >Recensisci</button>
         </a>

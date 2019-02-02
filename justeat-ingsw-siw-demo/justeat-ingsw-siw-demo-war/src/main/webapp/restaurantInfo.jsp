@@ -232,28 +232,28 @@ prefix="c" %>
       <br>
       <div class="btn-group" data-toggle="buttons">
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="2" name="italiana">
           Italiana</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="3" name="orientale">
           Orientale</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="4" name="fastfood">
           Fast Food</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="5" name="pizzeria">
           Pizzeria</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="6" name="bevande">
           Bevande</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="7" name="braceria">
           Braceria</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="8" name="paninoteca">
           Paninoteca</label>
         <label class="btn btn-primary" >
-          <input type="checkbox">
+          <input type="checkbox" value="9" name="altro">
           Altro</label>
       </div>
       </div>

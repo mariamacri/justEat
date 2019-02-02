@@ -183,5 +183,12 @@
 		<url-pattern>/AggiungiAlCarrelloTemp</url-pattern>
 	</servlet-mapping>
 
-
+	<servlet>
+		<servlet-name>ListaOrdiniUtente</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.listaOrdini</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ListaOrdiniUtente</servlet-name>
+		<url-pattern>/ordiniutente</url-pattern>
+	</servlet-mapping>
 </web-app> 

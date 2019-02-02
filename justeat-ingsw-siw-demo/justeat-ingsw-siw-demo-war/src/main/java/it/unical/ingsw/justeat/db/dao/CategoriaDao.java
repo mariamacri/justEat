@@ -12,5 +12,7 @@ public interface CategoriaDao {
 	public void update(Categoria categoria); // Update
 
 	public void delete(Categoria categoria); // Delete
+	
+	public void tipo_cucina_ristorante(int id, String partita_iva);
 
 }

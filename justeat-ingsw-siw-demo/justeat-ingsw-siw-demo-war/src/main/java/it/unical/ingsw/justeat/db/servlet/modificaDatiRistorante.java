@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+import it.unical.ingsw.justeat.db.dao.CategoriaDao;
 import it.unical.ingsw.justeat.db.dao.GiornoAttivitaDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.factory.DAOFactory;
@@ -38,6 +38,10 @@ public class modificaDatiRistorante extends HttpServlet {
 		String dom=req.getParameter("dom");
 		String spesa=req.getParameter("spesa");
 		Double minima=Double.parseDouble(spesa);
+		
+		
+		
+		
 		
 		
 		
@@ -70,6 +74,53 @@ public class modificaDatiRistorante extends HttpServlet {
 		ristorante.setDescrizione_Ristorante(descrizione);
 		ristorante.setSpesa_minima(minima);
 		rd.update(ristorante);
+		
+		CategoriaDao cd=factory.getCategoriaDAO();
+		
+		String italiana=req.getParameter("italiana");
+		int ita;
+		if(italiana!=null) {
+			ita=Integer.parseInt(italiana);
+			cd.tipo_cucina_ristorante(ita, ristorante.getPartita_Iva());
+		}
+		String orientale=req.getParameter("orientale");
+		int ori;
+		if(orientale!=null) {
+			ori=Integer.parseInt(orientale);
+			cd.tipo_cucina_ristorante(ori, ristorante.getPartita_Iva());
+		}
+		String fastfood=req.getParameter("fastfood");
+		int fast;
+		if(fastfood!=null) {
+			fast=Integer.parseInt(fastfood);
+			cd.tipo_cucina_ristorante(fast, ristorante.getPartita_Iva());
+		}
+		String pizzeria=req.getParameter("pizzeria");
+		int pizz;
+		if(pizzeria!=null) {
+			pizz=Integer.parseInt(pizzeria);
+			cd.tipo_cucina_ristorante(pizz, ristorante.getPartita_Iva());
+		}
+		String bevande=req.getParameter("bevande");
+		int bev;
+		if(bevande!=null) {
+			bev=Integer.parseInt(bevande); 
+			cd.tipo_cucina_ristorante(bev, ristorante.getPartita_Iva());
+		}
+		String braceria=req.getParameter("braceria");
+		int bra;
+		if(braceria!=null) {
+			bra=Integer.parseInt(braceria);
+			cd.tipo_cucina_ristorante(bra, ristorante.getPartita_Iva());
+		}
+		String altro=req.getParameter("altro");
+		int alt;
+		if(altro!=null) {
+			alt=Integer.parseInt(altro);
+			cd.tipo_cucina_ristorante(alt, ristorante.getPartita_Iva());
+		}
+		
+
 		
 		
 		GiornoAttivitaDao gd=factory.getGiornoAttivitaDao();
