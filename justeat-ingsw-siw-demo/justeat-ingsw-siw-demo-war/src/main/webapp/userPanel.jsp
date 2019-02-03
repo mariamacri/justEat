@@ -6,7 +6,7 @@ prefix="c" %>
 
 <html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
 <head>
-<title>Informazioni Account | JUST EAT</title>
+<title>Informazioni Account</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -134,7 +134,7 @@ prefix="c" %>
       <nav>
         <ul class="controlList unstyled">
          <li class="controlList-item is-active"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
-          <li class="controlList-item "> <a href="userOrders.jsp" id="orders-nav-link">Ordini</a> </li>
+          <li class="controlList-item is-active "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
 			<c:if test="${ristorante==true}">
           <li class="controlList-item"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
         <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>

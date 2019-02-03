@@ -14,7 +14,7 @@ prefix="c" %>
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="#">
-<title>Pagina Account Profilo</title>
+<title>Resoconto Ordini</title>
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -153,8 +153,8 @@ prefix="c" %>
 		   <c:forEach items="${ordini}" var="ordine">
         <a  class="mediaElement">
             <div class="listing-item-info mediaElement-content">
-                <h3 class="listing-item-title"  ><!--nome ristorante--></h3>
-				<p class="infoText">${ordine.getPrezzo_totale_ordine()} </p>
+                <h3 class="listing-item-title"  >Nome Ristorante: </h3>
+				<p class="infoText">Spesa Totale: €${ordine.getPrezzo_totale_ordine()} </p>
             </div>
             <button class="btn btn--primary btn--cta" >Recensisci</button>
         </a>

@@ -15,7 +15,7 @@ prefix="c" %>
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="#">
-<title>Pagina Account Profilo</title>
+<title>Lista Pietanze del tuo menù</title>
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -134,7 +134,7 @@ prefix="c" %>
       <nav>
         <ul class="controlList unstyled">
          <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
-          <li class="controlList-item "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
+         <li class="controlList-item is-active "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
 			<c:if test="${ristorante==true}">
           <li class="controlList-item"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
         <li class="controlList-item is-active"> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
