@@ -198,9 +198,9 @@ prefix="c" %>
                                  </div>
                                  <!-- end:col -->
                                  <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">Prezzo: € ${pasto.getPrezzo()} </span> 
-									 
+									 <c:if test="${utente.getEmail_Utente() != null}">
 									 <a href="AggiungiAlCarrelloTemp?nomePietanza=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" >&#43;</a> 
-								  
+								  	</c:if> 
 								  </div>
                               </div>
                               <!-- end:row -->
@@ -251,7 +251,10 @@ prefix="c" %>
                                  <p>Totale</p>
                                  <h3 class="value"><strong>€ ${tot}</strong></h3>
                                  <p>Ordine Minimo: ${ristor.getSpesa_minima()}</p>
-                                  <a href="confermaOrdine?partia_iva=${ristor.getPartita_Iva()}" class="btn theme-btn-dash">Paga Ora!</a> </div>
+								  <c:if test="${utente.getEmail_Utente() != null}">
+                                  <a href="confermaOrdine?partia_iva=${ristor.getPartita_Iva()}" class="btn theme-btn-dash">Paga Ora!</a> 
+									</c:if>  
+									  </div>
                               </div>
                            </div>
                         </div>
