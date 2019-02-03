@@ -146,7 +146,7 @@ prefix="c" %>
                                                         <td class="text-color"><strong>€ ${totConsegna}</strong></td>
                                                     </tr>
 													<label>Indirizzo di consegna:</label>
-                                                <h6>${utente.getIndirizzo()}</h6> </div>
+                                                <h6>${utente.getIndirizzo_Utente()}</h6> </div>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -161,7 +161,7 @@ prefix="c" %>
                                             </li>
                                             <li>
                                                 <label class="custom-control custom-radio  m-b-10">
-                                                    <input name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paga con carta:  </div>  <img src="img/paypal.jpg" alt="" width="90"></span> </label><label>Numero Carta Utilizzata:</label><h6>${utente.getCarta_Credito_Usata()}</h6>
+                                                    <input name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paga con carta:  </div>  <img src="img/paypal.jpg" alt="" width="90"></span> </label><label>Numero Carta Utilizzata:</label><h6>${utente.getCarta_Credito_Usata().getNumero_Carta()}</h6>
                                             </li>
                                         </ul>
                                         <p class="text-xs-center"> <a href="#" class="btn btn-outline-success btn-block">Paga Ora</a> </p>
