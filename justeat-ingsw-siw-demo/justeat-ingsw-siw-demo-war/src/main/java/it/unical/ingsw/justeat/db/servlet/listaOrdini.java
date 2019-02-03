@@ -16,6 +16,7 @@ import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.dao.UtenteDao;
 import it.unical.ingsw.justeat.db.factory.DAOFactory;
 import it.unical.ingsw.justeat.db.model.Ordine;
+import it.unical.ingsw.justeat.db.model.Ristorante;
 import it.unical.ingsw.justeat.db.model.Utente;
 
 public class listaOrdini extends HttpServlet {
@@ -25,17 +26,22 @@ public class listaOrdini extends HttpServlet {
 		//restituisce gli ordini di quell'utente loggato 
 		//restituisce il ristorante presso il quale questi ordini sono stati fatti 
 		//String nome_ristorante=req.getParameter("nome_ristorante");
+		
 		String email=req.getParameter("email");
-		System.out.println("ciaoooooo");
-		//ottieniRistorante?email=${utente.getEmail_Utente()}
 		DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		
 		UtenteDao ud=factory.getUtenteDAO();
 		Utente utente=ud.findByPrimaryKey(email);
 		OrdineDao rd=factory.getOrdineDAO();
+		
+		
 		List<Ordine> ordini=rd.ordini_dell_utente(utente);
-		System.out.println(utente.getEmail_Utente());
-		System.out.println(ordini.toString());
+
+		
+		
+		
+		
+	
 		req.getSession().setAttribute("ordini", ordini);
 	
 		RequestDispatcher rde = req.getRequestDispatcher("userOrders.jsp");

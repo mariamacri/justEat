@@ -318,19 +318,13 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 		Ristorante ristorante = null;
 		try {
 			PreparedStatement statement;
-			// anche qui il ? è per evitare sql injection
+			
 			String query = "select * from ristorante where partita_iva = ?";
 			statement = connection.prepareStatement(query);
 			statement.setString(1, partita_iva);
-			// eseguiamo la query e otteniamo un result set che è fatto di tante
-			// righe(tuple)
+			
 			ResultSet result = statement.executeQuery();
-			// dovremmo iterare quindi tutte le righe del resultSet finchè si può e
-			// trovare
-			// il ristorante con quel nome, il che significa che visto che dobbiamo
-			// ritornare il ristorante con quel nome dobbiamo creare un nuovo oggetto
-			// ristorante e settargli i valori con ciò che ci viene restituito dal result
-			// set in modo da evitare sql injection
+			
 
 			if (result.next()) {
 				ristorante = new Ristorante();

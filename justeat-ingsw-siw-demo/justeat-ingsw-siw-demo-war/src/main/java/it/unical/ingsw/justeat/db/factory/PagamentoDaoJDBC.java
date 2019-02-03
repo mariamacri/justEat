@@ -4,12 +4,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 
 import it.unical.ingsw.justeat.db.dao.PagamentoDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
 import it.unical.ingsw.justeat.db.model.Pagamento;
+import it.unical.ingsw.justeat.db.model.Ristorante;
+import it.unical.ingsw.justeat.db.model.Titolare;
 import it.unical.ingsw.justeat.db.model.Utente;
 //modificato
 public class PagamentoDaoJDBC implements PagamentoDao{
@@ -123,6 +127,50 @@ public class PagamentoDaoJDBC implements PagamentoDao{
 				throw new PersistenceException(e.getMessage());
 			}
 		}
+	}
+	
+	
+	@Override
+	public List<Pagamento> findAll() {
+		Connection connection = this.dataSource.getConnection();
+		List<Pagamento> pagamenti = new LinkedList<>();
+		try {
+			Pagamento pagamento;
+			PreparedStatement statement;
+			String query = "select * from pagamento";
+			statement = connection.prepareStatement(query);
+			
+			ResultSet result = statement.executeQuery();
+			while (result.next()) {
+
+				pagamento = new Pagamento();
+				pagamento.setId_pagamento(result.getInt("id_pagamento"));
+				pagamento.setImporto_totale_pagamento(result.getDouble("importo_totale_pagamento"));
+				pagamento.setSconto(result.getDouble("sconto"));
+				CartaDiCreditoDaoJDBC cartadao =new CartaDiCreditoDaoJDBC(dataSource);
+				CartaDiCredito carta=new CartaDiCredito();
+				carta =cartadao.findByPrimaryKey(result.getString("numero_cartadicredito_utente"));
+						//setNumero_Carta();
+				
+				UtenteDaoJDBC utenteDao=new UtenteDaoJDBC(dataSource);
+				Utente utente=new Utente();
+				utente=utenteDao.findByCartaDiCredito(carta.getNumero_Carta());
+				pagamento.setUtente(utente);
+				
+				pagamenti.add(pagamento);
+
+			}
+
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		return pagamenti;
 	}
 
 }

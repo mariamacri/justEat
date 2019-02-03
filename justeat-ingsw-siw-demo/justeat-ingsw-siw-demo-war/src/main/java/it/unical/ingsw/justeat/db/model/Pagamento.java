@@ -6,6 +6,8 @@ public class Pagamento {
 	private Utente utente; 
 	private int id_pagamento; 
 	private double importo_totale_pagamento;
+	
+	
 	public double getSconto() {
 		return sconto;
 	}

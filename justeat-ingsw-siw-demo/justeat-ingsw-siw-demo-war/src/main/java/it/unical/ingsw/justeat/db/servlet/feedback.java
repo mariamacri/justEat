@@ -8,29 +8,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import it.unical.ingsw.justeat.db.dao.OrdineDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.factory.DAOFactory;
-import it.unical.ingsw.justeat.db.model.Ordine;
+import it.unical.ingsw.justeat.db.model.Ristorante;
 
-public class ConfermaOrdine extends HttpServlet {
-	
+public class feedback extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-		double totConsegna=(double) req.getSession().getAttribute("tot");
-		String partia_iva= req.getParameter("partia_iva");
-		totConsegna+=2.00;
-		
-		req.getSession().setAttribute("totConsegna", totConsegna);
-		req.getSession().setAttribute("partita_iva_ristorante_ordine", partia_iva);
-		RequestDispatcher reqDisp=req.getRequestDispatcher("checkout.jsp");
-		reqDisp.forward(req, resp);
+		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		
 		
+		String partita_iva=req.getParameter("partita_iva");
 		
 		
+		req.getSession().removeAttribute("Ristorante_recensito");
 		
+		
+		RistoranteDao rd=factory.getRistoranteDAO();
+		Ristorante ristorante=rd.findByPrimaryKey(partita_iva);
+		
+		req.getSession().setAttribute("Ristorante_recensito", ristorante);
+		RequestDispatcher rde = req.getRequestDispatcher("feedback.jsp");
+		rde.forward(req, resp);
 	}
+
 }

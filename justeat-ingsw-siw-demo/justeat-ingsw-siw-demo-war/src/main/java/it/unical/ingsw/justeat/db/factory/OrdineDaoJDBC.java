@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import it.unical.ingsw.justeat.db.dao.OrdineDao;
+import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.Ordine;
 import it.unical.ingsw.justeat.db.model.Pagamento;
@@ -34,14 +35,15 @@ public class OrdineDaoJDBC implements OrdineDao{
 		Connection connection = this.dataSource.getConnection();
 		try {
 
-			String insert = "insert into ordine(id_ordine, id_pagamento_ordine, prezzo_totale_ordine, commissioni_ordine, spesa_minima) values (?,?,?,?,?)";
+			String insert = "insert into ordine(id_ordine, id_pagamento_ordine, prezzo_totale_ordine, commissioni_ordine,  partita_iva_ristorante_ordine) values (?,?,?,?,?)";
 			PreparedStatement statement = connection.prepareStatement(insert);
 			
 			statement.setInt(1, ordine.getId_ordine());
 			statement.setInt(2, ordine.getPagamento().getId_pagamento());
-			statement.setDouble(3, 0.0);
+			statement.setDouble(3, ordine.getTot());
+			
 			statement.setDouble(4, ordine.getCommissioni_ordine());
-			statement.setDouble(5, ordine.getSpesa_minima());
+			statement.setString(5, ordine.getRistorante().getPartita_Iva());
 			statement.executeUpdate();
 			
 			/*String update = "update ordine SET  prezzo_totale_ordine=? where id_ordine=?";
@@ -61,10 +63,10 @@ public class OrdineDaoJDBC implements OrdineDao{
 		}
 		save_pietanze_comprese(ordine);
 		
-		ordine.setPrezzo_totale_ordine(totale_ordine(ordine));
-		System.out.println(ordine.getPrezzo_totale_ordine());
+		//ordine.setPrezzo_totale_ordine(totale_ordine(ordine));
+
 		
-		update(ordine);
+		//update(ordine);
 		
 	}
 	
@@ -89,7 +91,14 @@ public class OrdineDaoJDBC implements OrdineDao{
 				ordine.setPagamento(pagamento);
 				ordine.setPrezzo_totale_ordine(result.getDouble("prezzo_totale_ordine"));
 				ordine.setCommissioni_ordine(result.getDouble("commissioni_ordine"));
-				ordine.setSpesa_minima(result.getDouble("spesa_minima"));
+				
+				DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+				RistoranteDao rd=factory.getRistoranteDAO();
+				
+				Ristorante ristorante=rd.findByPrimaryKey(result.getString("partita_iva_ristorante_ordine"));
+			
+				ordine.setRistorante(ristorante);
+				
 				}
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -111,14 +120,15 @@ public class OrdineDaoJDBC implements OrdineDao{
 	public void update(Ordine ordine) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			String update = "update ordine SET  id_pagamento_ordine = ?,  prezzo_totale_ordine=?, commissioni_ordine=? , spesa_minima =? WHERE id_ordine=?";
+			String update = "update ordine SET  id_pagamento_ordine = ?,  prezzo_totale_ordine=?, commissioni_ordine=? , partita_iva_ristorante_ordine=? WHERE id_ordine=?";
 			PreparedStatement statement = connection.prepareStatement(update);
 			
 			statement.setInt(1, ordine.getPagamento().getId_pagamento());
 			statement.setDouble(2, ordine.getPrezzo_totale_ordine());
 			statement.setDouble(3, ordine.getCommissioni_ordine());
-			statement.setDouble(4, ordine.getSpesa_minima());
+			statement.setString(4, ordine.getRistorante().getPartita_Iva());
 			statement.setInt(5, ordine.getId_ordine());
+			
 			statement.executeUpdate();
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -228,6 +238,7 @@ public List<Pietanza> comprende(Ordine ordine) {
 
 				String insert = "insert into comprende(nome_pietanza_compresa, id_ordine_compreso) values (?,?)";
 				PreparedStatement statement = connection.prepareStatement(insert);
+				if(ordine.getPietanze()!=null)
 				for(Pietanza i: ordine.getPietanze())
 				{
 					statement.setString(1, i.getNome());
@@ -266,7 +277,13 @@ public List<Pietanza> comprende(Ordine ordine) {
 				p.setId_pagamento(result.getInt("id_pagamento_ordine"));
 				ordine.setPagamento(p);
 				ordine.setPrezzo_totale_ordine(result.getDouble("prezzo_totale_ordine"));
-				ordine.setSpesa_minima(result.getDouble("spesa_minima"));
+				
+				DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+				RistoranteDao rd=factory.getRistoranteDAO();
+				
+				Ristorante ristorante=rd.findByPrimaryKey(result.getString("partita_iva_ristorante_ordine"));
+				
+				ordine.setRistorante(ristorante);
 				
 				ordini.add(ordine);
 			}
@@ -297,7 +314,19 @@ public List<Pietanza> comprende(Ordine ordine) {
 			while (result.next()) {
 				ordine = new Ordine();
 				ordine.setId_ordine(result.getInt("id_ordine"));
-				ordine.setPrezzo_totale_ordine(result.getInt("prezzo_totale_ordine"));
+				ordine.setCommissioni_ordine(result.getDouble("commissioni_ordine"));
+				Pagamento p=new Pagamento();
+				p.setId_pagamento(result.getInt("id_pagamento_ordine"));
+				ordine.setPagamento(p);
+				ordine.setPrezzo_totale_ordine(result.getDouble("prezzo_totale_ordine"));
+				
+				
+				DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+				RistoranteDao rd=factory.getRistoranteDAO();
+				
+				Ristorante ristorante=rd.findByPrimaryKey(result.getString("partita_iva_ristorante_ordine"));
+				
+				ordine.setRistorante(ristorante);
 				
 
 				ordini.add(ordine);
@@ -319,7 +348,7 @@ public List<Pietanza> comprende(Ordine ordine) {
 		Connection connection= this.dataSource.getConnection();
 		
 		try {
-			String save = "insert into effettua(email_effettuante,id_ordine_ricevuto) values (?,?) ";
+			String save = "insert into effettua(email_effettuante, id_ordine_effettuato) values (?,?) ";
 			PreparedStatement statement = connection.prepareStatement(save);
 			statement.setString(1,utente.getEmail_Utente());
 			statement.setInt(2, ordine.getId_ordine());
@@ -335,6 +364,11 @@ public List<Pietanza> comprende(Ordine ordine) {
 		}
 		
 	}
+	
+	
+	
+	
+
 	
 	
 

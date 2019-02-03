@@ -153,10 +153,10 @@ prefix="c" %>
 		   <c:forEach items="${ordini}" var="ordine">
         <a  class="mediaElement">
             <div class="listing-item-info mediaElement-content">
-                <h3 class="listing-item-title"  >Nome Ristorante: </h3>
-				<p class="infoText">Spesa Totale: €${ordine.getPrezzo_totale_ordine()} </p>
+                <h3 class="listing-item-title"  >Nome Ristorante: ${ordine.getRistorante().getNome_Ristorante()} </h3>
+				<p class="infoText">Spesa Totale: €${ordine.getTot()} </p>
             </div>
-            <button class="btn btn--primary btn--cta" >Recensisci</button>
+            <a href="feedback?partita_iva=${ordine.getRistorante().getPartita_Iva()}"><button class="btn btn--primary btn--cta" >Recensisci</button></a>
         </a>
 			   </c:forEach>
 		  <!-- Fine FOR-->

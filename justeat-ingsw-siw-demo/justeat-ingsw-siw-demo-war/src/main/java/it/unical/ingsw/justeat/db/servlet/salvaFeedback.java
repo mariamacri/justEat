@@ -22,9 +22,9 @@ import it.unical.ingsw.justeat.db.model.Utente;
 public class salvaFeedback extends HttpServlet{
 	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		String email=req.getParameter("email");
+		Utente utente=(Utente) req.getSession().getAttribute("utente");
 		
 		String partita_iva =req.getParameter("partita_iva");
 		
@@ -33,14 +33,10 @@ public class salvaFeedback extends HttpServlet{
 		
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		
-		UtenteDao uDao = factory.getUtenteDAO();
-		Utente utente =uDao.findByPrimaryKey(email);
 		
 		RistoranteDao rDao = factory.getRistoranteDAO();
 		Ristorante ristorante =rDao.findByPrimaryKey(partita_iva);
 		
-		OrdineDao rd=factory.getOrdineDAO();
-		List<Ordine> ordini=rd.ordini_dell_utente(utente);
 		
 		FeedbackDao fdao=factory.getFeedbackDAO();
 		List<Feedback> fs=fdao.findAll();
@@ -54,7 +50,7 @@ public class salvaFeedback extends HttpServlet{
 		
 		fdao.save(f);
 		
-		req.getSession().setAttribute("feedback", f);
+		
 		
 		RequestDispatcher reqDisp=req.getRequestDispatcher("userOrders.jsp");
 		reqDisp.forward(req, resp);

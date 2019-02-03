@@ -115,7 +115,7 @@ prefix="c" %>
 								  </c:forEach></div>
                     </div>
                     <div class="widget-body">
-                        <form method="post" action="#">
+                        <form method="get">
                             <div class="row">
                                 <div class="col-sm-6 margin-b-30">
 <div class="row"> </div>
@@ -164,7 +164,7 @@ prefix="c" %>
                                                     <input name="radio-stacked" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paga con carta:  </div>  <img src="img/paypal.jpg" alt="" width="90"></span> </label><label>Numero Carta Utilizzata:</label><h6>${utente.getCarta_Credito_Usata().getNumero_Carta()}</h6>
                                             </li>
                                         </ul>
-                                        <p class="text-xs-center"> <a href="#" class="btn btn-outline-success btn-block">Paga Ora</a> </p>
+                                        <p class="text-xs-center"> <a href="Creaordine" class="btn btn-outline-success btn-block">Paga Ora</a> </p>
                                     </div>
                                 </div>
                             </div>

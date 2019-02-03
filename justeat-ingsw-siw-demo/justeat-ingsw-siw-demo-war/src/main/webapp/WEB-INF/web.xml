@@ -202,7 +202,6 @@
 		<url-pattern>/togliUnaPietanza</url-pattern>
 	</servlet-mapping>
 	
-	
 	<servlet>
 		<servlet-name>ConfermaOrdine</servlet-name>
 		<servlet-class>it.unical.ingsw.justeat.db.servlet.ConfermaOrdine</servlet-class>
@@ -212,6 +211,35 @@
 		<url-pattern>/confermaOrdine</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>daifeedback</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.salvaFeedback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>daifeedback</servlet-name>
+		<url-pattern>/daifeedback</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Feedback</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.feedback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Feedback</servlet-name>
+		<url-pattern>/feedback</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>creaOrdine</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.creaOrdine</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>creaOrdine</servlet-name>
+		<url-pattern>/Creaordine</url-pattern>
+	</servlet-mapping>
 	
 	
 </web-app> 

@@ -251,7 +251,7 @@ prefix="c" %>
                                  <p>Totale</p>
                                  <h3 class="value"><strong>€ ${tot}</strong></h3>
                                  <p>Ordine Minimo: ${ristor.getSpesa_minima()}</p>
-                                  <a href="confermaOrdine" class="btn theme-btn-dash">Paga Ora!</a> </div>
+                                  <a href="confermaOrdine?partia_iva=${ristor.getPartita_Iva()}" class="btn theme-btn-dash">Paga Ora!</a> </div>
                               </div>
                            </div>
                         </div>
