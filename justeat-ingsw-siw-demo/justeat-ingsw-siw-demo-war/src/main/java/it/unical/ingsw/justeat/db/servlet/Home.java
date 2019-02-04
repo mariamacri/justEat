@@ -28,7 +28,6 @@ public class Home extends HttpServlet{
 		RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
 		rd.forward(req, resp);*/
 		String email=req.getParameter("email");
-		System.out.println(email);
 	
 	}
 		

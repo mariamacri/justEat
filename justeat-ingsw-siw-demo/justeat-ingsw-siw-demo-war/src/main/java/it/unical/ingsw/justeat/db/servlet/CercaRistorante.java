@@ -18,7 +18,7 @@ import it.unical.ingsw.justeat.db.model.Ristorante;
 public class CercaRistorante extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	;
+	
 		String citta = req.getParameter("citta");
 		
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);

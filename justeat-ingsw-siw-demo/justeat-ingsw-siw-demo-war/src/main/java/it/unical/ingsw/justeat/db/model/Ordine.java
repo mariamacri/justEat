@@ -113,11 +113,11 @@ public class Ordine {
 		} else if (!pagamento.equals(other.pagamento))
 			return false;
 		if (pietanze == null) {
-			System.out.println("A coglioneeeeeeee");
+			
 			if (other.pietanze != null)
 				return false;
 		} else if (!pietanze.equals(other.pietanze)) {
-			System.out.println("A coglioneeeeeeee");
+			
 			return false;}
 		if (Double.doubleToLongBits(prezzo_totale_ordine) != Double.doubleToLongBits(other.prezzo_totale_ordine))
 			return false;
