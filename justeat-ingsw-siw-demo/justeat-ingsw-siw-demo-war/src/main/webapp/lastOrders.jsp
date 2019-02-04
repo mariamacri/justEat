@@ -4,9 +4,9 @@ prefix="c" %>
 
 <!DOCTYPE html>
 
-<html dir="ltr" lang="it-IT" class="js  svg placeholder supports smil checked boxsizing flexbox csstransforms csstransforms3d csstransitions no-flexboxtweener datauri flexboxany" data-conversation-id="4d76c0f4-30a2-4a3f-a7e1-f3c15128a3b4" style="">
+<html lang="it">
 <head>
-<title>Informazioni Account</title>
+<title>Informazioni Account | JUST EAT</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,18 +14,18 @@ prefix="c" %>
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="#">
-<title>Pagina Account Profilo</title>
+<title>Resoconto Ordini</title>
 <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/animsition.min.css" rel="stylesheet">
 <link href="css/animate.css" rel="stylesheet">
 <!-- Custom styles for this template -->
-
 <link href="css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="css/je-67b0186d66.min.css">
 	
 <link rel="stylesheet" href="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/css/je-67b0186d66.min.css">
+</head>
 <!--Push backend validation errors-->
 
 <body itemscope="" itemtype="http://schema.org/WebPage">
@@ -44,7 +44,8 @@ prefix="c" %>
 
 <div class="skipTo"> <a class="is-visuallyHidden focusable u-text-marker" href="#skipToMain">Vai al contenuto principale</a> </div>
 <header class="header"> </header>
-
+		
+        
              <!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
@@ -110,7 +111,15 @@ prefix="c" %>
   </div>
 </nav>
 <!-- /.navbar -->
-
+	
+<div class="u-divider u-horizontalRule">
+  <div class="l-container l-vPad--small">
+    <ul class="breadcrumb unstyled">
+      <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="index.jsp" itemprop="url" title="Vai alla pagina iniziale di JUST EAT"> <span itemprop="title">Pagina iniziale</span> </a> </li>
+      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Ordini"> <span itemprop="title">Ordini</span> </li>
+    </ul>
+  </div>
+</div>
 <div data-cookiebanner="" class="infoBar infoBar--dark infoBar--hideByDefault">
   <div class="l-container infoBar-row"> <a class="btn infoBar-btn" data-cookiebanner-btn="" data-test="cookieBannerBtn">Chiudi</a>
     <p class="u-showAboveMid u-hideTextOverflow--narrow"><span style="font-weight: bold;">JUST EAT</span> utilizza cookie di profilazione, propri e di terzi, per inviarti pubblicitÃ  online in funzione delle tue preferenze manifestate nella navigazione e consentirti una miglior esperienza di navigazione. Se accedi ad un qualunque elemento del sito sottostante acconsenti allâuso di tali cookie. Per avere maggiori informazioni su come noi, o i terzi, usiamo i cookie, sapere come negare il consenso a tutti o solo alcuni cookie, e come impostare il proprio browser si prega di leggere la nostra <a href="/cookies-policy">cookie policy</a></p>
@@ -118,91 +127,42 @@ prefix="c" %>
     <p class="u-showBelowMid">Qui puoi trovare i dettagli della nostra <a href="/cookies-policy">cookie policy</a></p>
   </div>
 </div>
-<div class="u-divider u-horizontalRule">
-  <div class="l-container l-vPad--small">
-    <ul class="breadcrumb unstyled">
-      <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="index.jsp" itemprop="url" title="Vai alla pagina iniziale di JUST EAT"> <span itemprop="title">Pagina iniziale</span> </a> </li>
-      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Account"> <span itemprop="title">Account</span> </li>
-    </ul>
-  </div>
-</div>
 <div class="l-container l-pageContent">
   <div class="g g--gutter g--stack">
-	  
-	   <!-- Pannello Account Laterale -->
+	 <!-- Pannello Account Laterale -->
     <aside class="sidebar g-col g-span3--mid u-showAboveMid">
       <nav>
         <ul class="controlList unstyled">
-         <li class="controlList-item is-active"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
-			<c:if test="${ristorante==false}">
-          <li class="controlList-item "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
-				 </c:if>
+         <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
+          <li class="controlList-item is-active "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
+			<li class="controlList-item"> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Nuovi Ordini</a> </li>
 			<c:if test="${ristorante==true}">
-          <li class="controlList-item "> <a href="" id="orders-nav-link">Ordini</a> </li>
-				 </c:if>
-			
-			<c:if test="${ristorante==true}">
-				<li class="controlList-item"> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Nuovi Ordini</a> </li>
           <li class="controlList-item"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
         <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
         </c:if>
 		  </ul>
       </nav>
     </aside>
-	
-	
-    <main class="g-col g-span9--mid g-span4--midWide g-offset1--midWide g-holdWidth--midWide">
-      <form class="form" action="modificadati" id="account-info-form" method="post" novalidate="novalidate">
-        <fieldset class="form-fieldset">
-          <h1 class="form-title beta title--alternate">Il mio Account</h1>
-          <input name="__RequestVerificationToken" type="hidden" value="jmR4IvWw3cRE18u_Hl7HZH7-VvP8Vyj6vPKgEo_Eay9fvStNU7bnkDKsdYWK9uDjToHD0aYXuEB4WBH8KJsF4sYqLxOEbOGN6auvtwTA8SofSJgOw7C_u61fnQWetmh75xKINQ2">
-          <div role="alert" aria-atomic="true" class="validation-summary-valid alert alert--danger" data-valmsg-summary="true" data-test-id="validationErrorSummary">
-            <ul>
-            </ul>
-          </div>
-          <input data-unsaved-changes-flag="true" data-unsaved-changes-message="I cambiamenti che hai fatto verranno persi abbandonando questa pagina." id="UnsavedChangesFlag" name="UnsavedChangesFlag" type="hidden" value="0">
-          <div class="form-controlGroup">
-            <label class="form-label" for="Name">Nome</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="name" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" data-val-regex="Il tuo nome non dovrebbe contenere numeri" data-val-required="Inserisci Nome e Cognome" id="account-name" name="nome" type="text" value="${utente.getNome_Utente()}">
-              <span class="field-validation-valid has-error" data-valmsg-for="Name" data-valmsg-replace="true"></span> </div>
-          </div>
-          <div class="form-controlGroup">
-            <label class="form-label" for="Email">Cognome</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="cognome" data-val="true" data-val-email="Inserisci il tuo indirizzo email valido" data-val-length="Inserisci il tuo indirizzo email valido" data-val-length-max="50" data-val-required="Inserisci il tuo indirizzo email" name="cognome" type="text" value="${utente.getCognome_Utente()}">
-              <span class="field-validation-valid has-error" data-valmsg-for="Email" data-valmsg-replace="true"></span> </div>
-          </div>
-          <div class="form-controlGroup">
-            <label class="form-label" for="Phone">Cellulare</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="phone" data-val="true" data-val-length="Lunghezza massima 15 caratteri" data-val-length-max="15" data-val-regex="Il tuo numero di cellulare deve essere lungo almeno 9 caratteri e non deve conte lettere o caratteri speciali" data-val-regex-pattern="^\d{6,}$" data-val-required="Inserisci il tuo cellulare" id="account-phoneNumber" name="numero_telefono_utente" type="tel" value="${utente.getNumero_telefono_utente()}">
-              <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
-          </div>
-			  <div class="form-controlGroup">
-            <label class="form-label" for="IndirizzoOrdini">Indirizzo</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="IndirizzoOrdini" data-val="true" data-val-length="Lunghezza massima 100 caratteri" data-val-length-max="100" id="account-street" name="indirizzo" type="text" value="${utente.getIndirizzo_Utente()}">
+    <main class="g-col g-span9--mid g-span7--wide">
+      <h1 class="beta title--alternate">Ordini</h1>
+      <p class="u-text-knockedBack u-text-soften">Qui trovi lo storico dei tuoi ordini.</p>
+      <ol id="orderList" class="listing unstyled u-divider--top">
+		  
+		
+		  
+	<!-- INIZIO FOR-->
+		   <c:forEach items="${ordini}" var="ordine">
+        <a  class="mediaElement">
+            <div class="listing-item-info mediaElement-content">
+                <h3 class="listing-item-title"  >Nome Ristorante: ${ordine.getRistorante().getNome_Ristorante()} </h3>
+				<p class="infoText">Spesa Totale: €${ordine.getTot()} </p>
             </div>
-          </div>
-			  <div class="form-controlGroup">
-            <label class="form-label" for="NumeroCarta">Numero Carta</label>
-            <div class="form-controlGroup-inputWrapper">
-              <input class="form-input form-input--icon" data-test-id="NumeroCarta" data-val="true" data-val-length="Lunghezza massima 16 caratteri" data-val-length-max="16" data-val-regex="Il tuo nome non dovrebbe contenere caratteri"id="cardnumber" name="numero_carta" type="text" value="${utente.getCarta_Credito_Usata().getNumero_Carta()}"></div>
-				  <a class="form-editableText-link" data-test-id="changePassword" href="editcreditcard.jsp" id="change-password">Modifica Numero Carta</a>
-          </div>
-          <div class="form-controlGroup">
-            <label class="form-label" for="Password">Password</label>
-            <div class="form-editableText"> <a class="form-editableText-link" data-test-id="changePassword" href="editpassword.jsp" id="change-password">Modifica Password</a>
-              <p class="form-editableText-text text-masked" >*********</p>
-            </div>
-          </div>
-          <button type="submit" value="${utente.getEmail_Utente()}" name="email" class="btn btn--primary btn--block" id="save-changes-button" data-test-id="saveButton"><span class="is-loading-hidden">Salva modifiche</span></button>
-        </fieldset>
-        <div class="form-subSection u-separated--top">
-          <p class="u-text-soften">Desideri eliminare il tuo account Just Eat?</p>
-          <a href="/account/deactivate/" id="deactivate-account">Elimina il mio account</a> </div>
-      </form>
+            <a href="feedback?partita_iva=${ordine.getRistorante().getPartita_Iva()}"><button class="btn btn--primary btn--cta" >Recensisci</button></a>
+        </a>
+			   </c:forEach>
+		  <!-- Fine FOR-->
+		  
+      </ol>
     </main>
   </div>
 </div>
