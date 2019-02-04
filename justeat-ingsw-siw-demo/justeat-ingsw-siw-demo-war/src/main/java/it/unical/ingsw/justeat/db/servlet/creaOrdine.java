@@ -76,18 +76,27 @@ public class creaOrdine extends HttpServlet{
 		
 		
 		
+		
 		od.save_pietanze_comprese(ordine);
 		
 		
 		
 		List<Ordine> ordini2=od.ordini_dell_utente(utente);
 
+		List <Ordine> ordiniNonArchiviati= (List<Ordine>) req.getSession().getAttribute("Nuovi");
+		if(ordiniNonArchiviati!=null)
+			ordiniNonArchiviati.add(ordine);
+		else
+		{
+			ordiniNonArchiviati=new LinkedList<>();
+			ordiniNonArchiviati.add(ordine);
+		}
 		
 		
-		
+		req.getSession().setAttribute("ordini", ordini2);
 		
 	
-		req.getSession().setAttribute("ordini", ordini2);
+		req.getSession().setAttribute("Nuovi", ordiniNonArchiviati);
 	
 		
 		
