@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" 
+prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="it">
 
@@ -62,8 +66,8 @@
 				
 				
 				    <div class="dropdown-menu"> 
-						<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.html">Login</a>
-			    <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/registration.html">Registrazione</a>
+						<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.jsp">Login</a>
+			    <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/registration.jsp">Registrazione</a>
 
 			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
 			</div>
@@ -72,8 +76,8 @@
 				</c:if>	
 			
           <div class="dropdown-menu" > 
-			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link" >Area Utente</a> <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.html">Login</a>
-			    <a class="dropdown-item" href="registration.html">Registrazione</a>
+			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link" >Area Utente</a> <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.jsp">Login</a>
+			    <a class="dropdown-item" href="registration.jsp">Registrazione</a>
 			  <a class="dropdown-item" data-test-id="orders" href="/justeat-ingsw-siw-demo-war/userOrders.html" id="orders-nav-link">Ordini</a>
 			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Inserisci Nuovo Ristorante</a>
             <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
@@ -162,7 +166,7 @@ Cliente</label>
                      </div>
                      <!-- WHY? -->
                      <div class="col-md-4">
-                        <h4>La Registrazione è facile, veloce e gratis</h4>
+                        <h4>La Registrazione Ã¨ facile, veloce e gratis</h4>
                         <p>Una volta registrato potrai:</p>
                         <hr>
                         <img src="img/Local.png" alt="" class="img-fluid">

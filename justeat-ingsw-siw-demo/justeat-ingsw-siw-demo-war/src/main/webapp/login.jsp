@@ -1,4 +1,8 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" 
+prefix="c" %>
+
+<!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="utf-8">
@@ -61,8 +65,8 @@
 				
 				
 				    <div class="dropdown-menu"> 
-						<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.html">Login</a>
-			    <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/registration.html">Registrazione</a>
+						<a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.jsp">Login</a>
+			    <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/registration.jsp">Registrazione</a>
 
 			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Registra il tuo Ristorante!</a>
 			</div>
@@ -71,8 +75,8 @@
 				</c:if>	
 			
           <div class="dropdown-menu" > 
-			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link" >Area Utente</a> <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.html">Login</a>
-			    <a class="dropdown-item" href="registration.html">Registrazione</a>
+			  <a class="dropdown-item" data-test-id="accountInfo" href="/account/info/" id="account-nav-link" >Area Utente</a> <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/login.jsp">Login</a>
+			    <a class="dropdown-item" href="registration.jsp">Registrazione</a>
 			  <a class="dropdown-item" data-test-id="orders" href="/justeat-ingsw-siw-demo-war/userOrders.html" id="orders-nav-link">Ordini</a>
 			  <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/restaurantRegistration.jsp">Inserisci Nuovo Ristorante</a>
             <a class="dropdown-item" href="/justeat-ingsw-siw-demo-war/checkout.jsp">Checkout</a>
@@ -123,7 +127,7 @@
                     <div class="control">
                         <input checked="checked" data-test-id="remember" data-val="true" data-val-required="The Ricordami su questo computer field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true"><input name="RememberMe" type="hidden" value="false">
                         <label for="RememberMe">Ricordami su questo computer</label>
-                        <p>Non selezionare se è un computer condiviso</p>
+                        <p>Non selezionare se Ã¨ un computer condiviso</p>
                     </div>
                 </div>
 <!-- Bottone Accedi-->
