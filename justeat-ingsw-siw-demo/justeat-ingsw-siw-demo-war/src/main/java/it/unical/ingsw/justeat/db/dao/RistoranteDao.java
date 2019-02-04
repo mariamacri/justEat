@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import it.unical.ingsw.justeat.db.model.Categoria;
+import it.unical.ingsw.justeat.db.model.Ordine;
 import it.unical.ingsw.justeat.db.model.Pietanza;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 
@@ -29,4 +30,6 @@ public interface RistoranteDao {
 	public List<Pietanza> pietanze_del_ristorante(Ristorante ristorante);
 	
 	public List<Categoria> tipo_cucina(Ristorante ristorante);
+	
+	public List<Ordine> riceve(Ristorante ristorante);
 }

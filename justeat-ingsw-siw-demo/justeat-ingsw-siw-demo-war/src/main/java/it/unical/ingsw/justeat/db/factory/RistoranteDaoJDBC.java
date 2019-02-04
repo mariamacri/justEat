@@ -9,12 +9,16 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+import it.unical.ingsw.justeat.db.dao.OrdineDao;
+import it.unical.ingsw.justeat.db.dao.PagamentoDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.dao.TitolareDao;
 import it.unical.ingsw.justeat.db.dao.UtenteDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
+import it.unical.ingsw.justeat.db.model.Ordine;
+import it.unical.ingsw.justeat.db.model.Pagamento;
 import it.unical.ingsw.justeat.db.model.Pietanza;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 import it.unical.ingsw.justeat.db.model.Titolare;
@@ -581,5 +585,57 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 		
 		
 		return categorie;
+	}
+	
+	
+	@Override
+	public List<Ordine> riceve(Ristorante ristorante) {
+		Connection connection = this.dataSource.getConnection();
+		List<Ordine> ordini  = new LinkedList<>();
+		
+		
+		try {
+			Ordine ord=null;
+			PreparedStatement statement;
+			String query = "select * from ordine where id_ordine in (select id_ordine_ricevuto from riceve, ristorante where partita_iva_ristorante_ricevente=?)";
+			statement = connection.prepareStatement(query);
+			statement.setString(1, ristorante.getPartita_Iva());
+			ResultSet result = statement.executeQuery();
+			
+			while (result.next()) {
+			
+				ord=new Ordine();
+				ord.setId_ordine(result.getInt("id_ordine"));
+				ord.setCommissioni_ordine(result.getDouble("commissioni_ordine"));
+				
+				DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+				PagamentoDao pd=factory.getPagamentoDAO();
+				Pagamento p=pd.findByPrimaryKey(result.getInt("id_pagamento_ordine"));
+				
+				ord.setPagamento(p);
+				ord.setPrezzo_totale_ordine(result.getDouble("prezzo_totale_ordine"));
+				ord.setRistorante(ristorante);
+				
+				OrdineDao od=factory.getOrdineDAO();
+				ord.setPietanze(od.comprende(ord));
+				
+				ordini.add(ord);
+			
+			}
+			
+			
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		
+		
+		
+		return ordini;
 	}
 }

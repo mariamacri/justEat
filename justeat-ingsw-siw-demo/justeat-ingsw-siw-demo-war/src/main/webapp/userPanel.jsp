@@ -138,7 +138,7 @@ prefix="c" %>
           <li class="controlList-item "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
 				 </c:if>
 			<c:if test="${ristorante==true}">
-          <li class="controlList-item "> <a href="" id="orders-nav-link">Ordini</a> </li>
+          <li class="controlList-item "> <a href="ordiniRicevuti?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
 				 </c:if>
 			
 			<c:if test="${ristorante==true}">

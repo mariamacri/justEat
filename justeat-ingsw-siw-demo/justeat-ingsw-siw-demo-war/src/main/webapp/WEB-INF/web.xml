@@ -242,4 +242,16 @@
 	</servlet-mapping>
 	
 	
+	
+	<servlet>
+		<servlet-name>RiceviOrdine</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.servlet.ordiniRicevuti</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RiceviOrdine</servlet-name>
+		<url-pattern>/ordiniRicevuti</url-pattern>
+	</servlet-mapping>
+	
+	
+	
 </web-app> 

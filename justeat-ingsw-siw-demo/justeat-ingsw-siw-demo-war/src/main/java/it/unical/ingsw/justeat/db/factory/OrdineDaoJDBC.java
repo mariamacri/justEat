@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import it.unical.ingsw.justeat.db.dao.OrdineDao;
+import it.unical.ingsw.justeat.db.dao.PietanzaDao;
 import it.unical.ingsw.justeat.db.dao.RistoranteDao;
 import it.unical.ingsw.justeat.db.factory.exception.PersistenceException;
 import it.unical.ingsw.justeat.db.model.Ordine;
@@ -169,25 +170,28 @@ public class OrdineDaoJDBC implements OrdineDao{
 
 	@Override
 public List<Pietanza> comprende(Ordine ordine) {
-		
+		DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
+		PietanzaDao pd=factory.getPietanzaDAO();
 		Connection connection = this.dataSource.getConnection();
 		List<Pietanza> pietanze  = new LinkedList<>();
 		try {
 			Pietanza pietanza=null;
 			PreparedStatement statement;
-			String query = "select nome_pietanza, prezzo_pietanza, descrizione_pietanza from pietanza where nome_pietanza in (select nome_pietanza_compresa from comprende, ordine where id_ordine_compreso=? )";
+			String query = "SELECT nome_pietanza_compresa, COUNT(*) FROM comprende GROUP BY comprende.nome_pietanza_compresa, comprende.id_ordine_compreso HAVING COUNT(*) >= 1 and comprende.id_ordine_compreso=?";
 			statement = connection.prepareStatement(query);
 			statement.setInt(1, ordine.getId_ordine());
 			
 			ResultSet result = statement.executeQuery();
 			while (result.next()) {
-				pietanza = new Pietanza();
-				pietanza.setNome(result.getString("nome_pietanza"));
+				for(int cont=0; cont<result.getInt("count"); cont++) {
+				pietanza = pd.findByPrimaryKey(result.getString("nome_pietanza_compresa"));
+				/*pietanza.setNome(result.getString("nome_pietanza_compresa"));
 				pietanza.setPrezzo(result.getDouble("prezzo_pietanza"));
-				pietanza.setDescrizione(result.getString("descrizione_pietanza"));			
+				pietanza.setDescrizione(result.getString("descrizione_pietanza"));*/			
 				
 
 				pietanze.add(pietanza);
+				}
 			}
 		} catch (SQLException e) {
 			throw new PersistenceException(e.getMessage());
@@ -366,7 +370,27 @@ public List<Pietanza> comprende(Ordine ordine) {
 	}
 	
 	
-	
+	@Override
+	public void ordine_ricevuto_da(Ordine ordine) {
+Connection connection= this.dataSource.getConnection();
+		
+		try {
+			String save = "insert into riceve(partita_iva_ristorante_ricevente, id_ordine_ricevuto) values (?,?) ";
+			PreparedStatement statement = connection.prepareStatement(save);
+			statement.setString(1, ordine.getRistorante().getPartita_Iva());
+			statement.setInt(2, ordine.getId_ordine());
+			statement.executeUpdate();
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		
+	}
 	
 
 	

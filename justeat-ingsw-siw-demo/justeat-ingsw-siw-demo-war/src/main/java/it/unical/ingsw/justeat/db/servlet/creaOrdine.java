@@ -1,6 +1,7 @@
 package it.unical.ingsw.justeat.db.servlet;
 
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -18,6 +19,7 @@ import it.unical.ingsw.justeat.db.factory.DAOFactory;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Ordine;
 import it.unical.ingsw.justeat.db.model.Pagamento;
+import it.unical.ingsw.justeat.db.model.Pietanza;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 import it.unical.ingsw.justeat.db.model.Utente;
 
@@ -68,13 +70,14 @@ public class creaOrdine extends HttpServlet{
 		
 		od.save(ordine);
 		od.ordine_contenuto_in_effettua(ordine, utente);
+		od.ordine_ricevuto_da(ordine);
+		List <Pietanza> nuovoOrdine= (List<Pietanza>) req.getSession().getAttribute("carrello");
+		ordine.setPietanze(nuovoOrdine);
 		
 		
 		
+		od.save_pietanze_comprese(ordine);
 		
-	
-		
-
 		
 		
 		List<Ordine> ordini2=od.ordini_dell_utente(utente);

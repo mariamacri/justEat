@@ -15,10 +15,11 @@ public interface OrdineDao {
 	public List<Pietanza> comprende(Ordine ordine);
 	
 	public double totale_ordine(Ordine ordine);
-	
+	public void save_pietanze_comprese(Ordine ordine);
 	public List<Ordine> findAll();
 	public List<Ordine> ordini_dell_utente(Utente utente);
 	public void ordine_contenuto_in_effettua(Ordine ordine, Utente utente);
+	public void ordine_ricevuto_da(Ordine ordine);
 	
 
 

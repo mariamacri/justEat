@@ -150,14 +150,25 @@ prefix="c" %>
 		
 		  
 	<!-- INIZIO FOR-->
-		   <c:forEach items="${ordini}" var="ordine">
+		   <c:forEach items="${ordiniRicevuti}" var="ordini">
         <a  class="mediaElement">
             <div class="listing-item-info mediaElement-content">
-                <h3 class="listing-item-title"  >Nome Ristorante: ${ordine.getRistorante().getNome_Ristorante()} </h3>
-				<p class="infoText">Spesa Totale: €${ordine.getTot()} </p>
+                <h3 class="listing-item-title"  >Id Ordine: ${ordini.getId_ordine()} </h3>
+				<p class="infoText">Indirizzo di consegna: ${ordini.getPagamento().getUtente().getIndirizzo_Utente()} </p>
+					<c:forEach items="${ordini.getPietanze()}" var="pietan">
+      	  				<a  class="mediaElement">
+            			<div class="listing-item-info mediaElement-content">
+						<p class="infoText">Nome: ${pietan.getNome()}      Prezzo: ${pietan.getPrezzo()}</p>
+						<p class="infoText">Descrizione: ${pietan.getDescrizione()} </p>
+						
+						</div>  
+						</a>
+			   		</c:forEach>
+				<p class="infoText">Spesa Totale: €${ordini.getTot()} </p>
+				<p class="infoText">Id pagamento: ${ordini.getPagamento().getId_pagamento()} </p>
+				
             </div>
-            <a href="feedback?partita_iva=${ordine.getRistorante().getPartita_Iva()}"><button class="btn btn--primary btn--cta" >Recensisci</button></a>
-        </a>
+</a>
 			   </c:forEach>
 		  <!-- Fine FOR-->
 		  
