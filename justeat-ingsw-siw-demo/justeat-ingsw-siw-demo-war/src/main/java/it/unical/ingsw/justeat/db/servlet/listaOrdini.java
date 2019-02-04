@@ -1,6 +1,7 @@
 package it.unical.ingsw.justeat.db.servlet;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -36,7 +37,7 @@ public class listaOrdini extends HttpServlet {
 		
 		
 		List<Ordine> ordini=rd.ordini_dell_utente(utente);
-
+		Collections.reverse(ordini);
 		
 		
 		

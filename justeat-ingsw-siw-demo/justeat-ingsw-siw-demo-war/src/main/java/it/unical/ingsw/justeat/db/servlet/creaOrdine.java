@@ -1,6 +1,7 @@
 package it.unical.ingsw.justeat.db.servlet;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -39,7 +40,7 @@ public class creaOrdine extends HttpServlet{
 		
 		List<Pagamento> pagamenti=pd.findAll();
 		if(pagamenti!=null)
-			pagamento.setId_pagamento(pagamenti.size()+2);
+			pagamento.setId_pagamento(pagamenti.size()+3);
 		else
 			pagamento.setId_pagamento(1);
 		
@@ -54,7 +55,7 @@ public class creaOrdine extends HttpServlet{
 		List<Ordine> ordini=od.findAll();
 		
 		if(ordini!=null)
-			ordine.setId_ordine(ordini.size()+1);
+			ordine.setId_ordine(ordini.size()+2);
 		else
 			ordine.setId_ordine(1);
 		
@@ -82,6 +83,7 @@ public class creaOrdine extends HttpServlet{
 		
 		
 		List<Ordine> ordini2=od.ordini_dell_utente(utente);
+		Collections.reverse(ordini2);
 
 		List <Ordine> ordiniNonArchiviati= (List<Ordine>) req.getSession().getAttribute("Nuovi");
 		if(ordiniNonArchiviati!=null)
@@ -91,7 +93,7 @@ public class creaOrdine extends HttpServlet{
 			ordiniNonArchiviati=new LinkedList<>();
 			ordiniNonArchiviati.add(ordine);
 		}
-		
+		Collections.reverse(ordiniNonArchiviati);
 		
 		req.getSession().setAttribute("ordini", ordini2);
 		

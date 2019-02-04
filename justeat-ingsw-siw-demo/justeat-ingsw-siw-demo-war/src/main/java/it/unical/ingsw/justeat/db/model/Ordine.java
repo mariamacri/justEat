@@ -92,7 +92,11 @@ public class Ordine {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		Ordine other = (Ordine) obj;
+		if (id_ordine != other.id_ordine)
+			return false;
+		return true;
+		/*if (this == obj)
 			return true;
 		if (obj == null)
 			return false;
@@ -109,15 +113,17 @@ public class Ordine {
 		} else if (!pagamento.equals(other.pagamento))
 			return false;
 		if (pietanze == null) {
+			System.out.println("A coglioneeeeeeee");
 			if (other.pietanze != null)
 				return false;
-		} else if (!pietanze.equals(other.pietanze))
-			return false;
+		} else if (!pietanze.equals(other.pietanze)) {
+			System.out.println("A coglioneeeeeeee");
+			return false;}
 		if (Double.doubleToLongBits(prezzo_totale_ordine) != Double.doubleToLongBits(other.prezzo_totale_ordine))
 			return false;
 		if (Double.doubleToLongBits(spesa_minima) != Double.doubleToLongBits(other.spesa_minima))
 			return false;
-		return true;
+		return true;*/
 	}
 	@Override
 	public String toString() {

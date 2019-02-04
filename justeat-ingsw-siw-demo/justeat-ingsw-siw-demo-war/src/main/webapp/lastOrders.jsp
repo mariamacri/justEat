@@ -135,7 +135,7 @@ prefix="c" %>
         <ul class="controlList unstyled">
          <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
           <li class="controlList-item is-active "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
-			<li class="controlList-item"> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Nuovi Ordini</a> </li>
+			<li class="controlList-item"> <a href="lastOrders.jsp" id="orders-nav-link">Nuovi Ordini</a> </li>
 			<c:if test="${ristorante==true}">
           <li class="controlList-item"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
         <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
@@ -151,7 +151,8 @@ prefix="c" %>
 		
 		  
 	<!-- INIZIO FOR-->
-		  <c:forEach items="${Nuovi}" var="ordini">
+		   <c:forEach items="${Nuovi}" var="ordini">
+			   <c:if test="${utente.getEmail_Utente() == ordini.getRistorante().getUtente_Proprietario().getEmail_Utente()}">
         <a  class="mediaElement">
             <div class="listing-item-info mediaElement-content">
                 <h3 class="listing-item-title"  >Id Ordine: ${ordini.getId_ordine()} </h3>
@@ -165,13 +166,16 @@ prefix="c" %>
 						</div>  
 						</a>
 			   		</c:forEach>
+				<div class="title-row"><a href="archiviaOrdine?id=${ordini.getId_ordine()}"><em class="fa fa-folder pull-right">Archivia</em></a></div>
 				<p class="infoText">Spesa Totale: €${ordini.getTot()} </p>
 				<p class="infoText">Id pagamento: ${ordini.getPagamento().getId_pagamento()} </p>
-				
+				 
             </div>
 </a>
+				   </c:if>
 			   </c:forEach>
 		  <!-- Fine FOR-->
+	
 		  
       </ol>
     </main>
