@@ -179,12 +179,13 @@ prefix="c" %>
   </div>
 </div>
 
+
 <!-- start: FOOTER -->
 <footer class="footer">
   <div class="container"> 
     <!-- top footer statrs -->
     <div class="row top-footer">
-      <div class="col-xs-12 col-sm-3 footer-logo-block color-gray"> <a href="#"> <img src="img/food-picky-logo.png" alt="Footer logo"> </a> <span>Consegna dell'ordine &amp; Ritira </span> </div>
+      <div class="col-xs-12 col-sm-3 footer-logo-block color-gray"> <a class="col-xs-10" href="index.jsp"> <img src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" alt="Footer logo"> </a> <span>Consegna dell'ordine &amp; Ritira </span> </div>
       <div class="col-xs-12 col-sm-2 about color-gray">
         <h5>Informazioni</h5>
         <ul>
@@ -196,24 +197,23 @@ prefix="c" %>
       <div class="col-xs-12 col-sm-2 how-it-works-links color-gray">
         <h5>Come Funziona</h5>
         <ul>
-          <li><a href="#">Inserisci la tua posizione</a> </li>
-          <li><a href="#">Scegli il Ristorante</a> </li>
-          <li><a href="#">Scegli il cibo</a> </li>
-          <li><a href="#">Paga con carta di credito</a> </li>
-          <li><a href="#">Aspetta la consegna</a> </li>
+          <li><a href="index.jsp">Inserisci la tua città</a> </li>
+          <li><a href="index.jsp">Scegli il Ristorante</a> </li>
+          <li><a href="index.jsp">Scegli il cibo</a> </li>
+          <li><a href="index.jsp">Paga con carta di credito</a> </li>
+          <li><a href="index.jsp">Aspetta la consegna</a> </li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-2 pages color-gray">
         <h5>Pagine</h5>
         <ul>
-          <li><a href="#">Pagina dei risultarti</a> </li>
-          <li><a href="#">Pagina di accesso utente</a> </li>
-          <li><a href="#">Fai un ordine</a> </li>
-          <li><a href="#">Aggiungi al carrello</a> </li>
+          <li><a href="login.jsp">Pagina di accesso utente</a> </li>
+          <li><a href="index.jsp">Fai un ordine</a> </li>
+          <li><a href="index.jsp">Aggiungi al carrello</a> </li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-3 popular-locations color-gray">
-        <h5>Popular locations</h5>
+        <h5>Città Popolari</h5>
         <ul>
           <li><a href="#">Roma</a> </li>
           <li><a href="#">Milano</a> </li>
@@ -250,7 +250,7 @@ prefix="c" %>
           </div>
           <div class="col-xs-12 col-sm-5 additional-info color-gray">
             <h5>Informazioni aggiuntive</h5>
-            <p>Unisciti alle migliaia di altri ristoranti che traggono vantaggio dall'avere i loro menu su TakeOff</p>
+            <p>Se sei un ristorante unisciti alle migliaia di altri ristoranti che traggono vantaggio dall'avere i loro menu su JustEat.</p>
           </div>
         </div>
       </div>
