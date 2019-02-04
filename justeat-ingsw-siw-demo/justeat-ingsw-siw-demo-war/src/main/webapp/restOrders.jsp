@@ -164,9 +164,10 @@ prefix="c" %>
 						</div>  
 						</a>
 			   		</c:forEach>
+				<div class="title-row">${car.getNome()}<a href="togliUnaPietanza?nome=${car.getNome()}"><em class="fa fa-folder pull-right">Archivia</em></a></div>
 				<p class="infoText">Spesa Totale: €${ordini.getTot()} </p>
 				<p class="infoText">Id pagamento: ${ordini.getPagamento().getId_pagamento()} </p>
-				
+				 
             </div>
 </a>
 			   </c:forEach>
@@ -174,6 +175,7 @@ prefix="c" %>
 		  
       </ol>
     </main>
+	
   </div>
 </div>
 
