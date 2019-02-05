@@ -116,7 +116,7 @@ prefix="c" %>
   <div class="l-container l-vPad--small">
     <ul class="breadcrumb unstyled">
       <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="index.jsp" itemprop="url" title="Vai alla pagina iniziale di JUST EAT"> <span itemprop="title">Pagina iniziale</span> </a> </li>
-      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Ordini"> <span itemprop="title">Ordini</span> </li>
+      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Ordini"> <span itemprop="title">Nuovi ordini</span> </li>
     </ul>
   </div>
 </div>
@@ -133,7 +133,7 @@ prefix="c" %>
     <aside class="sidebar g-col g-span3--mid u-showAboveMid">
       <nav>
         <ul class="controlList unstyled">
-         <li class="controlList-item is-active"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
+         <li class="controlList-item "> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
 			<c:if test="${ristorante==false}">
           <li class="controlList-item "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
 				 </c:if>
@@ -142,7 +142,7 @@ prefix="c" %>
 				 </c:if>
 			
 			<c:if test="${ristorante==true}">
-				<li class="controlList-item"> <a href="lastOrders.jsp" id="orders-nav-link">Nuovi Ordini</a> </li>
+				<li class="controlList-item is-active"> <a href="lastOrders.jsp" id="orders-nav-link">Nuovi Ordini</a> </li>
           <li class="controlList-item"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
         <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
         </c:if>
@@ -151,7 +151,7 @@ prefix="c" %>
     </aside>
 	
     <main class="g-col g-span9--mid g-span7--wide">
-      <h1 class="beta title--alternate">Ordini</h1>
+      <h1 class="beta title--alternate">Ultimi Ordini</h1>
       <p class="u-text-knockedBack u-text-soften">Qui trovi lo storico dei tuoi ordini.</p>
       <ol id="orderList" class="listing unstyled u-divider--top">
 		  

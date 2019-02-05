@@ -123,7 +123,7 @@ prefix="c" %>
   <div class="l-container l-vPad--small">
     <ul class="breadcrumb unstyled">
       <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="index.jsp" itemprop="url" title="Vai alla pagina iniziale di JUST EAT"> <span itemprop="title">Pagina iniziale</span> </a> </li>
-      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Account"> <span itemprop="title">Nuovi Ordini</span> </li>
+      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Account"> <span itemprop="title">Menù Ristorante</span> </li>
     </ul>
   </div>
 </div>
@@ -142,9 +142,9 @@ prefix="c" %>
 				 </c:if>
 			
 			<c:if test="${ristorante==true}">
-				<li class="controlList-item  is-active"> <a href="lastOrders.jsp" id="orders-nav-link">Nuovi Ordini</a> </li>
+				<li class="controlList-item "> <a href="lastOrders.jsp" id="orders-nav-link">Nuovi Ordini</a> </li>
           <li class="controlList-item"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
-        <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
+        <li class="controlList-item  is-active"> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
         </c:if>
 		  </ul>
       </nav>
