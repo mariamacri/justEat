@@ -99,8 +99,8 @@ prefix="c" %>
         <section class="hero bg-image" data-image-src="img/cibo.jpg">
             <div class="hero-inner">
                 <div class="container text-center hero-text font-white">
-                  <h1>Ordina e Mangia come un Porco! </h1>
-                    <h5 class="font-white space-xs">Cerca subito il cibo che vuoi mangiare! </h5>
+                  <h1>Benvenuto su JustEat</h1>
+                    <h5 class="font-white space-xs">Inserisci la tua città per iniziare subito la ricerca del cibo che preferisci! </h5>
                     <div class="banner-form">
                       <form class="form-inline" action="cercaRistorante" method="get">
                             <div class="form-group">
@@ -154,7 +154,7 @@ prefix="c" %>
         <section class="how-it-works">
             <div class="container">
                 <div class="text-xs-center">
-                    <h2>Easy 3 Step Order</h2>
+                    <h2>Solo 3 passi da seguire</h2>
                     <!-- 3 block sections starts -->
                     <div class="row how-it-works-solution">
                         <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col1">
@@ -168,7 +168,7 @@ prefix="c" %>
                                         </svg>
                                     </div>
                                     <h3>Scegli un Ristorante</h3>
-                                    <p>We"ve got your covered with menus from over 345 delivery restaurants online.</p>
+                                    <p>Scegli il ristorante con la categoria che più preferisci</p>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +181,7 @@ prefix="c" %>
                                     </svg>
                                 </div>
                                 <h3>Scegli un Cibo</h3>
-                                <p>We"ve got your covered with menus from over 345 delivery restaurants online.</p>
+                                <p>Puoi scegliere il cibo che più ti piace.</p>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col3">
@@ -191,7 +191,7 @@ prefix="c" %>
                                         <path d="M604.131 440.17h-19.12V333.237c0-12.512-3.776-24.787-10.78-35.173l-47.92-70.975a62.99 62.99 0 0 0-52.169-27.698h-74.28c-8.734 0-15.737 7.082-15.737 15.738v225.043h-121.65c11.567 9.992 19.514 23.92 21.796 39.658H412.53c4.563-31.238 31.475-55.396 63.972-55.396 32.498 0 59.33 24.158 63.895 55.396h63.735c4.328 0 7.869-3.541 7.869-7.869V448.04c-.001-4.327-3.541-7.87-7.87-7.87zM525.76 312.227h-98.044a7.842 7.842 0 0 1-7.868-7.869v-54.372c0-4.328 3.541-7.869 7.868-7.869h59.724c2.597 0 4.957 1.259 6.452 3.305l38.32 54.451c3.619 5.194-.079 12.354-6.452 12.354zM476.502 440.17c-27.068 0-48.943 21.953-48.943 49.021 0 26.99 21.875 48.943 48.943 48.943 26.989 0 48.943-21.953 48.943-48.943 0-27.066-21.954-49.021-48.943-49.021zm0 73.495c-13.535 0-24.472-11.016-24.472-24.471 0-13.535 10.937-24.473 24.472-24.473 13.533 0 24.472 10.938 24.472 24.473 0 13.455-10.938 24.471-24.472 24.471zM68.434 440.17c-4.328 0-7.869 3.543-7.869 7.869v23.922c0 4.328 3.541 7.869 7.869 7.869h87.971c2.282-15.738 10.229-29.666 21.718-39.658H68.434v-.002zm151.864 0c-26.989 0-48.943 21.953-48.943 49.021 0 26.99 21.954 48.943 48.943 48.943 27.068 0 48.943-21.953 48.943-48.943.001-27.066-21.874-49.021-48.943-49.021zm0 73.495c-13.534 0-24.471-11.016-24.471-24.471 0-13.535 10.937-24.473 24.471-24.473s24.472 10.938 24.472 24.473c0 13.455-10.938 24.471-24.472 24.471zm117.716-363.06h-91.198c4.485 13.298 6.846 27.54 6.846 42.255 0 74.28-60.431 134.711-134.711 134.711-13.535 0-26.675-2.045-39.029-5.744v86.949c0 4.328 3.541 7.869 7.869 7.869h265.96c4.329 0 7.869-3.541 7.869-7.869V174.211c-.001-13.062-10.545-23.606-23.606-23.606zM118.969 73.866C53.264 73.866 0 127.129 0 192.834s53.264 118.969 118.969 118.969 118.97-53.264 118.97-118.969-53.265-118.968-118.97-118.968zm0 210.864c-50.752 0-91.896-41.143-91.896-91.896s41.144-91.896 91.896-91.896c50.753 0 91.896 41.144 91.896 91.896 0 50.753-41.143 91.896-91.896 91.896zm35.097-72.488c-1.014 0-2.052-.131-3.082-.407L112.641 201.5a11.808 11.808 0 0 1-8.729-11.396v-59.015c0-6.516 5.287-11.803 11.803-11.803 6.516 0 11.803 5.287 11.803 11.803v49.971l29.614 7.983c6.294 1.698 10.02 8.177 8.322 14.469-1.421 5.264-6.185 8.73-11.388 8.73z" fill="#FFF" /> </svg>
                                 </div>
                                 <h3>Ritira o aspetta la consegna</h3>
-                                <p>Get your food delivered! And enjoy your meal! Pay online on pickup or delivery</p>
+                                <p>Non devi fare altro che aspettare la consegna o andare a ritirare.</p>
                             </div>
                         </div>
                     </div>
@@ -199,7 +199,7 @@ prefix="c" %>
                 <!-- 3 block sections ends -->
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <p class="pay-info">Pay by Cash on delivery , Card or Paypal</p>
+                        <p class="pay-info">Paga con carta o in contanti al ritiro</p>
                     </div>
                 </div>
             </div>
@@ -218,9 +218,9 @@ prefix="c" %>
                               <h4>Aggiungi il tuo Ristorante</h4>
                             </div>
                             <div class="col-xs-12 col-sm-5 join-text">
-                                <p>Join the thousands of other restaurants who benefit from having their menus on <a href="#"><strong> FoodPicky directory</strong></a> </p>
+                                <p>Entra anche tu nella lista dei nostri ristoranti</strong></a> </p>
                             </div>
-                            <div class="col-xs-12 col-sm-4 join-btn text-xs-right"><a href="#" class="btn theme-btn btn-lg">Sono un Ristorante</a></div>
+                            <div class="col-xs-12 col-sm-4 join-btn text-xs-right"><a href="restaurantRegistration.jsp" class="btn theme-btn btn-lg">Sono un Ristorante</a></div>
                         </div>
                     </div>
                 </section>
