@@ -99,7 +99,7 @@ prefix="c" %>
                <div class="container">
                   <ul>
                      <li><a href="index.jsp" class="active">Home</a></li>
-                     <li><a href="#">Registrazione</a></li>
+                     <li><a href="#">Registrazione Ristorante</a></li>
                      
                   </ul>
                </div>
@@ -122,7 +122,7 @@ prefix="c" %>
                                  </div>
                                  <div class="form-group">
                                     <label for="exampleInputEmail1">Nome Attività </label>
-                                   <input class="form-control" type="text" name="nome_attivita" placeholder="Es. Da Pino" id="example-text-input"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
+                                   <input class="form-control" type="text" name="nome_attivita" placeholder="Es. Da Pino" id="example-text-input"> 
                                  </div>
                                  <div class="form-group">
                                     <label for="exampleInputEmail1">Indirizzo E-mail</label>
@@ -136,9 +136,13 @@ prefix="c" %>
                                     <label for="exampleInputEmail1">Indirizzo Attività </label>
                                     <input class="form-control" type="text" placeholder="Via Farfalle 69" id="example-url-input" name="indirizzo"> <small class="form-text text-muted">L'indirizzo dove è situata l'attività .</small> 
                                  </div>
+								  <div class="form-group">
+                                    <label for="exampleInputEmail1">Città</label>
+                                    <input class="form-control" type="text" placeholder="Cosenza" id="example-url-input" name="citta"> <small class="form-text text-muted">La città dove è situata l'attività .</small> 
+                                 </div>
 								   <div class="form-group">
                                     <label for="exampleInputEmail1">Numero di iscrizione al registro delle imprese</label>
-                                    <input class="form-control" type="text" placeholder="Partita Iva (16 caratteri)" id="example-text-input" name="iva"> <small id="emailHelp" class="form-text text-muted"></small> 
+                                    <input class="form-control" type="text" placeholder="Partita Iva (10 caratteri)" id="example-text-input" name="iva"> <small id="emailHelp" class="form-text text-muted"></small> 
                                  </div>
 								   <div class="form-group">
                                     <label for="exampleInputEmail1">Nome del Titolare dell'attività </label>

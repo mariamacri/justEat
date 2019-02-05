@@ -28,7 +28,7 @@ prefix="c" %>
 <!-- Custom styles for this template -->
 	<link rel="stylesheet" href="css/je-67b0186d66.min.css">
 <link href="css/style.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/css/je-67b0186d66.min.css">
 
 </head>
 <!--Push backend validation errors-->
@@ -137,7 +137,7 @@ prefix="c" %>
     <aside class="sidebar g-col g-span3--mid u-showAboveMid">
       <nav>
         <ul class="controlList unstyled">
-         <li class="controlList-item is-active"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
+         <li class="controlList-item"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
 			<c:if test="${ristorante==false}">
           <li class="controlList-item "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
 				 </c:if>
@@ -147,7 +147,7 @@ prefix="c" %>
 			
 			<c:if test="${ristorante==true}">
 				<li class="controlList-item"> <a href="lastOrders.jsp" id="orders-nav-link">Nuovi Ordini</a> </li>
-          <li class="controlList-item"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
+          <li class="controlList-item  is-active"> <a href="ottieniRistorante?email=${utente.getEmail_Utente()}" id="credit-nav-link">Il mio Ristorante</a> </li>
         <li class="controlList-item "> <a id="payment-nav-link" href="pietanze?email=${utente.getEmail_Utente()}" >Menù Ristorante</a> </li></li>
         </c:if>
 		  </ul>

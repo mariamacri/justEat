@@ -99,8 +99,8 @@ prefix="c" %>
                <div class="container">
                   <ul>
                      <li><a href="#" class="active">Home</a></li>
-                     <li><a href="#">Risultati Ricerca</a></li>
-                     <li>Profilo</li>
+                     <li><a href="#">Registrazione Utente</a></li>
+                    
                   </ul>
                </div>
             </div>
@@ -123,11 +123,11 @@ prefix="c" %>
                                     </div>
                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputEmail1">Indirizzo Email*</label>
-                                       <input name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inserisci Email"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
+                                       <input name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inserisci Email">
                                     </div>
                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputEmail1">Numero di Telefono*</label>
-                                       <input class="form-control" name="numero" type="tel" placeholder="348455555" id="example-tel-input-3"> <small class="form-text text-muted">We"ll never share your email with anyone else.</small> 
+                                       <input class="form-control" name="numero" type="tel" placeholder="348455555" id="example-tel-input-3"> 
                                     </div>
                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputPassword1">Password</label>
@@ -137,24 +137,9 @@ prefix="c" %>
                                        <label for="exampleInputPassword1">Ripeti password</label>
                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password"> 
                                     </div>
-                                    <div class="form-group col-sm-12">
-                                       <label for="exampleTextarea">Inviaci un messaggio</label>
-                                       <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                                    </div>
-                                 </div>
-                                 <div class="row">
-                                    <div class="form-group col-sm-6">
-                                       <div class="btn-group" data-toggle="buttons">
-                                          <label class="btn btn-secondary">
-                                          <input type="radio" name="options" id="option1" checked> Business </label>
-                                          <label class="btn btn-secondary">
-                                          <input type="radio" name="options" id="option2">
-Cliente</label>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="row">
-                                    <div class="col-sm-4">
+</div>
+<div class="row">
+                     <div class="col-sm-4">
 										<p> <button type="submit" class="btn theme-btn">Registrati</button> </p>
                                     </div>
                                  </div>
@@ -166,7 +151,7 @@ Cliente</label>
                      </div>
                      <!-- WHY? -->
                      <div class="col-md-4">
-                        <h4>La Registrazione Ã¨ facile, veloce e gratis</h4>
+                        <h4>La Registrazione è facile, veloce e gratis</h4>
                         <p>Una volta registrato potrai:</p>
                         <hr>
                         <img src="img/Local.png" alt="" class="img-fluid">

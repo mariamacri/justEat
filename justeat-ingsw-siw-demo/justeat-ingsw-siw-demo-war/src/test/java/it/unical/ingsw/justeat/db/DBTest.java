@@ -5,8 +5,8 @@ import java.sql.ResultSet;
 
 import org.junit.Test;
 
-import it.unical.ingsw.justeat.db.factory.DAOFactory;
-import it.unical.ingsw.justeat.db.factory.PostgresDAOFactory;
+import it.unical.ingsw.justeat.db.persistence.DAOFactory;
+import it.unical.ingsw.justeat.db.persistence.PostgresDAOFactory;
 
 public class DBTest {
 

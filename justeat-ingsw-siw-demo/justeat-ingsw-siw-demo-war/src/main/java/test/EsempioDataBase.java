@@ -7,20 +7,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import it.unical.ingsw.justeat.db.dao.CartaDiCreditoDao;
-import it.unical.ingsw.justeat.db.dao.CategoriaDao;
-import it.unical.ingsw.justeat.db.dao.FeedbackDao;
-import it.unical.ingsw.justeat.db.dao.GiornoAttivitaDao;
-import it.unical.ingsw.justeat.db.dao.MenuDao;
-import it.unical.ingsw.justeat.db.dao.OrdineDao;
-import it.unical.ingsw.justeat.db.dao.PagamentoDao;
-import it.unical.ingsw.justeat.db.dao.PietanzaDao;
-import it.unical.ingsw.justeat.db.dao.RistoranteDao;
-import it.unical.ingsw.justeat.db.dao.TitolareDao;
-import it.unical.ingsw.justeat.db.dao.UtenteDao;
-import it.unical.ingsw.justeat.db.factory.DAOFactory;
-import it.unical.ingsw.justeat.db.factory.DataSource;
-import it.unical.ingsw.justeat.db.factory.UtilDao;
 import it.unical.ingsw.justeat.db.model.CartaDiCredito;
 import it.unical.ingsw.justeat.db.model.Categoria;
 import it.unical.ingsw.justeat.db.model.Feedback;
@@ -31,6 +17,20 @@ import it.unical.ingsw.justeat.db.model.Pietanza;
 import it.unical.ingsw.justeat.db.model.Ristorante;
 import it.unical.ingsw.justeat.db.model.Titolare;
 import it.unical.ingsw.justeat.db.model.Utente;
+import it.unical.ingsw.justeat.db.persistence.DAOFactory;
+import it.unical.ingsw.justeat.db.persistence.DataSource;
+import it.unical.ingsw.justeat.db.persistence.UtilDao;
+import it.unical.ingsw.justeat.db.persistence.dao.CartaDiCreditoDao;
+import it.unical.ingsw.justeat.db.persistence.dao.CategoriaDao;
+import it.unical.ingsw.justeat.db.persistence.dao.FeedbackDao;
+import it.unical.ingsw.justeat.db.persistence.dao.GiornoAttivitaDao;
+import it.unical.ingsw.justeat.db.persistence.dao.MenuDao;
+import it.unical.ingsw.justeat.db.persistence.dao.OrdineDao;
+import it.unical.ingsw.justeat.db.persistence.dao.PagamentoDao;
+import it.unical.ingsw.justeat.db.persistence.dao.PietanzaDao;
+import it.unical.ingsw.justeat.db.persistence.dao.RistoranteDao;
+import it.unical.ingsw.justeat.db.persistence.dao.TitolareDao;
+import it.unical.ingsw.justeat.db.persistence.dao.UtenteDao;
 
 public class EsempioDataBase {
 

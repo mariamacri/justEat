@@ -13,7 +13,7 @@
 
       <servlet>
   <servlet-name>RegistrazioneUtente</servlet-name>
-    <servlet-class>it.unical.ingsw.justeat.db.servlet.registrazioneUtente</servlet-class>
+    <servlet-class>it.unical.ingsw.justeat.db.controller.registrazioneUtente</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RegistrazioneUtente</servlet-name>
@@ -24,7 +24,7 @@
   
      <servlet>
   <servlet-name>EliminaPietanza</servlet-name>
-    <servlet-class>it.unical.ingsw.justeat.db.servlet.eliminaPietanza</servlet-class>
+    <servlet-class>it.unical.ingsw.justeat.db.controller.eliminaPietanza</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>EliminaPietanza</servlet-name>
@@ -33,7 +33,7 @@
 
         <servlet>
   <servlet-name>RicercaRistorante</servlet-name>
-    <servlet-class>it.unical.ingsw.justeat.db.servlet.CercaRistorante</servlet-class>
+    <servlet-class>it.unical.ingsw.justeat.db.controller.CercaRistorante</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RicercaRistorante</servlet-name>
@@ -46,7 +46,7 @@
 
 	<servlet>
 		<servlet-name>InserisciPietanza</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.MettiPietanza</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.MettiPietanza</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>InserisciPietanza</servlet-name>
@@ -55,7 +55,7 @@
 
 	<servlet>
 		<servlet-name>Credenziali</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.CredenzialiLogin</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.CredenzialiLogin</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Credenziali</servlet-name>
@@ -63,7 +63,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>FaiLogin</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.Login</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.Login</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>FaiLogin</servlet-name>
@@ -71,7 +71,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>HomeServlet</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.Home</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.Home</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>HomeServlet</servlet-name>
@@ -79,7 +79,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>ioSono</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.cosaSono</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.cosaSono</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ioSono</servlet-name>
@@ -88,7 +88,7 @@
 
 	<servlet>
 		<servlet-name>ModificaDati</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.modificaDati</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.modificaDati</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ModificaDati</servlet-name>
@@ -98,7 +98,7 @@
 
 	<servlet>
 		<servlet-name>ModificaPassword</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.modificaPassword</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.modificaPassword</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ModificaPassword</servlet-name>
@@ -108,7 +108,7 @@
 
 	<servlet>
 		<servlet-name>ModificaCarta</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.modificaCarta</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.modificaCarta</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ModificaCarta</servlet-name>
@@ -118,7 +118,7 @@
 
 	<servlet>
 		<servlet-name>ListaPietanze</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.listaPietanze</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.listaPietanze</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ListaPietanze</servlet-name>
@@ -127,7 +127,7 @@
 
 	<servlet>
 		<servlet-name>RegistrazioneRistorante</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.registrazioneRistorante</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.registrazioneRistorante</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>RegistrazioneRistorante</servlet-name>
@@ -138,7 +138,7 @@
 
 	<servlet>
 		<servlet-name>ModificaDatiRistorante</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.modificaDatiRistorante</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.modificaDatiRistorante</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ModificaDatiRistorante</servlet-name>
@@ -148,7 +148,7 @@
 
 <servlet>
 		<servlet-name>OttieniRistorante</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.ottieniRistorante</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.ottieniRistorante</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>OttieniRistorante</servlet-name>
@@ -158,7 +158,7 @@
 	
 	<servlet>
 		<servlet-name>CarrelloTemp</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.CarrelloTemporaneo</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.CarrelloTemporaneo</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>CarrelloTemp</servlet-name>
@@ -167,7 +167,7 @@
 
 	<servlet>
 		<servlet-name>ListaPietanzeProfile</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.listaPietanzeProfilo</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.listaPietanzeProfilo</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ListaPietanzeProfile</servlet-name>
@@ -176,7 +176,7 @@
 	
 		<servlet>
 		<servlet-name>AggiungiPietanzaCarrello</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.AggiungiAlCarrelloTemp</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.AggiungiAlCarrelloTemp</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>AggiungiPietanzaCarrello</servlet-name>
@@ -185,7 +185,7 @@
 
 	<servlet>
 		<servlet-name>ListaOrdiniUtente</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.listaOrdini</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.listaOrdini</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ListaOrdiniUtente</servlet-name>
@@ -195,7 +195,7 @@
 	
 		<servlet>
 		<servlet-name>TogliPietanza</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.togliUnaPietanza</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.togliUnaPietanza</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>TogliPietanza</servlet-name>
@@ -204,7 +204,7 @@
 	
 	<servlet>
 		<servlet-name>ConfermaOrdine</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.ConfermaOrdine</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.ConfermaOrdine</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ConfermaOrdine</servlet-name>
@@ -213,7 +213,7 @@
 	
 	<servlet>
 		<servlet-name>daifeedback</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.salvaFeedback</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.salvaFeedback</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>daifeedback</servlet-name>
@@ -223,7 +223,7 @@
 	
 	<servlet>
 		<servlet-name>Feedback</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.feedback</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.feedback</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Feedback</servlet-name>
@@ -234,7 +234,7 @@
 	
 	<servlet>
 		<servlet-name>creaOrdine</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.creaOrdine</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.creaOrdine</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>creaOrdine</servlet-name>
@@ -245,7 +245,7 @@
 	
 	<servlet>
 		<servlet-name>RiceviOrdine</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.ordiniRicevuti</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.ordiniRicevuti</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>RiceviOrdine</servlet-name>
@@ -256,7 +256,7 @@
 	
 	<servlet>
 		<servlet-name>ArchiviaOrdine</servlet-name>
-		<servlet-class>it.unical.ingsw.justeat.db.servlet.archivia</servlet-class>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.archivia</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ArchiviaOrdine</servlet-name>

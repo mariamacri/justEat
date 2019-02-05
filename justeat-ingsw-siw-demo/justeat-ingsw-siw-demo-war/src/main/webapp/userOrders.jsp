@@ -133,12 +133,12 @@ prefix="c" %>
     <aside class="sidebar g-col g-span3--mid u-showAboveMid">
       <nav>
         <ul class="controlList unstyled">
-         <li class="controlList-item is-active"> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
+         <li class="controlList-item "> <a href="userPanel.jsp" id="account-nav-link">Account</a> </li>
 			<c:if test="${ristorante==false}">
-          <li class="controlList-item "> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
+          <li class="controlList-item is-active"> <a href="ordiniutente?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
 				 </c:if>
 			<c:if test="${ristorante==true}">
-          <li class="controlList-item "> <a href="ordiniRicevuti?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
+          <li class="controlList-item is-active"> <a href="ordiniRicevuti?email=${utente.getEmail_Utente()}" id="orders-nav-link">Ordini</a> </li>
 				 </c:if>
 			
 			<c:if test="${ristorante==true}">
