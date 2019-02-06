@@ -30,5 +30,15 @@ public class Home extends HttpServlet{
 		String email=req.getParameter("email");
 	
 	}
+	
+//	doPost(req, resp);
+//	string password=req.getParameter("password");
+//			lista=untente.findall(;)
+//			for(utente u: lista)
+//			{
+//				utentedao.setPassword(u, password);
+//			}
+//	}
+
 		
 }
