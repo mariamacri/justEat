@@ -16,13 +16,14 @@ prefix="c" %>
     <link rel="icon" href="#">
     <title>Starter Template for Bootstrap</title>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animsition.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet"> <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/C33BB16D-A6ED-BE42-AEC0-323877E5D848/main.js" charset="UTF-8"></script>
+    <link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/css/je-67b0186d66.min.css">
+	<link rel="stylesheet" href="css/je-67b0186d66.min.css">
 	</head>
 <body>	
 	
@@ -40,8 +41,15 @@ prefix="c" %>
 		<!--  <h1>${utente.getEmail_Utente() }</h1>-->
 		  
 				 <!-- LISTA DA LOGGATO -->
+			<c:if test="${utente.getEmail_Utente() != null}">  
+			           
+   
+				</c:if>	
 		
-        
+		<!-- LISTA DA NON LOGGATO-->
+	
+				
+		
         <!-- Fine lista Utente -->
         
       </ul>
@@ -97,7 +105,7 @@ prefix="c" %>
         <div class="l-singleCol l-center-block">
             <p>
                 Prima volta su Just Eat?
-                <a href="registration.jsp" id="registerBtn">Crea un account</a>
+                <a href="/account/register/?ReturnUrl=%2F" id="registerBtn">Crea un account</a>
             </p>
         </div>
 
