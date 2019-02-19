@@ -80,7 +80,7 @@ prefix="c" %>
         <div class="l-singleCol l-center-block">
             <p>
                 Prima volta su Just Eat?
-                <a href="/account/register/?ReturnUrl=%2F" id="registerBtn">Crea un account</a>
+                <a href="registration.jsp" id="registerBtn">Crea un account</a>
             </p>
         </div>
 
