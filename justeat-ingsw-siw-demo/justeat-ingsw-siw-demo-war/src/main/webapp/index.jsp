@@ -30,6 +30,13 @@ prefix="c" %>
             <!-- .navbar -->
 <nav class="navbar navbar-dark">
   <div class="container">
+	 
+	  <div id="prova" data-prodnumber="${utente}">
+	     <td><input type="button" value="Calcola ISEE" onclick="mostraScuola();" ></<input></td>
+		  
+		  
+	  </div>
+	
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
     <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="30"> </a>
     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
@@ -321,6 +328,7 @@ prefix="c" %>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/headroom.js"></script>
     <script src="js/foodpicky.min.js"></script>
+    <script src="js/test.js"></script>
 </body>
 
 </html>

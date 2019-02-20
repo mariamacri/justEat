@@ -75,7 +75,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>HomeServlet</servlet-name>
-		<url-pattern>/ciao</url-pattern>
+		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>ioSono</servlet-name>

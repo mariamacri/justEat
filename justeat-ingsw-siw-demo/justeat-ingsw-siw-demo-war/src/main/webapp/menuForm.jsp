@@ -64,7 +64,7 @@ prefix="c" %>
 			           
         <li class="nav-item dropdown"> 
 				
-			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="doLogin?logout=true" role="button" aria-haspopup="true" aria-expanded="false">Ciao, ${utente.getNome_Utente()}
+			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="doLogin?logout=true" role="button" aria-haspopup="true" aria-expanded="false" >Ciao, ${utente.getNome_Utente()}
 			<svg width="20" height="22" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg" class="icon-profile">
             <path d="M2.67 11.33V9a.33.33 0 0 1 .66 0v2.67c0 .18-.15.33-.33.33H1.67a1 1 0 0 1-1-1V9.67c0-2.6 1.8-4.34 5.33-4.34 3.53 0 5.33 1.74 5.33 4.34V11a1 1 0 0 1-1 1H9a.33.33 0 0 1-.33-.33V9a.33.33 0 1 1 .66 0v2.33h1c.19 0 .34-.15.34-.33V9.67C10.67 7.44 9.17 6 6 6S1.33 7.44 1.33 9.67V110 .18.15.33.34.33h1zm3.33-6c1.09 0 2-1.02 2-2.33C8 1.7 7.09.67 6 .67 4.91.67 4 1.69 4 3c0 1.3.91 2.33 2 2.33zM6 6C4.53 6 3.33 4.66 3.33 3S4.53 0 6 0s2.67 1.34 2.67 3S7.47 6 6 6zm2.67 3.67a.33.33 0 1 1 .66 0v2c0 .09-.03.17-.1.23-.12.12-.37.28-.8.42-.65.22-1.56.35-2.76.35-.92 0-1.65-.14-2.21-.36-.36-.14-.58-.3-.7-.4a.33.33 0 0 1-.1-.24v-2a.33.33 0 1 1 .67 0v1.84a5.33 5.33 0 0 0 2.33.5c1.14-.01 1.98-.13 2.57-.33.2-.07.35-.13.44-.18V9.67z" fill="#266ABD"></path>  </a>
           </svg>
@@ -156,10 +156,15 @@ prefix="c" %>
 		</div>
        
 		
+		
+		
+		
+		
 		   <!-- FOR PIETANZE INIZIO -->
 		
 		<c:forEach items="${pietanze}" var="pasto">
 <div class="food-item">
+<p class="hello">Hello</p>
                               <div class="row">
                                  <div class="col-xs-12 col-sm-12 col-lg-8">
                                  <!--   <div class="rest-logo pull-left">
@@ -167,14 +172,17 @@ prefix="c" %>
                                     </div>
                                     <!-- end:Logo -->
                                     <div class="rest-descr">
-														   <h5><a href="#">${pasto.getNome()}</a></h5>
+														   <h5><a href="${pasto.getNome()}" id="nome" >${pasto.getNome()}</a></h5>
                                        <h8><a href="#">${pasto.getDescrizione()}</a></h8>
                                     </div>
                                     <!-- end:Description -->
                                  </div>
                                  <!-- end:col -->
                                  <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left"><a href="#">Prezzo: € ${pasto.getPrezzo()}</a></span>
-									  <li class="controlList-item "> <a id="payment-nav-link" href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" >&#45 elimina</a> </li></li>
+									  <li class="controlList-item " > <!--<a id="payment-nav-link" href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" onClick="">&#45 elimina</a>-->
+										
+									 <input id="payment-nav-link" type="button" value="&#45 elimina" onClick="piet=new pietanza('${pasto.getNome()}',${pasto.getPrezzo()},'${pasto.getDescrizione()}'); eliminaPietanza(piet);"></input>
+									 </li>
 							    <!-- <a href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal" >&#45;</a> </div> -->
                               </div>
                               <!-- end:row -->
@@ -279,5 +287,6 @@ prefix="c" %>
 <script src="js/jquery.isotope.min.js"></script> 
 <script src="js/headroom.js"></script> 
 <script src="js/foodpicky.min.js"></script>
+	<script src="js/eliminaPietanza.js"></script>
 </body>
 </html>
