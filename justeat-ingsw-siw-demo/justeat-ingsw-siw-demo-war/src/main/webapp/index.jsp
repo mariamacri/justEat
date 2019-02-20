@@ -12,18 +12,20 @@ prefix="c" %>
 </head>
 
 
-<body class="home" onload="checkCookie();">
+<body class="home" onLoad="checkCookie(); ">
+
+
     <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
         <!--header starts-->
-		
-        <header id="header" class="header-scroll top-header headrom">
+		 
+    <header id="header" class="header-scroll top-header headrom">
 
 			
+
          <%@ include file="include/navbar.jsp" %>
          
          <!-- .navbar end -->
-         	
-	
+
         </header>
          
         <!-- banner part starts -->
@@ -171,8 +173,8 @@ prefix="c" %>
    
 
 <%@ include file="include/script.jsp" %>
- <script src="js/cookie.js"></script>
  <script src="js/test.js"></script>
+  <script src="js/cookie.js"></script>
 
 </body>
 

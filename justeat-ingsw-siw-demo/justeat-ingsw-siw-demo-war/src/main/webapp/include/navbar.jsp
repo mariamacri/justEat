@@ -1,6 +1,5 @@
-
-            <!-- .navbar -->
 <nav class="navbar navbar-dark">
+      
   <div class="container">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
     <a class="navbar-brand" href="index.jsp"> <img alt="" src="https://d3fpaxu9zxkgws.cloudfront.net/assets/dist/img/logos/je-logo-v2.svg" width="152" height="30"> </a>
@@ -25,7 +24,7 @@
 				
 			    <div class="dropdown-menu"> 
 			  <a class="dropdown-item" data-test-id="accountInfo" href="what?email=${utente.getEmail_Utente()}" id="account-nav-link">Area Utente</a>
-			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" name="logout" href="doLogin?logout=true">Esci</a>
+			  <a class="dropdown-item" data-gtm="header|click - navigation|logout" data-js-id="logout" data-test-id="logout" name="logout" href="doLogin?logout=true" onClick="deleteCookie()">Esci</a>
 			</div>
 				
         </li>
@@ -62,5 +61,7 @@
       </ul>
     </div>
   </div>
-</nav>
-<!-- /.navbar -->
+         	
+	</nav>
+
+  <script src="js/cookie.js"></script>
