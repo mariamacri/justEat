@@ -34,7 +34,7 @@ public class cookieservlet extends HttpServlet{
 			jsonReceived = jsonReceived + line + "\n";
 			line = reader.readLine();
 		}
-		// System.out.println(jsonReceived);
+//		System.out.println(jsonReceived);
 		String p= jsonReceived.replace("\n", "");
 		
 		try {
@@ -42,17 +42,16 @@ public class cookieservlet extends HttpServlet{
 			
 			
 			Utente u=uDao.findByPrimaryKey(p);
-			System.out.println(u.toString());
+//			System.out.println(u.toString());
 			req.getSession().setAttribute("utente", u);
-			
-			
+			RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+			rd.forward(req, resp);
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
-		rd.forward(req, resp);
+	
 	}
 
 	@Override

@@ -1,9 +1,7 @@
-//checkCookie();
 
 function checkbox(){
 
 	var x = document.getElementById("RememberMe").checked;	
-	alert(x);
 	if(x==true){
 	setCookie();
 	}
@@ -39,6 +37,7 @@ function getCookie(cname)
 
 function checkCookie()
 {
+
     var user = getCookie("email");
     if (user != "")
     {
@@ -48,8 +47,7 @@ function checkCookie()
 		   datatype: "text",
 		   data: user,
 		   success: function(){
-			   alert("Bentornato " +user);
-			   
+			 
 		   }  
 	   });
 			
@@ -59,6 +57,6 @@ function checkCookie()
 
 function deleteCookie()
 {
-	
+	 document.cookie = "email" + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
