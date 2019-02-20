@@ -28,7 +28,9 @@ prefix="c" %>
 <!-- End Google Tag Manager -->
 
 <div class="skipTo"> <a class="is-visuallyHidden focusable u-text-marker" href="#skipToMain">Vai al contenuto principale</a> </div>
+
 <header class="header">
+
 
              <!-- .navbar -->
     <%@ include file="include/navbar.jsp" %>
@@ -65,10 +67,16 @@ prefix="c" %>
 		</div>
        
 		
+		
+		
+		
+		
 		   <!-- FOR PIETANZE INIZIO -->
 		
 		<c:forEach items="${pietanze}" var="pasto">
-<div class="food-item">
+
+			<div class="food-item" id="${pasto.getNome()}">
+
                               <div class="row">
                                  <div class="col-xs-12 col-sm-12 col-lg-8">
                                  <!--   <div class="rest-logo pull-left">
@@ -76,14 +84,17 @@ prefix="c" %>
                                     </div>
                                     <!-- end:Logo -->
                                     <div class="rest-descr">
-														   <h5><a href="#">${pasto.getNome()}</a></h5>
+														   <h5><a href="${pasto.getNome()}" id="nome" >${pasto.getNome()}</a></h5>
                                        <h8><a href="#">${pasto.getDescrizione()}</a></h8>
                                     </div>
                                     <!-- end:Description -->
                                  </div>
                                  <!-- end:col -->
                                  <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left"><a href="#">Prezzo: € ${pasto.getPrezzo()}</a></span>
-									  <li class="controlList-item "> <a id="payment-nav-link" href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" >&#45 elimina</a> </li></li>
+									  <li class="controlList-item " > <!--<a id="payment-nav-link" href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" onClick="">&#45 elimina</a>-->
+										
+									 <input id="payment-nav-link" type="button" value="&#45 elimina" onClick="piet=new pietanza('${pasto.getNome()}',${pasto.getPrezzo()},'${pasto.getDescrizione()}'); eliminaPietanza(piet);"></input>
+									 </li>
 							    <!-- <a href="eliminapietanza?email=${utente.getEmail_Utente()}&nome=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" data-toggle="modal" data-target="#order-modal" >&#45;</a> </div> -->
                               </div>
                               <!-- end:row -->
@@ -94,6 +105,7 @@ prefix="c" %>
 		
     </main>
   </div>
+	
 </div>
 
 
@@ -105,6 +117,8 @@ prefix="c" %>
 <!--/end:Site wrapper --> 
 <!-- Bootstrap core JavaScript
     ================================================== --> 
+
+	<script src="js/eliminaPietanza.js"></script>
     <%@ include file="include/script.jsp" %>
 </body>
 </html>

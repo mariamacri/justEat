@@ -17,7 +17,7 @@ prefix="c" %>
         <!--header starts-->
         <header id="header" class="header-scroll top-header headrom">
 			
-        <!-- .navbar -->
+
         
          <%@ include file="include/navbar.jsp" %>
          
@@ -167,8 +167,13 @@ prefix="c" %>
     <!--/end:Site wrapper -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
+
+   
+
 <%@ include file="include/script.jsp" %>
-	  <script src="js/cookie.js"></script>
+ <script src="js/cookie.js"></script>
+ <script src="js/test.js"></script>
+
 </body>
 
 </html>
