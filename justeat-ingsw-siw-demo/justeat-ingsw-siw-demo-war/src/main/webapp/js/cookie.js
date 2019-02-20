@@ -1,4 +1,4 @@
-checkCookie();
+//checkCookie();
 
 function checkbox(){
 
@@ -42,19 +42,23 @@ function checkCookie()
     var user = getCookie("email");
     if (user != "")
     {
-		alert(user);
        $.ajax({
-		  type: "GET",
+		  type: "POST",
 		   url: "cookieservlet",
-		   datatype: JSON.stringfy(user),
+		   datatype: "text",
+		   data: user,
 		   success: function(){
-			   alert("loggato");
+			   alert("Bentornato " +user);
 			   
-		   }
-		   
-		   
+		   }  
 	   });
 			
     }
 	
 }
+
+function deleteCookie()
+{
+	
+}
+

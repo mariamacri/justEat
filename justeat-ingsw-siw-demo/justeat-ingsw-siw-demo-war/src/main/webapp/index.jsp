@@ -12,13 +12,13 @@ prefix="c" %>
 </head>
 
 
-<body class="home">
+<body class="home" onload="checkCookie();">
     <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
         <!--header starts-->
+		
         <header id="header" class="header-scroll top-header headrom">
-			
 
-        
+			
          <%@ include file="include/navbar.jsp" %>
          
          <!-- .navbar end -->

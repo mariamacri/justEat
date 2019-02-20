@@ -264,11 +264,11 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>cookieservlet</servlet-name>
+		<servlet-name>Cookieservlet</servlet-name>
 		<servlet-class>it.unical.ingsw.justeat.db.controller.cookieservlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>cookieservlet</servlet-name>
+		<servlet-name>Cookieservlet</servlet-name>
 		<url-pattern>/cookieservlet</url-pattern>
 	</servlet-mapping>
 	

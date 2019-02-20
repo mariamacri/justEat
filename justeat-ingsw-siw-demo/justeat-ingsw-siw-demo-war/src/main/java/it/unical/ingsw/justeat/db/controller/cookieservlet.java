@@ -23,7 +23,6 @@ public class cookieservlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtenteDao uDao = factory.getUtenteDAO();
 		
@@ -35,23 +34,30 @@ public class cookieservlet extends HttpServlet{
 			jsonReceived = jsonReceived + line + "\n";
 			line = reader.readLine();
 		}
-		System.out.println("jsonReceived"+jsonReceived);
+		// System.out.println(jsonReceived);
+		String p= jsonReceived.replace("\n", "");
 		
 		try {
-			JSONObject json = new JSONObject(jsonReceived);
-			Utente utente = new Utente();
-			utente.setEmail_Utente(json.getString("email"));
 			
-			Utente u=uDao.findByPrimaryKey(utente.getEmail_Utente());
+			
+			
+			Utente u=uDao.findByPrimaryKey(p);
+			System.out.println(u.toString());
 			req.getSession().setAttribute("utente", u);
 			
-			RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
-			rd.forward(req, resp);
+			
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+		rd.forward(req, resp);
 	}
 
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		doGet(req, resp);
+	}
 }
