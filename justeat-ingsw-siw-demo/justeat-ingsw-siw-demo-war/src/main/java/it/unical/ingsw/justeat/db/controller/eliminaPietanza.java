@@ -59,7 +59,7 @@ public class eliminaPietanza extends HttpServlet{
 			p.setPrezzo(json.getDouble("prezzo"));
 			p.setDescrizione(json.getString("descrizione"));
 			
-			System.out.println(p.toString());
+			//System.out.println(p.toString());
 			
 			RistoranteDao rd=factory.getRistoranteDAO();
 			Ristorante r=rd.findByEmail(utente.getEmail_Utente());

@@ -18,8 +18,9 @@ function eliminaPietanza(piet){
 		datatype: "json",
 		data: JSON.stringify(p),
 		success: function (data){
-			alert("Pietanza eliminata con successo!");
-			$( "p" ).remove( ":contains('Hello')" );
+			alert("La pietanza "+ p.nome+"e' stata eliminata con successo!");
+			
+			$('#'+p.nome).remove();
 		}
 	});
 }

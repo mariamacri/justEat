@@ -74,8 +74,9 @@ prefix="c" %>
 		   <!-- FOR PIETANZE INIZIO -->
 		
 		<c:forEach items="${pietanze}" var="pasto">
-<div class="food-item">
-<p class="hello">Hello</p>
+
+			<div class="food-item" id="${pasto.getNome()}">
+
                               <div class="row">
                                  <div class="col-xs-12 col-sm-12 col-lg-8">
                                  <!--   <div class="rest-logo pull-left">
@@ -104,6 +105,7 @@ prefix="c" %>
 		
     </main>
   </div>
+	
 </div>
 
 
