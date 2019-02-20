@@ -168,6 +168,7 @@ prefix="c" %>
     <!-- Bootstrap core JavaScript
     ================================================== -->
 <%@ include file="include/script.jsp" %>
+	  <script src="js/cookie.js"></script>
 </body>
 
 </html>

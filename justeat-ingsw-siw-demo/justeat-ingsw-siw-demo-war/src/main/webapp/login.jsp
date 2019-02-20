@@ -23,10 +23,7 @@ prefix="c" %>
 		<!--  <h1>${utente.getEmail_Utente() }</h1>-->
 		  
 				 <!-- LISTA DA LOGGATO -->
-			<c:if test="${utente.getEmail_Utente() != null}">  
-			           
-   
-				</c:if>	
+		
       </ul>
     </div>
   </div>
@@ -37,7 +34,7 @@ prefix="c" %>
 <div class="u-horizontalRule">
     <main class="l-container l-pageContent l-singleCol singleBox">
 		<!-- inizio form login -->
-<form class="form" action="inviaCredenziali" method="post">            <fieldset class="form-fieldset">
+<form class="form" name="loginform" action="inviaCredenziali" method="post">            <fieldset class="form-fieldset">
                 <h1 class="beta form-title">Accedi</h1>
                 
 <div role="alert" aria-atomic="true" class="validation-summary-valid alert alert--danger" data-valmsg-summary="true" data-test-id="validationErrorSummary">
@@ -66,13 +63,14 @@ prefix="c" %>
 	<!-- Ricorda login -->
                 <div class="form-controlGroup">
                     <div class="control">
-                        <input checked="checked" data-test-id="remember" data-val="true" data-val-required="The Ricordami su questo computer field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true"><input name="RememberMe" type="hidden" value="false">
+                        <input id="RememberMe" name="RememberMe" type="checkbox">
+					
                         <label for="RememberMe">Ricordami su questo computer</label>
                         <p>Non selezionare se è un computer condiviso</p>
                     </div>
                 </div>
 <!-- Bottone Accedi-->
-                <button type="submit" data-test-id="login" class="btn btn--primary btn--block submit" autocomplete="off"><span class="is-loading-hidden">Accedi</span></button>
+                <button name="Sign" id="Sign" type="submit" data-test-id="login" class="btn btn--primary btn--block submit" autocomplete="off" onClick="checkbox()"><span class="is-loading-hidden">Accedi</span></button>
             </fieldset>
 </form>
 		<!-- CHIUSURA FORM LOGIN -->
@@ -99,5 +97,6 @@ prefix="c" %>
     <!-- Bootstrap core JavaScript
     ================================================== -->
 <%@ include file="include/script.jsp" %>
+	  <script src="js/cookie.js"></script>
 </body>
 </html>
