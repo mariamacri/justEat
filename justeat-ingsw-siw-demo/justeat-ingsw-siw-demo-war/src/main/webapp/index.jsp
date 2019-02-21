@@ -7,7 +7,9 @@
 
 <head>
 <title>Pagina di Benvenuto</title>
+
 <%@ include file="include/headindex.jsp"%>
+
 <!--INIZIO SCRIPT -->
 <script type="text/javascript"
 	src='http://maps.google.it/maps/api/js?sensor=false&libraries=places&key=AIzaSyDhQfXZBqmdmPDXZvGzHkAvUNj8kjl98Xs'></script>
@@ -15,7 +17,7 @@
 <script src="js/test.js"></script>
 <script src="js/cookie.js"></script>
 <!-- FINE SCRIPT  -->
-<title>Add a geocoder</title>
+
 <meta name='viewport'
 	content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script
@@ -27,6 +29,11 @@
 body { margin:0; padding:0; }
 #map { position:relative;  bottom:10%; width:100%; }
 </style>
+
+	
+
+ 
+
 </head>
 
 

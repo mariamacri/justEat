@@ -127,7 +127,9 @@ prefix="c" %>
                                  <!-- end:col -->
                                  <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left">Prezzo: € ${pasto.getPrezzo()} </span> 
 									 <c:if test="${utente.getEmail_Utente() != null}">
-									 <a href="AggiungiAlCarrelloTemp?nomePietanza=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" >&#43;</a> 
+									 <!--  <a href="AggiungiAlCarrelloTemp?nomePietanza=${pasto.getNome()}" class="btn btn-small btn btn-secondary pull-right" >&#43;</a>--> 
+									 
+									  <input id="payment-nav-link" type="button" value="&#43" onClick="piet=new pietanza('${pasto.getNome()}',${pasto.getPrezzo()},'${pasto.getDescrizione()}'); aggiungiPietanza(piet);"></input>
 								  	</c:if> 
 								  </div>
                               </div>
@@ -153,9 +155,9 @@ prefix="c" %>
                               <div class="clearfix"></div>
                            </div>
                            <div class="order-row bg-white">
-                              <div class="widget-body">
+                              <div class="widget-body" id="carrel">
 								  <!-- INIZIA FOR LISTA QUI -->
-								  <c:forEach items="${carrello}" var="car">
+								 <!--  <c:forEach items="${carrello}" var="car">
                                  <div class="title-row">${car.getNome()}<a href="togliUnaPietanza?nome=${car.getNome()}"><em class="fa fa-trash pull-right"></em></a></div>
 									 <div class="form-group row no-gutter">
                                     <div class="col-xs-8"> </div>
@@ -163,9 +165,9 @@ prefix="c" %>
                                        <h6>Prezzo: ${car.getPrezzo()}</h6> 
                                     </div>
                                  </div> 
-								  </c:forEach>
+								  </c:forEach> -->
 								  <!-- FINE FOR LISTA-->
-                                 
+                                  
                               </div>
                            </div>
                            <div class="order-row"> </div>
@@ -175,13 +177,16 @@ prefix="c" %>
 </form>
                            </div>
                            <div class="widget-body">
-                              <div class="price-wrap text-xs-center">
-                                 <p>Totale</p>
-                                 <h3 class="value"><strong>€ ${tot}</strong></h3>
-                                 <p>Ordine Minimo: ${ristor.getSpesa_minima()}</p>
+                              <div class="price-wrap text-xs-center" id="totaleQui">
+                                 <p id="tot">Totale</p>
+                                 <h3 class="value" id="totH3"><strong>€ </strong><strong id="strongInnerDiv">${tot}</strong></h3>
+                                 <p id="spesMin">Ordine Minimo: ${ristor.getSpesa_minima()}</p>
+								 
+								  <div>
 								  <c:if test="${utente.getEmail_Utente() != null}">
                                   <a href="confermaOrdine?partia_iva=${ristor.getPartita_Iva()}" class="btn theme-btn-dash">Paga Ora!</a> 
-									</c:if>  
+									</c:if></div>  
+									  
 									  </div>
                               </div>
                            </div>
@@ -203,6 +208,7 @@ prefix="c" %>
     <!-- Bootstrap core JavaScript
     ================================================== -->
 <%@ include file="include/script.jsp" %>
+<script src="js/Pietanza.js"></script>
 </body>
 
 </html>

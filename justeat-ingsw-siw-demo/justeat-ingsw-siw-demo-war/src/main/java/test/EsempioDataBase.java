@@ -82,6 +82,13 @@ public class EsempioDataBase {
 		DataSource dataSource = new DataSource("jdbc:postgresql://localhost:5432/justeat", "postgres", "sette77");
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
+		
+		PietanzaDao pd=factory.getPietanzaDAO();
+		Pietanza p=new Pietanza();
+		p.setNome("NUOVODB");
+		p.setPrezzo(99);
+		p.setDescrizione("NUOVODB");
+		pd.delete(p);
 		//test feedback ok
 //		 RistoranteDao ristoranteDao = factory.getRistoranteDAO();
 //		 UtenteDao utenteDao = factory.getUtenteDAO();
@@ -128,13 +135,7 @@ public class EsempioDataBase {
 		
 		
 		//prova lista ordini
-		UtenteDao ud=factory.getUtenteDAO();
-		Utente utente=ud.findByPrimaryKey("rocco@rocco.com");
-		OrdineDao rd=factory.getOrdineDAO();
-		List<Ordine> ordini=rd.ordini_dell_utente(utente);
 		
-		
-		System.out.println(ordini.toString());
 		
 //		RistoranteDao ristoranteDao=factory.getRistoranteDAO();
 //		//Ristorante r=ristoranteDao.findByPrimaryKey("123");

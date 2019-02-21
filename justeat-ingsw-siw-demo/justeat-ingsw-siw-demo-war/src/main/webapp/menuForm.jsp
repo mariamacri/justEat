@@ -118,7 +118,7 @@ prefix="c" %>
 <!-- Bootstrap core JavaScript
     ================================================== --> 
 
-	<script src="js/eliminaPietanza.js"></script>
+	<script src="js/Pietanza.js"></script>
     <%@ include file="include/script.jsp" %>
 </body>
 </html>
