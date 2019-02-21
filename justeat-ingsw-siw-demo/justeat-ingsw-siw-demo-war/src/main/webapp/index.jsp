@@ -7,9 +7,9 @@
 
 <head>
 <title>Pagina di Benvenuto</title>
-<%@ include file="include/headindex.jsp"%>
+
  <script type="text/javascript" src='http://maps.google.it/maps/api/js?sensor=false&libraries=places&key=AIzaSyDhQfXZBqmdmPDXZvGzHkAvUNj8kjl98Xs'></script>
- 
+<%@ include file="include/headindex.jsp"%>
  
 </head>
 

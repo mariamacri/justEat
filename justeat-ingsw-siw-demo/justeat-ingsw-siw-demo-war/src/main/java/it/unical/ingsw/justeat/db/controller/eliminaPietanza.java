@@ -68,14 +68,7 @@ public class eliminaPietanza extends HttpServlet{
 			pd.delete(p);
 			List<Pietanza> pietanze= rd.pietanze_del_ristorante(r);
 			req.getSession().setAttribute("pietanze", pietanze);
-//			StudenteDao sDao = DatabaseManager.getInstance().getDaoFactory().getStudenteDAO();
-//			Studente dbStudente = sDao.findByPrimaryKey(studente.getMatricola());
-//			Scuola scuola = dbStudente.getScuolaDiDiploma();
-			
-			/*JSONObject jsonPietanze = new JSONObject(pietanze);
-		
-			System.out.println(jsonPietanze);
-			resp.getWriter().println(jsonPietanze);*/
+
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
