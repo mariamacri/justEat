@@ -8,7 +8,10 @@ prefix="c" %>
 
 <head>
     <title>Pagina di Benvenuto</title>
+	
      <%@ include file="include/headindex.jsp" %>
+
+   <script type="text/javascript" src='http://maps.google.it/maps/api/js?sensor=false&libraries=places&key=AIzaSyDhQfXZBqmdmPDXZvGzHkAvUNj8kjl98Xs'></script>
 </head>
 
 
@@ -29,7 +32,7 @@ prefix="c" %>
         </header>
          
         <!-- banner part starts -->
-        <section class="hero bg-image" data-image-src="img/cibo.jpg">
+        <section class="hero bg-image" data-image-src="img/image01.jpg">
             <div class="hero-inner">
                 <div class="container text-center hero-text font-white">
                   <h1>Benvenuto su JustEat</h1>
@@ -39,7 +42,8 @@ prefix="c" %>
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
                                 <div class="form-group">
-                                  <input type="text" class="form-control form-control-lg" id="exampleInputAmount" placeholder="In che città vivi?" name="citta"> </div>
+                                  <input type="text" class="form-control form-control-lg" id="txtAddress" placeholder="In che città vivi?" name="citta"> </div>
+<input id="input" type="text" style="width:500px;" />
                             </div>
                             <button type="submit" class="btn theme-btn btn-lg">Cerca</button>
                         </form>
@@ -78,8 +82,6 @@ prefix="c" %>
         <!-- banner part ends -->
         <!-- location match part starts -->
         <div class="location-match text-xs-center">
-            <div class="container"> <span><span class="primary-color"></span> </span>
-            </div>
         </div>
         <!-- location match part ends -->
         <!-- Popular block starts -->        <!-- Popular block ends -->
@@ -162,20 +164,24 @@ prefix="c" %>
         </section>
         <!-- Featured restaurants ends -->
         <section class="app-section"> </section>
-        
+	
    <%@ include file="include/footer.jsp" %>
    
     </div>
     <!--/end:Site wrapper -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
-
    
 
 <%@ include file="include/script.jsp" %>
  <script src="js/test.js"></script>
   <script src="js/cookie.js"></script>
-
-</body>
-
+	<script>
+function init()
+{
+   var input = document.getElementById('input');
+   var autocomplete = new google.maps.places.Autocomplete(input);
+}
+google.maps.event.addDomListener(window, 'load', init);
+</script>
 </html>
