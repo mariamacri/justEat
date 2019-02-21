@@ -8,8 +8,18 @@
 <head>
 <title>Pagina di Benvenuto</title>
 
- <script type="text/javascript" src='http://maps.google.it/maps/api/js?sensor=false&libraries=places&key=AIzaSyDhQfXZBqmdmPDXZvGzHkAvUNj8kjl98Xs'></script>
 <%@ include file="include/headindex.jsp"%>
+	<!--INIZIO SCRIPT -->
+
+ <script type="text/javascript" src='http://maps.google.it/maps/api/js?sensor=false&libraries=places&key=AIzaSyDhQfXZBqmdmPDXZvGzHkAvUNj8kjl98Xs'></script>
+
+
+
+ <%@ include file="include/script.jsp" %>
+ <script src="js/test.js"></script>
+  <script src="js/cookie.js"></script>	 
+	 <!-- FINE SCRIPT  -->
+
  
 </head>
 
@@ -33,7 +43,7 @@
 		</header>
 
 		<!-- banner part starts -->
-		<section class="hero bg-image" data-image-src="img/cibo.jpg">
+		<section class="hero bg-image" data-image-src="img/image01.jpg">
 			<div class="hero-inner">
 				<div class="container text-center hero-text font-white">
 					<h1>Benvenuto su JustEat</h1>
@@ -48,8 +58,9 @@
 									<input type="text" class="form-control form-control-lg"
 										id="exampleInputAmount" placeholder="In che città vivi?"
 										name="citta">
-										<input id="input" type="text" style="width:500px;" />
+										
 								</div>
+								
 							</div>
 							<button type="submit" class="btn theme-btn btn-lg">Cerca</button>
 						</form>
@@ -192,7 +203,7 @@
 							</div>
 							<div class="col-xs-12 col-sm-5 join-text">
 								<p>
-									Entra anche tu nella lista dei nostri ristoranti</strong></a>
+									<a><strong>Entra anche tu nella lista dei nostri ristoranti</strong></a>
 								</p>
 							</div>
 							<div class="col-xs-12 col-sm-4 join-btn text-xs-right">
@@ -214,21 +225,6 @@
 	<!--/end:Site wrapper -->
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-
-
-
-	
-<%@ include file="include/script.jsp" %>
- <script src="js/test.js"></script>
-  <script src="js/cookie.js"></script>
-	<script>
-function init()
-{
-   var input = document.getElementById('input');
-   var autocomplete = new google.maps.places.Autocomplete(input);
-}
-google.maps.event.addDomListener(window, 'load', init);
-</script>
 
 </body>
 
