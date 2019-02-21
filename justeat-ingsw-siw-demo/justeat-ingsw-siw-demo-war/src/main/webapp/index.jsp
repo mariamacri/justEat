@@ -192,7 +192,7 @@
 							</div>
 							<div class="col-xs-12 col-sm-5 join-text">
 								<p>
-									Entra anche tu nella lista dei nostri ristoranti</strong></a>
+									<a><strong>Entra anche tu nella lista dei nostri ristoranti</strong></a>
 								</p>
 							</div>
 							<div class="col-xs-12 col-sm-4 join-btn text-xs-right">
