@@ -8,19 +8,31 @@
 <head>
 <title>Pagina di Benvenuto</title>
 <%@ include file="include/headindex.jsp"%>
-	<!--INIZIO SCRIPT -->
- <script type="text/javascript" src='http://maps.google.it/maps/api/js?sensor=false&libraries=places&key=AIzaSyDhQfXZBqmdmPDXZvGzHkAvUNj8kjl98Xs'></script>
- <%@ include file="include/script.jsp" %>
- <script src="js/test.js"></script>
-  <script src="js/cookie.js"></script>	 
-	 <!-- FINE SCRIPT  -->
- 
+<!--INIZIO SCRIPT -->
+<script type="text/javascript"
+	src='http://maps.google.it/maps/api/js?sensor=false&libraries=places&key=AIzaSyDhQfXZBqmdmPDXZvGzHkAvUNj8kjl98Xs'></script>
+<%@ include file="include/script.jsp"%>
+<script src="js/test.js"></script>
+<script src="js/cookie.js"></script>
+<!-- FINE SCRIPT  -->
+<title>Add a geocoder</title>
+<meta name='viewport'
+	content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script
+	src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<link
+	href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css'
+	rel='stylesheet' />
+<style>
+body { margin:0; padding:0; }
+#map { position:relative;  bottom:10%; width:100%; }
+</style>
 </head>
 
 
 
 <body class="home" onload="checkCookie();">
-	
+
 
 	<div class="site-wrapper animsition" data-animsition-in="fade-in"
 		data-animsition-out="fade-out">
@@ -52,9 +64,9 @@
 									<input type="text" class="form-control form-control-lg"
 										id="exampleInputAmount" placeholder="In che città vivi?"
 										name="citta">
-										
+
 								</div>
-								
+
 							</div>
 							<button type="submit" class="btn theme-btn btn-lg">Cerca</button>
 						</form>
@@ -197,7 +209,8 @@
 							</div>
 							<div class="col-xs-12 col-sm-5 join-text">
 								<p>
-									<a><strong>Entra anche tu nella lista dei nostri ristoranti</strong></a>
+									<a><strong>Entra anche tu nella lista dei nostri
+											ristoranti</strong></a>
 								</p>
 							</div>
 							<div class="col-xs-12 col-sm-4 join-btn text-xs-right">
@@ -212,6 +225,30 @@
 		</section>
 		<!-- Featured restaurants ends -->
 		<section class="app-section"></section>
+			<div>
+				<script
+					src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.min.js'></script>
+				<link rel='stylesheet'
+					href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.css'
+					type='text/css' />
+				<div id='map'></div>
+
+				<script>
+					mapboxgl.accessToken = 'pk.eyJ1IjoibWFyaWE5NjUiLCJhIjoiY2pzZXVwMGl1MThpeDRhbG4zczdlMzA3dyJ9.aWuhFBitnvo3ZVviybNu2A';
+					var map = new mapboxgl.Map({
+						container : 'map',
+						style : 'mapbox://styles/mapbox/streets-v9',
+						center : [ -79.4512, 43.6568 ],
+						zoom : 13
+					});
+
+					map.addControl(new MapboxGeocoder({
+						accessToken : mapboxgl.accessToken
+					}));
+				</script>
+			</div>
+
+		
 
 		<%@ include file="include/footer.jsp"%>
 
