@@ -272,5 +272,13 @@
 		<url-pattern>/cookieservlet</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>SocialLogin</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.SocialLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SocialLogin</servlet-name>
+		<url-pattern>/sociallogin</url-pattern>
+	</servlet-mapping>
 	
 </web-app> 

@@ -11,8 +11,6 @@
 
 	<!-- .navbar -->
 	<nav class="navbar navbar-dark">
-		
-		
 		<div class="container">
 			<button class="navbar-toggler hidden-lg-up" type="button"
 				data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
@@ -115,24 +113,24 @@
 		</form>
 		<!-- CHIUSURA FORM LOGIN --> <!-- APERTURA FORM FACEBOOKLOGIN -->
 
-		<form class="form" name="Facebookloginform" action="" method="post">
-			<button name="FacebookSocial" id="SignFacebook" type="submit"
-				data-test-id="facebooklogin"
-				class="btn btn--primary btn--block submit" autocomplete="off">
-				<span class="is-loading-hidden">Accedi con Facebook</span>
-			</button>
-		</form>
-
-		<!-- CHIUSURA FORM FACEBOOKLOGIN --> 
-		
-		<!-- APERTURA FORM GOOGLELOGIN -->
-		<form class="form" name="Googleloginform" action="" method="">
-			<button name="GoogleSocial" id="SignGoogle" type="submit"
-				data-test-id="googlelogin"
-				class="btn btn--primary btn--block submit" autocomplete="off">
-				<span class="is-loading-hidden">Accedi con Google</span>
-			</button>
-		</form>
+		<div class ="socialBotton">
+													<div class = "fbButton">
+														<div class="fb-login-button" add target="_blank"
+															data-max-rows="1" data-size="large"
+															data-button-type="continue_with" data-show-faces="false"
+															data-auto-logout-link="false" data-use-continue-as="false"
+															scope="public_profile,email" onlogin="checkLoginState('index.jsp');"
+															add target="_blank">
+														</div>
+													</div>
+													<div>
+														<div class="form-group row justify-content-center" role="button" onclick="getCurrPage('index.jsp')">
+															<div class="g-signin2" data-width="257" data-height="40" data-onsuccess="onSignIn"
+																	data-theme="dark">
+															</div>
+														</div>	
+													</div>
+												</div>
 		<!-- CHIUSURA FORM GOOGLELOGIN -->
 		<div class="l-singleCol l-center-block">
 			<p>
@@ -162,5 +160,13 @@
     ================================================== -->
 	<%@ include file="include/script.jsp"%>
 	<script src="js/cookie.js"></script>
+		<script src="js/googleLogin.js"></script>
+<script src="js/fbLogin.js"></script>
+		<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script src='http://connect.facebook.net/en_US/all.js'></script>
+		
+		
 </body>
 </html>
