@@ -35,7 +35,6 @@ function aggiungiPietanza(piet){
 			descrizione: piet.descrizione
 		};
 
-	
 	$.ajax({
 		type: "POST",
 		url: "AggiungiAlCarrelloTemp",
@@ -69,15 +68,22 @@ function carrello(piet){
 	var a1=document.createElement("a");
 	a1.setAttribute('id', 'a'+i);
 	
-	var em1=document.createElement("em");
+	/*var em1=document.createElement("em");
 	em1.setAttribute('class', 'fa fa-trash pull-right');
-	em1.setAttribute('id', 'em'+1);
-
+	em1.setAttribute('id', 'em'+i);*/
+	//<input id="payment-nav-link" type="button" value="&#43" onClick="piet=new pietanza('${pasto.getNome()}',${pasto.getPrezzo()},'${pasto.getDescrizione()}'); aggiungiPietanza(piet);"></input>
 	
+	var input=document.createElement("input");
+	input.setAttribute('id', 'input'+i);
+	input.setAttribute('type', 'button');
+	input.setAttribute('class', 'fa fa-trash pull-right');
+	input.setAttribute('value', 'elimina');
+	var j=Number(i)+1;
+	input.setAttribute('onCLick', "piet=new pietanza('"+ piet.nome + "',"+ piet.prezzo+ ", '" + piet.descrizione +"'); rimuoviPietanzaDalCarrello(piet, 'div"+ i +"', 'div" + j +"');");
 	
 	document.getElementById("carrel").appendChild(div1);
 	document.getElementById("div"+i).appendChild(a1);
-	document.getElementById("a"+i).appendChild(em1);
+	document.getElementById("a"+i).appendChild(input);
 	
 	
 	/*<div class="form-group row no-gutter">
@@ -108,11 +114,53 @@ function carrello(piet){
 	h6.innerHTML ="Prezzo: € "+ piet.prezzo+ ".0";
 	document.getElementById("div"+(i)).appendChild(h6);
 	
+	addTot(piet);
 	
-	var pippo=document.getElementById("strongInnerDiv");
-	var totale=Number(pippo.innerHTML);
-	var tot= totale + piet.prezzo;
-	pippo.innerHTML =tot+".0";
 	
 }
+
+function addTot(piet){
+	var pippo=document.getElementById("strongInnerDiv");
+	var totale=Number(pippo.innerHTML);
+	var prezzo=Number(piet.prezzo);
+	var tot= totale + prezzo;
+	pippo.innerHTML =tot+".0";
+}
+
+function pullTot(piet){
+	var pippo=document.getElementById("strongInnerDiv");
+	var totale=Number(pippo.innerHTML);
+	var prezzo=Number(piet.prezzo);
+	var tot= totale - prezzo;
+	pippo.innerHTML =tot+".0";
+}
+
+
+function rimuoviPietanzaDalCarrello(piet, id1, id2){
+	var p = {
+			nome : piet.nome,
+			prezzo: piet.prezzo,
+			descrizione: piet.descrizione
+		};
+	
+	$.ajax({
+		type: "POST",
+		url: "togliUnaPietanza",
+		datatype: "json",
+		data: JSON.stringify(p),
+		success: function (data){
+			alert("La pietanza "+ p.nome+" e' stata eliminata dal tuo carrello con successo!");
+			eliminaDalcarrello(p, id1, id2);
+			
+		
+		}
+	});
+}
+
+ function eliminaDalcarrello(piet, id1, id2){
+	 $('#'+id1).remove();
+	 $('#'+id2).remove();
+	 pullTot(piet);
+		
+ }
 
