@@ -6,6 +6,7 @@
 <head>
 <title>Login</title>
 <%@ include file="include/headuserzone.jsp"%>
+	<meta name="google-signin-client_id" content="896513826498-dt0g3641t1l2bb1o7jq5jrd9opeauckf.apps.googleusercontent.com.apps.googleusercontent.com">
 </head>
 <body>
 
@@ -124,7 +125,7 @@
 														</div>
 													</div>
 													<div>
-														<div class="form-group row justify-content-center" role="button" onclick="getCurrPage('index.jsp')">
+														<div class="form-group row justify-content-center" role="button" onclick="getCurrPage('login.jsp')">
 															<div class="g-signin2" data-width="257" data-height="40" data-onsuccess="onSignIn"
 																	data-theme="dark">
 															</div>
