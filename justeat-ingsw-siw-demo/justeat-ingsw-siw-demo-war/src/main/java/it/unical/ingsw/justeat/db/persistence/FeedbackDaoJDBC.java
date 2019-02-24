@@ -183,4 +183,48 @@ public class FeedbackDaoJDBC implements FeedbackDao{
 		return feedbacks;
 		
 	}
+	
+	@Override
+	public List<Feedback> findAllForRestaurant(String partita_iva) {
+		Connection connection = this.dataSource.getConnection();
+		List<Feedback> feedbacks = new LinkedList<>();
+		try {
+			Feedback feedback;
+			PreparedStatement statement;
+			String query = "select * from feedback where partita_iva_ristorante_recensito=?";
+			statement = connection.prepareStatement(query);
+			statement.setString(1,partita_iva);
+			ResultSet result = statement.executeQuery();
+			while (result.next()) {
+				feedback = new Feedback();
+				feedback.setDescrizione(result.getString("descrizione"));
+				
+				Ristorante ristorante=new Ristorante();
+				ristorante.setPartita_Iva(result.getString("partita_iva_ristorante_recensito"));
+				feedback.setRistorante_recensito(ristorante);
+				
+				Utente utente =new Utente();
+				utente.setEmail_Utente(result.getString("email_utente_recensore"));
+				feedback.setUtente_recensore(utente);
+				feedback.setNumero_stelle(result.getInt("numero_stelle"));
+				feedback.setId_feedback(result.getInt("id_feedback"));
+				
+				feedbacks.add(feedback);
+
+			}
+
+		} catch (SQLException e) {
+			throw new PersistenceException(e.getMessage());
+		} finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				throw new PersistenceException(e.getMessage());
+			}
+		}
+		return feedbacks;
+		
+	}
+	
+	
 }

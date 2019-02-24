@@ -83,17 +83,17 @@ public class EsempioDataBase {
 		DAOFactory factory = DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
 		UtilDao util = factory.getUtilDAO();
 		
-		PietanzaDao pd=factory.getPietanzaDAO();
-		Pietanza p=new Pietanza();
-		p.setNome("NUOVODB");
-		p.setPrezzo(99);
-		p.setDescrizione("NUOVODB");
-		pd.delete(p);
+//		PietanzaDao pd=factory.getPietanzaDAO();
+//		Pietanza p=new Pietanza();
+//		p.setNome("NUOVODB");
+//		p.setPrezzo(99);
+//		p.setDescrizione("NUOVODB");
+//		pd.delete(p);
 		//test feedback ok
 //		 RistoranteDao ristoranteDao = factory.getRistoranteDAO();
 //		 UtenteDao utenteDao = factory.getUtenteDAO();
-//		 FeedbackDao feedackDao=factory.getFeedbackDAO();
-//		 //mi ritorna il ristorante Riccardo
+		 FeedbackDao feedackDao=factory.getFeedbackDAO();
+		 //mi ritorna il ristorante Riccardo
 //		 Ristorante r=ristoranteDao.findByPrimaryKey("123");
 //		 Utente m=utenteDao.findByPrimaryKey("rocco@rocco.com");
 //		 Feedback f=new Feedback();
@@ -103,7 +103,9 @@ public class EsempioDataBase {
 //		 f.setRistorante_recensito(r);
 //		 f.setUtente_recensore(m);
 //		 feedackDao.save(f);
-//		 System.out.println(feedackDao.findByPrimaryKey(1));
+		 List<Feedback> tutti=feedackDao.findAllForRestaurant("1234567890");
+		 
+		 System.out.println(tutti.toString());
 		
 		
 		

@@ -85,14 +85,17 @@ prefix="c" %>
                         </div>
                        <div class="collapse in" id="popular2">
 						    <!-- inizio for -->
-              <c:forEach items="${pietanze}" var="pasto">
+              <c:forEach items="${feedbacks}" var="feedback">
 <div class="food-item">
                   <div class="row">
                     <div class="col-xs-12 col-sm-12 col-lg-8">
                                     <!-- end:Logo -->
                                     <div class="rest-descr">
-                                       <h6><a href="#">${pasto.getNome()}</a></h6>
-                                       <p> ${pasto.getDescrizione()}</p>
+                                       <h6><a href="#">${feedback.getId_feedback()}</a></h6>
+                                       <p> ${feedback.getNumero_stelle()}</p>
+                                        <p> ${feedback.getUtente_recensore().getEmail_Utente()}</p>
+                                         <p> ${feedback.getRistorante_recensito().getPartita_Iva()}</p>
+                                         <p> ${feedback.getDescrizione()}</p>
                                     </div>
                                     <!-- end:Description -->
                      </div>
