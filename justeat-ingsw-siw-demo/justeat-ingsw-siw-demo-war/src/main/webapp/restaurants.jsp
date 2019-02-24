@@ -9,6 +9,7 @@ prefix="c" %>
 <head>
     <title>Lista Ristoranti</title>
      <%@ include file="include/headindex.jsp" %>
+     <script src="js/Ristorante.js"></script>
      </head>
 
 <body>
@@ -44,36 +45,35 @@ prefix="c" %>
                                  <button class="btn btn-secondary search-btn" type="button"><i class="fa fa-search"></i></button> 
                                  </span> </div>
                                     <form>
-                                        <ul>
-                                            <li>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Pizzeria</span> </label>
-                                            </li>
-                                            <li>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Bevande</span> </label>
-                                            </li>
-                                            <li>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Fast Food</span> </label>
-                                            </li>
-                                            <li>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Italiana</span> </label>
-                                            </li>
-                                            <li>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Orientale</span> </label>
-                                            </li>
-											    <li>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Braceria</span> </label>
-                                            </li>
-											    <li>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paninoteca</span> </label>
-                                            </li>
-                                        </ul>
+                                           <label>Categoria di Cucina</label>
+      <br>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary" >
+          <input type="checkbox" value="2" name="Italiana">
+          Italiana</label>
+        <label class="btn btn-primary" >
+          <input type="checkbox" value="3" name="orientale">
+          Orientale</label>
+        <label class="btn btn-primary" >
+          <input type="checkbox" value="4" name="FastFood">
+          Fast Food</label>
+        <label class="btn btn-primary" >
+          <input type="checkbox" value="5" name="Pizzeria">
+          Pizzeria</label>
+        <label class="btn btn-primary" >
+          <input type="checkbox" value="6" name="Bevande">
+          Bevande</label>
+        <label class="btn btn-primary" >
+          <input type="checkbox" value="7" name="Braceria">
+          Braceria</label>
+        <label class="btn btn-primary" >
+          <input type="checkbox" value="8" name="Paninoteca">
+          Paninoteca</label>
+        <label class="btn btn-primary" >
+          <input type="checkbox" value="9" name="Altro">
+          Altro</label>
+      </div>
+     <input type="button" value="Nascondi, Coglione!" onClick="caricaElenco();"></input>
                                     </form>
                                     <div class="clearfix"></div>
                                 </div>
@@ -85,27 +85,28 @@ prefix="c" %>
                             </div>
 <!-- end:Pricing widget -->                          <!-- end:Widget -->
                         </div>
-                      <div class="col-xs-12 col-sm-7 col-md-7 col-lg-9">
+                      <div class="col-xs-12 col-sm-7 col-md-7 col-lg-9" id="ristorantiQUI">
 						  
 						    <!-- INIZIO FOR -->
                           <c:forEach items="${ristoranti}" var="ristor">
-<div class="bg-gray restaurant-entry">
+                         <div class="${ristor.getElencoCat()}"> 
+	<div class="bg-gray restaurant-entry" id="${ristor.getElencoCat()}">
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
                                         <div class="entry-logo">
                                             <a class="img-fluid" href="foodprofilelist?partita_iva=${ristor.getPartita_Iva()}"><img src="img/logo6.png" alt="Food logo"></a>
                                         </div>
-                                        <!-- end:Logo -->
-                                        <div class="entry-dscr">
+                                       
+                                        <div class="ristorantiQUI">
                                             <h5><a href="#">${ristor.getNome_Ristorante()}</a></h5> 
 											<p>${ristor.getIndirizzo_Ristorante()} </p>
-											<p>${ristor.getElencoCat()} </p>
+											<p class="cat">${ristor.getElencoCat()} </p>
 											
                                             <ul class="list-inline">
                                                 <li class="list-inline-item"><i class="fa fa-check"></i>Spesa Minima: € ${ristor.getSpesa_minima()}</li>
                                             </ul>
                                         </div>
-                                        <!-- end:Entry description -->
+                                        
                                     </div>
                                     <div class="col-sm-12 col-md-12 col-lg-4 text-xs-center">
                                         <div class="right-content bg-white">
@@ -113,12 +114,13 @@ prefix="c" %>
                                                 <div class="rating-block"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
                                                <a href="foodprofilelist?partita_iva=${ristor.getPartita_Iva()}" class="btn theme-btn-dash">Vedi Menù</a> </div>
                                         </div>
-                                        <!-- end:right info -->
+                                       
                                     </div>
                                 </div>
-                                <!--end:row -->
-                            </div>
-</c:forEach>
+                             
+                            </div></div>
+</c:forEach >
+  
 						     <!-- CHIUSURA FOR -->
                         
                 </div>
@@ -133,6 +135,7 @@ prefix="c" %>
     <!-- Bootstrap core JavaScript
     ================================================== -->
 <%@ include file="include/script.jsp" %>
+<script src="js/Ristorante.js"></script>
 </body>
 
 </html>

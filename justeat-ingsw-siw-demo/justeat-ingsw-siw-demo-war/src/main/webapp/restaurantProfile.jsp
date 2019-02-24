@@ -9,6 +9,7 @@ prefix="c" %>
 <head>
     <title>Menu Ristorante</title>
       <%@ include file="include/headindex.jsp" %>
+    
       </head>
       
       
@@ -157,15 +158,15 @@ prefix="c" %>
                            <div class="order-row bg-white">
                               <div class="widget-body" id="carrel">
 								  <!-- INIZIA FOR LISTA QUI -->
-								   <c:forEach items="${carrello}" var="car">
-                                 <!--<div class="title-row">${car.getNome()}<a href="togliUnaPietanza?nome=${car.getNome()}"><em class="fa fa-trash pull-right"></em></a></div>
+								<!--    <c:forEach items="${carrello}" var="car">
+                                 <div class="title-row">${car.getNome()}<a href="togliUnaPietanza?nome=${car.getNome()}"><em class="fa fa-trash pull-right"></em></a></div>
 									 <div class="form-group row no-gutter">
                                     <div class="col-xs-8"> </div>
                                     <div class="col-xs-4">
                                        <h6>Prezzo: ${car.getPrezzo()}</h6> 
                                     </div>
-                                 </div> -->
-								  </c:forEach> 
+                                 </div> 
+								  </c:forEach>  -->
 								  <!-- FINE FOR LISTA-->
                                   
                               </div>
@@ -209,6 +210,7 @@ prefix="c" %>
     ================================================== -->
 <%@ include file="include/script.jsp" %>
 <script src="js/Pietanza.js"></script>
+
 </body>
 
 </html>
