@@ -6,14 +6,9 @@
 <head>
 <title>Login</title>
 <%@ include file="include/headuserzone.jsp"%>
-<<<<<<< HEAD
+
 <meta name="google-signin-client_id"
 	content="822365688421-fas5patihtt42qo9og41stt07vp6q74g.apps.googleusercontent.com">
-
-=======
-<meta name="google-signin-client_id"
-	content="896513826498-dt0g3641t1l2bb1o7jq5jrd9opeauckf.apps.googleusercontent.com.apps.googleusercontent.com">
->>>>>>> branch 'master' of https://github.com/mariamacri/justEat.git
 </head>
 <body>
 
