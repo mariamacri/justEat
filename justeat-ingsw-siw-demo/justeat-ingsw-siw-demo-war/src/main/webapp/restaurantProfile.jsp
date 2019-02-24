@@ -44,7 +44,7 @@ prefix="c" %>
                                 <li class="nav-item"> <a class="nav-link active" href="#"><em class="fa fa-check"></em>Spesa Minima: €  ${ristor.getSpesa_minima()}</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="#"></a></li>
                                 <li class="nav-item ratings">
-                                    <a class="nav-link" href="#"> <span>
+                                    <a class="nav-link" href="feedbackList.jsp"> <span>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
