@@ -26,7 +26,6 @@ public class ritornaFeedback extends HttpServlet {
 
 		FeedbackDao feedackDao = factory.getFeedbackDAO();
 		List<Feedback> tutti = feedackDao.findAllForRestaurant(partita_iva);
-		System.out.println(tutti.toString());
 		req.getSession().setAttribute("feedbacks", tutti);
 		RequestDispatcher rde = req.getRequestDispatcher("feedbackList.jsp");
 		rde.forward(req, resp);

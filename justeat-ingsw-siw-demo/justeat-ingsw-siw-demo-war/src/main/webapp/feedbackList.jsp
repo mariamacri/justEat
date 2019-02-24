@@ -86,17 +86,86 @@ prefix="c" %>
                        <div class="collapse in" id="popular2">
 						    <!-- inizio for -->
               <c:forEach items="${feedbacks}" var="feedback">
-<div class="food-item">
+<div class="food-item">       
                   <div class="row">
                     <div class="col-xs-12 col-sm-12 col-lg-8">
                                     <!-- end:Logo -->
-                                    <div class="rest-descr">
-                                       <h6><a href="#">${feedback.getId_feedback()}</a></h6>
-                                       <p> ${feedback.getNumero_stelle()}</p>
-                                        <p> ${feedback.getUtente_recensore().getEmail_Utente()}</p>
-                                         <p> ${feedback.getRistorante_recensito().getPartita_Iva()}</p>
-                                         <p> ${feedback.getDescrizione()}</p>
-                                    </div>
+						<h3>Feedback di: ${feedback.getUtente_recensore().getEmail_Utente()} </h3>
+                                    <h5 class="listing-item-title"  >
+										     <!-- 1 STELLA-->
+										<c:if test="${feedback.getNumero_stelle() == 1}">
+										
+										<a class="nav-link" href="ritornaFeedback?partita_iva=${ristor.getPartita_Iva()}"> <span>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    </span>
+										
+										
+										</a>
+											</c:if>	
+		 <!-- 2 STELLE-->
+											<c:if test="${feedback.getNumero_stelle() == 2}">
+										
+										<a class="nav-link" href="ritornaFeedback?partita_iva=${ristor.getPartita_Iva()}"> <span>
+                                  <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    </span>
+										
+										
+										</a>
+											</c:if>	
+										 <!-- 3 STELLE-->
+											<c:if test="${feedback.getNumero_stelle() == 3}">
+										
+										<a class="nav-link" href="ritornaFeedback?partita_iva=${ristor.getPartita_Iva()}"> <span>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    </span>
+										
+										
+										</a>
+											</c:if>	
+										 <!-- 4 STELLE-->
+											<c:if test="${feedback.getNumero_stelle() == 4}">
+										
+										<a class="nav-link" href="ritornaFeedback?partita_iva=${ristor.getPartita_Iva()}"> <span>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    </span>
+										
+										
+										</a>
+											</c:if>
+										 <!-- 5 STELLE-->
+											<c:if test="${feedback.getNumero_stelle() == 5}">
+										
+										<a class="nav-link" href="ritornaFeedback?partita_iva=${ristor.getPartita_Iva()}"> <span>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    </span>
+										
+										
+										</a>
+											</c:if>	
+											
+					</h3>
+				<p class="infoText">${feedback.getDescrizione()} </p>
+                            
                                     <!-- end:Description -->
                      </div>
                      <!-- end:col -->
