@@ -83,9 +83,8 @@ public class SocialLogin extends HttpServlet {
 			session.setAttribute("nome", nome);
 			session.setAttribute("cognome", cognome);
 			session.setAttribute("loggato", email);
-			session.setAttribute("tipo", tipo);
-
-			// session.setAttribute("utente", utente);
+			session.setAttribute("tipo", tipo);		
+			session.setAttribute("utente", utente);
 		}
 
 	}
