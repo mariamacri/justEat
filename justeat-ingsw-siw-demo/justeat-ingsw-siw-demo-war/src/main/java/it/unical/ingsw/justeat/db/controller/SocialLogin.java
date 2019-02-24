@@ -86,8 +86,8 @@ public class SocialLogin extends HttpServlet {
 			session.setAttribute("tipo", tipo);
 
             session.setAttribute("utente", utente);
-            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-			rd.forward(request, response);
+           
+			
 		}
 
 	}

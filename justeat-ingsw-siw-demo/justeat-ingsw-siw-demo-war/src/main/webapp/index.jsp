@@ -20,11 +20,8 @@
 
 <meta name='viewport'
 	content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script
-	src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-<link
-	href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css'
-	rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 <style>
 body { margin:0; padding:0; }
 #map { position:relative;  bottom:10%; width:100%; }
@@ -71,10 +68,11 @@ body { margin:0; padding:0; }
 									<input type="text" class="form-control form-control-lg"
 										id="exampleInputAmount" placeholder="In che città vivi?"
 										name="citta">
-
+                                 <div id='geocoder' class='geocoder'></div>
 								</div>
 
 							</div>
+							
 							<button type="submit" class="btn theme-btn btn-lg">Cerca</button>
 						</form>
 					</div>
@@ -232,30 +230,40 @@ body { margin:0; padding:0; }
 		</section>
 		<!-- Featured restaurants ends -->
 		<section class="app-section"></section>
-			<div>
-				<script
-					src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.min.js'></script>
-				<link rel='stylesheet'
-					href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.css'
-					type='text/css' />
-				<div id='map'></div>
-
-				<script>
-					mapboxgl.accessToken = 'pk.eyJ1IjoibWFyaWE5NjUiLCJhIjoiY2pzZXVwMGl1MThpeDRhbG4zczdlMzA3dyJ9.aWuhFBitnvo3ZVviybNu2A';
-					var map = new mapboxgl.Map({
-						container : 'map',
-						style : 'mapbox://styles/mapbox/streets-v9',
-						center : [ -79.4512, 43.6568 ],
-						zoom : 13
-					});
-
-					map.addControl(new MapboxGeocoder({
-						accessToken : mapboxgl.accessToken
-					}));
-				</script>
-			</div>
-
 		
+		
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.min.js' ></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.2/mapbox-gl-geocoder.css' type='text/css' />
+<style>
+.geocoder {
+position:relative;
+z-index:1;
+width:90%;
+left:30%;
+margin-left:-25%;
+top:10px;
+}
+.mapboxgl-ctrl-geocoder { min-width:100%; }
+
+</style>
+<div id='map'></div>
+ 
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibWFyaWE5NjUiLCJhIjoiY2pzZXVwMGl1MThpeDRhbG4zczdlMzA3dyJ9.aWuhFBitnvo3ZVviybNu2A';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v9',
+center: [-79.4512, 43.6568],
+zoom: 13	
+});
+ 
+var geocoder = new MapboxGeocoder({
+accessToken: mapboxgl.accessToken
+});
+ 
+document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+</script>
+ 
 
 		<%@ include file="include/footer.jsp"%>
 

@@ -281,4 +281,13 @@
 		<url-pattern>/sociallogin</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>ritornaFeedback</servlet-name>
+		<servlet-class>it.unical.ingsw.justeat.db.controller.ritornaFeedback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ritornaFeedback</servlet-name>
+		<url-pattern>/ritornaFeedback</url-pattern>
+	</servlet-mapping>
+	
 </web-app> 

@@ -15,5 +15,5 @@ public interface FeedbackDao {
 	public void update(Feedback feedback); // Update
 
 	public void delete(Feedback feedback); // Delete
-
+	public List<Feedback> findAllForRestaurant(String partita_iva);
 }
