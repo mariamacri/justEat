@@ -38,7 +38,7 @@ public class modificaDatiRistorante extends HttpServlet {
 		String dom=req.getParameter("dom");
 		String spesa=req.getParameter("spesa");
 		Double minima=Double.parseDouble(spesa);
-		
+		String immagine=req.getParameter("imagelink");
 		
 		
 		
@@ -73,6 +73,7 @@ public class modificaDatiRistorante extends HttpServlet {
 		ristorante.setCoordinate_Bancarie_Ristorante(coordinateBancarie);
 		ristorante.setDescrizione_Ristorante(descrizione);
 		ristorante.setSpesa_minima(minima);
+		ristorante.setLink_immagine(immagine);
 		rd.update(ristorante);
 		
 		CategoriaDao cd=factory.getCategoriaDAO();

@@ -187,10 +187,12 @@ prefix="c" %>
              </div>
         </div>
 
-      <div class="form-group">
-        <label for="exampleInputFile">Carica Immagini ristorante</label>
-        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-        <small id="fileHelp" class="form-text text-muted">Queste immagini verranno pubblicate sul profilo del tuo ristorante.</small> </div>
+    <div class="form-controlGroup">
+          <label class="form-label" for="Image">Link Immagine Ristorante (inserisci il link dell'immagine del tuo ristorante)</label>
+          <div class="form-controlGroup-inputWrapper">
+            <input class="form-input form-input--icon" data-test-id="image" data-val="true" id="imagelink" name="imagelink" type="text" value="${ristor.getLink_immagine()}">
+            <span class="field-validation-valid has-error" data-valmsg-for="Phone" data-valmsg-replace="true"></span> </div>
+        </div>
       <button type="submit" class="btn btn--primary btn--block" value="${utente.getEmail_Utente()}" name="email" id="save-changes-button" data-test-id="saveButton"><span class="is-loading-hidden">Salva modifiche</span></button>
     </form>
   </main>
