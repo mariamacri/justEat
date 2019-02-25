@@ -6,7 +6,7 @@ prefix="c" %>
 
 <html lang="it">
 <head>
-<title>Resoconto Ordini</title>
+<title>Statistiche ordini</title>
 <!--Lettura Head.jsp-->
  <%@ include file="include/headuserzone.jsp" %>
 </head>
@@ -39,7 +39,7 @@ prefix="c" %>
   <div class="l-container l-vPad--small">
     <ul class="breadcrumb unstyled">
       <li class="breadcrumb-item breadcrumb-item--home" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="index.jsp" itemprop="url" title="Vai alla pagina iniziale di JUST EAT"> <span itemprop="title">Pagina iniziale</span> </a> </li>
-      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Ordini"> <span itemprop="title">Ordini</span> </li>
+      <li class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" data-test-breadcrumb="Ordini"> <span itemprop="title">Statistiche Ordini</span> </li>
     </ul>
   </div>
 </div>
@@ -58,36 +58,10 @@ prefix="c" %>
 	 <!-- Fine annello Account Laterale -->
 	
     <main class="g-col g-span9--mid g-span7--wide">
-      <h1 class="beta title--alternate">Ordini</h1>
-      <p class="u-text-knockedBack u-text-soften">Qui trovi lo storico dei tuoi ordini.</p>
-		 <p class="u-text-knockedBack u-text-soften"><a href="orderStatistic.jsp">Visualizza grafico statistico degli ordini ricevuti</a></p>
+      <h1 class="beta title--alternate">Statistiche Ordini</h1>
+      <p class="u-text-knockedBack u-text-soften">Questo grafico ti mostrerà le statistiche degli ordini ricevuti</p>
       <ol id="orderList" class="listing unstyled u-divider--top">
 		  
-		
-		  
-	<!-- INIZIO FOR-->
-		   <c:forEach items="${ordiniRicevuti}" var="ordini">
-        <a  class="mediaElement">
-            <div class="listing-item-info mediaElement-content">
-                <h3 class="listing-item-title"  >Id Ordine: ${ordini.getId_ordine()} </h3>
-				<p class="infoText">Indirizzo di consegna: ${ordini.getPagamento().getUtente().getIndirizzo_Utente()} </p>
-					<c:forEach items="${ordini.getPietanze()}" var="pietan">
-      	  				<a  class="mediaElement">
-            			<div class="listing-item-info mediaElement-content">
-						<p class="infoText">Nome: ${pietan.getNome()}      Prezzo: ${pietan.getPrezzo()}</p>
-						<p class="infoText">Descrizione: ${pietan.getDescrizione()} </p>
-						
-						</div>  
-						</a>
-			   		</c:forEach>
-				
-				<p class="infoText">Spesa Totale: €${ordini.getTot()} </p>
-				<p class="infoText">Id pagamento: ${ordini.getPagamento().getId_pagamento()} </p>
-				 
-            </div>
-</a>
-			   </c:forEach>
-		  <!-- Fine FOR-->
 		  
       </ol>
     </main>

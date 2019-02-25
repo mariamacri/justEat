@@ -66,7 +66,7 @@ public class SocialLogin extends HttpServlet {
 				alternativeUser.setNumero_telefono_utente(123);
 				alternativeUser.setPassword("123");
 				dao.save(alternativeUser);
-				// session.setAttribute("utente", utente);
+//				session.setAttribute("utente", utente);
 //				RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 //				rd.forward(request, response);
 			}
@@ -83,8 +83,11 @@ public class SocialLogin extends HttpServlet {
 			session.setAttribute("nome", nome);
 			session.setAttribute("cognome", cognome);
 			session.setAttribute("loggato", email);
-			session.setAttribute("tipo", tipo);		
-			session.setAttribute("utente", utente);
+			session.setAttribute("tipo", tipo);
+
+            session.setAttribute("utente", utente);
+           
+			
 		}
 
 	}

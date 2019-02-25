@@ -119,19 +119,20 @@
 		
 		<div class="socialBotton">
 			<div class="fbButton">
-				<div class="fb-login-button" add target="_blank" data-max-rows="1"
-					data-size="large" data-button-type="continue_with"
+				<div class="fb-login-button" style="height: 40px; width: 275px; margin-left: 5px;" add target="_blank" data-max-rows="1"
+					data-size="large" data-button-type="continue_with"  data-width="267"
 					data-show-faces="false" data-auto-logout-link="false"
 					data-use-continue-as="false" scope="public_profile,email"
+					 
 					onlogin="checkLoginState('index.jsp');" add target="_blank">
 				</div>
 			</div>
-			<div>
+			
 				<div class="form-group row justify-content-center" role="button"
 					onclick="getCurrPage('login.jsp')">
-					<div class="g-signin2" data-width="257" data-height="40"
-						data-onsuccess="onSignIn" data-theme="dark">
-						<div style="height: 40px; width: 257px;"
+					<div class="g-signin2" data-width="267" data-height="40"
+						data-onsuccess="onSignIn" data-theme="dark"> 
+						<div style="height: 40px; width: 275px; margin-left: 15px;"
 							class="abcRioButton abcRioButtonBlue">
 							<div class="abcRioButtonContentWrapper">
 								<div class="abcRioButtonIcon" style="padding: 10px">
@@ -152,7 +153,7 @@
 									<path fill="none" d="M0 0h48v48H0z"></path></g></svg>
 									</div>
 								</div>
-								<span style="font-size: 14px; line-height: 38px;"
+								<span style="font-size: 16px; line-height: 38px;"
 									class="abcRioButtonContents"><span
 									id="not_signed_ine9vs0aelgpe3">Accedi</span><span
 									id="connectede9vs0aelgpe3" style="display: none">Signed
@@ -162,7 +163,7 @@
 
 					</div>
 				</div>
-			</div>
+			
 
 
 
@@ -182,9 +183,9 @@
 					e sui <a href="/cookies-policy" target="_blank">Cookie</a>.
 				</p>
 			</div>
-		</main>
+	
 	</div>
-
+	</main>
 
 
 	<%@ include file="include/footer.jsp"%>
