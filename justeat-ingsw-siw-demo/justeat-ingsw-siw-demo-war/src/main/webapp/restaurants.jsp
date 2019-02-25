@@ -73,7 +73,7 @@ prefix="c" %>
           <input type="checkbox" value="9" name="Altro">
           Altro</label>
       </div>
-     <input type="button" value="Nascondi, Coglione!" onClick="caricaElenco();"></input>
+     <input type="button" value="Filtra ristoranti!" onClick="caricaElenco();"></input>
                                     </form>
                                     <div class="clearfix"></div>
                                 </div>

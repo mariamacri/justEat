@@ -134,7 +134,7 @@ public class modificaDatiRistorante extends HttpServlet {
 		
 		
 		GiornoAttivitaDao gd=factory.getGiornoAttivitaDao();
-		List<GiornoAttivita> giorni=new LinkedList<>();
+		List<GiornoAttivita> giorni=new LinkedList<GiornoAttivita>();
 		GiornoAttivita giorno;
 		
 		if(lun!=null) {
@@ -304,7 +304,8 @@ public class modificaDatiRistorante extends HttpServlet {
 				giorni.add(giorno);
 			}
 		}
-		req.getSession().setAttribute("giorni", giorni);
+		if(!giorni.isEmpty())
+			req.getSession().setAttribute("giorni", giorni);
 		req.getSession().setAttribute("ristor",ristorante);
 		
 		RequestDispatcher reqDisp=req.getRequestDispatcher("restaurantInfo.jsp");

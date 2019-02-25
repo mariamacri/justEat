@@ -18,6 +18,7 @@ public interface OrdineDao {
 	public void save_pietanze_comprese(Ordine ordine);
 	public List<Ordine> findAll();
 	public List<Ordine> ordini_dell_utente(Utente utente);
+	public List<Ordine> ordini_ricevuti(String partita_iva);
 	public void ordine_contenuto_in_effettua(Ordine ordine, Utente utente);
 	public void ordine_ricevuto_da(Ordine ordine);
 	

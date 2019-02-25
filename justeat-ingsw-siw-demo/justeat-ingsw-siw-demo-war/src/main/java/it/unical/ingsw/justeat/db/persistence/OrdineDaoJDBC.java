@@ -393,7 +393,11 @@ Connection connection= this.dataSource.getConnection();
 	}
 	
 
-	
+	@Override
+	public List<Ordine> ordini_ricevuti(String partita_iva) {
+		
+		return null;
+	}
 	
 
 }
