@@ -124,7 +124,7 @@ prefix="c" %>
                               <div class="row">
                                  <div class="col-xs-12 col-sm-12 col-lg-8">
                                     <div class="rest-logo pull-left">
-                                       <a class="restaurant-logo pull-left" href="#"><img src="" alt="Food logo"></a>
+                                       <a class="restaurant-logo pull-left" href="#"><img src="img/food2.jpg" alt="Food logo"></a>
                                     </div>
                                     <!-- end:Logo -->
                                     <div class="rest-descr">

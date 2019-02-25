@@ -84,7 +84,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 		Connection connection = this.dataSource.getConnection();
 		try {
 
-			String insert = "insert into ristorante(nome_ristorante, indirizzo_ristorante, indirizzo_legale, partita_iva, coordinate_bancarie_ristorante,codice_fiscale_titolare, email_utenteregistrato, descrizione_ristorante, citta, numero_telefono_ristorante, spesa_minima,link_ristorante) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+			String insert = "insert into ristorante(nome_ristorante, indirizzo_ristorante, indirizzo_legale, partita_iva, coordinate_bancarie_ristorante,codice_fiscale_titolare, email_utenteregistrato, descrizione_ristorante, citta, numero_telefono_ristorante, spesa_minima,link_immagine) values (?,?,?,?,?,?,?,?,?,?,?,?)";
 
 			PreparedStatement statement = connection.prepareStatement(insert);
 

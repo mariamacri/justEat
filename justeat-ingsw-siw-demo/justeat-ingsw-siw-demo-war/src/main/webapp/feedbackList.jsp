@@ -32,7 +32,13 @@ prefix="c" %>
                      <div class="row">
                         <div class="col-xs-12 col-sm-12  col-md-4 col-lg-4 profile-img">
                            <div class="image-wrap">
-                              <figure><img src="img/profile-image.jpg" alt="Profile Image"></figure>
+                              <c:if test="${not empty ristor.getLink_immagine()}"> 
+								   <figure><img src="${ristor.getLink_immagine()}" alt="Profile Image" height="138px" width="243px"></figure> 
+							   </c:if>
+							   
+							   <c:if test="${empty ristor.getLink_immagine()}"> 
+							   <figure><img src="img/profile-image.jpg" alt="Profile Image"></figure> 
+								   </c:if>
                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-desc">
