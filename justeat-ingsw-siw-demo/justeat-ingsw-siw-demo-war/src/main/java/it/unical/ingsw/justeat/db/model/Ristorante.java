@@ -17,17 +17,28 @@ public class Ristorante {
 	private String descrizione_Ristorante;
 	private Utente utente_Proprietario;
 	private List<Categoria> categorie;
+	private String link_immagine; 
 	
-	
-	
+
+	public String getLink_immagine() {
+		return link_immagine;
+	}
+
+
+	public void setLink_immagine(String link_immagine) {
+		this.link_immagine = link_immagine;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Ristorante [nome_Ristorante=" + nome_Ristorante + ", indirizzo_Ristorante=" + indirizzo_Ristorante
 				+ ", indirizzo_Legale=" + indirizzo_Legale + ", partita_Iva=" + partita_Iva
 				+ ", coordinate_Bancarie_Ristorante=" + coordinate_Bancarie_Ristorante + ", titolare=" + titolare
 				+ ", descrizione_Ristorante=" + descrizione_Ristorante + ", utente_Proprietario=" + utente_Proprietario
-				+ ", categorie=" + categorie + ", citta_Ristorante=" + citta_Ristorante + ", spesa_minima="
-				+ spesa_minima + ", numero_Telefono_Ristorante=" + numero_Telefono_Ristorante + "]";
+				+ ", categorie=" + categorie + ", link_immagine=" + link_immagine + ", citta_Ristorante="
+				+ citta_Ristorante + ", spesa_minima=" + spesa_minima + ", numero_Telefono_Ristorante="
+				+ numero_Telefono_Ristorante + "]";
 	}
 
 	private String citta_Ristorante;

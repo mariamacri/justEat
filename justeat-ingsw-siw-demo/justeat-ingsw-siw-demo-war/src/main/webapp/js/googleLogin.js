@@ -1,10 +1,15 @@
+
 function onSignIn(googleUser) {
 	var profile = googleUser.getBasicProfile();
-
+	alert('PROVOLA');
 	var email = profile.getEmail();
 	var name = profile.getGivenName();
-	var surname = profile.getFamilyName();
+	var surname = profile.getFamilyName();ù
+	
+	var id_token = googleUser.getAuthResponse().id_token;
+    console.log("ID Token: " + id_token);
 
+	alert(email);
 	$.ajax({
 		url : 'sociallogin',
 		data : "email=" + email + "&nome=" + name + "&cognome=" + surname + "&tipo=google",
@@ -15,6 +20,8 @@ function onSignIn(googleUser) {
 		},
 		async : false,
 		success : function(response) {
+			
+			alert(name);
 			window.location = dispatcher;
 		}
 	});
@@ -24,6 +31,9 @@ var dispatcher = "";
 
 function getCurrPage(page){
 	dispatcher = page;
+
+
+
 }
 
 

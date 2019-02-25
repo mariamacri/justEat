@@ -73,7 +73,7 @@ prefix="c" %>
           <input type="checkbox" value="9" name="Altro">
           Altro</label>
       </div>
-     <input type="button" value="Filtra ristoranti!" onClick="caricaElenco();"></input>
+     <input type="button" class="btn theme-btn" value="Filtra ristoranti!" onClick="caricaElenco();"></input>
                                     </form>
                                     <div class="clearfix"></div>
                                 </div>
@@ -94,7 +94,14 @@ prefix="c" %>
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-8 text-xs-center text-sm-left">
                                         <div class="entry-logo">
-                                            <a class="img-fluid" href="foodprofilelist?partita_iva=${ristor.getPartita_Iva()}"><img src="img/logo6.png" alt="Food logo"></a>
+											
+											<c:if test="${not empty ristor.getLink_immagine()}"> 
+                                            <a class="img-fluid" href="foodprofilelist?partita_iva=${ristor.getPartita_Iva()}"><img src="${ristor.getLink_immagine()}" alt="Food logo" height="110px" width="110px"></a>
+											</c:if>
+												<c:if test="${empty ristor.getLink_immagine()}"> 
+                                            <a class="img-fluid" href="foodprofilelist?partita_iva=${ristor.getPartita_Iva()}"><img src="img/logo5.png" alt="Food logo"></a>
+											</c:if>
+										
                                         </div>
                                        
                                         <div class="ristorantiQUI">

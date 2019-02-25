@@ -24,7 +24,7 @@
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 <style>
 body { margin:0; padding:0; }
-#map { position:relative;  bottom:10%; width:100%; }
+#map { position:relative;  bottom:10%; width:100%; height: 400px}
 </style>
 
 	
@@ -65,15 +65,16 @@ body { margin:0; padding:0; }
 								<label class="sr-only" for="exampleInputAmount">I would
 									like to eat....</label>
 								<div class="form-group">
+									  <div id='geocoder' class='geocoder'></div>
 									<input type="text" class="form-control form-control-lg"
 										id="exampleInputAmount" placeholder="In che città vivi?"
-										name="citta">
-                                 <div id='geocoder' class='geocoder'></div>
+										name="citta" hidden="true">
+                               
 								</div>
 
 							</div>
 							
-							<button type="submit" class="btn theme-btn btn-lg">Cerca</button>
+							<button onClick="myFunction()" type="submit" class="btn theme-btn btn-lg">Cerca</button>
 						</form>
 					</div>
 					<div class="steps">
@@ -124,11 +125,7 @@ body { margin:0; padding:0; }
 		</section>
 		<!-- banner part ends -->
 		<!-- location match part starts -->
-		<div class="location-match text-xs-center">
-			<div class="container">
-				<span><span class="primary-color"></span> </span>
-			</div>
-		</div>
+		<div id='map'></div>
 		<!-- location match part ends -->
 		<!-- Popular block starts -->
 		<!-- Popular block ends -->
@@ -238,15 +235,16 @@ body { margin:0; padding:0; }
 .geocoder {
 position:relative;
 z-index:1;
-width:90%;
-left:30%;
-margin-left:-25%;
-top:10px;
+width:350px;
+left:20%;
+height: 50px;
+margin-left:-20%;
+top:5px;
 }
 .mapboxgl-ctrl-geocoder { min-width:100%; }
 
 </style>
-<div id='map'></div>
+
  
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFyaWE5NjUiLCJhIjoiY2pzZXVwMGl1MThpeDRhbG4zczdlMzA3dyJ9.aWuhFBitnvo3ZVviybNu2A';
@@ -263,8 +261,40 @@ accessToken: mapboxgl.accessToken
  
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 </script>
- 
+			<!--Script Parola da mappa -->
 
+	<script>
+		function myFunction() {
+
+			//alert("ciaooooo");
+			var div = document.getElementById('geocoder');
+
+			for (var i = 0; i < div.childNodes.length; i++) {
+				console.log(div.childNodes[i].innerHTML);
+				//console.log($("div + span:input")); 
+
+			}
+			//var list = document.getElementByClassName("input:geocoder-icon geocoder-icon-search");
+
+			//span.geocoder-icon.geocoder-icon-search, input	
+			//console.log($(":input"));
+			var x = document.getElementsByTagName("INPUT")[0].value;
+			// alert(x);
+			// document.getElementById("demo").innerHTML = x;
+			//alert(citta);
+			//var str = "How,are,you,doing,today?";
+			var res = x.split(",");
+			var c = res[0].trim();
+			// alert(c);
+			var sost = document.getElementById("exampleInputAmount");
+
+			sost.setAttribute("type", "text");
+			sost.setAttribute("value", c);
+
+		}
+	</script>
+	<!-- FineScript Parola da mappa -->		
+			
 		<%@ include file="include/footer.jsp"%>
 
 	</div>
