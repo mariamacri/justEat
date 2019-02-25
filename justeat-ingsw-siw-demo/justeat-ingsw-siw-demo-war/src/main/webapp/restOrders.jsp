@@ -60,7 +60,7 @@ prefix="c" %>
     <main class="g-col g-span9--mid g-span7--wide">
       <h1 class="beta title--alternate">Ordini</h1>
       <p class="u-text-knockedBack u-text-soften">Qui trovi lo storico dei tuoi ordini.</p>
-		 <p class="u-text-knockedBack u-text-soften"><a href="statisticheRistorante">Visualizza grafico statistico degli ordini ricevuti</a></p>
+		 <p class="u-text-knockedBack u-text-soften"><a href="orderStatistic.jsp">Visualizza grafico statistico degli ordini ricevuti</a></p>
       <ol id="orderList" class="listing unstyled u-divider--top">
 		  
 		

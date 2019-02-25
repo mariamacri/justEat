@@ -66,27 +66,59 @@ prefix="c" %>
 		  <div id="canvas-holder" style="width:165%">
 		<canvas id="chart-area"></canvas>
 	</div>
-	<button id="randomizeData">Randomize Data</button>
-	<button id="addDataset">Add Dataset</button>
-	<button id="removeDataset">Remove Dataset</button>
+	
 	<script>
 		var randomScalingFactor = function() {
 			return Math.round(Math.random() * 100);
 		};
 		
-		for(var i=0; i<3; i++)
-		//console.log("${ordiniRicevuti}");
-		var p="${ordiniRicevuti[0]}";
-		//var w=JSON.parse(p);
-		console.log(p);
 		
-		/*var p=${ordiniRicevuti.size()};
-		var pietanze=[];
+		 var p="${nomi}";
+		 var q="${quantita}"
+		 p=p.replace("[", "");
+		 q=q.replace("[", "");
 		
-		for(var i=0; i<${ordiniRicevuti.size()}; i++){
-			console.log(${ordiniRicevuti[i].id_ordine});
-			
-		}*/
+		 while(p.includes(" ") || q.includes(" "))
+			{
+				p=p.replace(" ", "");
+				q=q.replace(" ", "");
+			}
+		 
+		 var nomi=[];
+		 var quantita=[];
+		 
+		 var j=0;
+		 var i=0;
+		nomi[0]="";
+		 while(p[i]!="]"){
+			 if(p[i]!=",")
+			 nomi[j]+=p[i];
+			 else{
+				 j++;
+				 nomi[j]="";
+			 }
+			 i++;
+			 
+		 }
+		 
+		 j=0;
+		 i=0;
+		 quantita[0]="";
+		 while(q[i]!="]"){
+			 if(q[i]!=",")
+			 quantita[j]+=q[i];
+			 else{
+				 j++;
+				 quantita[j]="";
+			 }
+			 i++;
+			 
+		 }
+		
+		 
+	
+		
+		
 		var x =[randomScalingFactor(),
 			randomScalingFactor(),
 			randomScalingFactor(),
@@ -96,18 +128,17 @@ prefix="c" %>
 			window.chartColors.orange,
 			window.chartColors.yellow,
 			window.chartColors.green,
-			window.chartColors.blue];
-		var nomi=['Red',
-			'Orange',
-			'Yellow',
-			'Green',
-			'Blue'];
+			window.chartColors.blue,
+			window.chartColors.white,
+			window.chartColors.purple];
+	
+		
 		
 		var config = {
 			type: 'pie',
 			data: {
 				datasets: [{
-					data: x,
+					data: quantita,
 					backgroundColor: y,
 					label: 'Dataset 1'
 				}],
@@ -121,34 +152,9 @@ prefix="c" %>
 			var ctx = document.getElementById('chart-area').getContext('2d');
 			window.myPie = new Chart(ctx, config);
 		};
-		document.getElementById('randomizeData').addEventListener('click', function() {
-			config.data.datasets.forEach(function(dataset) {
-				dataset.data = dataset.data.map(function() {
-					return randomScalingFactor();
-				});
-			});
-			window.myPie.update();
-		});
+		
 		var colorNames = Object.keys(window.chartColors);
-		document.getElementById('addDataset').addEventListener('click', function() {
-			var newDataset = {
-				backgroundColor: [],
-				data: [],
-				label: 'New dataset ' + config.data.datasets.length,
-			};
-			for (var index = 0; index < config.data.labels.length; ++index) {
-				newDataset.data.push(randomScalingFactor());
-				var colorName = colorNames[index % colorNames.length];
-				var newColor = window.chartColors[colorName];
-				newDataset.backgroundColor.push(newColor);
-			}
-			config.data.datasets.push(newDataset);
-			window.myPie.update();
-		});
-		document.getElementById('removeDataset').addEventListener('click', function() {
-			config.data.datasets.splice(0, 1);
-			window.myPie.update();
-		});
+		
 	</script>
 		  
       </ol>
