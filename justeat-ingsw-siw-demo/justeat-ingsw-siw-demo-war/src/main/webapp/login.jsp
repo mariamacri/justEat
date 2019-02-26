@@ -106,7 +106,7 @@
 				<!-- Bottone Accedi-->
 				<button name="Sign" id="Sign" type="submit" data-test-id="login"
 					class="btn btn--primary btn--block submit" autocomplete="off"
-					onClick="checkbox()">
+					onClick="checkbox()" >
 					<span class="is-loading-hidden">Accedi</span>
 				</button>
 
@@ -130,8 +130,8 @@
 				</div>
 			</div>
 				<div>
-		<div class="form-group row justify-content-center" role="button" onclick="getCurrPage('login.jsp')">
-															<div class="g-signin2" data-width="257" data-height="40" data-onsuccess="onSignIn"
+		<div class="form-group row justify-content-center" style="height: 40px; width: 275px; margin-left: 5px; margin-top: 20px" role="button" onclick="getCurrPage('login.jsp')">
+															<div class="g-signin2" data-width="257" data-height="40"  data-onsuccess="onSignIn"
 																	data-theme="dark">
 															</div>
 														</div>	
@@ -175,4 +175,14 @@
 
 
 </body>
+<style>
+
+
+#main div{
+    float: left;
+    background-color:#ffffff;
+    width: calc(50% - 1.5em);
+    margin-left: 1.5em;
+}
+</style>
 </html>

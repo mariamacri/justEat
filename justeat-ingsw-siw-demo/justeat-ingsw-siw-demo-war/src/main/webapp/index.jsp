@@ -55,9 +55,9 @@ body { margin:0; padding:0; }
 		<!-- banner part starts -->
 		<section class="hero bg-image" data-image-src="img/image01.jpg">
 			<div class="hero-inner">
-				<div class="container text-center hero-text font-white">
-					<h1>Benvenuto su JustEat</h1>
-					<h5 class="font-white space-xs">Inserisci la tua città per
+				<div class="container text-center hero-text font-white" >
+					<h1 style="font:sans-serif; color: white; text-align:center;">Benvenuto su JustEat </h1>
+					<h5 class="font-white space-xs" style="font:sans-serif; color: white; text-align:center;">Inserisci la tua città per
 						iniziare subito la ricerca del cibo che preferisci!</h5>
 					<div class="banner-form">
 						<form class="form-inline" action="cercaRistorante" method="get">
@@ -65,7 +65,7 @@ body { margin:0; padding:0; }
 								<label class="sr-only" for="exampleInputAmount">I would
 									like to eat....</label>
 								<div class="form-group">
-									  <div id='geocoder' class='geocoder'></div>
+									  <div style="text-align: left" id='geocoder' class='geocoder'></div>
 									<input type="text" class="form-control form-control-lg"
 										id="exampleInputAmount" placeholder="In che città vivi?"
 										name="citta" hidden="true">
@@ -245,7 +245,7 @@ top:5px;
 
 </style>
 
- 
+ <div id='map'></div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFyaWE5NjUiLCJhIjoiY2pzZXVwMGl1MThpeDRhbG4zczdlMzA3dyJ9.aWuhFBitnvo3ZVviybNu2A';
 var map = new mapboxgl.Map({
@@ -303,5 +303,13 @@ document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
     ================================================== -->
 
 </body>
+<style>
+/* .mapboxgl-ctrl-geocoder ul > li.active > a {
+    color: #202020;
+    background-color: #414551;
+    text-decoration: none;
+    cursor: pointer;
+} */
+</style>
 
 </html>
