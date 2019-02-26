@@ -21,3 +21,4 @@ per verificare gli ordini ricevuti effettuare l'accesso con: alfred@alfred.com
 password: alfred
 
 
+All'interno del progetto è presente la relazione nell'apposita folder ed un eventuale backup locale del database
