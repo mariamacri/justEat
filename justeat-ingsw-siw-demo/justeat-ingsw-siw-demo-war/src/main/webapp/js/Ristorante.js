@@ -12,24 +12,8 @@ function ristorante(nome, indirizzo_ristorante, indirizzo_legale, partita_iva, b
 }
 
 
-function caricaElenco(){
-	/*alert("A riccardo piace il cazzo!123");
-	//Ristorante [nome_Ristorante
-	var cazzo=JSON.parse(ristoranti.text);
-	console.log(ristoranti);
-	var div1 = document.createElement("div");
-	div1.innerHTML = "SUCHIAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!";
-	document.getElementById("ristorantiQUI").appendChild(div1);*/
-	
-	
-	//var pippo=document.getElementById(id);
-	//pippo.style.visibility = 'hidden';
-	//pippo.style.display = 'none';
-	
-	
-	/*var pippo=document.getElementsByClassName('btn btn-primary active');
-	console.log(pippo.innerHTML);*/
-	
+function caricaElenco1(){
+
     var Italiana=  $('.active input[value="2"]').attr('name');
     var Orientale=  $('.active input[value="3"]').attr('name');
     var FastFood=  $('.active input[value="4"]').attr('name');
@@ -39,15 +23,11 @@ function caricaElenco(){
     var Paninoteca=  $('.active input[value="8"]').attr('name');
     var Altro=  $('.active input[value="9"]').attr('name');
 
-    console.log(Italiana, Orientale, FastFood, Pizzeria, Bevande, Braceria, Paninoteca, Altro);
-   /* var pippo=document.getElementById('ristorantiQUI');
-    
-    var myJsonString = JSON.stringify(pippo);*/
+   console.log(Italiana, Orientale, FastFood, Pizzeria, Bevande, Braceria, Paninoteca, Altro);
+
     var x;
     x=document.getElementsByClassName("cat");
-    /*var pippo=document.getElementsByClassName(y);
-    
-    pippo[0].style.display = 'none';*/
+  
     
     
   
@@ -146,7 +126,6 @@ function caricaElenco(){
     		if(Altro!=null){
     	    	if(!x[i].innerHTML.includes(Altro))
     	    	{
-    	 
     	    		var pippo=document.getElementsByClassName(x[i].innerHTML);
     	    	    
     	    	    for(var j=0; j<pippo.length; j++)
@@ -155,6 +134,43 @@ function caricaElenco(){
     	    	}
     	    	
     		}
+    		
+    		
+    	
+    	   
+    }
+    
+  //  var y=x[1].innerHTML;
+ 
+
+}
+
+
+
+
+function caricaElenco2(){
+	
+	
+    var Italiana=  $('.active input[value="2"]').attr('name');
+    var Orientale=  $('.active input[value="3"]').attr('name');
+    var FastFood=  $('.active input[value="4"]').attr('name');
+    var Pizzeria=  $('.active input[value="5"]').attr('name');
+    var Bevande=  $('.active input[value="6"]').attr('name');
+    var Braceria=  $('.active input[value="7"]').attr('name');
+    var Paninoteca=  $('.active input[value="8"]').attr('name');
+    var Altro=  $('.active input[value="9"]').attr('name');
+
+
+    var x;
+    x=document.getElementsByClassName("cat");
+
+    
+    
+  
+    	for(var i = 0; i < x.length; i++){
+    	       //do something to each div like
+    		
+    		
     		
     		
     		// rende visibili quelle che hanno almeno una categoria
@@ -236,6 +252,7 @@ function caricaElenco(){
     		if(Altro!=null){
     	    	if(x[i].innerHTML.includes(Altro))
     	    	{
+    	    		console.log(x[i].innerHTML);
     	    		var pippo=document.getElementsByClassName(x[i].innerHTML);
     	    	    
     	    	    for(var j=0; j<pippo.length; j++)
@@ -245,11 +262,7 @@ function caricaElenco(){
     	   
     }
     
-  //  var y=x[1].innerHTML;
 
-   
-
-    
-    
+ 
 
 }

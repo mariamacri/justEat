@@ -68,55 +68,17 @@ prefix="c" %>
 	</div>
 	
 	<script>
-		var randomScalingFactor = function() {
-			return Math.round(Math.random() * 100);
-		};
-		
-		
-		 var p="${nomi}";
-		 var q="${quantita}"
-		 p=p.replace("[", "");
-		 q=q.replace("[", "");
-		
-		 while(p.includes(" ") || q.includes(" "))
-			{
-				p=p.replace(" ", "");
-				q=q.replace(" ", "");
-			}
-		 
-		 var nomi=[];
-		 var quantita=[];
-		 
-		 var j=0;
-		 var i=0;
-		nomi[0]="";
-		 while(p[i]!="]"){
-			 if(p[i]!=",")
-			 nomi[j]+=p[i];
-			 else{
-				 j++;
-				 nomi[j]="";
-			 }
-			 i++;
-			 
-		 }
-		 
-		 j=0;
-		 i=0;
-		 quantita[0]="";
-		 while(q[i]!="]"){
-			 if(q[i]!=",")
-			 quantita[j]+=q[i];
-			 else{
-				 j++;
-				 quantita[j]="";
-			 }
-			 i++;
-			 
-		 }
-		
-		 
 	
+		
+		 var nomi="${nomi}";
+		 var quantita="${quantita}"
+		 
+		 quantita = JSON.parse(quantita);
+		 nomi= nomi.replace("[","");
+		 nomi= nomi.replace("]","");
+		 
+		 nomi= nomi.split(", ");
+		 
 		
 		
 		var x =[randomScalingFactor(),

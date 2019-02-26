@@ -73,14 +73,13 @@ prefix="c" %>
           <input type="checkbox" value="9" name="Altro">
           Altro</label>
       </div>
-     <input type="button" class="btn theme-btn" value="Filtra ristoranti!" onClick="caricaElenco();"></input>
+     <input type="button" class="btn theme-btn"  value="Filtra ristoranti!" onClick="caricaElenco1(); caricaElenco2();"></input>
                                     </form>
                                     <div class="clearfix"></div>
                                 </div>
                                 <!-- end:Sidebar nav -->
                                 <div class="widget-delivery">
-                                    <form>
-</form>
+                                 
                                 </div>
                             </div>
 <!-- end:Pricing widget -->                          <!-- end:Widget -->

@@ -65,6 +65,7 @@ public class registrazioneRistorante extends HttpServlet{
 		r.setPartita_Iva(partita_iva);
 		r.setTitolare(t);
 		r.setCitta_Ristorante(citta);
+		r.setLink_immagine("Nessun link");
 		
 		Utente u=new Utente();
 		u.setNome_Utente(nome);

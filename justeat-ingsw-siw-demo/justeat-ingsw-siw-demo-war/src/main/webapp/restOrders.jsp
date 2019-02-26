@@ -67,8 +67,10 @@ prefix="c" %>
 		  
 	<!-- INIZIO FOR-->
 		   <c:forEach items="${ordiniRicevuti}" var="ordini">
+			   <h6>_____________________________________</h6>
         <a  class="mediaElement">
             <div class="listing-item-info mediaElement-content">
+		
                 <h3 class="listing-item-title"  >Id Ordine: ${ordini.getId_ordine()} </h3>
 				<p class="infoText">Indirizzo di consegna: ${ordini.getPagamento().getUtente().getIndirizzo_Utente()} </p>
 					<c:forEach items="${ordini.getPietanze()}" var="pietan">

@@ -55,7 +55,7 @@ public class creaOrdine extends HttpServlet{
 		List<Ordine> ordini=od.findAll();
 		
 		if(ordini!=null)
-			ordine.setId_ordine(ordini.size()+2);
+			ordine.setId_ordine(ordini.size()+5);
 		else
 			ordine.setId_ordine(1);
 		

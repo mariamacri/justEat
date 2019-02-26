@@ -38,8 +38,10 @@ public class ordiniRicevuti extends HttpServlet{
 		List<Ordine> ordiniRicevuti=rd.riceve(ristorante);
 		
 		List<String> pietanze=new LinkedList<String>();
+		
 		for(Ordine o: ordiniRicevuti) {
 			for(Pietanza p: o.getPietanze()) {
+				if(p!=null)
 				pietanze.add(p.getNome());
 			}
 		}
@@ -64,6 +66,7 @@ public class ordiniRicevuti extends HttpServlet{
 		if(quantita!=null && quantita.size()!=0)
 			req.getSession().setAttribute("quantita", quantita);
 		req.getSession().setAttribute("ordiniRicevuti", ordiniRicevuti);
+		
 	
 		RequestDispatcher rde = req.getRequestDispatcher("restOrders.jsp");
 		rde.forward(req, resp);

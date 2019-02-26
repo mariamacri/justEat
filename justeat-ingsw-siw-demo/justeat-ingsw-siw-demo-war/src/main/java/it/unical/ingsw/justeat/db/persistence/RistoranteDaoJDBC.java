@@ -84,7 +84,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 		Connection connection = this.dataSource.getConnection();
 		try {
 
-			String insert = "insert into ristorante(nome_ristorante, indirizzo_ristorante, indirizzo_legale, partita_iva, coordinate_bancarie_ristorante,codice_fiscale_titolare, email_utenteregistrato, descrizione_ristorante, citta, numero_telefono_ristorante, spesa_minima,link_immagine) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+			String insert = "insert into ristorante(nome_ristorante, indirizzo_ristorante, indirizzo_legale, partita_iva, coordinate_bancarie_ristorante,codice_fiscale_titolare, email_utenteregistrato, descrizione_ristorante, citta, numero_telefono_ristorante, spesa_minima) values (?,?,?,?,?,?,?,?,?,?,?,?)";
 
 			PreparedStatement statement = connection.prepareStatement(insert);
 
@@ -145,6 +145,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				ristorante.setCitta_Ristorante(result.getString("citta"));
 				ristorante.setNumero_Telefono_Ristorante(result.getInt("numero_telefono_ristorante"));
 				ristorante.setSpesa_minima(result.getDouble("spesa_minima"));
+				ristorante.setLink_immagine(result.getString("link_immagine"));
 				ristoranti.add(ristorante);
 			}
 		} catch (SQLException e) {
@@ -288,7 +289,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 					ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
 					ristorante.setCitta_Ristorante(result.getString("citta"));
 					ristorante.setNumero_Telefono_Ristorante(result.getInt("numero_telefono_ristorante"));
-					//ristorante.setLink_immagine(result.getString("link_immagine"));
+					ristorante.setLink_immagine(result.getString("link_immagine"));
 
 					primaRiga = false;
 				}
@@ -402,7 +403,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 	public void update(Ristorante ristorante) {
 		Connection connection = this.dataSource.getConnection();
 		try {
-			String update = "update ristorante SET  nome_ristorante= ?, indirizzo_ristorante = ?,  indirizzo_legale=?, coordinate_bancarie_ristorante=? , codice_fiscale_titolare =? ,descrizione_ristorante=?, email_utenteregistrato=?, citta =?, numero_telefono_ristorante=?, spesa_minima=?, link_immagine=? WHERE partita_iva=?";
+			String update = "update ristorante SET  nome_ristorante= ?, indirizzo_ristorante = ?,  indirizzo_legale=?, coordinate_bancarie_ristorante=? , codice_fiscale_titolare =? ,descrizione_ristorante=?, email_utenteregistrato=?, citta =?, numero_telefono_ristorante=?, spesa_minima=?,link_immagine=?  WHERE partita_iva=?";
 			PreparedStatement statement = connection.prepareStatement(update);
 			statement.setString(1, ristorante.getNome_Ristorante());
 			statement.setString(2, ristorante.getIndirizzo_Ristorante());
@@ -476,6 +477,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				ristorante.setIndirizzo_Ristorante(result.getString("indirizzo_ristorante"));
 				ristorante.setCoordinate_Bancarie_Ristorante(result.getString("coordinate_bancarie_ristorante"));
 				ristorante.setSpesa_minima(result.getDouble("spesa_minima"));
+				ristorante.setLink_immagine(result.getString("link_immagine"));
 //				Titolare titolare = new Titolare();
 //				titolare.setCf_Titolare(result.getString("codice_fiscale_titolare"));
 				DAOFactory factory=DAOFactory.getDAOFactory(DAOFactory.POSTGRESQL);
@@ -490,7 +492,7 @@ public class RistoranteDaoJDBC implements RistoranteDao {
 				ristorante.setDescrizione_Ristorante(result.getString("descrizione_ristorante"));
 				ristorante.setCitta_Ristorante(result.getString("citta"));
 				ristorante.setNumero_Telefono_Ristorante(result.getInt("numero_telefono_ristorante"));
-				ristorante.setLink_immagine(result.getString("link_immagine"));
+			
 
 			}
 		} catch (SQLException e) {
